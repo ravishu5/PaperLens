@@ -54,3 +54,13 @@ def test_section_heading_words_cannot_sustain_an_absence_claim():
     that plainly performs inference."""
     for word in ("inference", "training", "architecture", "results"):
         assert word in _GENERIC
+
+
+def test_an_uncaptioned_listing_is_not_reported_absent(tmp_path):
+    """An uncaptioned verbatim block gets a synthetic slug like "verbatim-l767".
+    Searching code for that name and declaring it absent says nothing."""
+    from paperlens.correlate.mapper import _map_algorithm
+
+    row = {"extractable": 1, "name": None, "slug": "verbatim-l767"}
+    status, _, why, ev, sym = _map_algorithm(None, None, "o/r", row)
+    assert status == "UNKNOWN" and ev == [] and "no caption" in why

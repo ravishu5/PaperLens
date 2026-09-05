@@ -30,12 +30,12 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | SegResNet | `LATEX_EXACT` | 12 | 5 | 4 | 23 | 6 |
 | nnU-Net | `LATEX_EXACT` | 19 | 2 | 1 | 16 | 5 |
 | TransBTS | `LATEX_EXACT` | 12 | 3 | 7 | 24 | 3 |
-| UNETR | `LATEX_EXACT` | 19 | 9 | 12 | 55 | 4 |
+| UNETR | `LATEX_EXACT` | 19 | 9 | 11 | 55 | 4 |
 | nnFormer | `LATEX_EXACT` | 14 | 12 | 4 | 40 | 4 |
-| Swin UNETR | `LATEX_EXACT` | 10 | 3 | 10 | 43 | 5 |
-| RepUX-Net | `LATEX_EXACT` | 11 | 9 | 6 | 23 | 3 |
-| UNesT | `LATEX_EXACT` | 40 | 2 | 17 | 71 | 5 |
-| DeformUX-Net | `LATEX_EXACT` | 18 | 3 | 7 | 32 | 3 |
+| Swin UNETR | `LATEX_EXACT` | 10 | 3 | 8 | 43 | 5 |
+| RepUX-Net | `LATEX_EXACT` | 11 | 9 | 5 | 23 | 3 |
+| UNesT | `LATEX_EXACT` | 40 | 2 | 14 | 71 | 5 |
+| DeformUX-Net | `LATEX_EXACT` | 18 | 3 | 6 | 32 | 3 |
 
 ## Implementation found
 
@@ -60,12 +60,12 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | SegResNet | 1 | 0 | 6 | 6 | 0 | 0 | 0 | 15 |
 | nnU-Net | 0 | 0 | 5 | 4 | 0 | 0 | 2 | 15 |
 | TransBTS | 0 | 1 | 10 | 5 | 0 | 1 | 1 | 15 |
-| UNETR | 2 | 1 | 9 | 11 | 0 | 1 | 0 | 15 |
+| UNETR | 2 | 0 | 9 | 11 | 0 | 0 | 0 | 15 |
 | nnFormer | 2 | 0 | 6 | 4 | 0 | 0 | 2 | 15 |
-| Swin UNETR | 2 | 2 | 8 | 4 | 0 | 3 | 0 | 15 |
-| RepUX-Net | 0 | 1 | 6 | 3 | 0 | 1 | 4 | 15 |
-| UNesT | 3 | 2 | 16 | 11 | 0 | 0 | 3 | 15 |
-| DeformUX-Net | 1 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
+| Swin UNETR | 1 | 1 | 8 | 4 | 0 | 2 | 0 | 15 |
+| RepUX-Net | 0 | 0 | 6 | 3 | 0 | 0 | 4 | 15 |
+| UNesT | 2 | 0 | 15 | 12 | 0 | 0 | 3 | 15 |
+| DeformUX-Net | 0 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
 
 ## Files in each folder
 

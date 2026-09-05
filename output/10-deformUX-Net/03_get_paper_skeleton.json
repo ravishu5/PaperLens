@@ -1,0 +1,255 @@
+{
+  "paper_version": "2310.00199v2",
+  "uri": "paperlens://paper/2310.00199",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/2310.00199/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Timeline for Segmentation Network: From CNNs to ViTs",
+      "uri": "paperlens://paper/2310.00199/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "3D DeformUX-Net: Intuition",
+      "uri": "paperlens://paper/2310.00199/section/3"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "3D DeformUX-Net: Complete Backbone",
+      "uri": "paperlens://paper/2310.00199/section/4"
+    },
+    {
+      "path": "4.1",
+      "level": 2,
+      "title": "Depthwise Deformable Convolution with Tri-Planar Offsets",
+      "uri": "paperlens://paper/2310.00199/section/4.1"
+    },
+    {
+      "path": "4.2",
+      "level": 2,
+      "title": "Complete Architecture",
+      "uri": "paperlens://paper/2310.00199/section/4.2"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Experimental Setup",
+      "uri": "paperlens://paper/2310.00199/section/5"
+    },
+    {
+      "path": "6",
+      "level": 1,
+      "title": "Results",
+      "uri": "paperlens://paper/2310.00199/section/6"
+    },
+    {
+      "path": "6.1",
+      "level": 2,
+      "title": "Evaluation on Organ/Vessel \\& Tumor Segmentation",
+      "uri": "paperlens://paper/2310.00199/section/6.1"
+    },
+    {
+      "path": "6.2",
+      "level": 2,
+      "title": "Evaluation on Multi-Organ Segmentation",
+      "uri": "paperlens://paper/2310.00199/section/6.2"
+    },
+    {
+      "path": "6.3",
+      "level": 2,
+      "title": "Ablation Analysis",
+      "uri": "paperlens://paper/2310.00199/section/6.3"
+    },
+    {
+      "path": "7",
+      "level": 1,
+      "title": "Discussion",
+      "uri": "paperlens://paper/2310.00199/section/7"
+    },
+    {
+      "path": "8",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/2310.00199/section/8"
+    },
+    {
+      "path": "A",
+      "level": 1,
+      "title": "Appendix",
+      "uri": "paperlens://paper/2310.00199/section/A"
+    },
+    {
+      "path": "A.1",
+      "level": 2,
+      "title": "Data Preprocessing \\& Model Training",
+      "uri": "paperlens://paper/2310.00199/section/A.1"
+    },
+    {
+      "path": "A.2",
+      "level": 2,
+      "title": "Public Datasets Details",
+      "uri": "paperlens://paper/2310.00199/section/A.2"
+    },
+    {
+      "path": "A.3",
+      "level": 2,
+      "title": "Further Discussions Comparing with UNesT-L and RepUX-Net",
+      "uri": "paperlens://paper/2310.00199/section/A.3"
+    },
+    {
+      "path": "A.4",
+      "level": 2,
+      "title": "Limitations of DeformUX-Net",
+      "uri": "paperlens://paper/2310.00199/section/A.4"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "5c218705b3cb",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "y(v_0) = \\sum_{k=1}^{K} w(v_k)\\cdot x(v_0 + v_k)",
+      "uri": "paperlens://paper/2310.00199/equation/5c218705b3cb"
+    },
+    {
+      "hash": "bbd0ca6e4432",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{aligned}\n   & \\Delta v_0 = MLP(y^{l-1}(v_0))\\\\\n   & y^l(v_0) = \\sum_{g=1}^{G}\\sum_{",
+      "uri": "paperlens://paper/2310.00199/equation/bbd0ca6e4432"
+    },
+    {
+      "hash": "d255fc5c0df1",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{aligned}\n   & \\hat{z}^{l}=\\text{DDC}(\\text{LN}(z^{l-1}))+z^{l-1}\\\\\n   & {z}^{l}=\\te",
+      "uri": "paperlens://paper/2310.00199/equation/d255fc5c0df1"
+    }
+  ],
+  "components": [
+    {
+      "slug": "depthwise-deformable-convolution",
+      "name": "Depthwise Deformable Convolution",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2310.00199/component/depthwise-deformable-convolution"
+    },
+    {
+      "slug": "timeline-for-segmentation-network-from-cnns-to-vits",
+      "name": "Timeline for Segmentation Network: From CNNs to ViTs",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/timeline-for-segmentation-network-from-cnns-to-vits"
+    },
+    {
+      "slug": "complete-architecture",
+      "name": "Complete Architecture",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/complete-architecture"
+    },
+    {
+      "slug": "experimental-setup",
+      "name": "Experimental Setup",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/experimental-setup"
+    },
+    {
+      "slug": "results",
+      "name": "Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/results"
+    },
+    {
+      "slug": "evaluation-on-organ-vessel-tumor-segmentation",
+      "name": "Evaluation on Organ/Vessel \\& Tumor Segmentation",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/evaluation-on-organ-vessel-tumor-segmentation"
+    },
+    {
+      "slug": "evaluation-on-multi-organ-segmentation",
+      "name": "Evaluation on Multi-Organ Segmentation",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/evaluation-on-multi-organ-segmentation"
+    },
+    {
+      "slug": "ablation-analysis",
+      "name": "Ablation Analysis",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/ablation-analysis"
+    },
+    {
+      "slug": "data-preprocessing-model-training",
+      "name": "Data Preprocessing \\& Model Training",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/data-preprocessing-model-training"
+    },
+    {
+      "slug": "public-datasets-details",
+      "name": "Public Datasets Details",
+      "kind": "dataset",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2310.00199/component/public-datasets-details"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "sum_k",
+      "value": "1",
+      "src_line": 144
+    },
+    {
+      "symbol": "K",
+      "value": "27",
+      "src_line": 148
+    },
+    {
+      "symbol": "sum_g",
+      "value": "1",
+      "src_line": 151
+    },
+    {
+      "symbol": "Gsum_k",
+      "value": "1",
+      "src_line": 151
+    },
+    {
+      "symbol": "C",
+      "value": "48",
+      "src_line": 158
+    },
+    {
+      "symbol": "k",
+      "value": "7",
+      "src_line": 204
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://github.com/MASILab/deform-uxnet",
+      "owner": "MASILab",
+      "repo": "deform-uxnet",
+      "in_abstract": true
+    }
+  ],
+  "limitations": []
+}

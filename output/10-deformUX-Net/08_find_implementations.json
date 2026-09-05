@@ -1,0 +1,66 @@
+{
+  "paper_version": "2310.00199v2",
+  "uri": "paperlens://paper/2310.00199/implementations",
+  "candidates": [
+    {
+      "repo": "MASILab/deform-uxnet",
+      "url": "https://github.com/MASILab/deform-uxnet",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the abstract); repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "architecture": "lib/extensions/syncbn/module.py",
+          "evaluation": "lib/extensions/dcn/test.py",
+          "dataset": "lib/datasets/data_loader.py"
+        },
+        "missing": []
+      },
+      "stars": 23,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MASILab/deform-uxnet",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        },
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2310.00199/urls",
+          "excerpt": "https://github.com/MASILab/deform-uxnet",
+          "locator": "flattened LaTeX line 102",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MASILab/deform-uxnet",
+          "excerpt": "repository name 'deform-uxnet' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MASILab/deform-uxnet#readme",
+          "excerpt": "README references arXiv:2310.00199",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": []
+}

@@ -1,0 +1,279 @@
+{
+  "paper_version": "2303.05785v2",
+  "uri": "paperlens://lineage/2303.05785",
+  "predecessors": [
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+        "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+        "2b) and re-parameterizes the large kernel weights during inference \\cite{ding2022scaling}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2205.15242",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 5 time(s) in the paper's own text",
+      "contexts": [
+        "To tackle the trade-off, RepOptimizer provides an alternative to re-parameterize the back-propagate gradient, instead of the structural parameters of kernel weights, to enhance the training efficiency with plain convolution block design \\cite{ding2022re}.",
+        "\\section{Methods} Instead of changing the gradient dynamics during training \\cite{ding2022re}, we introduce RepUX-Net, a pure 3D CNN architecture that performs element-wise scaling in large kernel weights to enhance the learning convergence and effectively adapts large receptive field for volumetric segmentation.",
+        "Note the theoretical derivation depends on the optimization with first-order gradient-driven optimizer (e.g., SGD, AdamW) \\cite{ding2022re}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2205.15242"
+    },
+    {
+      "paper": "2209.15076",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 5 time(s) in the paper's own text",
+      "contexts": [
+        "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}.",
+        "\\subsection{Model Architecture} The backbone of RepUX-Net is based on 3D UX-Net \\cite{lee20223d}, which comprises multiple volumetric convolution blocks that directly utilize 3D patches and leverage skip connections to transfer hierarchical multi-resolution features for end-to-end optimization.",
+        "All preprocessing and training details including baselines, are followed with \\cite{lee20223d} for benchmarking."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2209.15076"
+    },
+    {
+      "paper": "2207.03620",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+        "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+        "SLaK further extends the kernel size to 51x51 by decomposing the large kernel into two rectangular parallel kernels with sparse groups and training the model with dynamic sparsity \\cite{liu2022more}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2207.03620"
+    },
+    {
+      "paper": "bib:hatamizadeh2022swin",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "izadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.981 & 0.969 & 0.982 & 0.801 & 0.934 & 0.926 & 0.836 & 0.939 & 0.750\\\\"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:hatamizadeh2022unetr",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "u} & 31.2M & 743.3G & 0.971 & 0.966 & 0.976 & 0.792 & 0.926 & 0.917 & 0.829 & 0.935 & 0.739\\\\ \\midrule TransBTS \\cite{wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:liu2022convnet",
+      "title": null,
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Note the attention mechanism is computationally unscalable with respect to the input resolutions \\cite{liu2021swin, liu2022convnet}.",
+        "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2109.03201",
+      "title": null,
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2109.03201"
+    },
+    {
+      "paper": "bib:kulikowski1982theory",
+      "title": null,
+      "year": 1982,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Furthermore, the ERF with SR is visualized to be more widely distributed from the center element to the global surroundings \\cite{ding2022scaling}, demonstrating a similar behavior to the spatial frequency in the human visual system \\cite{kulikowski1982theory}.",
+        "section{Bayesian Frequency Re-parameterization (BFR)} With the visualization of ERF in RepLKNet \\cite{ding2022scaling}, the diffused distribution (from local to global) in ERF demonstrates similar behavior with the spatial frequency in the human visual system \\cite{kulikowski1982theory}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:bilic2023liver",
+      "title": null,
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "perimental Setup} \\textbf{Datasets} We perform experiments on six public datasets for volumetric segmentation, which comprise with 1) Medical Segmentation Decathlon (MSD) spleen dataset \\cite{antonelli2022medical}, 2) MICCAI 2017 LiTS Challenge dataset (LiTS) \\cite{bilic2023liver}, 3) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2020international}, 4) NIH TCIA Pancreas-CT dataset (TCIA) \\cite{roth2015deeporgan}, 5) MICCAI 2021 FLARE Challenge dataset (FLARE) \\cite{AbdomenCT-1K}, and 6) MICCAI 2022 AMOS cha"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:antonelli2022medical",
+      "title": null,
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "\\section{Experimental Setup} \\textbf{Datasets} We perform experiments on six public datasets for volumetric segmentation, which comprise with 1) Medical Segmentation Decathlon (MSD) spleen dataset \\cite{antonelli2022medical}, 2) MICCAI 2017 LiTS Challenge dataset (LiTS) \\cite{bilic2023liver}, 3) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2020international}, 4) NIH TCIA Pancreas-CT dataset (TCIA) \\cite{roth2015deeporgan}, 5) MICCAI 2021 FLARE"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:hu2022online",
+      "title": null,
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "OREPA further adds more parallel branches with linear scaling modules to enhance training efficiency \\cite{hu2022online}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2206.08023",
+      "title": null,
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "3) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2020international}, 4) NIH TCIA Pancreas-CT dataset (TCIA) \\cite{roth2015deeporgan}, 5) MICCAI 2021 FLARE Challenge dataset (FLARE) \\cite{AbdomenCT-1K}, and 6) MICCAI 2022 AMOS challenge dataset (AMOS) \\cite{ji2022amos}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2206.08023"
+    },
+    {
+      "paper": "2207.11225",
+      "title": null,
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Inspired by \\cite{li2022large}, we choose a kernel size of $21\\times 21\\times 21$ for DepthWise Convolution (DWC-21) as the optimal choice without significant trade-off between model performance and computational efficiency in 3D."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2207.11225"
+    },
+    {
+      "paper": "bib:tang2022self",
+      "title": null,
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "successors": [
+    {
+      "paper": "0f4be00866b3de3fdf04afe5e8b62f6fc98182bb",
+      "title": "A foundation model for joint segmentation, detection and recognition of biomedical objects across nine modalities",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 103,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "960f5000ed60eb50b3b352c01cc56e7f075dcce4",
+      "title": "LKFlowNet: A deep neural network based on large kernel convolution for fast and accurate nonlinear fluid-changing prediction",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 2,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 2
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

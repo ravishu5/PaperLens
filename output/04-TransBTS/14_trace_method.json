@@ -1,0 +1,102 @@
+{
+  "paper_version": "2103.04430v2",
+  "method": "transformer",
+  "introduced_by": [
+    {
+      "paper": "2102.04306",
+      "title": null,
+      "year": 2021,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "\\subsection{Discussion} \\label{discuss} A very recent work TransUNet \\cite{chen2021transunet} also employs Transformer for medical image segmentation.",
+      "src_line": 120,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "paper": "2012.12877",
+      "title": null,
+      "year": 2012,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "DeiT \\cite{deit} further introduces a knowledge distillation method for training Transformer.",
+      "src_line": 56,
+      "uri": "paperlens://paper/2012.12877"
+    },
+    {
+      "paper": "bib:detr",
+      "title": null,
+      "year": 2020,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "DETR \\cite{detr} treats object detection as a set prediction task with the help of Transformer.",
+      "src_line": 57,
+      "uri": null
+    },
+    {
+      "paper": "2101.11986",
+      "title": null,
+      "year": 2021,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "However, as pointed out by \\cite{t2t}, local structures are ignored when directly splitting images into patches as tokens for Transformer.",
+      "src_line": 61,
+      "uri": "paperlens://paper/2101.11986"
+    },
+    {
+      "paper": "bib:vaswani2017attention",
+      "title": null,
+      "year": 2017,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "On the other hand, Transformer \\cite{vaswani2017attention} is designed to model long-range dependencies in sequence-to-sequence tasks and capture the relations between arbitrary positions in the sequence.",
+      "src_line": 54,
+      "uri": null
+    },
+    {
+      "paper": "2010.11929",
+      "title": null,
+      "year": 2010,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Vision Transformer (ViT) \\cite{vit} splits the image into patches and models the correlation between these patches as sequences with Transformer, achieving satisfactory results on image classification.",
+      "src_line": 56,
+      "uri": "paperlens://paper/2010.11929"
+    }
+  ],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction",
+      "uri": "paperlens://paper/2103.04430/section/1"
+    },
+    {
+      "section": "2.1",
+      "title": "Overall Architecture of TransBTS",
+      "uri": "paperlens://paper/2103.04430/section/2.1"
+    },
+    {
+      "section": "2.2",
+      "title": "Network Encoder",
+      "uri": "paperlens://paper/2103.04430/section/2.2"
+    },
+    {
+      "section": "2.3",
+      "title": "Network Decoder",
+      "uri": "paperlens://paper/2103.04430/section/2.3"
+    },
+    {
+      "section": "2.4",
+      "title": "Discussion",
+      "uri": "paperlens://paper/2103.04430/section/2.4"
+    },
+    {
+      "section": "3.1",
+      "title": "Main Results",
+      "uri": "paperlens://paper/2103.04430/section/3.1"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed."
+  ]
+}

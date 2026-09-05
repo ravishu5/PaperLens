@@ -24,7 +24,7 @@
       "status": "PARTIAL",
       "items": [
         {
-          "component": "Data preprocessing and augmentation",
+          "component": "Data Preprocessing and Augmentation",
           "kind": "preprocessing",
           "status_in_repo": "UNKNOWN",
           "confidence": "UNKNOWN",
@@ -37,18 +37,34 @@
       "status": "PARTIAL",
       "items": [
         {
+          "component": "Encoder part",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/encoder-part"
+        },
+        {
+          "component": "Decoder part",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/decoder-part"
+        },
+        {
           "component": "Encoder",
           "kind": "architecture",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1810.11654/component/encoder"
+          "uri": "paperlens://paper/1810.11654/component/encoder",
+          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3AEncoder%23class"
         },
         {
           "component": "Decoder",
           "kind": "architecture",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1810.11654/component/decoder"
+          "uri": "paperlens://paper/1810.11654/component/decoder",
+          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ADecoder%23class"
         },
         {
           "component": "Variational Autoencoder Branch",
@@ -56,22 +72,6 @@
           "status_in_repo": "UNKNOWN",
           "confidence": "UNKNOWN",
           "uri": "paperlens://paper/1810.11654/component/variational-autoencoder-branch"
-        },
-        {
-          "component": "Encoder part",
-          "kind": "architecture",
-          "status_in_repo": "AMBIGUOUS",
-          "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1810.11654/component/encoder-part",
-          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3AEncoder%23class"
-        },
-        {
-          "component": "Decoder part",
-          "kind": "architecture",
-          "status_in_repo": "AMBIGUOUS",
-          "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1810.11654/component/decoder-part",
-          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ADecoder%23class"
         }
       ],
       "evidence": [

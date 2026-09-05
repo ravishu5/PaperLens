@@ -1,0 +1,328 @@
+{
+  "uri": "paperlens://paper/2310.00199/references",
+  "paper_version": "2310.00199v2",
+  "count": 32,
+  "resolved_to_arxiv": 9,
+  "references": [
+    {
+      "bib_key": "ying2020deformable",
+      "title": "Deformable 3d convolution for video super-resolution",
+      "authors": "Xinyi Ying, Longguang Wang, Yingqian Wang, Weidong Sheng, Wei An, and Yulan Guo.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 7,
+      "uri": null
+    },
+    {
+      "bib_key": "lee20223d",
+      "title": "3d ux-net: A large kernel volumetric convnet modernizing hierarchical transformer for medical image segmentation",
+      "authors": "Ho Hin Lee, Shunxing Bao, Yuankai Huo, and Bennett A Landman.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 6,
+      "uri": null
+    },
+    {
+      "bib_key": "hatamizadeh2022swin",
+      "title": "Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images",
+      "authors": "Ali Hatamizadeh, Vishwesh Nath, Yucheng Tang, Dong Yang, Holger R Roth, and Daguang Xu.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "ding2022scaling",
+      "title": "Scaling up your kernels to 31x31: Revisiting large kernel design in cnns",
+      "authors": "Xiaohan Ding, Xiangyu Zhang, Jungong Han, and Guiguang Ding.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 3,
+      "uri": null
+    },
+    {
+      "bib_key": "hatamizadeh2022unetr",
+      "title": "Unetr: Transformers for 3d medical image segmentation",
+      "authors": "Ali Hatamizadeh, Yucheng Tang, Vishwesh Nath, Dong Yang, Andriy Myronenko, Bennett Landman, Holger R Roth, and Daguang Xu.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 3,
+      "uri": null
+    },
+    {
+      "bib_key": "yu2023unest",
+      "title": "Unest: local spatial representation learning with hierarchical transformer for efficient medical segmentation",
+      "authors": "Xin Yu, Qi Yang, Yinchi Zhou, Leon Y Cai, Riqiang Gao, Ho Hin Lee, Thomas Li, Shunxing Bao, Zhoubing Xu, Thomas A Lasko, et al.",
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 3,
+      "uri": null
+    },
+    {
+      "bib_key": "zhou2021nnformer",
+      "title": "nnformer: Interleaved transformer for volumetric segmentation",
+      "authors": "Hong-Yu Zhou, Jiansen Guo, Yinghao Zhang, Lequan Yu, Liansheng Wang, and Yizhou Yu.",
+      "year": 2021,
+      "arxiv_id": "2109.03201",
+      "doi": null,
+      "cited_times": 3,
+      "uri": "paperlens://paper/2109.03201"
+    },
+    {
+      "bib_key": "antonelli2022medical",
+      "title": "The medical segmentation decathlon",
+      "authors": "Michela Antonelli, Annika Reinke, Spyridon Bakas, Keyvan Farahani, Annette Kopp-Schneider, Bennett A Landman, Geert Litjens, Bjoern Menze, Olaf Ronneberger, Ronald M Summers, et al.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "cciccek20163d",
+      "title": "3d u-net: learning dense volumetric segmentation from sparse annotation",
+      "authors": "\\\"Ozg\\\"un Ci cek, Ahmed Abdulkadir, Soeren S Lienkamp, Thomas Brox, and Olaf Ronneberger.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "heller2019kits19",
+      "title": "The kits19 challenge data: 300 kidney tumor cases with clinical context, ct semantic segmentations, and surgical outcomes",
+      "authors": "Nicholas Heller, Niranjan Sathianathen, Arveen Kalapara, Edward Walczak, Keenan Moore, Heather Kaluzniak, Joel Rosenberg, Paul Blake, Zachary Rengel, Makinna Oestreich, et al.",
+      "year": 1904,
+      "arxiv_id": "1904.00445",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/1904.00445"
+    },
+    {
+      "bib_key": "isensee2021nnu",
+      "title": "nnu-net: a self-configuring method for deep learning-based biomedical image segmentation",
+      "authors": "Fabian Isensee, Paul F Jaeger, Simon AA Kohl, Jens Petersen, and Klaus H Maier-Hein.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "ji2022amos",
+      "title": "Amos: A large-scale abdominal multi-organ benchmark for versatile medical image segmentation",
+      "authors": "Yuanfeng Ji, Haotian Bai, Jie Yang, Chongjian Ge, Ye Zhu, Ruimao Zhang, Zhen Li, Lingyan Zhang, Wanling Ma, Xiang Wan, et al.",
+      "year": 2022,
+      "arxiv_id": "2206.08023",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2206.08023"
+    },
+    {
+      "bib_key": "myronenko20183d",
+      "title": "3d mri brain tumor segmentation using autoencoder regularization",
+      "authors": "Andriy Myronenko.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "wang2023internimage",
+      "title": "Internimage: Exploring large-scale vision foundation models with deformable convolutions",
+      "authors": "Wenhai Wang, Jifeng Dai, Zhe Chen, Zhenhang Huang, Zhiqi Li, Xizhou Zhu, Xiaowei Hu, Tong Lu, Lewei Lu, Hongsheng Li, et al.",
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "wang2021transbts",
+      "title": "Transbts: Multimodal brain tumor segmentation using transformer",
+      "authors": "Wenxuan Wang, Chen Chen, Meng Ding, Hong Yu, Sen Zha, and Jiangyun Li.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "xie2021cotr",
+      "title": "Cotr: Efficiently bridging cnn and transformer for 3d medical image segmentation",
+      "authors": "Yutong Xie, Jianpeng Zhang, Chunhua Shen, and Yong Xia.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "cao2021swin",
+      "title": "Swin-unet: Unet-like pure transformer for medical image segmentation",
+      "authors": "Hu Cao, Yueyue Wang, Joy Chen, Dongsheng Jiang, Xiaopeng Zhang, Qi Tian, and Manning Wang.",
+      "year": 2021,
+      "arxiv_id": "2105.05537",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2105.05537"
+    },
+    {
+      "bib_key": "chen2021transunet",
+      "title": "Transunet: Transformers make strong encoders for medical image segmentation",
+      "authors": "Jieneng Chen, Yongyi Lu, Qihang Yu, Xiangde Luo, Ehsan Adeli, Yan Wang, Le Lu, Alan L Yuille, and Yuyin Zhou.",
+      "year": 2021,
+      "arxiv_id": "2102.04306",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "bib_key": "ding2022re",
+      "title": "Re-parameterizing your optimizers rather than architectures",
+      "authors": "Xiaohan Ding, Honghao Chen, Xiangyu Zhang, Kaiqi Huang, Jungong Han, and Guiguang Ding.",
+      "year": 2022,
+      "arxiv_id": "2205.15242",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2205.15242"
+    },
+    {
+      "bib_key": "dosovitskiy2020image",
+      "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+      "authors": "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al.",
+      "year": 2010,
+      "arxiv_id": "2010.11929",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2010.11929"
+    },
+    {
+      "bib_key": "jiang2022swinbts",
+      "title": "Swinbts: a method for 3d multimodal brain tumor segmentation using swin transformer",
+      "authors": "Yun Jiang, Yuan Zhang, Xin Lin, Jinkun Dong, Tongtong Cheng, and Jing Liang.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "kuang2023towards",
+      "title": "Towards simultaneous segmentation of liver tumors and intrahepatic vessels via cross-attention mechanism",
+      "authors": "Haopeng Kuang, Dingkang Yang, Shunli Wang, Xiaoying Wang, and Lihua Zhang.",
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "lee2021rap",
+      "title": "Rap-net: Coarse-to-fine multi-organ segmentation with single random anatomical prior",
+      "authors": "Ho Hin Lee, Yucheng Tang, Shunxing Bao, Richard G Abramson, Yuankai Huo, and Bennett A Landman.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "lee2023scaling",
+      "title": "Scaling up 3d kernels with bayesian frequency re-parameterization for medical image segmentation",
+      "authors": "Ho Hin Lee, Quan Liu, Shunxing Bao, Qi Yang, Xin Yu, Leon Y Cai, Thomas Li, Yuankai Huo, Xenofon Koutsoukos, and Bennett A Landman.",
+      "year": 2023,
+      "arxiv_id": "2303.05785",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2303.05785"
+    },
+    {
+      "bib_key": "li2018h",
+      "title": "H-denseunet: hybrid densely connected unet for liver and tumor segmentation from ct volumes",
+      "authors": "Xiaomeng Li, Hao Chen, Xiaojuan Qi, Qi Dou, Chi-Wing Fu, and Pheng-Ann Heng.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "liu2021swin",
+      "title": "Swin transformer: Hierarchical vision transformer using shifted windows",
+      "authors": "Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "liu2022convnet",
+      "title": "A convnet for the 2020s",
+      "authors": "Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, and Saining Xie.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "milletari2016v",
+      "title": "V-net: Fully convolutional neural networks for volumetric medical image segmentation",
+      "authors": "Fausto Milletari, Nassir Navab, and Seyed-Ahmad Ahmadi.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "ronneberger2015u",
+      "title": "U-net: Convolutional networks for biomedical image segmentation",
+      "authors": "Olaf Ronneberger, Philipp Fischer, and Thomas Brox.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "tang2022self",
+      "title": "Self-supervised pre-training of swin transformers for 3d medical image analysis",
+      "authors": "Yucheng Tang, Dong Yang, Wenqi Li, Holger R Roth, Bennett Landman, Daguang Xu, Vishwesh Nath, and Ali Hatamizadeh.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "xu2021levit",
+      "title": "Levit-unet: Make faster encoders with transformer for medical image segmentation",
+      "authors": "Guoping Xu, Xingrong Wu, Xuan Zhang, and Xinwei He.",
+      "year": 2021,
+      "arxiv_id": "2107.08623",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2107.08623"
+    },
+    {
+      "bib_key": "zhou2018unet++",
+      "title": "Unet++: A nested u-net architecture for medical image segmentation",
+      "authors": "Zongwei Zhou, Md Mahfuzur Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    }
+  ]
+}

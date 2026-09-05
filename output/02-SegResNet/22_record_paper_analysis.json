@@ -1,0 +1,66 @@
+{
+  "paper_version": "1810.11654v3",
+  "analysis_uri": "paperlens://paper/1810.11654/analysis",
+  "accepted": {
+    "components": [
+      {
+        "slug": "encoder",
+        "name": "Encoder",
+        "kind": "architecture",
+        "uri": "paperlens://paper/1810.11654/component/encoder",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.1"
+        ]
+      },
+      {
+        "slug": "decoder",
+        "name": "Decoder",
+        "kind": "architecture",
+        "uri": "paperlens://paper/1810.11654/component/decoder",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.2"
+        ]
+      },
+      {
+        "slug": "variational-autoencoder-branch",
+        "name": "Variational Autoencoder Branch",
+        "kind": "module",
+        "uri": "paperlens://paper/1810.11654/component/variational-autoencoder-branch",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.3"
+        ]
+      },
+      {
+        "slug": "loss",
+        "name": "Loss",
+        "kind": "loss",
+        "uri": "paperlens://paper/1810.11654/component/loss",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.4"
+        ]
+      },
+      {
+        "slug": "optimization",
+        "name": "Optimization",
+        "kind": "optimizer",
+        "uri": "paperlens://paper/1810.11654/component/optimization",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.5"
+        ]
+      },
+      {
+        "slug": "data-preprocessing-and-augmentation",
+        "name": "Data Preprocessing and Augmentation",
+        "kind": "preprocessing",
+        "uri": "paperlens://paper/1810.11654/component/data-preprocessing-and-augmentation",
+        "evidence": [
+          "paperlens://paper/1810.11654/section/3.7"
+        ]
+      }
+    ],
+    "claims": [],
+    "narrative_fields": []
+  },
+  "rejected": [],
+  "notes": []
+}

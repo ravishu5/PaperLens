@@ -1,0 +1,95 @@
+{
+  "paper_version": "2201.01266v1",
+  "repos": [
+    "hxhxhx33/SwinUNETR",
+    "JavaZeroo/SwinUNETR"
+  ],
+  "errors": {},
+  "closest_to_paper": "JavaZeroo/SwinUNETR",
+  "coverage": {
+    "hxhxhx33/SwinUNETR": {
+      "matched": 1,
+      "absent": 1,
+      "ambiguous": 5,
+      "blocking_differences": 0,
+      "significant_differences": 2
+    },
+    "JavaZeroo/SwinUNETR": {
+      "matched": 0,
+      "absent": 1,
+      "ambiguous": 6,
+      "blocking_differences": 0,
+      "significant_differences": 1
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "GPU = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Implementation Details",
+      "status": {
+        "hxhxhx33/SwinUNETR": "UNKNOWN",
+        "JavaZeroo/SwinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Jfracsum_i = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "frac2Jsum_j = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "i = 5",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "rate = 0.0008",
+      "status": {
+        "hxhxhx33/SwinUNETR": "ABSENT",
+        "JavaZeroo/SwinUNETR": "ABSENT"
+      }
+    },
+    {
+      "anchor": "segmentation output consists = 3",
+      "status": {
+        "hxhxhx33/SwinUNETR": "UNKNOWN",
+        "JavaZeroo/SwinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "sum_i = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "L = 8",
+      "status": {
+        "hxhxhx33/SwinUNETR": "MATCHED",
+        "JavaZeroo/SwinUNETR": "AMBIGUOUS"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "paper_version": "2109.03201v6",
+  "uri": "paperlens://paper/2109.03201",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/2109.03201/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related Work",
+      "uri": "paperlens://paper/2109.03201/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Method",
+      "uri": "paperlens://paper/2109.03201/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Overview",
+      "uri": "paperlens://paper/2109.03201/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Encoder",
+      "uri": "paperlens://paper/2109.03201/section/3.2"
+    },
+    {
+      "path": "3.3",
+      "level": 2,
+      "title": "Bottleneck",
+      "uri": "paperlens://paper/2109.03201/section/3.3"
+    },
+    {
+      "path": "3.4",
+      "level": 2,
+      "title": "Decoder",
+      "uri": "paperlens://paper/2109.03201/section/3.4"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Experiments",
+      "uri": "paperlens://paper/2109.03201/section/4"
+    },
+    {
+      "path": "4.1",
+      "level": 2,
+      "title": "Implementation details",
+      "uri": "paperlens://paper/2109.03201/section/4.1"
+    },
+    {
+      "path": "4.2",
+      "level": 2,
+      "title": "Comparison with transformer-based methodologies",
+      "uri": "paperlens://paper/2109.03201/section/4.2"
+    },
+    {
+      "path": "4.3",
+      "level": 2,
+      "title": "Comparison with nnUNet and Discussion",
+      "uri": "paperlens://paper/2109.03201/section/4.3"
+    },
+    {
+      "path": "4.4",
+      "level": 2,
+      "title": "Ablation study",
+      "uri": "paperlens://paper/2109.03201/section/4.4"
+    },
+    {
+      "path": "4.5",
+      "level": 2,
+      "title": "Visualization of segmentation results",
+      "uri": "paperlens://paper/2109.03201/section/4.5"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/2109.03201/section/5"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "83246731322f",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\small\n\\begin{split}\n    \\mathcal{\\hat{X}}_{\\text{LV}}^{l}&=\\text{LV-MSA}\\left(\\text{Norm}",
+      "uri": "paperlens://paper/2109.03201/equation/83246731322f"
+    },
+    {
+      "hash": "373a0df4aac1",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\mathcal{X}_{\\text{LV}}^{l}&=\\text{MLP}\\left(\\text{Norm}\\left(\\mathcal{\\hat{X}}_{\\text{LV}",
+      "uri": "paperlens://paper/2109.03201/equation/373a0df4aac1"
+    },
+    {
+      "hash": "f16dc0abb153",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\mathcal{\\hat{X}}_{\\text{LV}}^{l+1}&=\\text{SLV-MSA}\\left(\\text{Norm}\\left(\\mathcal{X}_{\\te",
+      "uri": "paperlens://paper/2109.03201/equation/f16dc0abb153"
+    },
+    {
+      "hash": "2f2a6450fcde",
+      "number": "4",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\mathcal{X}_{\\text{LV}}^{l+1}&=\\text{MLP}\\left(\\text{Norm}\\left(\\mathcal{\\hat{X}}_{\\text{L",
+      "uri": "paperlens://paper/2109.03201/equation/2f2a6450fcde"
+    },
+    {
+      "hash": "fabdc64bcf6c",
+      "number": "5",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\end{split}",
+      "uri": "paperlens://paper/2109.03201/equation/fabdc64bcf6c"
+    },
+    {
+      "hash": "95377d66e888",
+      "number": "6",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        \\Omega(\\text{LV-MSA}) =  4hwd C^2 + 2S_H S_W S_D h w d C.\n    \\end{s",
+      "uri": "paperlens://paper/2109.03201/equation/95377d66e888"
+    },
+    {
+      "hash": "e7223674adba",
+      "number": "7",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        \\text{Attention}(Q, K, V)=\\text{softmax} \\left(\\frac{Q K^{T}}{\\sqrt{",
+      "uri": "paperlens://paper/2109.03201/equation/e7223674adba"
+    },
+    {
+      "hash": "b3eceecb675d",
+      "number": "8",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        \\Omega(\\text{GV-MSA}) = 4hwd C^2 + 2(hwd)^2 C.\n    \\end{split}",
+      "uri": "paperlens://paper/2109.03201/equation/b3eceecb675d"
+    },
+    {
+      "hash": "51e566a40e6f",
+      "number": "9",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        K^{l^*}, V^{l^*} = \\text{LP}(\\mathcal{X}_{\\{\\text{LV}, \\text{GV}\\}}^",
+      "uri": "paperlens://paper/2109.03201/equation/51e566a40e6f"
+    },
+    {
+      "hash": "858046aba6c1",
+      "number": "10",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\small\n    \\begin{split}\n        \\text{Attention}(Q^{l^*}, K^{l^*}, V^{l^*})=\\text{softmax",
+      "uri": "paperlens://paper/2109.03201/equation/858046aba6c1"
+    },
+    {
+      "hash": "a16db55a57f9",
+      "number": "11",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        \\text{lr}=\\text{initial\\_lr} \\times (1-\\frac{\\text{epoch\\_id}}{\\text",
+      "uri": "paperlens://paper/2109.03201/equation/a16db55a57f9"
+    },
+    {
+      "hash": "5f8ccc43d2ec",
+      "number": "12",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\begin{split}\n        \\mathcal{L}_{all} = \\alpha_1 \\mathcal{L}_{\\{H,\\ W,\\ D\\}} + \\alpha_2 ",
+      "uri": "paperlens://paper/2109.03201/equation/5f8ccc43d2ec"
+    }
+  ],
+  "components": [
+    {
+      "slug": "bottleneck",
+      "name": "Bottleneck",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/bottleneck"
+    },
+    {
+      "slug": "implementation-details",
+      "name": "Implementation details",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/implementation-details"
+    },
+    {
+      "slug": "method",
+      "name": "Method",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/method"
+    },
+    {
+      "slug": "encoder",
+      "name": "Encoder",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/encoder"
+    },
+    {
+      "slug": "decoder",
+      "name": "Decoder",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/decoder"
+    },
+    {
+      "slug": "experiments",
+      "name": "Experiments",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/experiments"
+    },
+    {
+      "slug": "ablation-study",
+      "name": "Ablation study",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/ablation-study"
+    },
+    {
+      "slug": "visualization-of-segmentation-results",
+      "name": "Visualization of segmentation results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2109.03201/component/visualization-of-segmentation-results"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "stride",
+      "value": "2",
+      "src_line": 209
+    },
+    {
+      "symbol": "be",
+      "value": "1",
+      "src_line": 209
+    },
+    {
+      "symbol": "rate",
+      "value": "0.01",
+      "src_line": 339
+    },
+    {
+      "symbol": "decay",
+      "value": "3e-5",
+      "src_line": 339
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://git.io/JSf3i",
+      "owner": null,
+      "repo": null,
+      "in_abstract": true
+    }
+  ],
+  "limitations": []
+}

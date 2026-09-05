@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2209.14378",
+  "paper_version": "2209.14378v2",
+  "title": "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation",
+  "fidelity": "LATEX_EXACT",
+  "sections": 40,
+  "equations": 2,
+  "numbered_equations": 2,
+  "algorithms": 2,
+  "unextractable_algorithms": 0,
+  "stated_values": 14,
+  "declared_urls": 6,
+  "components": 13,
+  "notes": [
+    "71 bibliography entries parsed; 25 resolved to arXiv identifiers. Unresolved entries are still listed with title and authors.",
+    "Components are section-derived only at this stage. Finer-grained method components come from agent analysis."
+  ]
+}

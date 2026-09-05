@@ -1,0 +1,16 @@
+{
+  "uri": "paperlens://paper/2109.03201/urls",
+  "paper_version": "2109.03201v6",
+  "urls": [
+    {
+      "url": "https://git.io/JSf3i",
+      "host": "git.io",
+      "owner": null,
+      "repo": null,
+      "in_abstract": true,
+      "section": null,
+      "src_line": 43,
+      "context": "pared to nnUNet, nnFormer produces significantly lower HD95 and comparable DSC results. Furthermore, we show that nnFormer and nnUNet are highly complementary to each other in model ensembling. Codes and models of nnFormer are available at \\url{https://git.io/JSf3i}. \\end{abstract} \\begin{IEEEkeywords} Transformer, Attention Mechanism, Volumetric Image Segmentation \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, wh"
+    }
+  ]
+}

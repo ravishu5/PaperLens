@@ -1,0 +1,16 @@
+{
+  "uri": "paperlens://paper/2310.00199/urls",
+  "paper_version": "2310.00199v2",
+  "urls": [
+    {
+      "url": "https://github.com/MASILab/deform-uxnet",
+      "host": "github.com",
+      "owner": "MASILab",
+      "repo": "deform-uxnet",
+      "in_abstract": true,
+      "section": null,
+      "src_line": 102,
+      "context": "spanning various scales from organs (KiTS: 0.680 to 0.720, MSD Pancreas: 0.676 to 0.717, AMOS: 0.871 to 0.902) to vessels (e.g., MSD hepatic vessels: 0.635 to 0.671) in mean Dice. The source code with our pre-trained model is available at \\url{https://github.com/MASILab/deform-uxnet}. \\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetri"
+    }
+  ]
+}

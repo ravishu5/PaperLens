@@ -1,0 +1,94 @@
+{
+  "uri": "paperlens://paper/2103.10504/values",
+  "paper_version": "2103.10504v3",
+  "values": [
+    {
+      "symbol": "C",
+      "value": "4",
+      "numeric": 4.0,
+      "section": "2103.10504v3:sec:*vision-transformers",
+      "src_line": 121,
+      "context": "\\begin{figure*}[t] \\centering \\includegraphics[width=\\textwidth]{unetr.pdf} \\caption{Overview of UNETR architecture. A 3D input volume (e.g. $C=4$ channels for MRI images), is divided into a sequence of uniform non-overlapping patches and projected into an embedding space using a linear layer. The sequence is added with a position embedding and used as an input to a transformer"
+    },
+    {
+      "symbol": "P",
+      "value": "16",
+      "numeric": 16.0,
+      "section": "2103.10504v3:sec:*vision-transformers",
+      "src_line": 121,
+      "context": "an input to a transformer model. The encoded representations of different layers in the transformer are extracted and merged with a decoder via skip connections to predict the final segmentation. Output sizes are given for patch resolution $P=16$ and embedding size $K=768$.} \\label{fig:pipeline} \\end{figure*} \\section{Methodology} \\label{sec:method} \\subsection{Architecture} We have presented an overview of the proposed model in Fig.~\\ref{fig:pipeline}. UNETR utilizes a con"
+    },
+    {
+      "symbol": "K",
+      "value": "768",
+      "numeric": 768.0,
+      "section": "2103.10504v3:sec:*vision-transformers",
+      "src_line": 121,
+      "context": "model. The encoded representations of different layers in the transformer are extracted and merged with a decoder via skip connections to predict the final segmentation. Output sizes are given for patch resolution $P=16$ and embedding size $K=768$.} \\label{fig:pipeline} \\end{figure*} \\section{Methodology} \\label{sec:method} \\subsection{Architecture} We have presented an overview of the proposed model in Fig.~\\ref{fig:pipeline}. UNETR utilizes a contracting-expanding pattern"
+    },
+    {
+      "symbol": "i",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.1",
+      "src_line": 140,
+      "context": "\\begin{equation} \\label{eq:trans2} \\mathbf{z^{\\prime}}_{i} = \\textnormal{MSA}(\\textnormal{Norm}(\\mathbf{z}_{i-1})) + \\mathbf{z}_{i-1}, \\quad i=1 \\ldots L, \\end{equation} \\begin{equation} \\label{eq:trans3} \\mathbf{z}_{i} = \\textnormal{MLP}(\\textnormal{Norm}(\\mathbf{z^{\\prime}}_{i})) + \\mathbf{z^{\\prime}}_{i}, \\quad i=1 \\ldots L, \\end{equation} where Norm() denotes layer n"
+    },
+    {
+      "symbol": "frac2Jsum_j",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.2",
+      "src_line": 174,
+      "context": "\\subsection{Loss Function} Our loss function is a combination of soft dice loss~\\cite{milletari2016v} and cross-entropy loss, and it can be computed in a voxel-wise manner according to \\begin{equation} \\begin{split} \\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y_{i,j} }{\\sum_{i=1}^{I}G^{2}_{i,j}+ \\sum_{i=1}^{I}Y^{2}_{i,j}}-\\\\ & -\\frac{1}{I}\\sum_{i=1}^{I}\\sum_{j=1}^{J} G_{i,j}\\log Y_{i,j}. \\end{split} \\label{eq:ce} \\end{equation} where $I$ is th"
+    },
+    {
+      "symbol": "Jfracsum_i",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.2",
+      "src_line": 174,
+      "context": "tion} Our loss function is a combination of soft dice loss~\\cite{milletari2016v} and cross-entropy loss, and it can be computed in a voxel-wise manner according to \\begin{equation} \\begin{split} \\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y_{i,j} }{\\sum_{i=1}^{I}G^{2}_{i,j}+ \\sum_{i=1}^{I}Y^{2}_{i,j}}-\\\\ & -\\frac{1}{I}\\sum_{i=1}^{I}\\sum_{j=1}^{J} G_{i,j}\\log Y_{i,j}. \\end{split} \\label{eq:ce} \\end{equation} where $I$ is the number of voxels; $J$"
+    },
+    {
+      "symbol": "sum_i",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.2",
+      "src_line": 174,
+      "context": "of soft dice loss~\\cite{milletari2016v} and cross-entropy loss, and it can be computed in a voxel-wise manner according to \\begin{equation} \\begin{split} \\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y_{i,j} }{\\sum_{i=1}^{I}G^{2}_{i,j}+ \\sum_{i=1}^{I}Y^{2}_{i,j}}-\\\\ & -\\frac{1}{I}\\sum_{i=1}^{I}\\sum_{j=1}^{J} G_{i,j}\\log Y_{i,j}. \\end{split} \\label{eq:ce} \\end{equation} where $I$ is the number of voxels; $J$ is the number of classes; $Y_{i,j}$ and"
+    },
+    {
+      "symbol": "frac1Isum_i",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.2",
+      "src_line": 174,
+      "context": "oss, and it can be computed in a voxel-wise manner according to \\begin{equation} \\begin{split} \\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y_{i,j} }{\\sum_{i=1}^{I}G^{2}_{i,j}+ \\sum_{i=1}^{I}Y^{2}_{i,j}}-\\\\ & -\\frac{1}{I}\\sum_{i=1}^{I}\\sum_{j=1}^{J} G_{i,j}\\log Y_{i,j}. \\end{split} \\label{eq:ce} \\end{equation} where $I$ is the number of voxels; $J$ is the number of classes; $Y_{i,j}$ and $G_{i,j}$ denote the probability output and one-hot encoded"
+    },
+    {
+      "symbol": "Isum_j",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:3.2",
+      "src_line": 175,
+      "context": "uted in a voxel-wise manner according to \\begin{equation} \\begin{split} \\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y_{i,j} }{\\sum_{i=1}^{I}G^{2}_{i,j}+ \\sum_{i=1}^{I}Y^{2}_{i,j}}-\\\\ & -\\frac{1}{I}\\sum_{i=1}^{I}\\sum_{j=1}^{J} G_{i,j}\\log Y_{i,j}. \\end{split} \\label{eq:ce} \\end{equation} where $I$ is the number of voxels; $J$ is the number of classes; $Y_{i,j}$ and $G_{i,j}$ denote the probability output and one-hot encoded ground truth for class"
+    },
+    {
+      "symbol": "frac2sum_i",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2103.10504v3:sec:4.2",
+      "src_line": 461,
+      "context": "and $P_{i}$ denote the ground truth and prediction values for voxel $i$ and $G'$ and $P'$ denote ground truth and prediction surface point sets respectively. The Dice score and HD metrics are defined as \\begin{equation} \\textrm{Dice}(G,P)= \\frac{2\\sum_{i=1}^{I} G_{i}P_{i} }{\\sum_{i=1}^{I}G_{i}+ \\sum_{i=1}^{I}P_{i}}, \\label{eq:dice_score} \\end{equation} \\begin{equation} \\begin{split} \\textrm{HD}(G',P')=\\max \\{{\\max _{g' \\in G'} \\min _{p' \\in P'} } \\|g'-p'\\|, \\\\ \\max _{p' \\in P"
+    },
+    {
+      "symbol": "L",
+      "value": "12",
+      "numeric": 12.0,
+      "section": "2103.10504v3:sec:4.3",
+      "src_line": 484,
+      "context": "learning rate of $0.0001$ for $20,000$ iterations. For the specified batch size, the average training time was 10 hours for 20,000 iterations. Our transformer-based encoder follows the ViT-B16~\\cite{dosovitskiy2020image} architecture with $L=12$ layers, an embedding size of $K=768$. We used a patch resolution of $16\\times 16\\times 16$. For inference, we used a sliding window approach with an overlap portion of 0.5 between the neighboring patches and the same resolution as sp"
+    }
+  ]
+}

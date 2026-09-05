@@ -69,7 +69,7 @@
       "sections": 19,
       "equations": 9,
       "algorithms": 0,
-      "stated_values": 12,
+      "stated_values": 11,
       "declared_urls": 3,
       "components": 11
     }
@@ -99,7 +99,7 @@
       "sections": 10,
       "equations": 3,
       "algorithms": 0,
-      "stated_values": 10,
+      "stated_values": 8,
       "declared_urls": 4,
       "components": 6
     }
@@ -114,7 +114,7 @@
       "sections": 11,
       "equations": 9,
       "algorithms": 0,
-      "stated_values": 6,
+      "stated_values": 5,
       "declared_urls": 1,
       "components": 4
     }
@@ -129,7 +129,7 @@
       "sections": 40,
       "equations": 2,
       "algorithms": 2,
-      "stated_values": 17,
+      "stated_values": 14,
       "declared_urls": 6,
       "components": 13
     }
@@ -144,7 +144,7 @@
       "sections": 18,
       "equations": 3,
       "algorithms": 0,
-      "stated_values": 7,
+      "stated_values": 6,
       "declared_urls": 1,
       "components": 10
     }

@@ -1,0 +1,207 @@
+{
+  "paper_version": "2201.01266v1",
+  "uri": "paperlens://paper/2201.01266",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/2201.01266/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related work",
+      "uri": "paperlens://paper/2201.01266/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Swin UNETR",
+      "uri": "paperlens://paper/2201.01266/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Encoder",
+      "uri": "paperlens://paper/2201.01266/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Decoder",
+      "uri": "paperlens://paper/2201.01266/section/3.2"
+    },
+    {
+      "path": "3.3",
+      "level": 2,
+      "title": "Loss Function",
+      "uri": "paperlens://paper/2201.01266/section/3.3"
+    },
+    {
+      "path": "3.4",
+      "level": 2,
+      "title": "Implementation Details",
+      "uri": "paperlens://paper/2201.01266/section/3.4"
+    },
+    {
+      "path": "3.5",
+      "level": 2,
+      "title": "Dataset and Model Ensembling",
+      "uri": "paperlens://paper/2201.01266/section/3.5"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Results and Discussion",
+      "uri": "paperlens://paper/2201.01266/section/4"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/2201.01266/section/5"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "e586340bde33",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{array}{l}\n\\hat{{z}}^{l}=\\text{W-MSA}(\\text{LN}({z}^{l-1}))+{z}^{l-1} \\\\\n{z}^{l}=\\te",
+      "uri": "paperlens://paper/2201.01266/equation/e586340bde33"
+    },
+    {
+      "hash": "b5f5b093719e",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\textnormal{Attention}(Q, K, V) = \\textnormal{Softmax}\\left(\\frac{QK^{\\top}}{\\sqrt{d}}\\rig",
+      "uri": "paperlens://paper/2201.01266/equation/b5f5b093719e"
+    },
+    {
+      "hash": "76f64b8a756b",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{split}\n\\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y",
+      "uri": "paperlens://paper/2201.01266/equation/76f64b8a756b"
+    }
+  ],
+  "components": [
+    {
+      "slug": "implementation-details",
+      "name": "Implementation Details",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2201.01266/component/implementation-details"
+    },
+    {
+      "slug": "encoder",
+      "name": "Encoder",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2201.01266/component/encoder"
+    },
+    {
+      "slug": "decoder",
+      "name": "Decoder",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2201.01266/component/decoder"
+    },
+    {
+      "slug": "loss-function",
+      "name": "Loss Function",
+      "kind": "loss",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2201.01266/component/loss-function"
+    },
+    {
+      "slug": "dataset-and-model-ensembling",
+      "name": "Dataset and Model Ensembling",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2201.01266/component/dataset-and-model-ensembling"
+    },
+    {
+      "slug": "results-and-discussion",
+      "name": "Results and Discussion",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2201.01266/component/results-and-discussion"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "segmentation output consists",
+      "value": "3",
+      "src_line": 57
+    },
+    {
+      "symbol": "L",
+      "value": "8",
+      "src_line": 83
+    },
+    {
+      "symbol": "i",
+      "value": "5",
+      "src_line": 93
+    },
+    {
+      "symbol": "frac2Jsum_j",
+      "value": "1",
+      "src_line": 122
+    },
+    {
+      "symbol": "Jfracsum_i",
+      "value": "1",
+      "src_line": 122
+    },
+    {
+      "symbol": "sum_i",
+      "value": "1",
+      "src_line": 122
+    },
+    {
+      "symbol": "rate",
+      "value": "0.0008",
+      "src_line": 130
+    },
+    {
+      "symbol": "GPU",
+      "value": "1",
+      "src_line": 130
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://monai.io/research/swin-unetr",
+      "owner": null,
+      "repo": null,
+      "in_abstract": true
+    },
+    {
+      "url": "http://pytorch.org/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    },
+    {
+      "url": "https://monai.io/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    },
+    {
+      "url": "https://www.synapse.org/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    }
+  ],
+  "limitations": []
+}

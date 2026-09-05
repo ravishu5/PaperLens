@@ -1,0 +1,47 @@
+{
+  "paper_version": "1809.10486v1",
+  "repos": [
+    "MIC-DKFZ/batchgenerators",
+    "MIC-DKFZ/nnUNet"
+  ],
+  "errors": {},
+  "closest_to_paper": null,
+  "coverage": {
+    "MIC-DKFZ/batchgenerators": {
+      "matched": 0,
+      "absent": 0,
+      "ambiguous": 1,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    },
+    "MIC-DKFZ/nnUNet": {
+      "matched": 0,
+      "absent": 0,
+      "ambiguous": 2,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "mask = 0",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "AMBIGUOUS",
+        "MIC-DKFZ/nnUNet": "AMBIGUOUS"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "Postprocessing",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "UNKNOWN",
+        "MIC-DKFZ/nnUNet": "AMBIGUOUS"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper.",
+    "MIC-DKFZ/batchgenerators and MIC-DKFZ/nnUNet score identically on these checks, so no claim is made about which is closer to the paper."
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "paper_version": "2103.10504v3",
+  "repos": [
+    "mkara44/unetr_pytorch",
+    "tamasino52/UNETR"
+  ],
+  "errors": {},
+  "closest_to_paper": "tamasino52/UNETR",
+  "coverage": {
+    "mkara44/unetr_pytorch": {
+      "matched": 2,
+      "absent": 0,
+      "ambiguous": 9,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    },
+    "tamasino52/UNETR": {
+      "matched": 3,
+      "absent": 0,
+      "ambiguous": 8,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "C = 4",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Implementation Details",
+      "status": {
+        "mkara44/unetr_pytorch": "UNKNOWN",
+        "tamasino52/UNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Isum_j = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Jfracsum_i = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "K = 768",
+      "status": {
+        "mkara44/unetr_pytorch": "MATCHED",
+        "tamasino52/UNETR": "MATCHED"
+      }
+    },
+    {
+      "anchor": "P = 16",
+      "status": {
+        "mkara44/unetr_pytorch": "MATCHED",
+        "tamasino52/UNETR": "MATCHED"
+      }
+    },
+    {
+      "anchor": "frac1Isum_i = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "frac2Jsum_j = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "frac2sum_i = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "i = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "sum_i = 1",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "AMBIGUOUS"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "L = 12",
+      "status": {
+        "mkara44/unetr_pytorch": "AMBIGUOUS",
+        "tamasino52/UNETR": "MATCHED"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "paper_version": "2303.05785v2",
+  "analysis_uri": "paperlens://paper/2303.05785/analysis",
+  "accepted": {
+    "components": [
+      {
+        "slug": "bayesian-frequency-re-parameterization",
+        "name": "Bayesian Frequency Re-parameterization",
+        "kind": "module",
+        "uri": "paperlens://paper/2303.05785/component/bayesian-frequency-re-parameterization",
+        "evidence": [
+          "paperlens://paper/2303.05785/section/3.2"
+        ]
+      },
+      {
+        "slug": "model-architecture",
+        "name": "Model Architecture",
+        "kind": "architecture",
+        "uri": "paperlens://paper/2303.05785/component/model-architecture",
+        "evidence": [
+          "paperlens://paper/2303.05785/section/3.3"
+        ]
+      },
+      {
+        "slug": "experimental-setup",
+        "name": "Experimental Setup",
+        "kind": "training",
+        "uri": "paperlens://paper/2303.05785/component/experimental-setup",
+        "evidence": [
+          "paperlens://paper/2303.05785/section/4"
+        ]
+      }
+    ],
+    "claims": [],
+    "narrative_fields": []
+  },
+  "rejected": [],
+  "notes": []
+}

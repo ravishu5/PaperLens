@@ -1,0 +1,64 @@
+{
+  "paper_version": "1809.10486v1",
+  "repo": "MIC-DKFZ/batchgenerators",
+  "commit_sha": "9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 1,
+    "CONFIG_HIDDEN": 1
+  },
+  "gaps": [
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 1 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "batchgenerators/datasets/cifar.py (1 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/file/batchgenerators/datasets/cifar.py",
+          "excerpt": "36: http://www.cs.toronto.edu/~kriz/cifar-%d-python.tar.gz",
+          "locator": "batchgenerators/datasets/cifar.py",
+          "provenance": {
+            "count": 1
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.3125.",
+      "where": "batchgenerators/augmentations/spatial_transformations.py:492",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/file/batchgenerators/augmentations/spatial_transformations.py",
+          "excerpt": "spacing_ratio=0.3125/3.0, blur=32, anisotropy_safety= True,",
+          "locator": "batchgenerators/augmentations/spatial_transformations.py:492",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/1809.10486",
+          "excerpt": "none of 0.3125 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.3125"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}

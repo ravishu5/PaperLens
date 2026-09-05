@@ -386,6 +386,12 @@ def _map_algorithm(store: Store, prov, repo_key: str, row) -> tuple:
         return ("UNKNOWN", [],
                 "the algorithm is a figure image in the paper, so there is no text "
                 "to correlate against code", [], None)
+    if not row["name"]:
+        # An uncaptioned listing gets a synthetic slug like "verbatim-l767".
+        # Searching code for that name and reporting it absent says nothing.
+        return ("UNKNOWN", [],
+                "this listing has no caption, so it has no name to correlate "
+                "against code", [], None)
     name = row["name"] or row["slug"]
     res = prov.search_symbols(repo_key, " ".join(_tokens(name)) or name, limit=6)
     if not res.found:

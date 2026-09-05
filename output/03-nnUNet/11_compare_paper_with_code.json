@@ -1,0 +1,48 @@
+{
+  "paper_version": "1809.10486v1",
+  "repo": "MIC-DKFZ/batchgenerators",
+  "commit_sha": "9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e",
+  "uri": "paperlens://mapping/1809.10486/MIC-DKFZ/batchgenerators",
+  "summary": {
+    "BLOCKING": 0,
+    "SIGNIFICANT": 0,
+    "MINOR": 1
+  },
+  "differences": [
+    {
+      "kind": "TRAINING",
+      "paper_states": "ts. We define an epoch as the iteration over 250 training batches. During training, we keep an exponential moving average of the validation ($l_{MA}^{v}$) and training ($l_{MA}^{t}$) losses. Whenever $l_{MA}^{t}$ did",
+      "code_does": "No occurrence of exponential moving average vocabulary in the repository.",
+      "difference": "The paper describes exponential moving average, but nothing in MIC-DKFZ/batchgenerators appears to implement it.",
+      "severity": "MINOR",
+      "confidence": "LIKELY",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1809.10486",
+          "excerpt": "ts. We define an epoch as the iteration over 250 training batches. During training, we keep an exponential moving average of the validation ($l_{MA}^{v}$) and training ($l_{MA}^{t}$) losses. Whenever $l_{MA}^{t}$ did",
+          "locator": "flattened LaTeX line 205",
+          "stance": "SUPPORTS",
+          "provenance": {
+            "pattern": "exponential moving average|\\bEMA\\b"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators",
+          "excerpt": "no match for /\\bema\\b|exponential_moving/ in source",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": {
+            "method": "regex_search",
+            "behaviour": "exponential moving average"
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "MIC-DKFZ/batchgenerators contains no training code, so every training-related difference below follows from that single fact rather than from independent decisions.",
+    "Each difference pairs an exact quote from the paper with an exact search over source. The inference that a paper term implies a code term is a heuristic, which is why these are LIKELY rather than CONFIRMED."
+  ]
+}

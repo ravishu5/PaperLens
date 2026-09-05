@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "2103.10504",
+  "paper_version": "2103.10504v3",
+  "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+  "fidelity": "LATEX_EXACT",
+  "sections": 19,
+  "equations": 9,
+  "numbered_equations": 9,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 11,
+  "declared_urls": 3,
+  "components": 11,
+  "notes": [
+    "55 bibliography entries parsed; 24 resolved to arXiv identifiers. Unresolved entries are still listed with title and authors.",
+    "Components are section-derived only at this stage. Finer-grained method components come from agent analysis."
+  ]
+}

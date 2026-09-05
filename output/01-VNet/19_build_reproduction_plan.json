@@ -29,34 +29,34 @@
       "status": "PARTIAL",
       "items": [
         {
-          "component": "V-Net Architecture",
-          "kind": "architecture",
-          "status_in_repo": "AMBIGUOUS",
-          "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
-          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class"
-        },
-        {
           "component": "Method",
           "kind": "module",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
           "uri": "paperlens://paper/1606.04797/component/method",
           "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.getNumpyData%23method"
+        },
+        {
+          "component": "V-Net Architecture",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class"
         }
       ],
       "evidence": [
         {
           "kind": "code_symbol",
-          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class",
-          "excerpt": null,
-          "locator": ":VNet#class"
-        },
-        {
-          "kind": "code_symbol",
           "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.getNumpyData%23method",
           "excerpt": null,
           "locator": ":DataManager.getNumpyData#method"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class",
+          "excerpt": null,
+          "locator": ":VNet#class"
         }
       ],
       "note": "The paper describes 2 item(s) here, but none was located in faustomilletari/VNet, so this section rests on the paper alone."
@@ -65,26 +65,26 @@
       "status": "PARTIAL",
       "items": [
         {
-          "component": "Training Procedure",
+          "component": "Training",
           "kind": "training",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1606.04797/component/training-procedure"
+          "uri": "paperlens://paper/1606.04797/component/training"
         },
         {
-          "component": "Dice loss layer",
+          "component": "Dice Loss Layer",
           "kind": "loss",
-          "status_in_repo": "AMBIGUOUS",
+          "status_in_repo": "MATCHED",
           "confidence": "POSSIBLE",
           "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
           "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADiceLoss%23class"
         },
         {
-          "component": "Training",
+          "component": "Training Procedure",
           "kind": "training",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
-          "uri": "paperlens://paper/1606.04797/component/training",
+          "uri": "paperlens://paper/1606.04797/component/training-procedure",
           "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.loadTrainingData%23method"
         }
       ],
@@ -102,7 +102,7 @@
           "locator": ":DataManager.loadTrainingData#method"
         }
       ],
-      "note": "The paper describes 3 item(s) here, but none was located in faustomilletari/VNet, so this section rests on the paper alone."
+      "note": "1 of 3 located in faustomilletari/VNet."
     },
     "hyperparameters": {
       "status": "UNKNOWN",
@@ -121,19 +121,19 @@
       "status": "PARTIAL",
       "items": [
         {
-          "component": "Inference",
-          "kind": "inference",
-          "status_in_repo": "UNKNOWN",
-          "confidence": "UNKNOWN",
-          "uri": "paperlens://paper/1606.04797/component/inference"
-        },
-        {
           "component": "Results",
           "kind": "evaluation",
           "status_in_repo": "AMBIGUOUS",
           "confidence": "POSSIBLE",
           "uri": "paperlens://paper/1606.04797/component/results",
           "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.writeResultsFromNumpyLabel%23method"
+        },
+        {
+          "component": "Inference",
+          "kind": "inference",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1606.04797/component/inference"
         }
       ],
       "evidence": [

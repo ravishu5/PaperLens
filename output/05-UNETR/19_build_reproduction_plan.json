@@ -1,0 +1,289 @@
+{
+  "paper_version": "2103.10504v3",
+  "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+  "repo": "mkara44/unetr_pytorch",
+  "commit_sha": "538c8aa586936cb86d72fb1c94d710365b10e35e",
+  "uri": "paperlens://plan/2103.10504/mkara44/unetr_pytorch",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "KNOWN",
+      "items": [
+        {
+          "file": "requirements.txt",
+          "declared": [
+            "tqdm==4.49.0",
+            "numpy==1.19.2",
+            "monai==0.8.1",
+            "opencv_python==4.4.0.42",
+            "torch==1.7.0",
+            "einops==0.3.0",
+            "easydict==1.9"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/mkara44/unetr_pytorch/file/requirements.txt",
+          "excerpt": null,
+          "locator": "requirements.txt"
+        }
+      ]
+    },
+    "dataset": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Datasets",
+          "kind": "dataset",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/datasets"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in mkara44/unetr_pytorch, so this section rests on the paper alone."
+    },
+    "dataset_preparation": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind preprocessing has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Decoder Choice",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/decoder-choice"
+        },
+        {
+          "component": "Model and Computational Complexity",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/model-and-computational-complexity"
+        },
+        {
+          "component": "Architecture",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/architecture"
+        }
+      ],
+      "note": "The paper describes 3 item(s) here, but none was located in mkara44/unetr_pytorch, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Loss Function",
+          "kind": "loss",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/loss-function"
+        },
+        {
+          "component": "Implementation Details",
+          "kind": "training",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/implementation-details"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in mkara44/unetr_pytorch, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "symbol": "C",
+          "value": "4",
+          "stated_at": "LaTeX line 121",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "P",
+          "value": "16",
+          "stated_at": "LaTeX line 121",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "K",
+          "value": "768",
+          "stated_at": "LaTeX line 121",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "i",
+          "value": "1",
+          "stated_at": "LaTeX line 140",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "frac2Jsum_j",
+          "value": "1",
+          "stated_at": "LaTeX line 174",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "Jfracsum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 174",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "sum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 174",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "frac1Isum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 174",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "Isum_j",
+          "value": "1",
+          "stated_at": "LaTeX line 175",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "frac2sum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 461",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "L",
+          "value": "12",
+          "stated_at": "LaTeX line 484",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2103.10504/values",
+          "excerpt": "P = 16",
+          "locator": "LaTeX line 121"
+        },
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2103.10504/values",
+          "excerpt": "K = 768",
+          "locator": "LaTeX line 121"
+        }
+      ],
+      "note": "2 of 11 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Experiments",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/experiments"
+        },
+        {
+          "component": "Evaluation Metrics",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/evaluation-metrics"
+        },
+        {
+          "component": "Quantitative Evaluations",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/quantitative-evaluations"
+        },
+        {
+          "component": "Qualitative Results",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/qualitative-results"
+        },
+        {
+          "component": "Ablation",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2103.10504/component/ablation"
+        }
+      ],
+      "note": "The paper describes 5 item(s) here, but none was located in mkara44/unetr_pytorch, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [
+    {
+      "severity": "MINOR",
+      "kind": "TRAINING",
+      "risk": "The paper describes data augmentation, but nothing in mkara44/unetr_pytorch appears to implement it.",
+      "paper_states": "experiments, we employed five-fold cross validation with a ratio of 95:5. In addition, we used data augmentation strategies such as random rotation of 90, 180 and 270 degrees, random flip in axial, sagittal",
+      "code_does": "No occurrence of data augmentation vocabulary in the repository.",
+      "confidence": "LIKELY"
+    }
+  ],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "PARTIAL",
+    "items": [
+      {
+        "check": "assert the value used for P equals 16",
+        "where": "config.py:16",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      },
+      {
+        "check": "assert the value used for K equals 768",
+        "where": "config.py:17",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      }
+    ],
+    "note": "These checks follow from anchors that were verified. They do not constitute a full test plan."
+  },
+  "lineage": {
+    "predecessors_recorded": 32,
+    "uri": "paperlens://lineage/2103.10504"
+  },
+  "readiness": {
+    "sections_known": 1,
+    "sections_partial": 5,
+    "sections_unknown": 2,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

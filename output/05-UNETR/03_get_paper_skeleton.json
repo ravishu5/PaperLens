@@ -1,0 +1,353 @@
+{
+  "paper_version": "2103.10504v3",
+  "uri": "paperlens://paper/2103.10504",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/2103.10504/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related Work",
+      "uri": "paperlens://paper/2103.10504/section/2"
+    },
+    {
+      "path": "*cnn-based-segmentation-networks",
+      "level": 4,
+      "title": "CNN-based Segmentation Networks",
+      "uri": "paperlens://paper/2103.10504/section/*cnn-based-segmentation-networks"
+    },
+    {
+      "path": "*vision-transformers",
+      "level": 4,
+      "title": "Vision Transformers",
+      "uri": "paperlens://paper/2103.10504/section/*vision-transformers"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Methodology",
+      "uri": "paperlens://paper/2103.10504/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Architecture",
+      "uri": "paperlens://paper/2103.10504/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Loss Function",
+      "uri": "paperlens://paper/2103.10504/section/3.2"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Experiments",
+      "uri": "paperlens://paper/2103.10504/section/4"
+    },
+    {
+      "path": "4.1",
+      "level": 2,
+      "title": "Datasets",
+      "uri": "paperlens://paper/2103.10504/section/4.1"
+    },
+    {
+      "path": "4.2",
+      "level": 2,
+      "title": "Evaluation Metrics",
+      "uri": "paperlens://paper/2103.10504/section/4.2"
+    },
+    {
+      "path": "4.3",
+      "level": 2,
+      "title": "Implementation Details",
+      "uri": "paperlens://paper/2103.10504/section/4.3"
+    },
+    {
+      "path": "4.4",
+      "level": 2,
+      "title": "Quantitative Evaluations",
+      "uri": "paperlens://paper/2103.10504/section/4.4"
+    },
+    {
+      "path": "4.5",
+      "level": 2,
+      "title": "Qualitative Results",
+      "uri": "paperlens://paper/2103.10504/section/4.5"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Discussion",
+      "uri": "paperlens://paper/2103.10504/section/5"
+    },
+    {
+      "path": "6",
+      "level": 1,
+      "title": "Ablation",
+      "uri": "paperlens://paper/2103.10504/section/6"
+    },
+    {
+      "path": "*decoder-choice",
+      "level": 4,
+      "title": "Decoder Choice",
+      "uri": "paperlens://paper/2103.10504/section/*decoder-choice"
+    },
+    {
+      "path": "*patch-resolution",
+      "level": 4,
+      "title": "Patch Resolution",
+      "uri": "paperlens://paper/2103.10504/section/*patch-resolution"
+    },
+    {
+      "path": "*model-and-computational-complexity",
+      "level": 4,
+      "title": "Model and Computational Complexity",
+      "uri": "paperlens://paper/2103.10504/section/*model-and-computational-complexity"
+    },
+    {
+      "path": "7",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/2103.10504/section/7"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "6b47349e407c",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans1}\n    \\mathbf{z}_{0} = [\\mathbf{x}^{1}_{v}\\mathbf{E};\\mathbf{x}^{2}_{v}\\ma",
+      "uri": "paperlens://paper/2103.10504/equation/6b47349e407c"
+    },
+    {
+      "hash": "ef7e31c5d028",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans2}\n    \\mathbf{z^{\\prime}}_{i} = \\textnormal{MSA}(\\textnormal{Norm}(\\mathbf",
+      "uri": "paperlens://paper/2103.10504/equation/ef7e31c5d028"
+    },
+    {
+      "hash": "55cb191dedd2",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans3}\n    \\mathbf{z}_{i} = \\textnormal{MLP}(\\textnormal{Norm}(\\mathbf{z^{\\prim",
+      "uri": "paperlens://paper/2103.10504/equation/55cb191dedd2"
+    },
+    {
+      "hash": "56fb61bdc675",
+      "number": "4",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans4}\n    \\textnormal{A} = \\textnormal{Softmax}(\\frac{{\\mathbf{q}\\mathbf{k}^\\t",
+      "uri": "paperlens://paper/2103.10504/equation/56fb61bdc675"
+    },
+    {
+      "hash": "9ef63abeb23a",
+      "number": "5",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans6}\n    \\textnormal{SA}(\\mathbf{z}) = \\mathbf{A}\\mathbf{v},",
+      "uri": "paperlens://paper/2103.10504/equation/9ef63abeb23a"
+    },
+    {
+      "hash": "ff9f14186eb3",
+      "number": "6",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:trans5}\n    \\textnormal{MSA}(\\mathbf{z}) = [\\textnormal{SA}_{1}(\\mathbf{z});\\tex",
+      "uri": "paperlens://paper/2103.10504/equation/ff9f14186eb3"
+    },
+    {
+      "hash": "5db53490ec20",
+      "number": "7",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{split}\n\\mathcal{L}(G,Y) &= 1-\\frac{2}{J}\\sum_{j=1}^{J}\\frac{\\sum_{i=1}^{I} G_{i,j}Y",
+      "uri": "paperlens://paper/2103.10504/equation/5db53490ec20"
+    },
+    {
+      "hash": "ca594733b5a9",
+      "number": "8",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\textrm{Dice}(G,P)= \\frac{2\\sum_{i=1}^{I} G_{i}P_{i} }{\\sum_{i=1}^{I}G_{i}+ \\sum_{i=1}^{I}",
+      "uri": "paperlens://paper/2103.10504/equation/ca594733b5a9"
+    },
+    {
+      "hash": "1de18eefb8aa",
+      "number": "9",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\begin{split}\n\\textrm{HD}(G',P')=\\max \\{{\\max _{g' \\in G'} \\min _{p' \\in P'} } \\|g'-p'\\|, ",
+      "uri": "paperlens://paper/2103.10504/equation/1de18eefb8aa"
+    }
+  ],
+  "components": [
+    {
+      "slug": "implementation-details",
+      "name": "Implementation Details",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.10504/component/implementation-details"
+    },
+    {
+      "slug": "architecture",
+      "name": "Architecture",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/architecture"
+    },
+    {
+      "slug": "loss-function",
+      "name": "Loss Function",
+      "kind": "loss",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/loss-function"
+    },
+    {
+      "slug": "experiments",
+      "name": "Experiments",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/experiments"
+    },
+    {
+      "slug": "datasets",
+      "name": "Datasets",
+      "kind": "dataset",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/datasets"
+    },
+    {
+      "slug": "evaluation-metrics",
+      "name": "Evaluation Metrics",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/evaluation-metrics"
+    },
+    {
+      "slug": "quantitative-evaluations",
+      "name": "Quantitative Evaluations",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/quantitative-evaluations"
+    },
+    {
+      "slug": "qualitative-results",
+      "name": "Qualitative Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/qualitative-results"
+    },
+    {
+      "slug": "ablation",
+      "name": "Ablation",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/ablation"
+    },
+    {
+      "slug": "decoder-choice",
+      "name": "Decoder Choice",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/decoder-choice"
+    },
+    {
+      "slug": "model-and-computational-complexity",
+      "name": "Model and Computational Complexity",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2103.10504/component/model-and-computational-complexity"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "C",
+      "value": "4",
+      "src_line": 121
+    },
+    {
+      "symbol": "P",
+      "value": "16",
+      "src_line": 121
+    },
+    {
+      "symbol": "K",
+      "value": "768",
+      "src_line": 121
+    },
+    {
+      "symbol": "i",
+      "value": "1",
+      "src_line": 140
+    },
+    {
+      "symbol": "frac2Jsum_j",
+      "value": "1",
+      "src_line": 174
+    },
+    {
+      "symbol": "Jfracsum_i",
+      "value": "1",
+      "src_line": 174
+    },
+    {
+      "symbol": "sum_i",
+      "value": "1",
+      "src_line": 174
+    },
+    {
+      "symbol": "frac1Isum_i",
+      "value": "1",
+      "src_line": 174
+    },
+    {
+      "symbol": "Isum_j",
+      "value": "1",
+      "src_line": 175
+    },
+    {
+      "symbol": "frac2sum_i",
+      "value": "1",
+      "src_line": 461
+    },
+    {
+      "symbol": "L",
+      "value": "12",
+      "src_line": 484
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://monai.io/research/unetr",
+      "owner": null,
+      "repo": null,
+      "in_abstract": true
+    },
+    {
+      "url": "http://pytorch.org/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    },
+    {
+      "url": "https://monai.io/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    }
+  ],
+  "limitations": []
+}

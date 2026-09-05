@@ -1,0 +1,52 @@
+{
+  "paper_version": "2103.10504v3",
+  "uri": "paperlens://paper/2103.10504",
+  "structure": {
+    "sections": 19,
+    "equations": 9,
+    "algorithms": 0,
+    "stated_values": 11,
+    "components": 11,
+    "claims": 0
+  },
+  "implementations": [
+    "mkara44/unetr_pytorch",
+    "tamasino52/UNETR",
+    "Amshaker/unetr_plus_plus",
+    "Jianing-Qiu/Awesome-Healthcare-Foundation-Models",
+    "OSUPCVLab/MobileUNETR",
+    "QiujieDong/Mesh_Segmentation",
+    "aigzhusmart/Slim-UNETR",
+    "lxtGH/Awesome-Segmentation-With-Transformer"
+  ],
+  "mappings": [
+    {
+      "repo": "mkara44/unetr_pytorch",
+      "summary": {
+        "AMBIGUOUS": 9,
+        "MATCHED": 2,
+        "UNKNOWN": 11
+      },
+      "uri": "paperlens://mapping/2103.10504/mkara44/unetr_pytorch"
+    },
+    {
+      "repo": "tamasino52/UNETR",
+      "summary": {
+        "AMBIGUOUS": 8,
+        "MATCHED": 3,
+        "UNKNOWN": 11
+      },
+      "uri": "paperlens://mapping/2103.10504/tamasino52/UNETR"
+    }
+  ],
+  "skeleton_uri": "paperlens://paper/2103.10504",
+  "analysis_uri": "paperlens://paper/2103.10504/analysis",
+  "status": "analysed",
+  "analysis": {
+    "paper_version": "2103.10504v3",
+    "author": "agent:batch",
+    "created_at": "2026-09-05T17:56:35+00:00",
+    "schema_version": "1",
+    "fields": {}
+  }
+}
