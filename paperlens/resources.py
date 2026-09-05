@@ -298,6 +298,30 @@ def mapping(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
     }
 
 
+def differences(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
+    """Stored paper-vs-code differences. Run compare_paper_with_code to refresh."""
+    pv = _pv(store, paper_id)
+    rows = store.all(
+        "SELECT * FROM differences WHERE paper_version = ? AND snapshot_id LIKE ? "
+        "ORDER BY CASE severity WHEN 'BLOCKING' THEN 0 WHEN 'SIGNIFICANT' THEN 1 "
+        "WHEN 'MINOR' THEN 2 ELSE 3 END", (pv, f"{repo}@%"))
+    uri = f"paperlens://difference/{pv.split('v')[0]}/{repo}"
+    if not rows:
+        return {"uri": uri, "paper_version": pv, "repo": repo, "differences": [],
+                "note": "No comparison has been run for this pair. "
+                        "Call compare_paper_with_code."}
+    return {
+        "uri": uri, "paper_version": pv, "repo": repo,
+        "summary": {s: sum(1 for r in rows if r["severity"] == s)
+                    for s in ("BLOCKING", "SIGNIFICANT", "MINOR")},
+        "differences": [{
+            "kind": r["kind"], "paper_states": r["paper_states"],
+            "code_does": r["code_does"], "difference": r["difference"],
+            "severity": r["severity"], "confidence": r["confidence"],
+        } for r in rows],
+    }
+
+
 def analysis(store: Store, paper_id: str) -> dict[str, Any]:
     from .correlate.analysis import get_analysis
 
@@ -407,6 +431,8 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/analysis$"), lambda s, m: analysis(s, m[0])),
     (re.compile(r"^paperlens://mapping/([^/]+)/([^/]+/[^/]+)$"),
      lambda s, m: mapping(s, m[0], m[1])),
+    (re.compile(r"^paperlens://difference/([^/]+)/([^/]+/[^/]+)$"),
+     lambda s, m: differences(s, m[0], m[1])),
     (re.compile(r"^paperlens://repo/([^/]+/[^/]+)$"), lambda s, m: repo_overview(s, m[0])),
     (re.compile(r"^paperlens://repo/([^/]+/[^/]+)/file/(.+)$"),
      lambda s, m: repo_file(s, m[0], m[1])),

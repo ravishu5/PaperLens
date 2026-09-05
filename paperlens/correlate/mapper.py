@@ -73,6 +73,19 @@ def _stem(token: str) -> str:
     return token[:5] if len(token) > 5 else token
 
 
+# Papers name components with agent nouns ("Image Encoder"); code names them with
+# verbs (`encode_image`). Recovering the verb is what makes the two meet.
+_AGENT_NOUN = re.compile(r"^(.*[a-z])(?:er|or)$")
+
+
+def _verb_form(token: str) -> str | None:
+    m = _AGENT_NOUN.match(token)
+    if not m or len(m.group(1)) < 4:
+        return None
+    base = m.group(1)
+    return base if base.endswith("e") else base + "e"
+
+
 def _tokens(text: str) -> list[str]:
     return [t for t in re.split(r"[^a-z0-9]+", text.lower())
             if len(t) > 2 and t not in _STOPWORDS]
@@ -196,6 +209,38 @@ def _matched_value_sections(store: Store, pv: str,
             {(r["symbol"] or "").lower() for r in rows if r["symbol"]})
 
 
+def _search_variants(prov, repo_key: str, name: str, toks: list[str]):
+    """Query the backend several ways and merge the candidates.
+
+    Backend ranking is sensitive to phrasing: in a 3,000-symbol repository
+    "encode image" returns CLIP.encode_image while "image encoder" returns
+    unrelated towers. Merging a few orderings, and widening the window, makes the
+    right symbol far more likely to be in the candidate set at all -- which is a
+    precondition for scoring it.
+    """
+    from ..code.provider import SearchResult
+
+    verbs = [_verb_form(t) or t for t in toks]
+    queries = [" ".join(toks) or name]
+    if len(toks) >= 2:
+        # The backend ranks on its own terms and caps results at ten, so the
+        # phrasing has to be right rather than the window wide. "Image Encoder"
+        # returns unrelated towers; "encode image" returns CLIP.encode_image.
+        queries += [" ".join(reversed(verbs)), " ".join(verbs), "_".join(verbs)]
+    seen: dict[str, object] = {}
+    method = ""
+    for q in queries:
+        r = prov.search_symbols(repo_key, q, limit=25)
+        method = method or r.method
+        if r.found:
+            for sym in r.symbols:
+                seen.setdefault(sym.qualified_name, sym)
+    if not seen:
+        return SearchResult.absent(repo_key, name, method or "search_variants")
+    return SearchResult(query=name, found=True, symbols=list(seen.values()),
+                        method=method or "search_variants")
+
+
 def _map_component(store: Store, prov, repo_key: str, row,
                    located: tuple[set[str], set[str]] | None = None) -> tuple:
     """Name and kind matching. Suggestive, never decisive.
@@ -209,7 +254,7 @@ def _map_component(store: Store, prov, repo_key: str, row,
     kind = row["kind"]
     derived = row["source"] == "DETERMINISTIC"
     toks = _tokens(name)
-    res = prov.search_symbols(repo_key, " ".join(toks) or name, limit=10)
+    res = _search_variants(prov, repo_key, name, toks)
 
     if not res.found or not res.symbols:
         if derived:

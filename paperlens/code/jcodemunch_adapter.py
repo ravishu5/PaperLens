@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
 import os
 import shlex
 import threading
@@ -100,6 +101,25 @@ class _StdioBridge:
             self._loop.call_soon_threadsafe(self._stop.set)
 
 
+_INSTANCE: "JCodeMunchProvider | None" = None
+_INSTANCE_LOCK = threading.Lock()
+
+
+def get_shared() -> "JCodeMunchProvider":
+    """One provider, therefore one subprocess, per process.
+
+    Each instance spawns its own `uvx jcodemunch-mcp`, and two of them share the
+    same on-disk index at ~/.code-index. That contention silently produced empty
+    search results rather than an error, which surfaced as gap detection finding
+    nothing at all.
+    """
+    global _INSTANCE
+    with _INSTANCE_LOCK:
+        if _INSTANCE is None:
+            _INSTANCE = JCodeMunchProvider()
+        return _INSTANCE
+
+
 class JCodeMunchProvider:
     name = "jcodemunch"
 
@@ -132,7 +152,10 @@ class JCodeMunchProvider:
     @staticmethod
     def _rows(text: str, table: str) -> list[dict[str, Any]]:
         if is_munch(text):
-            return parse(text)["tables"].get(table, [])
+            parsed = parse(text)
+            rows = parsed["tables"].get(table, [])
+            _check_parse(parsed["scalars"].get("result_count"), len(rows), table)
+            return rows
         try:
             blob = json.loads(text)
         except json.JSONDecodeError:
@@ -233,11 +256,31 @@ class JCodeMunchProvider:
         raw = self._order("search_text", {"repo": repo_key, "query": pattern,
                                           "is_regex": regex})
         hits: list[TextHit] = []
+
+        if is_munch(raw):
+            # jcodemunch switches to its compact encoding partway through a
+            # session. Handling only JSON meant search silently returned nothing,
+            # which surfaced as "no gaps found" rather than as an error.
+            parsed = parse(raw)
+            rows = parsed["tables"].get("__rows__") or parsed["tables"].get("results", [])
+            for r in rows:
+                try:
+                    hits.append(TextHit(str(r.get("file") or ""),
+                                        int(r.get("line") or 0),
+                                        str(r.get("text") or "").strip()[:240]))
+                except (TypeError, ValueError):
+                    continue
+                if len(hits) >= limit:
+                    break
+            _check_parse(parsed["scalars"].get("result_count"), len(hits),
+                         "search_text")
+            return hits
+
         try:
             blob = json.loads(raw)
         except json.JSONDecodeError:
-            blob = {}
-        # Results are grouped per file, each holding its own list of matches.
+            return hits
+        # JSON results are grouped per file, each holding its own match list.
         for entry in blob.get("results", []):
             path = str(entry.get("file") or entry.get("file_path") or "")
             for m in entry.get("matches", [entry]):
@@ -255,6 +298,18 @@ class JCodeMunchProvider:
                           {"repo": repo_key, "symbol_id": qualified_name})
         rows = self._rows(raw, "callers") or self._rows(raw, "incoming")
         return [s for s in (self._to_symbol(r) for r in rows) if s]
+
+
+def _check_parse(declared: Any, got: int, what: str) -> None:
+    """Warn when the backend says it found rows we failed to read.
+
+    A parser that silently yields nothing is indistinguishable from a genuine
+    absence, and absence is a finding here -- so a format change must be noisy.
+    """
+    if isinstance(declared, int) and declared > 0 and got == 0:
+        logging.getLogger(__name__).warning(
+            "jcodemunch reported %d result(s) for %s but none could be parsed; "
+            "the response format may have changed.", declared, what)
 
 
 def _on_path(name: str) -> bool:

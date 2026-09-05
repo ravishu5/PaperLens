@@ -3,7 +3,7 @@
 An MCP server for **research engineering**: going from a paper to a working understanding of how its ideas became real code.
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
-**Status: Phase 5 of 8.** Paper ingestion, implementation discovery, code intelligence and paper↔code mapping work end to end. Comparison, lineage and reproduction planning are not built yet.
+**Status: Phase 6 of 8.** Ingestion, implementation discovery, code intelligence, paper↔code mapping and comparison work end to end. Citation lineage and reproduction planning are not built yet.
 
 ---
 
@@ -45,6 +45,9 @@ search_code("openai/CLIP", "contrastive loss")          → symbols, or a citabl
 record_paper_analysis("2103.00020", {...})              → validated write-back
 map_paper_to_code("2103.00020", "openai/CLIP")          → anchors ↔ symbols, with evidence
 reverse_engineer_paper("2103.00020")                    → the assembled reconstruction
+compare_paper_with_code("2103.00020", "openai/CLIP")    → differences, BLOCKING first
+find_implementation_gaps("2103.00020", "openai/CLIP")   → what would block a reproduction
+compare_implementations("2103.00020", [repo_a, repo_b]) → which implements more
 ```
 
 Then read only what you need:
@@ -62,6 +65,7 @@ paperlens://repo/openai/CLIP
 paperlens://repo/openai/CLIP/file/clip/model.py
 paperlens://repo/openai/CLIP/symbol/{percent-encoded symbol id}
 paperlens://mapping/2103.00020/openai/CLIP
+paperlens://difference/2103.00020/openai/CLIP
 ```
 
 `paperlens_fetch(uri)` returns identical content, for clients without resource support.
@@ -73,6 +77,8 @@ paperlens://mapping/2103.00020/openai/CLIP
 **Equations are addressed by content hash, not number.** Equation numbers do not exist in LaTeX source — they are assigned by a counter at compile time, and authors almost never `\label` them. *Attention Is All You Need* numbers three equations and labels none; its only `\label{eq:attention}` is commented out. PaperLens replays the counter, so `…/equation/1` works, but the number carries its own confidence and is never better than `LIKELY` without checking the compiled PDF.
 
 **The mapping is the point.** `map_paper_to_code` joins paper anchors to code symbols with evidence on both sides. An exact constant match can reach `CONFIRMED` — the paper states τ = 0.07, and the identical literal sits at `clip/model.py:295` inside `CLIP.__init__`. A name resemblance cannot: `Image Encoder → CLIP.encode_image` is `POSSIBLE`. And the contrastive objective comes back `ABSENT` with a citable reference, because `openai/CLIP` does not contain it.
+
+**Differences quote both sides.** `compare_paper_with_code` pairs an exact quote from the paper with an exact search over source. CLIP's paper calls the temperature clamp "necessary to prevent training instability"; `openai/CLIP` contains no clamp, so that surfaces as `BLOCKING`. The inference joining a paper term to a code term is a heuristic, so such differences are `LIKELY`, never `CONFIRMED`.
 
 **Official is not the same as complete.** `find_implementations` ranks by evidential strength and reports content coverage for every candidate. `openai/CLIP` comes back first — `OFFICIAL`, `CONFIRMED`, cited to the URL in the paper's own abstract — with `missing: [dataset, training, inference]` on the face of the result, because the official repository ships inference weights and not the contrastive objective the paper is about.
 

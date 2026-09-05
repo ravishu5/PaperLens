@@ -49,3 +49,30 @@ def test_citable_absence_marker_is_recovered():
 def test_malformed_input_degrades_instead_of_raising():
     got = parse("#MUNCH/1 tool=x enc=y\n\ngarbage,,,\n")
     assert got["tables"] == {} and isinstance(got["scalars"], dict)
+
+
+SEARCH_TEXT = '''#MUNCH/1 tool=search_text enc=st2
+
+@1=clip/clip.py
+
+result_count=3 __stypes=result_count:int __tables=t:__rows__:file|line|text|before|after
+
+t,@1,10,"from torchvision.transforms import Compose, Normalize",,
+t,@1,85,"        Normalize((0.48145466, 0.4578275), (0.26862954,)),",,
+t,clip/model.py,362,        # normalized features,,
+'''
+
+
+def test_search_text_compact_encoding_is_parsed():
+    """jcodemunch switches search_text from JSON to this encoding partway through
+    a session. Handling only JSON made searches silently return nothing, which
+    reads as a genuine absence."""
+    rows = parse(SEARCH_TEXT)["tables"]["__rows__"]
+    assert len(rows) == 3
+    assert rows[0]["file"] == "clip/clip.py" and rows[0]["line"] == "10"
+    assert "0.48145466" in rows[1]["text"]
+    assert rows[2]["file"] == "clip/model.py"
+
+
+def test_declared_result_count_is_available_for_cross_checking():
+    assert parse(SEARCH_TEXT)["scalars"]["result_count"] == 3

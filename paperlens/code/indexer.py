@@ -88,17 +88,23 @@ def index_repository(store: Store, repo: str, ref: str = "HEAD",
     )
 
 
-_backend_seen: set[str] = set()
+# Keyed by (backend, repo): a backend that has never been told about a repo
+# cannot answer questions about it, and the active backend can change at runtime
+# (PAPERLENS_CODE_PROVIDER, or a jcodemunch session that failed to start). Keying
+# on the repo alone silently left the new backend with no index.
+_backend_seen: set[tuple[str, str]] = set()
 
 
 def _ensure_backend_knows(repo_id: str, path: Any) -> None:
-    if repo_id in _backend_seen:
+    prov = provider()
+    key = (prov.name, repo_id)
+    if key in _backend_seen:
         return
     try:
-        provider().index(repo_id, str(path))
+        prov.index(repo_id, str(path))
     except Exception:
         pass
-    _backend_seen.add(repo_id)
+    _backend_seen.add(key)
 
 
 def latest_snapshot(store: Store, repo: str):

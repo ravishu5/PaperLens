@@ -20,6 +20,9 @@ from .code.indexer import index_repository as _index_repo
 from .code.indexer import provider as _code_provider
 from .code.indexer import require_snapshot as _require_snapshot
 from .correlate.analysis import record_paper_analysis as _record_analysis
+from .correlate.compare import compare_implementations as _cmp_impls
+from .correlate.compare import compare_paper_with_code as _cmp_code
+from .correlate.compare import find_implementation_gaps as _find_gaps
 from .correlate.discover import find_implementations as _discover
 from .correlate.mapper import map_paper_to_code as _map
 from .paper.ingest import ingest_paper as _ingest
@@ -378,6 +381,49 @@ def reverse_engineer_paper(paper_id: str) -> dict[str, Any]:
 
 
 @mcp.tool(
+    title="Compare paper with code",
+    description="Where the implementation differs from the paper. Each difference "
+                "pairs an exact quote from the paper with an exact search over "
+                "source, ordered BLOCKING first. The inference joining them is a "
+                "heuristic, so differences are LIKELY rather than CONFIRMED.",
+)
+def compare_paper_with_code(paper_id: str, repo: str) -> dict[str, Any]:
+    try:
+        return _cmp_code(store(), paper_id, repo)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Find implementation gaps",
+    description="Details that would block a reproduction: constants hard-coded in "
+                "source but absent from the paper, components the paper describes "
+                "but the repository lacks, and pretrained artifacts downloaded "
+                "rather than trained.",
+)
+def find_implementation_gaps(paper_id: str, repo: str) -> dict[str, Any]:
+    try:
+        return _find_gaps(store(), paper_id, repo)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Compare implementations",
+    description="Compare repositories on what they actually implement. Ranks by "
+                "BLOCKING differences and established absences, not by how many "
+                "symbol names match.",
+)
+def compare_implementations(paper_id: str, repos: list[str]) -> dict[str, Any]:
+    if not isinstance(repos, list) or len(repos) < 2:
+        return {"error": "ValueError", "message": "pass at least two repositories"}
+    try:
+        return _cmp_impls(store(), paper_id, repos)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
     title="Explain a confidence verdict",
     description="Why a mapping carries the confidence it does: the supporting and "
                 "contradicting evidence, and what would raise it.",
@@ -466,6 +512,12 @@ def r_analysis(arxiv_id: str) -> dict[str, Any]:
               mime_type="application/json")
 def r_mapping(arxiv_id: str, owner: str, repo: str) -> dict[str, Any]:
     return res.mapping(store(), arxiv_id, f"{owner}/{repo}")
+
+
+@mcp.resource("paperlens://difference/{arxiv_id}/{owner}/{repo}",
+              mime_type="application/json")
+def r_differences(arxiv_id: str, owner: str, repo: str) -> dict[str, Any]:
+    return res.differences(store(), arxiv_id, f"{owner}/{repo}")
 
 
 @mcp.resource("paperlens://repo/{owner}/{repo}", mime_type="application/json")

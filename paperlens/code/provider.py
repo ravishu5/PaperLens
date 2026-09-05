@@ -101,9 +101,9 @@ def get_provider(prefer: str | None = None) -> CodeIntelligenceProvider:
 
     if choice in ("auto", "jcodemunch"):
         try:
-            from .jcodemunch_adapter import JCodeMunchProvider
+            from .jcodemunch_adapter import get_shared
 
-            p = JCodeMunchProvider()
+            p = get_shared()
             if p.available():
                 return p
         except Exception:

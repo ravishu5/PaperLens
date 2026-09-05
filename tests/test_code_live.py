@@ -30,12 +30,22 @@ def _providers():
 
 @pytest.fixture(scope="module", params=[n for n, _ in _providers()])
 def wired(request, tmp_path_factory, monkeypatch_module):
+    # This fixture swaps the process-wide provider, so it must put it back:
+    # leaking a backend into later modules made an unrelated gap-detection test
+    # fail only when the full suite ran.
+    saved_provider = indexer._provider
+    saved_seen = set(indexer._backend_seen)  # (backend, repo) pairs
+
     prov = dict(_providers())[request.param]
     indexer._provider = prov
     indexer._backend_seen.clear()
     store = Store(tmp_path_factory.mktemp(request.param) / "g.db")
     summary = indexer.index_repository(store, REPO)
-    return store, prov, summary
+    yield store, prov, summary
+
+    indexer._provider = saved_provider
+    indexer._backend_seen.clear()
+    indexer._backend_seen.update(saved_seen)
 
 
 @pytest.fixture(scope="module")
