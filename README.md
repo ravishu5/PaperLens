@@ -4,7 +4,7 @@ An MCP server for **research engineering**: going from a paper to a working unde
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
 
-**Status: Phase 4 of 8.** Paper ingestion, implementation discovery and code intelligence work end to end. Paper↔code mapping, comparison and lineage are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
+**Status: Phase 5 of 8.** Paper ingestion, implementation discovery, code intelligence and paper↔code mapping work end to end. Comparison, lineage and reproduction planning are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
 
 ---
 
@@ -43,6 +43,9 @@ find_implementations("2103.00020")                      → ranked repos + evide
 index_repository("openai/CLIP")                         → commit SHA + symbol counts
 get_repo_outline("openai/CLIP")                         → files and symbols as URIs
 search_code("openai/CLIP", "contrastive loss")          → symbols, or a citable absence
+record_paper_analysis("2103.00020", {...})              → validated write-back
+map_paper_to_code("2103.00020", "openai/CLIP")          → anchors ↔ symbols, with evidence
+reverse_engineer_paper("2103.00020")                    → the assembled reconstruction
 ```
 
 Then read only what you need:
@@ -59,15 +62,18 @@ paperlens://paper/2103.00020/implementations
 paperlens://repo/openai/CLIP
 paperlens://repo/openai/CLIP/file/clip/model.py
 paperlens://repo/openai/CLIP/symbol/{percent-encoded symbol id}
+paperlens://mapping/2103.00020/openai/CLIP
 ```
 
 `paperlens_fetch(uri)` returns identical content, for clients without resource support.
 
-## Four things worth knowing
+## Five things worth knowing
 
 **LaTeX, not PDF.** arXiv e-print source preserves section structure, exact math and the authors' own `\url{}` links. PDF extraction destroys all three. Papers without source are marked `UNAVAILABLE` rather than silently degraded.
 
 **Equations are addressed by content hash, not number.** Equation numbers do not exist in LaTeX source — they are assigned by a counter at compile time, and authors almost never `\label` them. *Attention Is All You Need* numbers three equations and labels none; its only `\label{eq:attention}` is commented out. PaperLens replays the counter, so `…/equation/1` works, but the number carries its own confidence and is never better than `LIKELY` without checking the compiled PDF.
+
+**The mapping is the point.** `map_paper_to_code` joins paper anchors to code symbols with evidence on both sides. An exact constant match can reach `CONFIRMED` — the paper states τ = 0.07, and the identical literal sits at `clip/model.py:295` inside `CLIP.__init__`. A name resemblance cannot: `Image Encoder → CLIP.encode_image` is `POSSIBLE`. And the contrastive objective comes back `ABSENT` with a citable reference, because `openai/CLIP` does not contain it.
 
 **Official is not the same as complete.** `find_implementations` ranks by evidential strength and reports content coverage for every candidate. `openai/CLIP` comes back first — `OFFICIAL`, `CONFIRMED`, cited to the URL in the paper's own abstract — with `missing: [dataset, training, inference]` on the face of the result, because the official repository ships inference weights and not the contrastive objective the paper is about.
 

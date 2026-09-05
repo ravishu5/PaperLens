@@ -19,7 +19,9 @@ from .graph.store import Store
 from .code.indexer import index_repository as _index_repo
 from .code.indexer import provider as _code_provider
 from .code.indexer import require_snapshot as _require_snapshot
+from .correlate.analysis import record_paper_analysis as _record_analysis
 from .correlate.discover import find_implementations as _discover
+from .correlate.mapper import map_paper_to_code as _map
 from .paper.ingest import ingest_paper as _ingest
 from .sources import arxiv
 
@@ -290,6 +292,128 @@ def search_code(repo: str, query: str, limit: int = 20) -> dict[str, Any]:
 
 
 @mcp.tool(
+    title="Map paper to code",
+    description="Join a paper's anchors to symbols in an indexed repository. "
+                "Returns MATCHED, ABSENT, AMBIGUOUS or UNKNOWN per anchor with "
+                "evidence. An exact constant match can reach CONFIRMED; a name "
+                "resemblance cannot. Pass anchor_kind/anchor_id to drill into one.",
+)
+def map_paper_to_code(paper_id: str, repo: str, anchor_kind: str | None = None,
+                      anchor_id: str | None = None) -> dict[str, Any]:
+    if anchor_kind and anchor_kind not in ("stated_value", "component", "algorithm"):
+        return {"error": "ValueError",
+                "message": "anchor_kind must be stated_value, component or algorithm"}
+    try:
+        return _map(store(), paper_id, repo, anchor_kind=anchor_kind,
+                    anchor_id=anchor_id)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Record a paper analysis",
+    description="Write your structured reading of a paper back into the graph. "
+                "Every component and claim MUST cite paperlens:// URIs that "
+                "resolve; unsupported items are rejected, not stored. Recording "
+                "real method components is what makes map_paper_to_code useful.",
+)
+def record_paper_analysis(paper_id: str, analysis: dict[str, Any]) -> dict[str, Any]:
+    if not isinstance(analysis, dict):
+        return {"error": "ValueError", "message": "analysis must be an object"}
+    try:
+        return _record_analysis(store(), paper_id, analysis, author="agent")
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Reverse engineer a paper",
+    description="The assembled technical reconstruction: recorded analysis, "
+                "structure counts, implementations and mappings. If no analysis "
+                "has been recorded it says so and points at the evidence needed "
+                "to produce one.",
+)
+def reverse_engineer_paper(paper_id: str) -> dict[str, Any]:
+    from .correlate.analysis import get_analysis
+
+    try:
+        pv = res._pv(store(), paper_id)
+    except Exception as exc:
+        return _err(exc)
+    s, aid = store(), pv.split("v")[0]
+    base = f"paperlens://paper/{aid}"
+    counts = {t: s.one(f"SELECT COUNT(*) c FROM {t} WHERE paper_version = ?", (pv,))["c"]
+              for t in ("sections", "equations", "algorithms", "stated_values",
+                        "components", "claims")}
+    impls = [r["repo_id"] for r in s.all(
+        "SELECT repo_id FROM implementation_candidates WHERE paper_version = ? "
+        "ORDER BY rank", (pv,))]
+    maps = s.all(
+        "SELECT snapshot_id, status, COUNT(*) c FROM mappings WHERE paper_version = ? "
+        "GROUP BY snapshot_id, status", (pv,))
+    mapped: dict[str, dict[str, int]] = {}
+    for r in maps:
+        repo = r["snapshot_id"].split("@")[0]
+        mapped.setdefault(repo, {})[r["status"]] = r["c"]
+
+    analysis = get_analysis(s, paper_id)
+    out = {
+        "paper_version": pv, "uri": base, "structure": counts,
+        "implementations": impls,
+        "mappings": [{"repo": k, "summary": v,
+                      "uri": f"paperlens://mapping/{aid}/{k}"} for k, v in mapped.items()],
+        "skeleton_uri": base, "analysis_uri": f"{base}/analysis",
+    }
+    if analysis is None:
+        out["status"] = "needs_analysis"
+        out["next_step"] = (
+            "No analysis has been recorded. Call get_paper_skeleton, read the "
+            "sections you need, then call record_paper_analysis with components "
+            "and claims that each cite a resolving paperlens:// URI."
+        )
+    else:
+        out["status"] = "analysed"
+        out["analysis"] = analysis
+    return out
+
+
+@mcp.tool(
+    title="Explain a confidence verdict",
+    description="Why a mapping carries the confidence it does: the supporting and "
+                "contradicting evidence, and what would raise it.",
+)
+def explain_confidence(mapping_id: str) -> dict[str, Any]:
+    from .evidence.confidence import evidence_for
+
+    row = store().one("SELECT * FROM mappings WHERE id = ?", (mapping_id,))
+    if row is None:
+        return {"error": "LookupError",
+                "message": f"No mapping {mapping_id!r}. Ids come from map_paper_to_code."}
+    ev = evidence_for(store(), "mapping", mapping_id)
+    supporting = [e for e in ev if e["stance"] == "SUPPORTS"]
+    raise_it = {
+        "MATCHED": "Index a repository at a specific commit and confirm the symbol "
+                   "still implements this anchor.",
+        "AMBIGUOUS": "Narrow the anchor: map a single component or stated value, or "
+                     "record a more specific component via record_paper_analysis.",
+        "ABSENT": "Nothing would raise this; the absence is established. Check a "
+                  "different repository, such as a community reproduction.",
+        "UNKNOWN": "Record finer-grained components with record_paper_analysis, or "
+                   "index a repository that actually implements the paper.",
+    }[row["status"]]
+    return {
+        "mapping_id": mapping_id, "status": row["status"],
+        "confidence": row["confidence"], "method": row["method"],
+        "reasoning": row["reasoning"],
+        "supporting": supporting,
+        "contradicting": [e for e in ev if e["stance"] == "CONTRADICTS"],
+        "what_would_raise_it": raise_it,
+        "note": ("Confidence is assigned from evidence by rule, never asserted. "
+                 "A verdict with no supporting evidence is forced to UNKNOWN."),
+    }
+
+
+@mcp.tool(
     title="Fetch a PaperLens resource",
     description="Read any paperlens:// URI. Identical to the MCP resource of the "
                 "same URI; provided for clients without resource support.",
@@ -331,6 +455,17 @@ def r_algorithm(arxiv_id: str, slug: str) -> dict[str, Any]:
 @mcp.resource("paperlens://paper/{arxiv_id}/implementations", mime_type="application/json")
 def r_implementations(arxiv_id: str) -> dict[str, Any]:
     return res.implementations(store(), arxiv_id)
+
+
+@mcp.resource("paperlens://paper/{arxiv_id}/analysis", mime_type="application/json")
+def r_analysis(arxiv_id: str) -> dict[str, Any]:
+    return res.analysis(store(), arxiv_id)
+
+
+@mcp.resource("paperlens://mapping/{arxiv_id}/{owner}/{repo}",
+              mime_type="application/json")
+def r_mapping(arxiv_id: str, owner: str, repo: str) -> dict[str, Any]:
+    return res.mapping(store(), arxiv_id, f"{owner}/{repo}")
 
 
 @mcp.resource("paperlens://repo/{owner}/{repo}", mime_type="application/json")

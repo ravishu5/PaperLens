@@ -237,6 +237,46 @@ def implementations(store: Store, paper_id: str) -> dict[str, Any]:
     }
 
 
+def mapping(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
+    """Stored paper-to-code mappings. Read-only; run map_paper_to_code to refresh."""
+    from .evidence.confidence import evidence_for
+
+    pv = _pv(store, paper_id)
+    rows = store.all(
+        "SELECT * FROM mappings WHERE paper_version = ? AND snapshot_id LIKE ? "
+        "ORDER BY status, anchor_kind", (pv, f"{repo}@%"))
+    if not rows:
+        return {"uri": f"paperlens://mapping/{pv.split('v')[0]}/{repo}",
+                "paper_version": pv, "repo": repo, "mappings": [],
+                "note": "No mapping has been computed for this pair. "
+                        "Call map_paper_to_code."}
+    return {
+        "uri": f"paperlens://mapping/{pv.split('v')[0]}/{repo}",
+        "paper_version": pv, "repo": repo,
+        "summary": {s: sum(1 for r in rows if r["status"] == s)
+                    for s in ("MATCHED", "ABSENT", "AMBIGUOUS", "UNKNOWN")},
+        "mappings": [{
+            "id": r["id"], "anchor_kind": r["anchor_kind"], "anchor_id": r["anchor_id"],
+            "status": r["status"], "confidence": r["confidence"],
+            "method": r["method"], "reasoning": r["reasoning"],
+            "evidence": evidence_for(store, "mapping", r["id"]),
+        } for r in rows],
+    }
+
+
+def analysis(store: Store, paper_id: str) -> dict[str, Any]:
+    from .correlate.analysis import get_analysis
+
+    got = get_analysis(store, paper_id)
+    if got is None:
+        pv = _pv(store, paper_id)
+        return {"uri": f"paperlens://paper/{pv.split('v')[0]}/analysis",
+                "paper_version": pv, "analysis": None,
+                "note": "No analysis has been recorded. Read the skeleton, then "
+                        "call record_paper_analysis."}
+    return {"uri": f"paperlens://paper/{paper_id}/analysis", **got}
+
+
 # ── code side ─────────────────────────────────────────────────────────────
 def encode_symbol(qualified_name: str) -> str:
     """Percent-encode a symbol id for use in a URI path segment.
@@ -330,6 +370,9 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/urls$"), lambda s, m: declared_urls(s, m[0])),
     (re.compile(r"^paperlens://paper/([^/]+)/implementations$"),
      lambda s, m: implementations(s, m[0])),
+    (re.compile(r"^paperlens://paper/([^/]+)/analysis$"), lambda s, m: analysis(s, m[0])),
+    (re.compile(r"^paperlens://mapping/([^/]+)/([^/]+/[^/]+)$"),
+     lambda s, m: mapping(s, m[0], m[1])),
     (re.compile(r"^paperlens://repo/([^/]+/[^/]+)$"), lambda s, m: repo_overview(s, m[0])),
     (re.compile(r"^paperlens://repo/([^/]+/[^/]+)/file/(.+)$"),
      lambda s, m: repo_file(s, m[0], m[1])),
