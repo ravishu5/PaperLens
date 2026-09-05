@@ -3,8 +3,7 @@
 An MCP server for **research engineering**: going from a paper to a working understanding of how its ideas became real code.
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
-
-**Status: Phase 5 of 8.** Paper ingestion, implementation discovery, code intelligence and paper↔code mapping work end to end. Comparison, lineage and reproduction planning are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
+**Status: Phase 5 of 8.** Paper ingestion, implementation discovery, code intelligence and paper↔code mapping work end to end. Comparison, lineage and reproduction planning are not built yet.
 
 ---
 
@@ -93,9 +92,3 @@ Test corpus ground truth was verified by hand in Phase 0:
 | `1706.03762` Transformer | Three numbered equations, zero labels, nine `\input` files — the equation-identity case. |
 | `2103.00020` CLIP | Zero equations; core algorithm is a figure image; official repo lacks the paper's central method — the adversarial case. |
 
-## Docs
-
-- [docs/PHASES.md](docs/PHASES.md) — per-phase log: what was built, verified, and broken
-- [RESEARCH.md](RESEARCH.md) — what already exists, what died with Papers With Code, and what is genuinely new
-- [ARCHITECTURE.md](ARCHITECTURE.md) — decisions, schema, tool surface, build plan
-- [DECISIONS.md](DECISIONS.md) — what was chosen, what was rejected, why
