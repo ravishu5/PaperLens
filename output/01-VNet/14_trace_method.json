@@ -1,0 +1,157 @@
+{
+  "paper_version": "1606.04797v1",
+  "method": "convolution",
+  "introduced_by": [
+    {
+      "paper": "1512.03385",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Similarly to the approach presented in \\cite{he2015deep}, we formulate each stage such that it learns a residual function: the input of each stage is (a) used in the convolutional layers and processed through the non-linearities and (b) added to the output of the last convolutional layer of that st",
+      "src_line": 91,
+      "uri": "paperlens://paper/1512.03385"
+    },
+    {
+      "paper": "1408.5093",
+      "title": null,
+      "year": 2014,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Our custom implementation of Caffe \\cite{jia2014caffe} processes 3D data by performing volumetric convolutions.",
+      "src_line": 85,
+      "uri": "paperlens://paper/1408.5093"
+    },
+    {
+      "paper": "1408.5093",
+      "title": null,
+      "year": 2014,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabled to perform volumetric convolutions via CuDNN v3.",
+      "src_line": 211,
+      "uri": "paperlens://paper/1408.5093"
+    },
+    {
+      "paper": "bib:long2015fully",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:long2015fully",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "In \\cite{long2015fully} three fully convolutional deep neural networks, pre-trained on a classification task, were refined to produce segmentations while in \\cite{ronneberger2015u} a brand new CNN model, especially tailored to tackle biomedical image analysis pro",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:noh2015learning",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:noh2015learning",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "In \\cite{noh2015learning} a pre-trained VGG network architecture \\cite{simonyan2014very} was used in conjunction with its mirrored, de-convolutional, equivalent to segment RGB images by leveraging the descriptive power of the features extracted by the innermost l",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:ronneberger2015u",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:ronneberger2015u",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "In \\cite{long2015fully} three fully convolutional deep neural networks, pre-trained on a classification task, were refined to produce segmentations while in \\cite{ronneberger2015u} a brand new CNN model, especially tailored to tackle biomedical image analysis problems in 2D, was proposed.",
+      "src_line": 72,
+      "uri": null
+    },
+    {
+      "paper": "bib:ronneberger2015u",
+      "title": null,
+      "year": 2015,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Conversely, de-convolutions increase the data size by projecting each input voxel to a bigger region through the kernel.} \\label{fig:updown} \\end{figure} Similarly to \\cite{ronneberger2015u}, we forward the features extracted from early stages of the left part of the CNN to the right part.",
+      "src_line": 110,
+      "uri": null
+    },
+    {
+      "paper": "1409.1556",
+      "title": null,
+      "year": 2014,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "In \\cite{noh2015learning} a pre-trained VGG network architecture \\cite{simonyan2014very} was used in conjunction with its mirrored, de-convolutional, equivalent to segment RGB images by leveraging the descriptive power of the features extracted by the innermost layer.",
+      "src_line": 72,
+      "uri": "paperlens://paper/1409.1556"
+    },
+    {
+      "paper": "1412.6806",
+      "title": null,
+      "year": 2014,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "This strategy serves a similar purpose as pooling layers that, motivated by \\cite{springenberg2014striving} and other works discouraging the use of max-pooling operations in CNNs, have been replaced in our approach by convolutional ones.",
+      "src_line": 95,
+      "uri": "paperlens://paper/1412.6806"
+    }
+  ],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction and Related Work",
+      "uri": "paperlens://paper/1606.04797/section/1"
+    },
+    {
+      "section": "2",
+      "title": "Method",
+      "uri": "paperlens://paper/1606.04797/section/2"
+    },
+    {
+      "section": "3.2",
+      "title": "Testing",
+      "uri": "paperlens://paper/1606.04797/section/3.2"
+    },
+    {
+      "section": "4",
+      "title": "Results",
+      "uri": "paperlens://paper/1606.04797/section/4"
+    },
+    {
+      "section": "5",
+      "title": "Conclusion",
+      "uri": "paperlens://paper/1606.04797/section/5"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed."
+  ]
+}

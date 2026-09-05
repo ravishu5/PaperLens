@@ -1,0 +1,159 @@
+{
+  "paper_version": "1606.04797v1",
+  "uri": "paperlens://paper/1606.04797/implementations",
+  "candidates": [
+    {
+      "repo": "faustomilletari/VNet",
+      "url": "https://github.com/faustomilletari/VNet",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the body); repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.2,
+        "matched": {
+          "architecture": "pyLayer.py"
+        },
+        "missing": [
+          "training",
+          "evaluation",
+          "loss",
+          "inference"
+        ]
+      },
+      "stars": 303,
+      "archived": false,
+      "license": "GPL-3.0",
+      "evidence": [
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1606.04797/urls",
+          "excerpt": "https://github.com/faustomilletari/VNet",
+          "locator": "flattened LaTeX line 211",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "owner=faustomilletari (User)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "faustomilletari/3D-Caffe",
+      "url": "https://github.com/faustomilletari/3D-Caffe",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the body)",
+      "rank": 2,
+      "name_match": false,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "training": "tools/train_net.cpp",
+          "evaluation": "include/caffe/test/test_caffe_main.hpp",
+          "architecture": "include/caffe/common_layers.hpp",
+          "loss": "include/caffe/loss_layers.hpp",
+          "inference": "src/caffe/test/test_data/generate_sample_data.py"
+        },
+        "missing": []
+      },
+      "stars": 66,
+      "archived": false,
+      "license": "NOASSERTION",
+      "evidence": [
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1606.04797/urls",
+          "excerpt": "https://github.com/faustomilletari/3D-Caffe",
+          "locator": "flattened LaTeX line 211",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/faustomilletari/3D-Caffe",
+          "excerpt": "owner=faustomilletari (User)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network",
+      "url": "https://github.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network",
+      "relation": "DERIVED",
+      "confidence": "UNKNOWN",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 3,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 5397,
+      "archived": false,
+      "license": null,
+      "evidence": []
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "1 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
+  ]
+}

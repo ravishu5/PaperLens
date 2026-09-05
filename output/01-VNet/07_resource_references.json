@@ -1,0 +1,208 @@
+{
+  "uri": "paperlens://paper/1606.04797/references",
+  "paper_version": "1606.04797v1",
+  "count": 20,
+  "resolved_to_arxiv": 6,
+  "references": [
+    {
+      "bib_key": "litjens2014evaluation",
+      "title": null,
+      "authors": "Litjens, G., Toth, R., van de Ven, W., Hoeks, C., Kerkstra, S., van Ginneken, B., Vincent, G., Guillard, G., Birbeck, N., Zhang, J., et al.: Evaluation of prostate segmentation algorithms for mri: the promise12 challenge. Medical image analysis 18(2), 359--373 (2014)",
+      "year": 2014,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 5,
+      "uri": null
+    },
+    {
+      "bib_key": "ronneberger2015u",
+      "title": null,
+      "authors": "Ronneberger, O., Fischer, P., Brox, T.: U-net: Convolutional networks for biomedical image segmentation. In: Medical Image Computing and Computer-Assisted Intervention--MICCAI 2015, pp. 234--241. Springer (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "jia2014caffe",
+      "title": null,
+      "authors": "Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding. arXiv preprint arXiv:1408.5093 (2014)",
+      "year": 2014,
+      "arxiv_id": "1408.5093",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/1408.5093"
+    },
+    {
+      "bib_key": "long2015fully",
+      "title": null,
+      "authors": "Long, J., Shelhamer, E., Darrell, T.: Fully convolutional networks for semantic segmentation. In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. pp. 3431--3440 (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "noh2015learning",
+      "title": null,
+      "authors": "Noh, H., Hong, S., Han, B.: Learning deconvolution network for semantic segmentation. In: Proceedings of the IEEE International Conference on Computer Vision. pp. 1520--1528 (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "zeiler2014visualizing",
+      "title": null,
+      "authors": "Zeiler, M.D., Fergus, R.: Visualizing and understanding convolutional networks. In: Computer vision--ECCV 2014, pp. 818--833. Springer (2014)",
+      "year": 2014,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "zettinig2015multimodal",
+      "title": null,
+      "authors": "Zettinig, O., Shah, A., Hennersperger, C., Eiber, M., Kroll, C., K\\\"ubler, H., Maurer, T., Milletari, F., Rackerseder, J., zu Berge, C.S., et al.: Multimodal image-guided prostate fusion biopsy based on automatic deformable registration. International journal of computer assisted radiology and surgery 10(12), 1997--2007 (2015) thebibliography",
+      "year": 1997,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "bernard2015standardized",
+      "title": null,
+      "authors": "Bernard, O., Bosch, J., Heyde, B., Alessandrini, M., Barbosa, D., Camarasu-Pop, S., Cervenansky, F., Valette, S., Mirea, O., Bernier, M., et al.: Standardized evaluation system for left ventricular segmentation algorithms in 3d echocardiography. Medical Imaging, IEEE Transactions on (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "cha2016urinary",
+      "title": null,
+      "authors": "Cha, K.H., Hadjiiski, L., Samala, R.K., Chan, H.P., Caoili, E.M., Cohan, R.H.: Urinary bladder segmentation in ct urography using deep-learning convolutional neural network and level sets. Medical Physics 43(4), 1882--1896 (2016)",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "he2015deep",
+      "title": null,
+      "authors": "He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recognition. arXiv preprint arXiv:1512.03385 (2015)",
+      "year": 2015,
+      "arxiv_id": "1512.03385",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1512.03385"
+    },
+    {
+      "bib_key": "huyskens2009qualitative",
+      "title": null,
+      "authors": "Huyskens, D.P., Maingon, P., Vanuytsel, L., Remouchamps, V., Roques, T., Dubray, B., Haas, B., Kunz, P., Coradi, T., B\\\"uhlman, R., et al.: A qualitative and a quantitative analysis of an auto-segmentation module for prostate cancer. Radiotherapy and Oncology 90(3), 337--345 (2009)",
+      "year": 2009,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "kamnitsas2016efficient",
+      "title": null,
+      "authors": "Kamnitsas, K., Ledig, C., Newcombe, V.F., Simpson, J.P., Kane, A.D., Menon, D.K., Rueckert, D., Glocker, B.: Efficient multi-scale 3d cnn with fully connected crf for accurate brain lesion segmentation. arXiv preprint arXiv:1603.05959 (2016)",
+      "year": 2016,
+      "arxiv_id": "1603.05959",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1603.05959"
+    },
+    {
+      "bib_key": "milletari2016hough",
+      "title": null,
+      "authors": "Milletari, F., Ahmadi, S.A., Kroll, C., Plate, A., Rozanski, V., Maiostre, J., Levin, J., Dietrich, O., Ertl-Wagner, B., B\\\"otzel, K., et al.: Hough-cnn: Deep learning for segmentation of deep brain regions in mri and ultrasound. arXiv preprint arXiv:1601.07014 (2016)",
+      "year": 2016,
+      "arxiv_id": "1601.07014",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1601.07014"
+    },
+    {
+      "bib_key": "moradi2009augmenting",
+      "title": null,
+      "authors": "Moradi, M., Mousavi, P., Boag, A.H., Sauerbrei, E.E., Siemens, D.R., Abolmaesumi, P.: Augmenting detection of prostate cancer in transrectal ultrasound images using svm and rf time series. Biomedical Engineering, IEEE Transactions on 56(9), 2214--2224 (2009)",
+      "year": 2009,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "porter2003combining",
+      "title": null,
+      "authors": "Porter, C.R., Crawford, E.D.: Combining artificial neural networks and transrectal ultrasound in the diagnosis of prostate cancer. Oncology (Williston Park, NY) 17(10), 1395--9 (2003)",
+      "year": 2003,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "roehrborn1999serum",
+      "title": null,
+      "authors": "Roehrborn, C.G., Boyle, P., Bergner, D., Gray, T., Gittelman, M., Shown, T., Melman, A., Bracken, R.B., deVere White, R., Taylor, A., et al.: Serum prostate-specific antigen and prostate volume predict long-term changes in symptoms and flow rate: results of a four-year, randomized trial comparing finasteride versus placebo. Urology 54(4), 662--669 (1999)",
+      "year": 1999,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "simonyan2014very",
+      "title": null,
+      "authors": "Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 (2014)",
+      "year": 2014,
+      "arxiv_id": "1409.1556",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1409.1556"
+    },
+    {
+      "bib_key": "springenberg2014striving",
+      "title": null,
+      "authors": "Springenberg, J.T., Dosovitskiy, A., Brox, T., Riedmiller, M.: Striving for simplicity: The all convolutional net. arXiv preprint arXiv:1412.6806 (2014)",
+      "year": 2014,
+      "arxiv_id": "1412.6806",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1412.6806"
+    },
+    {
+      "bib_key": "tustison2010n4itk",
+      "title": null,
+      "authors": "Tustison, N.J., Avants, B.B., Cook, P.A., Zheng, Y., Egan, A., Yushkevich, P.A., Gee, J.C.: N4itk: improved n3 bias correction. Medical Imaging, IEEE Transactions on 29(6), 1310--1320 (2010)",
+      "year": 2010,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "imorp",
+      "title": null,
+      "authors": "Vincent, G., Guillard, G., Bowes, M.: Fully automatic segmentation of the prostate using active appearance models. MICCAI Grand Challenge PROMISE 2012 (2012)",
+      "year": 2012,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    }
+  ]
+}

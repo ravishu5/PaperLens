@@ -14,6 +14,7 @@ from typing import Any
 from mcp.server.mcpserver import MCPServer
 from mcp.server.caching import CacheHint
 
+from . import config
 from . import resources as res
 from .graph.store import Store
 from .code.indexer import index_repository as _index_repo
@@ -42,6 +43,8 @@ Every result carries evidence and a confidence of CONFIRMED, LIKELY, POSSIBLE or
 UNKNOWN. UNKNOWN is a normal answer and means exactly what it says; do not fill
 the gap with an assumption.
 """
+
+config.quiet_dependencies()
 
 mcp = MCPServer(
     name="paperlens",

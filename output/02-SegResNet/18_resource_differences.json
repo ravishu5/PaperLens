@@ -1,0 +1,28 @@
+{
+  "uri": "paperlens://difference/1810.11654/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "paper_version": "1810.11654v3",
+  "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "summary": {
+    "BLOCKING": 0,
+    "SIGNIFICANT": 0,
+    "MINOR": 2
+  },
+  "differences": [
+    {
+      "kind": "ARCHITECTURAL",
+      "paper_states": "ation on the convolutional kernel parameters with a weight of $1e-5$. We also use the spatial dropout with a rate of $0.2$ after the initial encoder convolution. We have experimented with other p",
+      "code_does": "No occurrence of dropout vocabulary in the repository.",
+      "difference": "The paper describes dropout, but nothing in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization appears to implement it.",
+      "severity": "MINOR",
+      "confidence": "LIKELY"
+    },
+    {
+      "kind": "TRAINING",
+      "paper_states": ", but did not find any additional accuracy improvements. \\subsection{Data preprocessing and augmentation} We normalize all input images to have zero mean and unit std (based on non-zero voxels only",
+      "code_does": "No occurrence of data augmentation vocabulary in the repository.",
+      "difference": "The paper describes data augmentation, but nothing in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization appears to implement it.",
+      "severity": "MINOR",
+      "confidence": "LIKELY"
+    }
+  ]
+}

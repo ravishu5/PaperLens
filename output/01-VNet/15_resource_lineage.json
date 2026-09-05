@@ -1,0 +1,132 @@
+{
+  "uri": "paperlens://lineage/1606.04797",
+  "paper_version": "1606.04797v1",
+  "edges": [
+    {
+      "from": "1606.04797",
+      "to": "1408.5093",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Our custom implementation of Caffe \\cite{jia2014caffe} processes 3D data by performing volumetric convolutions.",
+        "figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabled to perform volumetric convolutions via CuDNN v3."
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1408.5093",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Our custom implementation of Caffe \\cite{jia2014caffe} processes 3D data by performing volumetric convolutions.",
+        "figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabled to perform volumetric convolutions via CuDNN v3."
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1603.05959",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Post-processing approaches such as connected components analysis normally yield no improvement and therefore, more recent works, propose to use the network predictions in combination with Markov random fields \\cite{kamnitsas2016efficient}, voting strategies \\cite{milletari2016hough} or more traditional approaches such as level-sets \\cite{cha2016urinary}."
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1601.07014",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Post-processing approaches such as connected components analysis normally yield no improvement and therefore, more recent works, propose to use the network predictions in combination with Markov random fields \\cite{kamnitsas2016efficient}, voting strategies \\cite{milletari2016hough} or more traditional approaches such as level-sets \\cite{cha2016urinary}."
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1512.03385",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Similarly to the approach presented in \\cite{he2015deep}, we formulate each stage such that it learns a residual function: the input of each stage is (a) used in the convolutional layers and processed through the non-linearities and (b) added to the output of the last convolutional layer of that st"
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1409.1556",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In \\cite{noh2015learning} a pre-trained VGG network architecture \\cite{simonyan2014very} was used in conjunction with its mirrored, de-convolutional, equivalent to segment RGB images by leveraging the descriptive power of the features extracted by the innermost layer."
+      ]
+    },
+    {
+      "from": "1606.04797",
+      "to": "1412.6806",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "This strategy serves a similar purpose as pooling layers that, motivated by \\cite{springenberg2014striving} and other works discouraging the use of max-pooling operations in CNNs, have been replaced in our approach by convolutional ones."
+      ]
+    },
+    {
+      "from": "2102.06867",
+      "to": "1606.04797",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1805.04537",
+      "to": "1606.04797",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2306.12242",
+      "to": "1606.04797",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "unknown",
+      "to": "1606.04797",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

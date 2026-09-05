@@ -1,0 +1,15 @@
+{
+  "paper": "01-VNet",
+  "arxiv_id": "1606.04797",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "faustomilletari/VNet",
+  "counts": {
+    "sections": 8,
+    "equations": 2,
+    "algorithms": 0,
+    "stated_values": 1,
+    "declared_urls": 3,
+    "components": 7
+  }
+}

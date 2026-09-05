@@ -1,0 +1,75 @@
+{
+  "paper_version": "2103.04430v2",
+  "repo": "Rubics-Xuan/TransBTS",
+  "commit_sha": "7dcfc316baafafb557c9011078993bfdf74afac9",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 0,
+    "CONFIG_HIDDEN": 2
+  },
+  "gaps": [
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.8885.",
+      "where": "data/preprocess.py:73",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/file/data/preprocess.py",
+          "excerpt": "# 0.8885",
+          "locator": "data/preprocess.py:73",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2103.04430",
+          "excerpt": "none of 0.8885 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.8885"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.0002.",
+      "where": "train.py:75",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/file/train.py",
+          "excerpt": "parser.add_argument('--lr', default=0.0002, type=float)",
+          "locator": "train.py:75",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2103.04430",
+          "excerpt": "none of 0.0002 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.0002"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}

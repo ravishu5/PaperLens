@@ -1,0 +1,469 @@
+{
+  "paper_version": "1810.11654v3",
+  "uri": "paperlens://lineage/1810.11654",
+  "predecessors": [
+    {
+      "paper": "bib:Milletari16",
+      "title": null,
+      "year": 2016,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "Convolutional neural networks (CNN) are able to learn from examples and demonstrate state-of-the-art segmentation accuracy both in 2D natural images~\\cite{deeplabv3plus2018} and in 3D medical image modalities~\\cite{Milletari16}.",
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}.",
+        "3 terms: \\begin{equation} \\label{eq:loss} \\ensuremath{\\mathbf{L}} =\\ensuremath{\\mathbf{L}}_{dice} + 0.1*\\ensuremath{\\mathbf{L}}_{\\textsc{L2}} + 0.1*\\ensuremath{\\mathbf{L}}_{\\textsc{KL}} \\end{equation} $\\ensuremath{\\mathbf{L}}_{dice}$ is a soft dice loss~\\cite{Milletari16} applied to the decoder output $p_{pred}$ to match the segmentation mask $p_{true}$: \\begin{equation} \\label{eq:dice} \\ensuremath{\\mathbf{L}}_{dice} = \\frac{2*\\sum p_{true} * p_{pred} }{\\sum p_{true}^2 + \\sum p_{pred}^2 + \\epsilon}"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1802.02611",
+      "title": null,
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Convolutional neural networks (CNN) are able to learn from examples and demonstrate state-of-the-art segmentation accuracy both in 2D natural images~\\cite{deeplabv3plus2018} and in 3D medical image modalities~\\cite{Milletari16}.",
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1802.02611"
+    },
+    {
+      "paper": "bib:Isensee18brats",
+      "title": null,
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "This year, BraTS 2018 top performing submission (in addition to the current work) included Isensee et al.~\\cite{Isensee18brats} in the 2nd place, McKinly et al.~\\cite{McKinley18brats} and Zhou et al.~\\cite{Zhou18brats}, who shared the 3rd place.",
+        "Isensee et al.~\\cite{Isensee18brats} demonstrated that a generic U-net architecture with a few minor modifications is enough to achieve competitive performance."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:McKinley18brats",
+      "title": null,
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "This year, BraTS 2018 top performing submission (in addition to the current work) included Isensee et al.~\\cite{Isensee18brats} in the 2nd place, McKinly et al.~\\cite{McKinley18brats} and Zhou et al.~\\cite{Zhou18brats}, who shared the 3rd place.",
+        "McKinly et al.~\\cite{McKinley18brats} proposed a segmentation CNN in which a DenseNet~\\cite{huang2017densely} structure with dilated convolutions was embedded in U-net-like network."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:Zhou18brats",
+      "title": null,
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "This year, BraTS 2018 top performing submission (in addition to the current work) included Isensee et al.~\\cite{Isensee18brats} in the 2nd place, McKinly et al.~\\cite{McKinley18brats} and Zhou et al.~\\cite{Zhou18brats}, who shared the 3rd place.",
+        "Finally, Zhou et al.~\\cite{Zhou18brats} proposed to use an ensemble of different networks: taking into account multi-scale context information, segmenting 3 tumor subregions in cascade with a shared backbone weights and adding an attention block."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:Wang17",
+      "title": null,
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "\\section{Related work} \\label{sec:relatedwork} Last year, BraTS 2017, top performing submissions included Kamnitsas et al.~\\cite{Kamnitsas17} who proposed to ensemble several models for robust segmentation (EMMA), and Wang et al.~\\cite{Wang17} who proposed to segment tumor subregions in cascade using anisotropic convolutions.",
+        "Wang et al.~\\cite{Wang17} second place paper took a different approach, by training 3 networks for each tumor subregion in cascade, with each subsequent network taking the output of the previous network (cropped) as its input."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:Kamnitsas16",
+      "title": null,
+      "year": 2016,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "In particular, EMMA combined DeepMedic~\\cite{Kamnitsas16}, FCN~\\cite{Long15} and U-net~\\cite{Ronneberger15} models and ensembled their segmentation predictions.",
+        "We have tried several data post-processing techniques to fine tune the segmentation predictions with CRF~\\cite{Kamnitsas16}, but did not find it beneficial (it helped for some images, but made some other image segmentation results worse)."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:Ronneberger15",
+      "title": null,
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "In particular, EMMA combined DeepMedic~\\cite{Kamnitsas16}, FCN~\\cite{Long15} and U-net~\\cite{Ronneberger15} models and ensembled their segmentation predictions.",
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1811.02629",
+      "title": null,
+      "year": 2018,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Multimodal Brain Tumor Segmentation Challenge (BraTS) aims to evaluate state-of-the-art methods for the segmentation of brain tumors by providing a 3D MRI dataset with ground truth tumor segmentation labels annotated by physicians~\\cite{BratsAll2018,brats1,brats2,brats3,brats4}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1811.02629"
+    },
+    {
+      "paper": "bib:Wu18",
+      "title": null,
+      "year": 2018,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "For normalization, we use Group Normalization (GN)~\\cite{Wu18}, which shows better than BatchNorm performance when batch size is small (bath size of 1 in our case)."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:brats3",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Multimodal Brain Tumor Segmentation Challenge (BraTS) aims to evaluate state-of-the-art methods for the segmentation of brain tumors by providing a 3D MRI dataset with ground truth tumor segmentation labels annotated by physicians~\\cite{BratsAll2018,brats1,brats2,brats3,brats4}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:brats4",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Multimodal Brain Tumor Segmentation Challenge (BraTS) aims to evaluate state-of-the-art methods for the segmentation of brain tumors by providing a 3D MRI dataset with ground truth tumor segmentation labels annotated by physicians~\\cite{BratsAll2018,brats1,brats2,brats3,brats4}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:brats2",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Multimodal Brain Tumor Segmentation Challenge (BraTS) aims to evaluate state-of-the-art methods for the segmentation of brain tumors by providing a 3D MRI dataset with ground truth tumor segmentation labels annotated by physicians~\\cite{BratsAll2018,brats1,brats2,brats3,brats4}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:deeplabv3plus2017",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:he2017maskrcnn",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "successors": [
+    {
+      "paper": "2609.00447",
+      "title": "Instance-Guided Report Anchoring for Text-Free 3D Abnormality Segmentation in Chest CT",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2609.00447"
+    },
+    {
+      "paper": "2608.17926",
+      "title": "PerFact: Perception-Derived Fact Prompting for 3D Brain MRI Report Generation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "For non-tumor datasets, whose masks are binary rather than multi-region, we use a separate binary lesion segmenter per dataset, which avoids forcing the tumor label scheme onto stroke and white-matter disease (Myronenko 2018)."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.17926"
+    },
+    {
+      "paper": "2608.13807",
+      "title": "Label-Free Deep-Tissue Peripheral Nerve Detection with a Handheld Multimodal OCT Probe and NerveDetNet",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "The compared architectures were U-Net [24], U-Net++ [19], SegResNet [25], DeepLabV3+ [26], Attention U-Net [27], TransUNet-lite adapted from TransUNet [28], and NerveDetNet."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.13807"
+    },
+    {
+      "paper": "2608.05389",
+      "title": "Text-Guided Refinement of Multi-sequence Glioma Subregion Segmentation with a Vision-Language Foundation Model",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "\u2026Tumor Segmentation (BraTS) benchmark providing standardized subregion labels and common evaluation metrics [Menze et al., 2015, Bakas et al., 2018, Pereira et al., 2016, Havaei et al., 2017, Kamnitsas et al., 2017, Myronenko, 2018, Hatamizadeh et al., 2022, Tang et al., 2022, Liu et al., 2023]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.05389"
+    },
+    {
+      "paper": "2607.28858",
+      "title": "A Unified Benchmark of Deep Learning Models for Multi-task 3D Brain Tumor Segmentation from Magnetic Resonance Imaging",
+      "year": 2026,
+      "relation": "SUCCESSOR",
+      "confidence": "LIKELY",
+      "why": "Semantic Scholar marks the citation influential",
+      "contexts": [
+        "SegResNet [11] adopts an asymmetric encoder\u2013decoder architecture in which the encoder, composed of residual blocks with group normalization, is substantially deeper than the decoder.",
+        "Five representative models\u20143D U-Net [2], SegResNet [11], Swin UNETR [4], SegMamba [9], and SegMambaV2 [10]\u2014are trained and evaluated using the same preprocessing pipeline, optimization strategy, validation protocol, and inference procedure.",
+        "SegResNet [11] Residual Convolutional Asymmetric encoder\u2013decoder with residual blocks and an auxiliary variational auto-encoder branch for regularization."
+      ],
+      "citation_count": 0,
+      "is_influential": true,
+      "intents": [],
+      "uri": "paperlens://paper/2607.28858"
+    },
+    {
+      "paper": "2607.26829",
+      "title": "BATS: Resource-Efficient Volumetric Segmentation with Boundary-Aware Mixed-Resolution Tokens",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.26829"
+    },
+    {
+      "paper": "2607.22139",
+      "title": "CARDIAG: A Dense Segment Classification Benchmark of Deep Learning Architectures for Coronary Angiography",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "In the study we identify four groups of architectures and associated inductive biases: (1) Standard CNNs including U-Net [31], Attention U-Net [32]s, SegResNet [33], nnUNet [34], PSP-Net [35], FPN [36], UPerNet [37], DeepLabV3 [38] and DeepLabV3+ [39]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.22139"
+    },
+    {
+      "paper": "2607.22727",
+      "title": "Trustworthy Medical Segmentation: Uncertainty-Aware U-Net Evaluation Under Clinical Image Degradation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Myronenko demonstrated that a well-regularized U-Net with deep supervision and region-specific loss weighting achieves competitive BraTS performance without complex architectural modifications [16]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.22727"
+    },
+    {
+      "paper": "2607.12602",
+      "title": "Decouple and Reason: Anatomically Guided Two-Stage Voxel-Level Grounding of Free-Text Findings in 3D Chest CT",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.12602"
+    },
+    {
+      "paper": "2607.00201",
+      "title": "Trust the Prior (or Not): Uncertainty-Aware Abdominal Aortic Aneurysm Segmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.00201"
+    },
+    {
+      "paper": "2606.30108",
+      "title": "LETT-NeXt: A Lightweight RECIST-Guided Model for 3D CT Lesion Segmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "3D variants such as SegResNet [18] extend this family to volumetric segmentation, while nnU-Net [10] showed the importance of adapting preprocessing, training, inference, and postprocessing to each dataset."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2606.30108"
+    },
+    {
+      "paper": "2606.29102",
+      "title": "BTI-Net: Bidirectional Decoder-Level Task Interaction via Uncertainty-Aware Gating for Multi-Task Medical Image Analysis",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Joint segmentation and classification has been widely studied for ultrasound [9, 13], dermoscopy [26], and brain MRI [16]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2606.29102"
+    },
+    {
+      "paper": "2606.19300",
+      "title": "Confidence is Not Reliability: Rethinking MC Dropout in Brain Tumour Segmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Segmentation Models The primary segmentation model was a pretrained 3D SegResNet [15] sourced from the MONAI [5] model zoo bundle brats_mri_segmentation v0.",
+        "We address these questions through a two-model case study empirically evaluating MC Dropout on a high-performing pretrained SegResNet [15] and a locally trained UNet-Res [5], assessed on 126 patients from the BraTS21 dataset [2]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2606.19300"
+    },
+    {
+      "paper": "2606.15305",
+      "title": "CoMNet: A MedNeXt-CorrDiff Framework for Multi-Site Brain Tumor Segmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "SegResNet follows the same general multi-resolution structure but incorporates residual blocks to improve gradient flow and feature reuse in deeper networks 23 ."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2606.15305"
+    },
+    {
+      "paper": "2606.08421",
+      "title": "Segmentation-Assisted Brain MRI Synthesis with Cross-Image Multi-Contrast Feature Memory Bank Retrieval Augmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "In particular, T2w is sensitive to edema, while T1ce better highlights enhancing lesions and necrotic components [15]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2606.08421"
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 15
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

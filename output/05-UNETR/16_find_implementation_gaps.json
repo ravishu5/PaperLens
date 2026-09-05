@@ -1,0 +1,15 @@
+{
+  "paper_version": "2103.10504v3",
+  "repo": "mkara44/unetr_pytorch",
+  "commit_sha": "538c8aa586936cb86d72fb1c94d710365b10e35e",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 0,
+    "CONFIG_HIDDEN": 0
+  },
+  "gaps": [],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source.",
+    "No gaps were established by these checks. That is not a claim that none exist."
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "uri": "paperlens://mapping/1810.11654/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "paper_version": "1810.11654v3",
+  "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "summary": {
+    "MATCHED": 1,
+    "ABSENT": 0,
+    "AMBIGUOUS": 6,
+    "UNKNOWN": 6
+  },
+  "mappings": [
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:decoder",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:decoder",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Decoder' matches 1/1 of its name tokens against ndv/modules/model.py::Decoder#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1810.11654/component/decoder",
+          "excerpt": "Decoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3ADecoder%23class",
+          "excerpt": "class Decoder(nn.Module)",
+          "locator": "ndv/modules/model.py:95",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:decoder-part",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:decoder-part",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Decoder part' matches 1/2 of its name tokens against ndv/modules/model.py::Decoder#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1810.11654/component/decoder-part",
+          "excerpt": "Decoder part (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:encoder",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:encoder",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Encoder' matches 1/1 of its name tokens against ndv/modules/model.py::Encoder#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1810.11654/component/encoder",
+          "excerpt": "Encoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3AEncoder%23class",
+          "excerpt": "class Encoder(nn.Module)",
+          "locator": "ndv/modules/model.py:51",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:encoder-part",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:encoder-part",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Encoder part' matches 1/2 of its name tokens against ndv/modules/model.py::Encoder#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1810.11654/component/encoder-part",
+          "excerpt": "Encoder part (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:loss",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:loss",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Loss' matches 1/1 of its name tokens against ndv/modules/model.py::SoftDiceLoss#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1810.11654/component/loss",
+          "excerpt": "Loss (loss)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3ASoftDiceLoss%23class",
+          "excerpt": "class SoftDiceLoss(nn.Module)",
+          "locator": "ndv/modules/model.py:188",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|stated_value|1810.11654v3:val:2",
+      "anchor_kind": "stated_value",
+      "anchor_id": "1810.11654v3:val:2",
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "10 is too common a value for an exact match to be evidence",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|stated_value|1810.11654v3:val:1",
+      "anchor_kind": "stated_value",
+      "anchor_id": "1810.11654v3:val:1",
+      "status": "MATCHED",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the paper states alpha_0 = 1e-4 and the identical literal appears at ndv/modules/model.py:227",
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/1810.11654/values",
+          "excerpt": "alpha_0 = 1e-4",
+          "locator": "LaTeX line 134",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/file/ndv/modules/model.py",
+          "excerpt": "lr = 1e-4",
+          "locator": "ndv/modules/model.py:227",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:data-preprocessing-and-augmentation",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:data-preprocessing-and-augmentation",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Data Preprocessing and Augmentation' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:optimization",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:optimization",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Optimization' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:results",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:results",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Results' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|component|1810.11654v3:comp:variational-autoencoder-branch",
+      "anchor_kind": "component",
+      "anchor_id": "1810.11654v3:comp:variational-autoencoder-branch",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Variational Autoencoder Branch' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|stated_value|1810.11654v3:val:0",
+      "anchor_kind": "stated_value",
+      "anchor_id": "1810.11654v3:val:0",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "'bath size' is a prose phrase rather than a named quantity, so no claim about the code follows from it",
+      "evidence": []
+    },
+    {
+      "id": "1810.11654v3|sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization@9763a7f7e40c229d6e40fa296e33172dd583b2d5|stated_value|1810.11654v3:val:3",
+      "anchor_kind": "stated_value",
+      "anchor_id": "1810.11654v3:val:3",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "'hline\\n\\t\\tEnsemble' is a prose phrase rather than a named quantity, so no claim about the code follows from it",
+      "evidence": []
+    }
+  ]
+}

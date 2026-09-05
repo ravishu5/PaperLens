@@ -1,0 +1,38 @@
+{
+  "uri": "paperlens://paper/1810.11654/values",
+  "paper_version": "1810.11654v3",
+  "values": [
+    {
+      "symbol": "bath size",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "1810.11654v3:sec:3.1",
+      "src_line": 70,
+      "context": "onsists of two convolutions with normalization and ReLU, followed by additive identity skip connection. For normalization, we use Group Normalization (GN)~\\cite{Wu18}, which shows better than BatchNorm performance when batch size is small (bath size of 1 in our case). We follow a common CNN approach to progressively downsize image dimensions by 2 and simultaneously increase feature size by 2. For downsizing we use strided convolutions. All convolutions are 3x3x3 with init"
+    },
+    {
+      "symbol": "alpha_0",
+      "value": "1e-4",
+      "numeric": 0.0001,
+      "section": "1810.11654v3:sec:3.5",
+      "src_line": 134,
+      "context": "\\subsection{Optimization} We use Adam optimizer with initial learning rate of $ \\alpha_{0} = 1e-4$ and progressively decrease it according to: \\begin{equation} \\label{eq:learningrate} \\alpha = \\alpha_{0} *\\left(1-\\frac{e}{N_{e}}\\right)^{0.9} \\end{equation} where $e$ is an epoch counter, and $N_{e}$ is a total numb"
+    },
+    {
+      "symbol": "Ensemble",
+      "value": "10",
+      "numeric": 10.0,
+      "section": "1810.11654v3:sec:4",
+      "src_line": 181,
+      "context": "Hausdorff (mm)} \\\\ \\hline Validation dataset & ET & WT & TC & ET & WT & TC \\\\ \\hline Single Model & 0.8145 & 0.9042 & 0.8596 & 3.8048 & 4.4834 & 8.2777 \\\\ Single Model + TTA & 0.8173 & 0.9068 & 0.8602 & 3.8241 & 4.4117 & 6.8413 \\\\ Ensemble of 10 models & 0.8233 & 0.9100 & 0.8668 & 3.9257 & 4.5160 & 6.8545 \\\\ \\hline \\end{tabular} \\end{table}"
+    },
+    {
+      "symbol": "hline\n\t\tEnsemble",
+      "value": "10",
+      "numeric": 10.0,
+      "section": "1810.11654v3:sec:4",
+      "src_line": 195,
+      "context": "core, WT - whole tumor, TC - tumor core.} \\label{tab:testresults} \\begin{tabular}{l|c|c|c|c|c|c} \\hline & \\multicolumn{3}{c|}{Dice} & \\multicolumn{3}{c}{Hausdorff (mm)} \\\\ \\hline Testing dataset & ET & WT & TC & ET & WT & TC \\\\ \\hline Ensemble of 10 models & 0.7664 & 0.8839 & 0.8154 & 3.7731 & 5.9044 & 4.8091 \\\\"
+    }
+  ]
+}

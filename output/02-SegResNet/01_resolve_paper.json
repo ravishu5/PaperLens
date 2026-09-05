@@ -1,0 +1,14 @@
+{
+  "candidates": [
+    {
+      "arxiv_id": "1810.11654",
+      "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+      "authors": [
+        "Andriy Myronenko"
+      ],
+      "published_at": "2018-10-27T14:42:13Z",
+      "confidence": "CONFIRMED",
+      "why": "explicit arXiv identifier"
+    }
+  ]
+}

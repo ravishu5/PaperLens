@@ -1,0 +1,444 @@
+{
+  "paper_version": "1606.04797v1",
+  "uri": "paperlens://lineage/1606.04797",
+  "predecessors": [
+    {
+      "paper": "bib:litjens2014evaluation",
+      "title": null,
+      "year": 2014,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 5 time(s) in the paper's own text",
+      "contexts": [
+        "This data is part of the PROMISE2012 challenge dataset \\cite{litjens2014evaluation}.} \\label{fig:anatomies} \\end{figure} Segmentation is a highly relevant task in medical image analysis.",
+        "\\section{Results} \\label{sec:results} \\begin{figure} \\centering \\includegraphics[scale=0.18]{qualitativeResults.pdf} \\caption{Qualitative results on the PROMISE 2012 dataset \\cite{litjens2014evaluation}.} \\label{fig:qualitative} \\end{figure} We trained our method on $50$ MRI volumes, and the relative manual ground truth annotation, obtained from the \"PROMISE2012\" challenge dataset \\cite{litjens2014evaluation}.",
+        "{Qualitative results on the PROMISE 2012 dataset \\cite{litjens2014evaluation}.} \\label{fig:qualitative} \\end{figure} We trained our method on $50$ MRI volumes, and the relative manual ground truth annotation, obtained from the \"PROMISE2012\" challenge dataset \\cite{litjens2014evaluation}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:ronneberger2015u",
+      "title": null,
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+        "In \\cite{long2015fully} three fully convolutional deep neural networks, pre-trained on a classification task, were refined to produce segmentations while in \\cite{ronneberger2015u} a brand new CNN model, especially tailored to tackle biomedical image analysis problems in 2D, was proposed.",
+        "Conversely, de-convolutions increase the data size by projecting each input voxel to a bigger region through the kernel.} \\label{fig:updown} \\end{figure} Similarly to \\cite{ronneberger2015u}, we forward the features extracted from early stages of the left part of the CNN to the right part."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:long2015fully",
+      "title": null,
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+        "In \\cite{long2015fully} three fully convolutional deep neural networks, pre-trained on a classification task, were refined to produce segmentations while in \\cite{ronneberger2015u} a brand new CNN model, especially tailored to tackle biomedical image analysis pro"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:noh2015learning",
+      "title": null,
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Fully convolutional network trained end-to-end were so far applied only to 2D images both in computer vision \\cite{noh2015learning,long2015fully} and microscopy image analysis \\cite{ronneberger2015u}.",
+        "In \\cite{noh2015learning} a pre-trained VGG network architecture \\cite{simonyan2014very} was used in conjunction with its mirrored, de-convolutional, equivalent to segment RGB images by leveraging the descriptive power of the features extracted by the innermost l"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1408.5093",
+      "title": null,
+      "year": 2014,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Our custom implementation of Caffe \\cite{jia2014caffe} processes 3D data by performing volumetric convolutions.",
+        "figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabled to perform volumetric convolutions via CuDNN v3."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1408.5093"
+    },
+    {
+      "paper": "bib:zeiler2014visualizing",
+      "title": null,
+      "year": 2014,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Shallower layers grasp local information while deeper layers use filters whose receptive fields are much broader that therefore capture global information \\cite{zeiler2014visualizing}.",
+        "ing on the specific implementation, can have a smaller memory footprint during training, due to the fact that no switches mapping the output of pooling layers back to their inputs are needed for back-propagation, and that can be better understood and analysed \\cite{zeiler2014visualizing} by applying only de-convolutions instead of un-pooling operations."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:zettinig2015multimodal",
+      "title": null,
+      "year": 1997,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Automatic delineation of organs and structures of interest is often necessary to perform tasks such as visual augmentation \\cite{moradi2009augmenting}, computer assisted diagnosis \\cite{porter2003combining}, interventions \\cite{zettinig2015multimodal} and extraction of quantitative indices from images \\cite{bernard2015standardized}.",
+        "nevertheless an important task having clinical relevance both during diagnosis, where the volume of the prostate needs to be assessed \\cite{roehrborn1999serum}, and during treatment planning, where the estimate of the anatomical boundary needs to be accurate \\cite{huyskens2009qualitative,zettinig2015multimodal}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:cha2016urinary",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "eld no improvement and therefore, more recent works, propose to use the network predictions in combination with Markov random fields \\cite{kamnitsas2016efficient}, voting strategies \\cite{milletari2016hough} or more traditional approaches such as level-sets \\cite{cha2016urinary}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1603.05959",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Post-processing approaches such as connected components analysis normally yield no improvement and therefore, more recent works, propose to use the network predictions in combination with Markov random fields \\cite{kamnitsas2016efficient}, voting strategies \\cite{milletari2016hough} or more traditional approaches such as level-sets \\cite{cha2016urinary}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1603.05959"
+    },
+    {
+      "paper": "1601.07014",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Post-processing approaches such as connected components analysis normally yield no improvement and therefore, more recent works, propose to use the network predictions in combination with Markov random fields \\cite{kamnitsas2016efficient}, voting strategies \\cite{milletari2016hough} or more traditional approaches such as level-sets \\cite{cha2016urinary}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1601.07014"
+    },
+    {
+      "paper": "bib:bernard2015standardized",
+      "title": null,
+      "year": 2015,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "res of interest is often necessary to perform tasks such as visual augmentation \\cite{moradi2009augmenting}, computer assisted diagnosis \\cite{porter2003combining}, interventions \\cite{zettinig2015multimodal} and extraction of quantitative indices from images \\cite{bernard2015standardized}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1512.03385",
+      "title": null,
+      "year": 2015,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Similarly to the approach presented in \\cite{he2015deep}, we formulate each stage such that it learns a residual function: the input of each stage is (a) used in the convolutional layers and processed through the non-linearities and (b) added to the output of the last convolutional layer of that st"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1512.03385"
+    },
+    {
+      "paper": "1409.1556",
+      "title": null,
+      "year": 2014,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "In \\cite{noh2015learning} a pre-trained VGG network architecture \\cite{simonyan2014very} was used in conjunction with its mirrored, de-convolutional, equivalent to segment RGB images by leveraging the descriptive power of the features extracted by the innermost layer."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1409.1556"
+    },
+    {
+      "paper": "1412.6806",
+      "title": null,
+      "year": 2014,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "This strategy serves a similar purpose as pooling layers that, motivated by \\cite{springenberg2014striving} and other works discouraging the use of max-pooling operations in CNNs, have been replaced in our approach by convolutional ones."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1412.6806"
+    },
+    {
+      "paper": "bib:imorp",
+      "title": null,
+      "year": 2012,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "logistic loss & $0.739 \\pm 0.088 $ & $10.55 \\pm 5.38$ mm & $63.30$\\tabularnewline \\hline Imorphics \\cite{imorp} & $0.879 \\pm 0.044$ & $5.935 \\pm 2.14 $ mm & $84.36$\\tabularnewline \\hline ScrAutoProstate & $0.874 \\pm 0.036$ & $5.58 \\pm 1.49 $ mm & $83.49$ \\tabularnewline \\hline SBIA & $0.835 \\pm 0.055$ & $7.73 \\pm 2.68 $ mm & $78.33$ \\tabularnewline \\hline G"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "successors": [
+    {
+      "paper": "unknown",
+      "title": "Camouflaged Object Detection with Feature Decomposition and Edge Reconstruction",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 372,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Lightweight Remote Sensing Change Detection With Progressive Feature Aggregation and Supervised Attention",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 187,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Asymmetric Cross-Attention Hierarchical Network Based on CNN and Transformer for Bitemporal Remote Sensing Images Change Detection",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 131,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Transclaw U-Net: Claw U-Net With Transformers for Medical Image Segmentation",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 100,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "End-to-End Vectorized HD-map Construction with Piecewise B\u00e9zier Curve",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 97,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2102.06867",
+      "title": "CPP-Net: Context-Aware Polygon Proposal Network for Nucleus Segmentation",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 88,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2102.06867"
+    },
+    {
+      "paper": "unknown",
+      "title": "A Convolutional-Transformer Network for Crack Segmentation with Boundary Awareness",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 82,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "CMLFormer: CNN and Multiscale Local-Context Transformer Network for Remote Sensing Images Semantic Segmentation",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 80,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Few-shot Medical Image Segmentation with Cycle-resemblance Attention",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 79,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Multimodal Brain Tumor Segmentation Boosted by Monomodal Normal Brain Images",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 67,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "SCUNet++: Swin-UNet and CNN Bottleneck Hybrid Architecture with Multi-Fusion Dense Skip Connection for Pulmonary Embolism CT Image Segmentation*",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 61,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "UPL-SFDA: Uncertainty-Aware Pseudo Label Guided Source-Free Domain Adaptation for Medical Image Segmentation",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 60,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "FreMIM: Fourier Transform Meets Masked Image Modeling for Medical Image Segmentation",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 58,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Fuzzy Attention Neural Network to Tackle Discontinuity in Airway Segmentation",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 58,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Semi-Supervised Medical Image Segmentation Using Cross-Style Consistency With Shape-Aware and Local Context Constraints",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 57,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 15
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "paper_version": "1810.11654v3",
+  "uri": "paperlens://paper/1810.11654/implementations",
+  "candidates": [
+    {
+      "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+      "url": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+      "relation": "REPRODUCTION",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README cites arXiv:1810.11654; repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.2,
+        "matched": {
+          "architecture": "ndv/modules/model.py"
+        },
+        "missing": [
+          "evaluation",
+          "loss",
+          "optimizer",
+          "preprocessing"
+        ]
+      },
+      "stars": 45,
+      "archived": false,
+      "license": "GPL-3.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization#readme",
+          "excerpt": "README references arXiv:1810.11654",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the optimizer component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "optimizer"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the preprocessing component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "preprocessing"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+      "url": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README cites arXiv:1810.11654; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.2,
+        "matched": {
+          "architecture": "model.py"
+        },
+        "missing": [
+          "evaluation",
+          "loss",
+          "optimizer",
+          "preprocessing"
+        ]
+      },
+      "stars": 376,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization#readme",
+          "excerpt": "README references arXiv:1810.11654",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the optimizer component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "optimizer"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the preprocessing component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "preprocessing"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "mfaizan-ai/Brain-Tumors-Segmentation",
+      "url": "https://github.com/mfaizan-ai/Brain-Tumors-Segmentation",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README quotes the paper title",
+      "rank": 3,
+      "name_match": false,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "architecture": "networks/models/E_CATBraTS/model.py",
+          "evaluation": "BTCV/test.py",
+          "loss": "networks/models/unetr_pp/training/loss_functions/TopK_loss.py",
+          "optimizer": "BTCV/optimizers/lr_scheduler.py",
+          "preprocessing": "networks/models/unetr_pp/experiment_planning/nnFormer_plan_and_preprocess.py"
+        },
+        "missing": []
+      },
+      "stars": 102,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/mfaizan-ai/Brain-Tumors-Segmentation#readme",
+          "excerpt": null,
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "jongcye/CollaGAN_MRI",
+      "url": "https://github.com/jongcye/CollaGAN_MRI",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README cites arXiv:1810.11654",
+      "rank": 4,
+      "name_match": false,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.0,
+        "matched": {},
+        "missing": [
+          "architecture",
+          "evaluation",
+          "loss",
+          "optimizer",
+          "preprocessing"
+        ]
+      },
+      "stars": 28,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI#readme",
+          "excerpt": "README references arXiv:1810.11654",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the optimizer component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "optimizer"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the preprocessing component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "preprocessing"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "JunMa11/SOTA-MedSeg",
+      "url": "https://github.com/JunMa11/SOTA-MedSeg",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 5,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 1677,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/JunMa11/SOTA-MedSeg#readme",
+          "excerpt": "README references arXiv:1810.11654",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "ZhihuaLiuEd/SoTA-Brain-Tumor-Segmentation",
+      "url": "https://github.com/ZhihuaLiuEd/SoTA-Brain-Tumor-Segmentation",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 6,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 27,
+      "archived": true,
+      "license": "GPL-3.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/ZhihuaLiuEd/SoTA-Brain-Tumor-Segmentation#readme",
+          "excerpt": null,
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "No official implementation was established. The paper declares no repository URL, so these candidates come from searching GitHub for the title -- treat them as third-party until verified.",
+    "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
+  ]
+}

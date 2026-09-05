@@ -1,0 +1,402 @@
+{
+  "paper_version": "2103.04430v2",
+  "repo": "Rubics-Xuan/TransBTS",
+  "commit_sha": "7dcfc316baafafb557c9011078993bfdf74afac9",
+  "uri": "paperlens://mapping/2103.04430/Rubics-Xuan/TransBTS",
+  "summary": {
+    "MATCHED": 0,
+    "ABSENT": 1,
+    "AMBIGUOUS": 10,
+    "UNKNOWN": 5
+  },
+  "mappings": [
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:0",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "stride = 2",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "2 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "data/BraTS.py:38",
+        "data/BraTS.py:39",
+        "data/BraTS.py:76",
+        "data/BraTS.py:98"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:1",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "K = 128",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 128 appears 20 times; no single site is identifiable",
+      "symbol_uri": null,
+      "candidates": [
+        "data/BraTS.py:48",
+        "data/BraTS.py:49",
+        "data/BraTS.py:50",
+        "data/BraTS.py:52"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:2",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "d = 512",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "this reads as a reported result rather than a hyperparameter, so its absence from source would not be meaningful",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:3",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "rate = 0.0004",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "ABSENT",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 0.0004 does not appear anywhere in the repository",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS",
+          "excerpt": "literal '0.0004' not found in source",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": "absent:10bc9c887b86",
+            "method": "literal_search"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:4",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "OS = 16",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 16 appears 18 times; no single site is identifiable",
+      "symbol_uri": null,
+      "candidates": [
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:74",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:195",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:196",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:198"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:5",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "OS = 8",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 8 appears 18 times; no single site is identifiable",
+      "symbol_uri": null,
+      "candidates": [
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:99",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:192",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:193",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:195"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|stated_value|2103.04430v2:val:6",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "L = 4",
+        "uri": "paperlens://paper/2103.04430/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "4 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "data/preprocess.py:52",
+        "data/preprocess.py:68",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:74",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py:86"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:method",
+      "anchor": {
+        "kind": "component",
+        "label": "Method",
+        "uri": "paperlens://paper/2103.04430/component/method"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Method' matches 1/1 of its name tokens against data/BraTS.py::BraTS.__getitem__#method",
+      "symbol_uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/data%2FBraTS.py%3A%3ABraTS.__getitem__%23method",
+      "candidates": [
+        "data/BraTS.py::BraTS.__getitem__#method",
+        "data/BraTS.py::BraTS.__init__#method",
+        "data/BraTS.py::BraTS.__len__#method",
+        "data/BraTS.py::BraTS.collate#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.04430/component/method",
+          "excerpt": "Method (module)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/data%2FBraTS.py%3A%3ABraTS.__getitem__%23method",
+          "excerpt": "def __getitem__(self, item)",
+          "locator": "data/BraTS.py:147",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:overall-architecture-of-transbts",
+      "anchor": {
+        "kind": "component",
+        "label": "Overall Architecture of TransBTS",
+        "uri": "paperlens://paper/2103.04430/component/overall-architecture-of-transbts"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Overall Architecture of TransBTS' is a section heading rather than a named method component, so its absence from code is not informative",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:experiments",
+      "anchor": {
+        "kind": "component",
+        "label": "Experiments",
+        "uri": "paperlens://paper/2103.04430/component/experiments"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Experiments' is a section heading rather than a named method component, so its absence from code is not informative",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:main-results",
+      "anchor": {
+        "kind": "component",
+        "label": "Main Results",
+        "uri": "paperlens://paper/2103.04430/component/main-results"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Main Results' matches 1/2 of its name tokens against test.py::main#function",
+      "symbol_uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/test.py%3A%3Amain%23function",
+      "candidates": [
+        "test.py::main#function",
+        "train.py::main_worker#function",
+        "predict.py::validate_softmax#function"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.04430/component/main-results",
+          "excerpt": "Main Results (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/test.py%3A%3Amain%23function",
+          "excerpt": "def main()",
+          "locator": "test.py:68",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:model-complexity",
+      "anchor": {
+        "kind": "component",
+        "label": "Model Complexity",
+        "uri": "paperlens://paper/2103.04430/component/model-complexity"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Model Complexity' matches 1/2 of its name tokens against models/TransBTS/Transformer.py::TransformerModel#class",
+      "symbol_uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FTransformer.py%3A%3ATransformerModel%23class",
+      "candidates": [
+        "models/TransBTS/Transformer.py::TransformerModel#class",
+        "predict.py::tailor_and_concat#function",
+        "predict.py::validate_softmax#function"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.04430/component/model-complexity",
+          "excerpt": "Model Complexity (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FTransformer.py%3A%3ATransformerModel%23class",
+          "excerpt": "class TransformerModel(nn.Module)",
+          "locator": "models/TransBTS/Transformer.py:87",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:ablation-study",
+      "anchor": {
+        "kind": "component",
+        "label": "Ablation Study",
+        "uri": "paperlens://paper/2103.04430/component/ablation-study"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Ablation Study' is a section heading rather than a named method component, so its absence from code is not informative",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:overall-architecture",
+      "anchor": {
+        "kind": "component",
+        "label": "Overall Architecture",
+        "uri": "paperlens://paper/2103.04430/component/overall-architecture"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Overall Architecture' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:network-encoder",
+      "anchor": {
+        "kind": "component",
+        "label": "Network Encoder",
+        "uri": "paperlens://paper/2103.04430/component/network-encoder"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Network Encoder' matches 1/2 of its name tokens against models/TransBTS/PositionalEncoding.py::FixedPositionalEncoding#class",
+      "symbol_uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FPositionalEncoding.py%3A%3AFixedPositionalEncoding%23class",
+      "candidates": [
+        "models/TransBTS/PositionalEncoding.py::FixedPositionalEncoding#class",
+        "models/TransBTS/PositionalEncoding.py::LearnedPositionalEncoding#class",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py::TransformerBTS.encode#method",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py::BTS.__init__#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.04430/component/network-encoder",
+          "excerpt": "Network Encoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FPositionalEncoding.py%3A%3AFixedPositionalEncoding%23class",
+          "excerpt": "class FixedPositionalEncoding(nn.Module)",
+          "locator": "models/TransBTS/PositionalEncoding.py:4",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2103.04430v2|Rubics-Xuan/TransBTS@7dcfc316baafafb557c9011078993bfdf74afac9|component|2103.04430v2:comp:network-decoder",
+      "anchor": {
+        "kind": "component",
+        "label": "Network Decoder",
+        "uri": "paperlens://paper/2103.04430/component/network-decoder"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Network Decoder' matches 1/2 of its name tokens against models/TransBTS/TransBTS_downsample8x_skipconnection.py::BTS.decode#method",
+      "symbol_uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FTransBTS_downsample8x_skipconnection.py%3A%3ABTS.decode%23method",
+      "candidates": [
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py::BTS.decode#method",
+        "models/TransBTS/TransBTS_downsample8x_skipconnection.py::TransformerBTS.decode#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.04430/component/network-decoder",
+          "excerpt": "Network Decoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/Rubics-Xuan/TransBTS/symbol/models%2FTransBTS%2FTransBTS_downsample8x_skipconnection.py%3A%3ABTS.decode%23method",
+          "excerpt": "def decode(self, x1_1, x2_1, x3_1, x, intmd_x, intmd_layers=[1, 2, 3, 4])",
+          "locator": "models/TransBTS/TransBTS_downsample8x_skipconnection.py:204",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Nothing in this paper could be located in this repository. That is the expected result when the repository does not implement the paper.",
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components.",
+    "1 anchor(s) are established as absent from this repository, with citable evidence: rate = 0.0004."
+  ]
+}

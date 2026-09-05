@@ -1,0 +1,36 @@
+{
+  "uri": "paperlens://paper/1606.04797/urls",
+  "paper_version": "1606.04797v1",
+  "urls": [
+    {
+      "url": "http://promise12.grand-challenge.org/results/",
+      "host": "promise12.grand-challenge.org",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false,
+      "section": "1606.04797v1:sec:1",
+      "src_line": 76,
+      "context": "that we optimise during training. We demonstrate fast and accurate results on prostate MRI test volumes and we provide direct comparison with other methods which were evaluated on the same test data \\footnote{Detailed results available on \\url{http://promise12.grand-challenge.org/results/}}. \\section{Method} \\label{sec:method} \\begin{figure} \\centering \\includegraphics[scale=0.26]{architecture.pdf} \\caption{Schematic representation of our network architecture. Our custom"
+    },
+    {
+      "url": "https://github.com/faustomilletari/VNet",
+      "host": "github.com",
+      "owner": "faustomilletari",
+      "repo": "VNet",
+      "in_abstract": false,
+      "section": "1606.04797v1:sec:4",
+      "src_line": 211,
+      "context": "ive comparison between the results obtained using the Dice coefficient based loss (green) and re-weighted soft-max with loss (yellow).} \\label{fig:qualitativecomparison} \\end{figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabl"
+    },
+    {
+      "url": "https://github.com/faustomilletari/3D-Caffe",
+      "host": "github.com",
+      "owner": "faustomilletari",
+      "repo": "3D-Caffe",
+      "in_abstract": false,
+      "section": "1606.04797v1:sec:4",
+      "src_line": 211,
+      "context": "ig:qualitativecomparison} \\end{figure} Our implementation\\footnote{Implementation available at \\url{https://github.com/faustomilletari/VNet}} was realised in python, using a custom version of the Caffe\\footnote{Implementation available at \\url{https://github.com/faustomilletari/3D-Caffe}} \\cite{jia2014caffe} framework which was enabled to perform volumetric convolutions via CuDNN v3. All the trainings and experiments were ran on a standard workstation equipped with $64$ GB o"
+    }
+  ]
+}

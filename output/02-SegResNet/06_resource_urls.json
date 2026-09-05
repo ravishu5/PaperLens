@@ -1,0 +1,16 @@
+{
+  "uri": "paperlens://paper/1810.11654/urls",
+  "paper_version": "1810.11654v3",
+  "urls": [
+    {
+      "url": "https://www.cbica.upenn.edu/BraTS18/lboardValidation.html",
+      "host": "www.cbica.upenn.edu",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false,
+      "section": "1810.11654v3:sec:4",
+      "src_line": 166,
+      "context": "ormance. Table~\\ref{tab:valid} shows the results of our model on the BraTS 2018 validation dataset. At the time of initial short paper submission (Jul 13, 2018), our dice accuracy performance was second best (team name NVDLMED\\footnote{https://www.cbica.upenn.edu/BraTS18/lboardValidation.html}) for all of the 3 segmentation labels (ET, WT, TC). The TTA only marginally improved the performance, but the ensemble of 10 models resulted in ~1\\% improvement, which is consiste"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 """Mapper heuristics that decide whether a claim can be made at all."""
-from paperlens.correlate.mapper import (_distinctive, _is_named_quantity,
-                                        _looks_like_result, _stem, _tokens)
+from paperlens.correlate.mapper import (_GENERIC, _distinctive,
+                                        _is_named_quantity, _looks_like_result,
+                                        _stem, _tokens)
 
 
 def test_common_values_carry_no_information():
@@ -28,12 +29,28 @@ def test_prose_phrases_are_not_named_quantities():
     assert not _is_named_quantity(None)
 
 
+def test_hyphenated_names_yield_their_joined_form():
+    """"V-Net" tokenises to "net" alone, which is useless; the code calls it
+    VNet."""
+    assert "vnet" in _tokens("V-Net Architecture")
+    assert "uxnet" in _tokens("3D UX-Net backbone")
+
+
 def test_stemming_lets_encoder_match_encode_image():
     assert _stem("encoder") in "clip/model.py::clip.encode_image#method"
     assert _stem("text") in "clip/model.py::clip.encode_text#method"
 
 
 def test_stopwords_are_dropped_from_component_names():
+    # "Pre-Training" also yields its de-hyphenated form, because "V-Net" would
+    # otherwise survive only as the useless token "net".
     assert _tokens("Selecting an Efficient Pre-Training Method") == [
-        "pre", "training", "method"]
+        "pre", "training", "method", "pretraining"]
     assert _tokens("Image Encoder") == ["image", "encoder"]
+
+
+def test_section_heading_words_cannot_sustain_an_absence_claim():
+    """A component named only "Inference" was reported ABSENT from a repository
+    that plainly performs inference."""
+    for word in ("inference", "training", "architecture", "results"):
+        assert word in _GENERIC

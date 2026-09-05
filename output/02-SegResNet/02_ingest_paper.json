@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "1810.11654",
+  "paper_version": "1810.11654v3",
+  "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+  "fidelity": "LATEX_EXACT",
+  "sections": 12,
+  "equations": 5,
+  "numbered_equations": 5,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 4,
+  "declared_urls": 1,
+  "components": 9,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

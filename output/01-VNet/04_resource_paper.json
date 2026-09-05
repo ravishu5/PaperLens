@@ -1,0 +1,27 @@
+{
+  "uri": "paperlens://paper/1606.04797",
+  "paper_version": "1606.04797v1",
+  "title": "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+  "authors": [
+    {
+      "name": "Fausto Milletari"
+    },
+    {
+      "name": "Nassir Navab"
+    },
+    {
+      "name": "Seyed-Ahmad Ahmadi"
+    }
+  ],
+  "published_at": "2016-06-15T14:55:09Z",
+  "abstract": "Convolutional Neural Networks (CNNs) have been recently employed to solve problems from both the computer vision and medical image analysis fields. Despite their popularity, most approaches are only able to process 2D images while most medical data used in clinical practice consists of 3D volumes. In this work we propose an approach to 3D image segmentation based on a volumetric, fully convolutional, neural network. Our CNN is trained end-to-end on MRI volumes depicting prostate, and learns to predict segmentation for the whole volume at once. We introduce a novel objective function, that we optimise during training, based on Dice coefficient. In this way we can deal with situations where there is a strong imbalance between the number of foreground and background voxels. To cope with the limited number of annotated volumes available for training, we augment the data applying random non-linear transformations and histogram matching. We show in our experimental evaluation that our approach achieves good performances on challenging test data while requiring only a fraction of the processing time needed by other previous methods.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 8,
+    "equations": 2,
+    "algorithms": 0,
+    "stated_values": 1,
+    "declared_urls": 3,
+    "components": 7
+  }
+}

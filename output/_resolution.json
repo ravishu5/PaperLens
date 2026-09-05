@@ -1,0 +1,146 @@
+[
+  {
+    "name": "VNet",
+    "query": "V-Net Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+    "candidates": [
+      {
+        "arxiv_id": "1606.04797",
+        "title": "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+        "year": "2016"
+      }
+    ],
+    "chosen": "1606.04797",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['v-net']",
+    "chosen_title": "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation"
+  },
+  {
+    "name": "SegResNet",
+    "query": "3D MRI brain tumor segmentation using autoencoder regularization",
+    "candidates": [
+      {
+        "arxiv_id": "1810.11654",
+        "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+        "year": "2018"
+      }
+    ],
+    "chosen": "1810.11654",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['autoencoder regularization']",
+    "chosen_title": "3D MRI brain tumor segmentation using autoencoder regularization"
+  },
+  {
+    "name": "nnUNet",
+    "query": "nnU-Net self-configuring method for deep learning-based biomedical image segmentation",
+    "candidates": [],
+    "chosen": null,
+    "match_confidence": "UNKNOWN",
+    "why": ""
+  },
+  {
+    "name": "TransBTS",
+    "query": "TransBTS Multimodal Brain Tumor Segmentation Using Transformer",
+    "candidates": [
+      {
+        "arxiv_id": "2103.04430",
+        "title": "TransBTS: Multimodal Brain Tumor Segmentation Using Transformer",
+        "year": "2021"
+      }
+    ],
+    "chosen": "2103.04430",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['transbts']",
+    "chosen_title": "TransBTS: Multimodal Brain Tumor Segmentation Using Transformer"
+  },
+  {
+    "name": "UNETR",
+    "query": "UNETR Transformers for 3D Medical Image Segmentation",
+    "candidates": [
+      {
+        "arxiv_id": "2103.10504",
+        "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+        "year": "2021"
+      }
+    ],
+    "chosen": "2103.10504",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['unetr']",
+    "chosen_title": "UNETR: Transformers for 3D Medical Image Segmentation"
+  },
+  {
+    "name": "nnFormer",
+    "query": "nnFormer Interleaved Transformer for Volumetric Segmentation",
+    "candidates": [
+      {
+        "arxiv_id": "2109.03201",
+        "title": "nnFormer: Interleaved Transformer for Volumetric Segmentation",
+        "year": "2021"
+      }
+    ],
+    "chosen": "2109.03201",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['nnformer']",
+    "chosen_title": "nnFormer: Interleaved Transformer for Volumetric Segmentation"
+  },
+  {
+    "name": "Swin UNETR",
+    "query": "Swin UNETR Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images",
+    "candidates": [
+      {
+        "arxiv_id": "2201.01266",
+        "title": "Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images",
+        "year": "2022"
+      }
+    ],
+    "chosen": "2201.01266",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['swin unetr']",
+    "chosen_title": "Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images"
+  },
+  {
+    "name": "RepUX-Net",
+    "query": "Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for Medical Image Segmentation",
+    "candidates": [
+      {
+        "arxiv_id": "2303.05785",
+        "title": "Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for Medical Image Segmentation",
+        "year": "2023"
+      }
+    ],
+    "chosen": "2303.05785",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['re-parameterization']",
+    "chosen_title": "Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for Medical Image Segmentation"
+  },
+  {
+    "name": "UNesT",
+    "query": "UNesT Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation",
+    "candidates": [
+      {
+        "arxiv_id": "2209.14378",
+        "title": "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation",
+        "year": "2022"
+      }
+    ],
+    "chosen": "2209.14378",
+    "match_confidence": "LIKELY",
+    "why": "title contains ['unest', 'unest']",
+    "chosen_title": "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation"
+  },
+  {
+    "name": "deformUX-Net",
+    "query": "Deformable Large Kernel Attention 3D UX-Net medical image segmentation",
+    "candidates": [],
+    "chosen": null,
+    "match_confidence": "UNKNOWN",
+    "why": ""
+  },
+  {
+    "name": "ULD-Net",
+    "query": "ULD-Net medical image segmentation",
+    "candidates": [],
+    "chosen": null,
+    "match_confidence": "UNKNOWN",
+    "why": ""
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "1809.10486",
+  "paper_version": "1809.10486v1",
+  "title": "nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation",
+  "fidelity": "LATEX_EXACT",
+  "sections": 19,
+  "equations": 2,
+  "numbered_equations": 2,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 1,
+  "declared_urls": 2,
+  "components": 8,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

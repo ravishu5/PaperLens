@@ -1,0 +1,227 @@
+{
+  "paper_version": "1810.11654v3",
+  "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+  "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "commit_sha": "9763a7f7e40c229d6e40fa296e33172dd583b2d5",
+  "uri": "paperlens://plan/1810.11654/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No dependency manifest was found in the repository."
+    },
+    "dataset": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind dataset has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "dataset_preparation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Data Preprocessing and Augmentation",
+          "kind": "preprocessing",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1810.11654/component/data-preprocessing-and-augmentation"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization, so this section rests on the paper alone."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Encoder part",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/encoder-part"
+        },
+        {
+          "component": "Decoder part",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/decoder-part"
+        },
+        {
+          "component": "Encoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/encoder",
+          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3AEncoder%23class"
+        },
+        {
+          "component": "Decoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/decoder",
+          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ADecoder%23class"
+        },
+        {
+          "component": "Variational Autoencoder Branch",
+          "kind": "module",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1810.11654/component/variational-autoencoder-branch"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3AEncoder%23class",
+          "excerpt": null,
+          "locator": ":Encoder#class"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ADecoder%23class",
+          "excerpt": null,
+          "locator": ":Decoder#class"
+        }
+      ],
+      "note": "The paper describes 5 item(s) here, but none was located in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Loss",
+          "kind": "loss",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1810.11654/component/loss",
+          "implemented_by": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ASoftDiceLoss%23class"
+        },
+        {
+          "component": "Optimization",
+          "kind": "optimizer",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1810.11654/component/optimization"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/%3ASoftDiceLoss%23class",
+          "excerpt": null,
+          "locator": ":SoftDiceLoss#class"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "symbol": "bath size",
+          "value": "1",
+          "stated_at": "LaTeX line 70",
+          "found_in_code": "UNKNOWN",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "alpha_0",
+          "value": "1e-4",
+          "stated_at": "LaTeX line 134",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "Ensemble",
+          "value": "10",
+          "stated_at": "LaTeX line 181",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "hline\n\t\tEnsemble",
+          "value": "10",
+          "stated_at": "LaTeX line 195",
+          "found_in_code": "UNKNOWN",
+          "confidence": "UNKNOWN"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/1810.11654/values",
+          "excerpt": "alpha_0 = 1e-4",
+          "locator": "LaTeX line 134"
+        }
+      ],
+      "note": "1 of 4 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Results",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1810.11654/component/results"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [
+    {
+      "severity": "MINOR",
+      "kind": "ARCHITECTURAL",
+      "risk": "The paper describes dropout, but nothing in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization appears to implement it.",
+      "paper_states": "ation on the convolutional kernel parameters with a weight of $1e-5$. We also use the spatial dropout with a rate of $0.2$ after the initial encoder convolution. We have experimented with other p",
+      "code_does": "No occurrence of dropout vocabulary in the repository.",
+      "confidence": "LIKELY"
+    },
+    {
+      "severity": "MINOR",
+      "kind": "TRAINING",
+      "risk": "The paper describes data augmentation, but nothing in sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization appears to implement it.",
+      "paper_states": ", but did not find any additional accuracy improvements. \\subsection{Data preprocessing and augmentation} We normalize all input images to have zero mean and unit std (based on non-zero voxels only",
+      "code_does": "No occurrence of data augmentation vocabulary in the repository.",
+      "confidence": "LIKELY"
+    }
+  ],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "PARTIAL",
+    "items": [
+      {
+        "check": "assert the value used for alpha_0 equals 1e-4",
+        "where": "ndv/modules/model.py:227",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      }
+    ],
+    "note": "These checks follow from anchors that were verified. They do not constitute a full test plan."
+  },
+  "lineage": {
+    "predecessors_recorded": 3,
+    "uri": "paperlens://lineage/1810.11654"
+  },
+  "readiness": {
+    "sections_known": 0,
+    "sections_partial": 5,
+    "sections_unknown": 3,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

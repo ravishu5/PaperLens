@@ -1,0 +1,248 @@
+{
+  "uri": "paperlens://paper/2103.04430/references",
+  "paper_version": "2103.04430v2",
+  "count": 24,
+  "resolved_to_arxiv": 8,
+  "references": [
+    {
+      "bib_key": "3dunet",
+      "title": null,
+      "authors": "Ci cek, \\\"O., Abdulkadir, A., Lienkamp, S.S., Brox, T., Ronneberger, O.: 3d u-net: learning dense volumetric segmentation from sparse annotation. In: International conference on medical image computing and computer-assisted intervention. pp. 424--432. Springer (2016)",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 6,
+      "uri": null
+    },
+    {
+      "bib_key": "vnet",
+      "title": null,
+      "authors": "Milletari, F., Navab, N., Ahmadi, S.A.: V-net: Fully convolutional neural networks for volumetric medical image segmentation. In: 2016 fourth international conference on 3D vision (3DV). pp. 565--571. IEEE (2016)",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 5,
+      "uri": null
+    },
+    {
+      "bib_key": "bakas2017advancing",
+      "title": null,
+      "authors": "Bakas, S., Akbari, H., Sotiras, A., Bilello, M., Rozycki, M., Kirby, J.S., Freymann, J.B., Farahani, K., Davatzikos, C.: Advancing the cancer genome atlas glioma mri collections with expert segmentation labels and radiomic features. Scientific data 4, 170117 (2017)",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "bakas2018identifying",
+      "title": null,
+      "authors": "Bakas, S., Reyes, M., Jakab, A., Bauer, S., Rempfler, M., Crimi, A., Shinohara, R.T., Berger, C., Ha, S.M., Rozycki, M., et al.: Identifying the best machine learning algorithms for brain tumor segmentation, progression assessment, and overall survival prediction in the brats challenge. arXiv preprint arXiv:1811.02629 (2018)",
+      "year": 2018,
+      "arxiv_id": "1811.02629",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/1811.02629"
+    },
+    {
+      "bib_key": "chen2021transunet",
+      "title": null,
+      "authors": "Chen, J., Lu, Y., Yu, Q., Luo, X., Adeli, E., Wang, Y., Lu, L., Yuille, A.L., Zhou, Y.: Transunet: Transformers make strong encoders for medical image segmentation. arXiv preprint arXiv:2102.04306 (2021)",
+      "year": 2021,
+      "arxiv_id": "2102.04306",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "bib_key": "vit",
+      "title": null,
+      "authors": "Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S., et al.: An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929 (2020)",
+      "year": 2010,
+      "arxiv_id": "2010.11929",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2010.11929"
+    },
+    {
+      "bib_key": "menze2014multimodal",
+      "title": null,
+      "authors": "Menze, B.H., Jakab, A., Bauer, S., Kalpathy-Cramer, J., Farahani, K., Kirby, J., Burren, Y., Porz, N., Slotboom, J., Wiest, R., et al.: The multimodal brain tumor image segmentation benchmark (brats). IEEE transactions on medical imaging 34(10), 1993--2024 (2014)",
+      "year": 1993,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "oktay2018attention",
+      "title": null,
+      "authors": "Oktay, O., Schlemper, J., Folgoc, L.L., Lee, M., Heinrich, M., Misawa, K., Mori, K., McDonagh, S., Hammerla, N.Y., Kainz, B., et al.: Attention u-net: Learning where to look for the pancreas. arXiv preprint arXiv:1804.03999 (2018)",
+      "year": 2018,
+      "arxiv_id": "1804.03999",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/1804.03999"
+    },
+    {
+      "bib_key": "bahdanau2014neural",
+      "title": null,
+      "authors": "Bahdanau, D., Cho, K., Bengio, Y.: Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014)",
+      "year": 2014,
+      "arxiv_id": "1409.0473",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1409.0473"
+    },
+    {
+      "bib_key": "detr",
+      "title": null,
+      "authors": "Carion, N., Massa, F., Synnaeve, G., Usunier, N., Kirillov, A., Zagoruyko, S.: End-to-end object detection with transformers. In: European Conference on Computer Vision. pp. 213--229. Springer (2020)",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "frey2019memory",
+      "title": null,
+      "authors": "Frey, M., Nau, M.: Memory efficient brain tumor segmentation using an autoencoder-regularized u-net. In: International MICCAI Brainlesion Workshop. pp. 388--396. Springer (2019)",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "li2019multi",
+      "title": null,
+      "authors": "Li, X., Luo, G., Wang, K.: Multi-step cascaded networks for brain tumor segmentation. In: International MICCAI Brainlesion Workshop. pp. 163--173. Springer (2019)",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "fcn",
+      "title": null,
+      "authors": "Long, J., Shelhamer, E., Darrell, T.: Fully convolutional networks for semantic segmentation. In: Proceedings of the IEEE conference on computer vision and pattern recognition. pp. 3431--3440 (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "myronenko2019robust",
+      "title": null,
+      "authors": "Myronenko, A., Hatamizadeh, A.: Robust semantic segmentation of brain tumor regions from 3d mris. In: International MICCAI Brainlesion Workshop. pp. 82--89. Springer (2019)",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "unet",
+      "title": null,
+      "authors": "Ronneberger, O., Fischer, P., Brox, T.: U-net: Convolutional networks for biomedical image segmentation. In: International Conference on Medical image computing and computer-assisted intervention. pp. 234--241. Springer (2015)",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "schlemper2019attention",
+      "title": null,
+      "authors": "Schlemper, J., Oktay, O., Schaap, M., Heinrich, M., Kainz, B., Glocker, B., Rueckert, D.: Attention gated networks: Learning to leverage salient regions in medical images. Medical image analysis 53, 197--207 (2019)",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "deit",
+      "title": null,
+      "authors": "Touvron, H., Cord, M., Douze, M., Massa, F., Sablayrolles, A., J\\'egou, H.: Training data-efficient image transformers \\& distillation through attention. arXiv preprint arXiv:2012.12877 (2020)",
+      "year": 2012,
+      "arxiv_id": "2012.12877",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2012.12877"
+    },
+    {
+      "bib_key": "valanarasu2020kiu",
+      "title": null,
+      "authors": "Valanarasu, J.M.J., Sindagi, V.A., Hacihaliloglu, I., Patel, V.M.: Kiu-net: Overcomplete convolutional architectures for biomedical image and volumetric segmentation. arXiv preprint arXiv:2010.01663 (2020)",
+      "year": 2010,
+      "arxiv_id": "2010.01663",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2010.01663"
+    },
+    {
+      "bib_key": "vaswani2017attention",
+      "title": null,
+      "authors": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, ., Polosukhin, I.: Attention is all you need. In: Advances in neural information processing systems. pp. 5998--6008 (2017)",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "wang20193d",
+      "title": null,
+      "authors": "Wang, F., Jiang, R., Zheng, L., Meng, C., Biswal, B.: 3d u-net based brain tumor segmentation and survival days prediction. In: International MICCAI Brainlesion Workshop. pp. 131--141. Springer (2019)",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "wang2018non",
+      "title": null,
+      "authors": "Wang, X., Girshick, R., Gupta, A., He, K.: Non-local neural networks. In: Proceedings of the IEEE conference on computer vision and pattern recognition. pp. 7794--7803 (2018)",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "t2t",
+      "title": null,
+      "authors": "Yuan, L., Chen, Y., Wang, T., Yu, W., Shi, Y., Tay, F.E., Feng, J., Yan, S.: Tokens-to-token vit: Training vision transformers from scratch on imagenet. arXiv preprint arXiv:2101.11986 (2021)",
+      "year": 2021,
+      "arxiv_id": "2101.11986",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2101.11986"
+    },
+    {
+      "bib_key": "zhang2018road",
+      "title": null,
+      "authors": "Zhang, Z., Liu, Q., Wang, Y.: Road extraction by deep residual u-net. IEEE Geoscience and Remote Sensing Letters 15(5), 749--753 (2018)",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "unet++",
+      "title": null,
+      "authors": "Zhou, Z., Siddiquee, M.M.R., Tajbakhsh, N., Liang, J.: Unet++: A nested u-net architecture for medical image segmentation. In: Deep learning in medical image analysis and multimodal learning for clinical decision support, pp. 3--11. Springer (2018) thebibliography",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    }
+  ]
+}

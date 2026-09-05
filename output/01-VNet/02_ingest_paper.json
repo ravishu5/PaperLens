@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "1606.04797",
+  "paper_version": "1606.04797v1",
+  "title": "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+  "fidelity": "LATEX_EXACT",
+  "sections": 8,
+  "equations": 2,
+  "numbered_equations": 0,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 1,
+  "declared_urls": 3,
+  "components": 7,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

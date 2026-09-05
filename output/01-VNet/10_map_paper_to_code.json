@@ -1,0 +1,284 @@
+{
+  "paper_version": "1606.04797v1",
+  "repo": "faustomilletari/VNet",
+  "commit_sha": "584c1502f369f2547e7ed384f9cc25beb09f65e1",
+  "uri": "paperlens://mapping/1606.04797/faustomilletari/VNet",
+  "summary": {
+    "MATCHED": 1,
+    "ABSENT": 0,
+    "AMBIGUOUS": 6,
+    "UNKNOWN": 1
+  },
+  "mappings": [
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|stated_value|1606.04797v1:val:0",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "p_j = 2",
+        "uri": "paperlens://paper/1606.04797/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "2 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "DataManager.py:87",
+        "DataManager.py:93",
+        "DataManager.py:106",
+        "DataManager.py:125"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:method",
+      "anchor": {
+        "kind": "component",
+        "label": "Method",
+        "uri": "paperlens://paper/1606.04797/component/method"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Method' matches 1/1 of its name tokens against DataManager.py::DataManager.getNumpyData#method",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.getNumpyData%23method",
+      "candidates": [
+        "DataManager.py::DataManager.getNumpyData#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/method",
+          "excerpt": "Method (module)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.getNumpyData%23method",
+          "excerpt": "def getNumpyData(self,dat,method)",
+          "locator": "DataManager.py:84",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:training",
+      "anchor": {
+        "kind": "component",
+        "label": "Training",
+        "uri": "paperlens://paper/1606.04797/component/training"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Training' matches 1/1 of its name tokens against DataManager.py::DataManager.loadTrainingData#method",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
+      "candidates": [
+        "DataManager.py::DataManager.loadTrainingData#method",
+        "VNet.py::VNet.train#method",
+        "VNet.py::VNet.trainThread#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/training",
+          "excerpt": "Training (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
+          "excerpt": "def loadTrainingData(self)",
+          "locator": "DataManager.py:59",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:results",
+      "anchor": {
+        "kind": "component",
+        "label": "Results",
+        "uri": "paperlens://paper/1606.04797/component/results"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Results' matches 1/1 of its name tokens against DataManager.py::DataManager.writeResultsFromNumpyLabel#method",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.writeResultsFromNumpyLabel%23method",
+      "candidates": [
+        "DataManager.py::DataManager.writeResultsFromNumpyLabel#method",
+        "DataManager.py::DataManager.__init__#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/results",
+          "excerpt": "Results (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.writeResultsFromNumpyLabel%23method",
+          "excerpt": "def writeResultsFromNumpyLabel(self,result,key)",
+          "locator": "DataManager.py:130",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:v-net-architecture",
+      "anchor": {
+        "kind": "component",
+        "label": "V-Net Architecture",
+        "uri": "paperlens://paper/1606.04797/component/v-net-architecture"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'V-Net Architecture' matches 2/3 of its name tokens against VNet.py::VNet#class",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/VNet.py%3A%3AVNet%23class",
+      "candidates": [
+        "VNet.py::VNet#class"
+      ],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/faustomilletari/VNet",
+          "excerpt": "no symbol matches component 'V-Net Architecture'",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": "absent:e987763a7ba1",
+            "method": "jcodemunch:search_symbols"
+          }
+        },
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
+          "excerpt": "V-Net Architecture (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/VNet.py%3A%3AVNet%23class",
+          "excerpt": "class VNet(object)",
+          "locator": "VNet.py:11",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:dice-loss-layer",
+      "anchor": {
+        "kind": "component",
+        "label": "Dice Loss Layer",
+        "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
+      },
+      "status": "MATCHED",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Dice Loss Layer' matches 3/3 of its name tokens against pyLayer.py::DiceLoss#class",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/pyLayer.py%3A%3ADiceLoss%23class",
+      "candidates": [
+        "pyLayer.py::DiceLoss#class"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
+          "excerpt": "Dice Loss Layer (loss)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/pyLayer.py%3A%3ADiceLoss%23class",
+          "excerpt": "class DiceLoss(caffe.Layer)",
+          "locator": "pyLayer.py:4",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:training-procedure",
+      "anchor": {
+        "kind": "component",
+        "label": "Training Procedure",
+        "uri": "paperlens://paper/1606.04797/component/training-procedure"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Training Procedure' matches 1/2 of its name tokens against DataManager.py::DataManager.loadTrainingData#method",
+      "symbol_uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
+      "candidates": [
+        "DataManager.py::DataManager.loadTrainingData#method",
+        "VNet.py::VNet.train#method",
+        "VNet.py::VNet.trainThread#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/training-procedure",
+          "excerpt": "Training Procedure (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
+          "excerpt": "def loadTrainingData(self)",
+          "locator": "DataManager.py:59",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:inference",
+      "anchor": {
+        "kind": "component",
+        "label": "Inference",
+        "uri": "paperlens://paper/1606.04797/component/inference"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Inference' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/faustomilletari/VNet",
+          "excerpt": "no symbol matches component 'Inference'",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": "absent:8e72be8b099e",
+            "method": "jcodemunch:search_symbols"
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components."
+  ]
+}

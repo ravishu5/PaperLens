@@ -1,0 +1,218 @@
+{
+  "paper_version": "1810.11654v3",
+  "uri": "paperlens://paper/1810.11654",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/1810.11654/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related work",
+      "uri": "paperlens://paper/1810.11654/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Methods",
+      "uri": "paperlens://paper/1810.11654/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Encoder part",
+      "uri": "paperlens://paper/1810.11654/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Decoder part",
+      "uri": "paperlens://paper/1810.11654/section/3.2"
+    },
+    {
+      "path": "3.3",
+      "level": 2,
+      "title": "VAE part",
+      "uri": "paperlens://paper/1810.11654/section/3.3"
+    },
+    {
+      "path": "3.4",
+      "level": 2,
+      "title": "Loss",
+      "uri": "paperlens://paper/1810.11654/section/3.4"
+    },
+    {
+      "path": "3.5",
+      "level": 2,
+      "title": "Optimization",
+      "uri": "paperlens://paper/1810.11654/section/3.5"
+    },
+    {
+      "path": "3.6",
+      "level": 2,
+      "title": "Regularization",
+      "uri": "paperlens://paper/1810.11654/section/3.6"
+    },
+    {
+      "path": "3.7",
+      "level": 2,
+      "title": "Data preprocessing and augmentation",
+      "uri": "paperlens://paper/1810.11654/section/3.7"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Results",
+      "uri": "paperlens://paper/1810.11654/section/4"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Discussion and Conclusion",
+      "uri": "paperlens://paper/1810.11654/section/5"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "4d23c8b437f2",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:loss}\n \\ensuremath{\\mathbf{L}} =\\ensuremath{\\mathbf{L}}_{dice} + 0.1*\\ensuremath",
+      "uri": "paperlens://paper/1810.11654/equation/4d23c8b437f2"
+    },
+    {
+      "hash": "410b46df849a",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:dice}\n  \\ensuremath{\\mathbf{L}}_{dice}  = \\frac{2*\\sum p_{true} * p_{pred} }{\\su",
+      "uri": "paperlens://paper/1810.11654/equation/410b46df849a"
+    },
+    {
+      "hash": "fefc8d58a665",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:vael2}\n  \t\\ensuremath{\\mathbf{L}}_{\\textsc{L2}}   =|| I_{input} - I_{pred}||_2^2",
+      "uri": "paperlens://paper/1810.11654/equation/fefc8d58a665"
+    },
+    {
+      "hash": "f631fd8cf9db",
+      "number": "4",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:vaekl}\n\\ensuremath{\\mathbf{L}}_{\\textsc{KL}} =  \\frac{1}{N} \\sum  \\mu^2  + \\sigm",
+      "uri": "paperlens://paper/1810.11654/equation/f631fd8cf9db"
+    },
+    {
+      "hash": "f8dce05c0f75",
+      "number": "5",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\label{eq:learningrate}\n \\alpha = \\alpha_{0} *\\left(1-\\frac{e}{N_{e}}\\right)^{0.9}",
+      "uri": "paperlens://paper/1810.11654/equation/f8dce05c0f75"
+    }
+  ],
+  "components": [
+    {
+      "slug": "encoder-part",
+      "name": "Encoder part",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/encoder-part"
+    },
+    {
+      "slug": "decoder-part",
+      "name": "Decoder part",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/decoder-part"
+    },
+    {
+      "slug": "results",
+      "name": "Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/results"
+    },
+    {
+      "slug": "encoder",
+      "name": "Encoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/encoder"
+    },
+    {
+      "slug": "decoder",
+      "name": "Decoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/decoder"
+    },
+    {
+      "slug": "variational-autoencoder-branch",
+      "name": "Variational Autoencoder Branch",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/variational-autoencoder-branch"
+    },
+    {
+      "slug": "loss",
+      "name": "Loss",
+      "kind": "loss",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/loss"
+    },
+    {
+      "slug": "optimization",
+      "name": "Optimization",
+      "kind": "optimizer",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/optimization"
+    },
+    {
+      "slug": "data-preprocessing-and-augmentation",
+      "name": "Data Preprocessing and Augmentation",
+      "kind": "preprocessing",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1810.11654/component/data-preprocessing-and-augmentation"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "bath size",
+      "value": "1",
+      "src_line": 70
+    },
+    {
+      "symbol": "alpha_0",
+      "value": "1e-4",
+      "src_line": 134
+    },
+    {
+      "symbol": "Ensemble",
+      "value": "10",
+      "src_line": 181
+    },
+    {
+      "symbol": "hline\n\t\tEnsemble",
+      "value": "10",
+      "src_line": 195
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://www.cbica.upenn.edu/BraTS18/lboardValidation.html",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    }
+  ],
+  "limitations": []
+}

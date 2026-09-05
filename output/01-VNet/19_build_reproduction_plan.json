@@ -1,0 +1,175 @@
+{
+  "paper_version": "1606.04797v1",
+  "title": "V-Net: Fully Convolutional Neural Networks for Volumetric Medical Image Segmentation",
+  "repo": "faustomilletari/VNet",
+  "commit_sha": "584c1502f369f2547e7ed384f9cc25beb09f65e1",
+  "uri": "paperlens://plan/1606.04797/faustomilletari/VNet",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No dependency manifest was found in the repository."
+    },
+    "dataset": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind dataset has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "dataset_preparation": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind preprocessing has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Method",
+          "kind": "module",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/method",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.getNumpyData%23method"
+        },
+        {
+          "component": "V-Net Architecture",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.getNumpyData%23method",
+          "excerpt": null,
+          "locator": ":DataManager.getNumpyData#method"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3AVNet%23class",
+          "excerpt": null,
+          "locator": ":VNet#class"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in faustomilletari/VNet, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Training",
+          "kind": "training",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/training"
+        },
+        {
+          "component": "Dice Loss Layer",
+          "kind": "loss",
+          "status_in_repo": "MATCHED",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADiceLoss%23class"
+        },
+        {
+          "component": "Training Procedure",
+          "kind": "training",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/training-procedure",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.loadTrainingData%23method"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3ADiceLoss%23class",
+          "excerpt": null,
+          "locator": ":DiceLoss#class"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.loadTrainingData%23method",
+          "excerpt": null,
+          "locator": ":DataManager.loadTrainingData#method"
+        }
+      ],
+      "note": "1 of 3 located in faustomilletari/VNet."
+    },
+    "hyperparameters": {
+      "status": "UNKNOWN",
+      "items": [
+        {
+          "symbol": "p_j",
+          "value": "2",
+          "stated_at": "LaTeX line 144",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        }
+      ],
+      "note": "0 of 1 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Results",
+          "kind": "evaluation",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1606.04797/component/results",
+          "implemented_by": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.writeResultsFromNumpyLabel%23method"
+        },
+        {
+          "component": "Inference",
+          "kind": "inference",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1606.04797/component/inference"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/%3ADataManager.writeResultsFromNumpyLabel%23method",
+          "excerpt": null,
+          "locator": ":DataManager.writeResultsFromNumpyLabel#method"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in faustomilletari/VNet, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "No anchor was confirmed against this repository, so no verification step can be grounded. Run map_paper_to_code first."
+  },
+  "lineage": {
+    "predecessors_recorded": 7,
+    "uri": "paperlens://lineage/1606.04797"
+  },
+  "readiness": {
+    "sections_known": 0,
+    "sections_partial": 3,
+    "sections_unknown": 5,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

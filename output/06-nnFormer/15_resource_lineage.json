@@ -1,0 +1,530 @@
+{
+  "uri": "paperlens://lineage/2109.03201",
+  "paper_version": "2109.03201v6",
+  "edges": [
+    {
+      "from": "2109.03201",
+      "to": "2010.11929",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "n \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, which has become the de-facto choice for natural language processing (NLP) problems, has recently been widely exploited in vision-based applications~\\cite{dosovitskiy2020image,liu2021swin,he2021masked,carion2020end}.",
+        "Patch embedding is then applied to patches of feature maps in the bottleneck instead of raw images in ViT \\cite{dosovitskiy2020image}.",
+        "Different from ViT \\cite{dosovitskiy2020image} and Swin Transformer \\cite{liu2021swin} that use large convolutional kernels in the embedding block to extract features, we found that applying {successive} convolutional layers with {small} convolutional kernels bring more benefits",
+        "\\subsection{Bottleneck} The original vision transformer (i.e., ViT) \\cite{dosovitskiy2020image} employs the naive 2D multi-head self-attention mechanism."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.14030",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "n \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, which has become the de-facto choice for natural language processing (NLP) problems, has recently been widely exploited in vision-based applications~\\cite{dosovitskiy2020image,liu2021swin,he2021masked,carion2020end}.",
+        "Recently, Swin Transformer~\\cite{liu2021swin} showed that by referring to the feature pyramids used in convnets, transformers can learn hierarchical object concepts at different scales by applying appropriate down-sampling to feature maps.",
+        "SwinUNet \\cite{cao2021swin} built a U-shape transformer-based segmentation model on top of transformer blocks in \\cite{liu2021swin}, where observable improvements were achieved.",
+        "Different from ViT \\cite{dosovitskiy2020image} and Swin Transformer \\cite{liu2021swin} that use large convolutional kernels in the embedding block to extract features, we found that applying {successive} convolutional layers with {small} convolutional kernels bring more benefits in the initial stage, which could be explained f"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2111.06377",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "n \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, which has become the de-facto choice for natural language processing (NLP) problems, has recently been widely exploited in vision-based applications~\\cite{dosovitskiy2020image,liu2021swin,he2021masked,carion2020end}."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2105.07197",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "It has also been investigated that the prediction errors of transformers are more consistent with those of humans than convnets \\cite{tuli2021convolutional}."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.04306",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Chen \\textit{et al.}~\\cite{chen2021transunet} first time proposed TransUNet to explore the potential of transformers in the context of medical image segmentation.",
+        "ploy hybrid architecture of convolution and self-attention \\cite{vaswani2017attention}, we divide them into two categories based on whether the majority of the stem is convolutional or transformer-based.\\\\ \\noindent \\textbf{Convolution-based stem.} TransUNet \\cite{chen2021transunet} first time applied transformer to improve the segmentation results of medical images.",
+        "72 & 54.4 & 15.19 & 66.9 \\\\ SETR PUP~\\cite{zheng2021rethinking} & 14.01 & 63.8 & 15.245 & 69.6 & 11.76 & 54.9 & 15.023 & 67.0 \\\\ SETR MLA~\\cite{zheng2021rethinking} & 13.49 & 63.9 & 15.503 & 69.8 & 10.24 & 55.4 & 14.72 & 66.5 \\\\ TransUNet~\\cite{chen2021transunet} & 12.98 & 64.4 & 14.03 & 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 7",
+        "ow{2}{*}{Kidney (Right)} & \\multirow{2}{*}{Liver} & \\multirow{2}{*}{Pancreas} & \\multirow{2}{*}{Spleen} & \\multirow{2}{*}{Stomach} \\\\ \\cline{2-3} & HD95 $\\downarrow$ & DSC $\\uparrow$ &&&&&&&&\\\\ \\hline \\hline ViT \\cite{dosovitskiy2020image} + CUP \\cite{chen2021transunet} & 36.11 & 67.86 & 70.19 & 45.10 & 74.70 & 67.40 & 91.32 & 42.00 & 81.75 & 70.44\\\\ R50-ViT \\cite{dosovitskiy2020image} + CUP \\cite{chen2021transunet} & 32.87 & 71.29 & 73.73 & 55.13 & 75.80 & 72.20 & 91.51 & 45.99 & 81.99 & 73.95\\\\"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.08005",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "TransFuse \\cite{zhang2021transfuse} introduced a BiFusion module to fuse features from the shallow convnet-based encoder and transformer-based segmentation network to make final predictions on 2D images."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.10662",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "at directly employ convnets as feature extractors, our nnFormer functionally relies on convolutional and transformer-based blocks, which are interleaved to take advantages of each other.\\\\ \\noindent \\textbf{Transformer-based stem.} Valanarasu \\textit{et al.} \\cite{valanarasu2021medical} proposed a gated axial-attention model (i.e., MedT) which extends the existing convnet architecture by introducing an summational control mechanism in the self-attention."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2107.05188",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "TransClaw U-Net \\cite{chang2021transclaw} utilized transformers in UNet with more convolutional feature pyramids.",
+        "\\underline{86.04} & \\underline{83.71} & \\underline{95.54} & \\underline{73.96} & 88.80 & \\underline{84.20}\\\\ SwinUNet~\\cite{cao2021swin} & 21.55 & 79.13 & 85.47 & 66.53 &83.28 &79.61 & 94.29 & 56.58 & \\underline{90.66} & 76.60\\\\ TransClaw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet-384s~\\cite{xu2021levit} &\\underline{16.84}&78.53 &87.33&62.23 &84.61 &80.25 &93.11 &59.07 &88.86 &72.76\\\\ MISSFormer~\\cite{hua"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2107.05274",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "TransAttUNet \\cite{chen2021transattunet} explored the feasibility of applying transformer self attention with convolutional global spatial attention."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.13645",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Karimi \\textit{et al.}~\\cite{karimi2021convolution} first time introduced a convolution-free segmentation model by forwarding flattened image representations to transformers, whose outputs are then reorganized into 3D tensors to align with segmentation masks.",
+        "In comparison to directly flattening raw pixels and applying 1D pre-processing in \\cite{karimi2021convolution}, the convolutional embedding layer encodes precise (i.e., pixel-level) spatial information and provides low-level yet high-resolution 3D features.",
+        "Karimi \\textit{et al.} \\cite{karimi2021convolution} removed the convolutional operations and built a 3D segmentation model based on transformers."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2105.05537",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Inspired by this idea, SwinUNet \\cite{cao2021swin} utilized hierarchical transformer blocks to construct the encoder and decoder within a U-Net like architecture, based on which DS-TransUNet~\\cite{lin2021ds} added one more encoder to accept different-sized inputs.",
+        "SwinUNet \\cite{cao2021swin} built a U-shape transformer-based segmentation model on top of transformer blocks in \\cite{liu2021swin}, where observable improvements were achieved.",
+        "75.62\\\\ TransUNet{$^\\bigtriangledown$}~\\cite{chen2021transunet} & - & \\underline{84.36} & \\underline{90.68} & \\textbf{71.99} & \\underline{86.04} & \\underline{83.71} & \\underline{95.54} & \\underline{73.96} & 88.80 & \\underline{84.20}\\\\ SwinUNet~\\cite{cao2021swin} & 21.55 & 79.13 & 85.47 & 66.53 &83.28 &79.61 & 94.29 & 56.58 & \\underline{90.66} & 76.60\\\\ TransClaw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2106.06716",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Inspired by this idea, SwinUNet \\cite{cao2021swin} utilized hierarchical transformer blocks to construct the encoder and decoder within a U-Net like architecture, based on which DS-TransUNet~\\cite{lin2021ds} added one more encoder to accept different-sized inputs.",
+        "DS-TransUNet \\cite{lin2021ds} further extended SwinUNet by adding one more encoder to handle multi-scale inputs and introduced a fusion module to effectively establish global dependencies between features of different scales through the self-attention mechanism."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2105.09511",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Concurrently, similar to TransUNet, Li \\textit{et al.} \\cite{li2021medical} proposed to use a squeezed attention block to regularize the self-attention modules of transformers and an expansion block to learn diversified representations for fundus images, which are all implemented in the bottleneck within convnets."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.03604",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Yun \\textit{et al.} \\cite{yun2021spectr} employed transformers to incorporate spectral information, which are entangled with spectral information encoded by convolutional features to address the problem of hyperspectral pathology."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2107.08623",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Xu \\textit{et al.} \\cite{xu2021levit} extensively studied the trade-off between transformers and convnets and proposed a more efficient encoder named LeViT-UNet.",
+        "cao2021swin} & 21.55 & 79.13 & 85.47 & 66.53 &83.28 &79.61 & 94.29 & 56.58 & \\underline{90.66} & 76.60\\\\ TransClaw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet-384s~\\cite{xu2021levit} &\\underline{16.84}&78.53 &87.33&62.23 &84.61 &80.25 &93.11 &59.07 &88.86 &72.76\\\\ MISSFormer~\\cite{huang2021missformer} & 18.20 & 81.96 & 86.99 & 68.65 & 85.21 & 82.00 & 94.41 & 65.67 & \\textbf{91.92} & 80.81\\\\ UNETR~\\cite{Ha",
+        "R50-VIT-CUP~\\cite{dosovitskiy2020image} &87.57 &86.07 &81.88 &94.75\\\\ TransUNet~\\cite{chen2021transunet} &89.71 &88.86 &84.54 &\\underline{95.73}\\\\ SwinUNet~\\cite{cao2021swin} &90.00 &88.55 &85.62 &\\textbf{95.83}\\\\ LeViT-UNet-384s~\\cite{xu2021levit} & \\underline{90.32} & \\underline{89.55} & \\underline{87.64} & 93.76\\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 88.61 & 85.29 & 86.52 & 94.02\\\\ \\hline nnFormer &\\textbf{92.06} &\\textbf{90.94} &\\textbf{89.58} &95.65\\\\",
+        "As we can see, the best performing methods are LeViT-UNet-384s~\\cite{xu2021levit} and TransUNet~\\cite{chen2021transunet}."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2106.10637",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Li \\textit{et al.} \\cite{li2021more} presented a new up-sampling approach and incorporated it into the decoder of UNet to model long-term dependencies and global information for better reconstruction results."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.03024",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Xie \\textit{et al.} \\cite{xie2021cotr} adopted transformers to capture long-term dependencies of multi-scale convolutional features from different layers of convnets.",
+        "24 & 55.4 & 14.72 & 66.5 \\\\ TransUNet~\\cite{chen2021transunet} & 12.98 & 64.4 & 14.03 & 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 71.2 & 9.59 & 52.3 & 12.58 & 69.8 \\\\ CoTr~\\cite{xie2021cotr} & 9.70 & 68.3 & 9.20 & 74.6 & 9.45 & 55.7 & 10.45 & 74.8 \\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 8.82 & 71.1 & 8.27 & 78.9 & 9.35 & 58.5 & 8.",
+        "& 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 71.2 & 9.59 & 52.3 & 12.58 & 69.8 \\\\ CoTr~\\cite{xie2021cotr} & 9.70 & 68.3 & 9.20 & 74.6 & 9.45 & 55.7 & 10.45 & 74.8 \\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 8.82 & 71.1 & 8.27 & 78.9 & 9.35 & 58.5 & 8.85 & 76.1 \\\\ \\hline Our nnFormer & \\textbf{4.05} & \\textbf{86.4} & \\textbf{3.80"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.04430",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "TransBTS \\cite{wang2021transbts} first utilized 3D convnets to extract volumetric spatial features and down-sample the input 3D images to produce hierarchical representations.",
+        "11.76 & 54.9 & 15.023 & 67.0 \\\\ SETR MLA~\\cite{zheng2021rethinking} & 13.49 & 63.9 & 15.503 & 69.8 & 10.24 & 55.4 & 14.72 & 66.5 \\\\ TransUNet~\\cite{chen2021transunet} & 12.98 & 64.4 & 14.03 & 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 71.2 & 9.59 & 52.3 & 12.58 & 69.8 \\\\ CoTr~\\cite{xie2021cotr} & 9.70 & 68.3 & 9.20 & 74.6 & 9.45 &"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "1606.08415",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "After each convolutional layer (except the last one), one GELU \\cite{hendrycks2016gaussian} and one layer normalization \\cite{ba2016layer} layers are appended."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "1607.06450",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "After each convolutional layer (except the last one), one GELU \\cite{hendrycks2016gaussian} and one layer normalization \\cite{ba2016layer} layers are appended."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2109.07162",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "aw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet-384s~\\cite{xu2021levit} &\\underline{16.84}&78.53 &87.33&62.23 &84.61 &80.25 &93.11 &59.07 &88.86 &72.76\\\\ MISSFormer~\\cite{huang2021missformer} & 18.20 & 81.96 & 86.99 & 68.65 & 85.21 & 82.00 & 94.41 & 65.67 & \\textbf{91.92} & 80.81\\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 22.97 & 79.56 & 89.99 & 60.56 & 85.66 & 84.80 & 94.46 & 59.25 & 87.81 & 73.99 \\\\ \\hline"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2106.05735",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "lue.} \\label{ACDC} \\end{center} \\end{table} For thoroughly comparing nnFormer to previous convnet- and transformer-based architecture, we conduct experiments on three datasets/tasks: the brain tumor segmentation task in Medical Segmentation Decathlon (MSD)~\\cite{antonelli2021medical}, Synapse multi-organ segmentation~\\cite{landman2015miccai} and Automatic Cardiac Diagnosis Challenge (ACDC)~\\cite{bernard2018deep}."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.14030",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "n \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, which has become the de-facto choice for natural language processing (NLP) problems, has recently been widely exploited in vision-based applications~\\cite{dosovitskiy2020image,liu2021swin,he2021masked,carion2020end}.",
+        "Recently, Swin Transformer~\\cite{liu2021swin} showed that by referring to the feature pyramids used in convnets, transformers can learn hierarchical object concepts at different scales by applying appropriate down-sampling to feature maps.",
+        "SwinUNet \\cite{cao2021swin} built a U-shape transformer-based segmentation model on top of transformer blocks in \\cite{liu2021swin}, where observable improvements were achieved."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.04306",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Chen \\textit{et al.}~\\cite{chen2021transunet} first time proposed TransUNet to explore the potential of transformers in the context of medical image segmentation.",
+        "ploy hybrid architecture of convolution and self-attention \\cite{vaswani2017attention}, we divide them into two categories based on whether the majority of the stem is convolutional or transformer-based.\\\\ \\noindent \\textbf{Convolution-based stem.} TransUNet \\cite{chen2021transunet} first time applied transformer to improve the segmentation results of medical images.",
+        "72 & 54.4 & 15.19 & 66.9 \\\\ SETR PUP~\\cite{zheng2021rethinking} & 14.01 & 63.8 & 15.245 & 69.6 & 11.76 & 54.9 & 15.023 & 67.0 \\\\ SETR MLA~\\cite{zheng2021rethinking} & 13.49 & 63.9 & 15.503 & 69.8 & 10.24 & 55.4 & 14.72 & 66.5 \\\\ TransUNet~\\cite{chen2021transunet} & 12.98 & 64.4 & 14.03 & 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 7"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2010.11929",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "n \\end{IEEEkeywords} \\section{Introduction} \\label{sec:introduction} Transformer~\\cite{vaswani2017attention}, which has become the de-facto choice for natural language processing (NLP) problems, has recently been widely exploited in vision-based applications~\\cite{dosovitskiy2020image,liu2021swin,he2021masked,carion2020end}.",
+        "Patch embedding is then applied to patches of feature maps in the bottleneck instead of raw images in ViT \\cite{dosovitskiy2020image}.",
+        "Different from ViT \\cite{dosovitskiy2020image} and Swin Transformer \\cite{liu2021swin} that use large convolutional kernels in the embedding block to extract features, we found that applying {successive} convolutional layers with {small} convolutional kernels bring more benefits"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2105.05537",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Inspired by this idea, SwinUNet \\cite{cao2021swin} utilized hierarchical transformer blocks to construct the encoder and decoder within a U-Net like architecture, based on which DS-TransUNet~\\cite{lin2021ds} added one more encoder to accept different-sized inputs.",
+        "SwinUNet \\cite{cao2021swin} built a U-shape transformer-based segmentation model on top of transformer blocks in \\cite{liu2021swin}, where observable improvements were achieved."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2107.08623",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Xu \\textit{et al.} \\cite{xu2021levit} extensively studied the trade-off between transformers and convnets and proposed a more efficient encoder named LeViT-UNet.",
+        "cao2021swin} & 21.55 & 79.13 & 85.47 & 66.53 &83.28 &79.61 & 94.29 & 56.58 & \\underline{90.66} & 76.60\\\\ TransClaw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet-384s~\\cite{xu2021levit} &\\underline{16.84}&78.53 &87.33&62.23 &84.61 &80.25 &93.11 &59.07 &88.86 &72.76\\\\ MISSFormer~\\cite{huang2021missformer} & 18.20 & 81.96 & 86.99 & 68.65 & 85.21 & 82.00 & 94.41 & 65.67 & \\textbf{91.92} & 80.81\\\\ UNETR~\\cite{Ha",
+        "R50-VIT-CUP~\\cite{dosovitskiy2020image} &87.57 &86.07 &81.88 &94.75\\\\ TransUNet~\\cite{chen2021transunet} &89.71 &88.86 &84.54 &\\underline{95.73}\\\\ SwinUNet~\\cite{cao2021swin} &90.00 &88.55 &85.62 &\\textbf{95.83}\\\\ LeViT-UNet-384s~\\cite{xu2021levit} & \\underline{90.32} & \\underline{89.55} & \\underline{87.64} & 93.76\\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 88.61 & 85.29 & 86.52 & 94.02\\\\ \\hline nnFormer &\\textbf{92.06} &\\textbf{90.94} &\\textbf{89.58} &95.65\\\\"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.13645",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Karimi \\textit{et al.}~\\cite{karimi2021convolution} first time introduced a convolution-free segmentation model by forwarding flattened image representations to transformers, whose outputs are then reorganized into 3D tensors to align with segmentation masks.",
+        "In comparison to directly flattening raw pixels and applying 1D pre-processing in \\cite{karimi2021convolution}, the convolutional embedding layer encodes precise (i.e., pixel-level) spatial information and provides low-level yet high-resolution 3D features."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2107.05188",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "TransClaw U-Net \\cite{chang2021transclaw} utilized transformers in UNet with more convolutional feature pyramids.",
+        "\\underline{86.04} & \\underline{83.71} & \\underline{95.54} & \\underline{73.96} & 88.80 & \\underline{84.20}\\\\ SwinUNet~\\cite{cao2021swin} & 21.55 & 79.13 & 85.47 & 66.53 &83.28 &79.61 & 94.29 & 56.58 & \\underline{90.66} & 76.60\\\\ TransClaw U-Net~\\cite{chang2021transclaw} & 26.38 & 78.09 & 85.87 & 61.38 & 84.83 & 79.36 & 94.28 & 57.65 & 87.74 &73.55\\\\ LeVit-UNet-384s~\\cite{xu2021levit} &\\underline{16.84}&78.53 &87.33&62.23 &84.61 &80.25 &93.11 &59.07 &88.86 &72.76\\\\ MISSFormer~\\cite{hua"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2106.06716",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To address the above issue, some researchers \\cite{karimi2021convolution,cao2021swin,lin2021ds} started to use transformers as the main stem in segmentation models.",
+        "Inspired by this idea, SwinUNet \\cite{cao2021swin} utilized hierarchical transformer blocks to construct the encoder and decoder within a U-Net like architecture, based on which DS-TransUNet~\\cite{lin2021ds} added one more encoder to accept different-sized inputs.",
+        "DS-TransUNet \\cite{lin2021ds} further extended SwinUNet by adding one more encoder to handle multi-scale inputs and introduced a fusion module to effectively establish global dependencies between features of different scales through the self-attention mechanism."
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2103.03024",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Xie \\textit{et al.} \\cite{xie2021cotr} adopted transformers to capture long-term dependencies of multi-scale convolutional features from different layers of convnets.",
+        "24 & 55.4 & 14.72 & 66.5 \\\\ TransUNet~\\cite{chen2021transunet} & 12.98 & 64.4 & 14.03 & 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 71.2 & 9.59 & 52.3 & 12.58 & 69.8 \\\\ CoTr~\\cite{xie2021cotr} & 9.70 & 68.3 & 9.20 & 74.6 & 9.45 & 55.7 & 10.45 & 74.8 \\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 8.82 & 71.1 & 8.27 & 78.9 & 9.35 & 58.5 & 8.",
+        "& 70.6 & 10.42 & 54.2 & 14.5 & 68.4 \\\\ TransBTS~\\cite{wang2021transbts} & 9.65 & 69.6 & 10.03 & 77.9 & 9.97 & 57.4 & 8.95 & 73.5 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 11.22 & 64.4 & 11.49 & 71.2 & 9.59 & 52.3 & 12.58 & 69.8 \\\\ CoTr~\\cite{xie2021cotr} & 9.70 & 68.3 & 9.20 & 74.6 & 9.45 & 55.7 & 10.45 & 74.8 \\\\ UNETR~\\cite{Hatamizadeh_2022_WACV} & 8.82 & 71.1 & 8.27 & 78.9 & 9.35 & 58.5 & 8.85 & 76.1 \\\\ \\hline Our nnFormer & \\textbf{4.05} & \\textbf{86.4} & \\textbf{3.80"
+      ]
+    },
+    {
+      "from": "2109.03201",
+      "to": "2102.08005",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "In fact, one major characteristic of TransUNet and most of its followers \\cite{zhang2021transfuse,valanarasu2021medical,chang2021transclaw,chen2021transattunet} is to treat convnets as main bodies, on top of which transformers are further applied to capture long-term dependencies.",
+        "TransFuse \\cite{zhang2021transfuse} introduced a BiFusion module to fuse features from the shallow convnet-based encoder and transformer-based segmentation network to make final predictions on 2D images."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ]
+    },
+    {
+      "from": "2209.14378",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Vision Transformers (ViT), on the other hand, are capable of learning long-range dependencies and have recently demonstrated exceptional representational learning capabilities and effectiveness in computer vision and medical image applications \\citep{dosovitskiy2020image,hatamizadeh2022unetr,zhou2021nnformer}.",
+        "To overcome this, ViT usually requires a large amount of training data which is expensive to acquire~\\citep{tang2022self,zhou2021nnformer}.",
+        "The nnFormer~\\cite{zhou2021nnformer} is another promising network that used 3D transformers and combined encoder and decoder with self-attention operations.",
+        "ansBTS~\\cite{wang2021transbts} & 33.0M & 111.9 & 0.6537 & inf & 0.6043 & inf \\\\ nnFormer~\\cite{zhou2021nnformer} & 158.9M & 920.1 & 0.7113 & 10.2755 & 0.6393 & inf \\\\ CoTr~\\cite{xie20"
+      ]
+    },
+    {
+      "from": "2209.14378",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Vision Transformers (ViT), on the other hand, are capable of learning long-range dependencies and have recently demonstrated exceptional representational learning capabilities and effectiveness in computer vision and medical image applications \\citep{dosovitskiy2020image,hatamizadeh2022unetr,zhou2021nnformer}.",
+        "To overcome this, ViT usually requires a large amount of training data which is expensive to acquire~\\citep{tang2022self,zhou2021nnformer}.",
+        "The nnFormer~\\cite{zhou2021nnformer} is another promising network that used 3D transformers and combined encoder and decoder with self-attention operations."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ]
+    },
+    {
+      "from": "unknown",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

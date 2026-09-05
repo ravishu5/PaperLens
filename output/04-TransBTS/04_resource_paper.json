@@ -1,0 +1,36 @@
+{
+  "uri": "paperlens://paper/2103.04430",
+  "paper_version": "2103.04430v2",
+  "title": "TransBTS: Multimodal Brain Tumor Segmentation Using Transformer",
+  "authors": [
+    {
+      "name": "Wenxuan Wang"
+    },
+    {
+      "name": "Chen Chen"
+    },
+    {
+      "name": "Meng Ding"
+    },
+    {
+      "name": "Jiangyun Li"
+    },
+    {
+      "name": "Hong Yu"
+    },
+    {
+      "name": "Sen Zha"
+    }
+  ],
+  "published_at": "2021-03-07T19:12:14Z",
+  "abstract": "Transformer, which can benefit from global (long-range) information modeling using self-attention mechanisms, has been successful in natural language processing and 2D image classification recently. However, both local and global features are crucial for dense prediction tasks, especially for 3D medical image segmentation. In this paper, we for the first time exploit Transformer in 3D CNN for MRI Brain Tumor Segmentation and propose a novel network named TransBTS based on the encoder-decoder structure. To capture the local 3D context information, the encoder first utilizes 3D CNN to extract the volumetric spatial feature maps. Meanwhile, the feature maps are reformed elaborately for tokens that are fed into Transformer for global feature modeling. The decoder leverages the features embedded by Transformer and performs progressive upsampling to predict the detailed segmentation map. Extensive experimental results on both BraTS 2019 and 2020 datasets show that TransBTS achieves comparable or higher results than previous state-of-the-art 3D methods for brain tumor segmentation on 3D MRI scans. The source code is available at https://github.com/Wenxuan-1119/TransBTS",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 12,
+    "equations": 3,
+    "algorithms": 0,
+    "stated_values": 7,
+    "declared_urls": 1,
+    "components": 9
+  }
+}

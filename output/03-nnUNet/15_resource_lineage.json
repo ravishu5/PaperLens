@@ -1,0 +1,200 @@
+{
+  "uri": "paperlens://lineage/1809.10486",
+  "paper_version": "1809.10486v1",
+  "edges": [
+    {
+      "from": "1809.10486",
+      "to": "1804.03999",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}.",
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}."
+      ]
+    },
+    {
+      "from": "1809.10486",
+      "to": "1804.03999",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}.",
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}."
+      ]
+    },
+    {
+      "from": "1809.10486",
+      "to": "1803.02579",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}."
+      ]
+    },
+    {
+      "from": "1809.10486",
+      "to": "1709.07330",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}."
+      ]
+    },
+    {
+      "from": "1809.10486",
+      "to": "1607.08022",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "slope $1e^{-2}$) and use instance normalization~\\cite{ulyanov2016instance} instead of the more popular batch normalization \\cite{ioffe2015batch}."
+      ]
+    },
+    {
+      "from": "1809.10486",
+      "to": "1502.03167",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "slope $1e^{-2}$) and use instance normalization~\\cite{ulyanov2016instance} instead of the more popular batch normalization \\cite{ioffe2015batch}."
+      ]
+    },
+    {
+      "from": "2001.06535",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2001.11767",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2006.16806",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2107.04537",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2004.08108",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1909.10726",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1911.10477",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2011.08018",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1811.08661",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1910.07655",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "1903.08205",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "unknown",
+      "to": "1809.10486",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

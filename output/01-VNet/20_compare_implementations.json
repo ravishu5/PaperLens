@@ -1,0 +1,67 @@
+{
+  "paper_version": "1606.04797v1",
+  "repos": [
+    "faustomilletari/VNet",
+    "faustomilletari/3D-Caffe"
+  ],
+  "errors": {},
+  "closest_to_paper": "faustomilletari/VNet",
+  "coverage": {
+    "faustomilletari/VNet": {
+      "matched": 1,
+      "absent": 0,
+      "ambiguous": 3,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    },
+    "faustomilletari/3D-Caffe": {
+      "matched": 0,
+      "absent": 0,
+      "ambiguous": 3,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "Inference",
+      "status": {
+        "faustomilletari/VNet": "UNKNOWN",
+        "faustomilletari/3D-Caffe": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Training Procedure",
+      "status": {
+        "faustomilletari/VNet": "AMBIGUOUS",
+        "faustomilletari/3D-Caffe": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "p_j = 2",
+      "status": {
+        "faustomilletari/VNet": "AMBIGUOUS",
+        "faustomilletari/3D-Caffe": "AMBIGUOUS"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "Dice Loss Layer",
+      "status": {
+        "faustomilletari/VNet": "MATCHED",
+        "faustomilletari/3D-Caffe": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "V-Net Architecture",
+      "status": {
+        "faustomilletari/VNet": "AMBIGUOUS",
+        "faustomilletari/3D-Caffe": "UNKNOWN"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

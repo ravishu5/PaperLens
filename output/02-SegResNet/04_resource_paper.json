@@ -1,0 +1,21 @@
+{
+  "uri": "paperlens://paper/1810.11654",
+  "paper_version": "1810.11654v3",
+  "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+  "authors": [
+    {
+      "name": "Andriy Myronenko"
+    }
+  ],
+  "published_at": "2018-10-27T14:42:13Z",
+  "abstract": "Automated segmentation of brain tumors from 3D magnetic resonance images (MRIs) is necessary for the diagnosis, monitoring, and treatment planning of the disease. Manual delineation practices require anatomical knowledge, are expensive, time consuming and can be inaccurate due to human error. Here, we describe a semantic segmentation network for tumor subregion segmentation from 3D MRIs based on encoder-decoder architecture. Due to a limited training dataset size, a variational auto-encoder branch is added to reconstruct the input image itself in order to regularize the shared decoder and impose additional constraints on its layers. The current approach won 1st place in the BraTS 2018 challenge.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 12,
+    "equations": 5,
+    "algorithms": 0,
+    "stated_values": 4,
+    "declared_urls": 1,
+    "components": 9
+  }
+}

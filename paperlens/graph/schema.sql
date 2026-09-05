@@ -206,7 +206,8 @@ CREATE TABLE IF NOT EXISTS implementation_candidates (
   paper_version      TEXT NOT NULL REFERENCES paper_versions(paper_version) ON DELETE CASCADE,
   repo_id            TEXT NOT NULL REFERENCES repos(id) ON DELETE CASCADE,
   relation           TEXT NOT NULL CHECK (relation IN
-                       ('OFFICIAL','ORGANIZATION','REPRODUCTION','THIRD_PARTY','DERIVED','UNRELATED')),
+                       ('OFFICIAL','ORGANIZATION','REPRODUCTION','THIRD_PARTY','DERIVED',
+                        'DECLARED_DEPENDENCY','UNRELATED')),
   confidence         TEXT NOT NULL CHECK (confidence IN
                        ('CONFIRMED','LIKELY','POSSIBLE','UNKNOWN')),
   coverage_score     REAL,

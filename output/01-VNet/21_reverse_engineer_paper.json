@@ -1,0 +1,52 @@
+{
+  "paper_version": "1606.04797v1",
+  "uri": "paperlens://paper/1606.04797",
+  "structure": {
+    "sections": 8,
+    "equations": 2,
+    "algorithms": 0,
+    "stated_values": 1,
+    "components": 7,
+    "claims": 0
+  },
+  "implementations": [
+    "faustomilletari/VNet",
+    "faustomilletari/3D-Caffe",
+    "ShawnBIT/UNet-family",
+    "ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network",
+    "black0017/MedicalZooPytorch",
+    "JunMa11/SegLossOdyssey",
+    "bharathgs/Awesome-pytorch-list",
+    "ritchieng/the-incredible-pytorch",
+    "maziarraissi/Applied-Deep-Learning"
+  ],
+  "mappings": [
+    {
+      "repo": "faustomilletari/3D-Caffe",
+      "summary": {
+        "AMBIGUOUS": 6,
+        "UNKNOWN": 2
+      },
+      "uri": "paperlens://mapping/1606.04797/faustomilletari/3D-Caffe"
+    },
+    {
+      "repo": "faustomilletari/VNet",
+      "summary": {
+        "AMBIGUOUS": 6,
+        "MATCHED": 1,
+        "UNKNOWN": 1
+      },
+      "uri": "paperlens://mapping/1606.04797/faustomilletari/VNet"
+    }
+  ],
+  "skeleton_uri": "paperlens://paper/1606.04797",
+  "analysis_uri": "paperlens://paper/1606.04797/analysis",
+  "status": "analysed",
+  "analysis": {
+    "paper_version": "1606.04797v1",
+    "author": "agent:batch",
+    "created_at": "2026-09-05T17:28:04+00:00",
+    "schema_version": "1",
+    "fields": {}
+  }
+}

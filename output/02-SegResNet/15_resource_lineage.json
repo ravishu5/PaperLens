@@ -1,0 +1,361 @@
+{
+  "uri": "paperlens://lineage/1810.11654",
+  "paper_version": "1810.11654v3",
+  "edges": [
+    {
+      "from": "1810.11654",
+      "to": "1802.02611",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Convolutional neural networks (CNN) are able to learn from examples and demonstrate state-of-the-art segmentation accuracy both in 2D natural images~\\cite{deeplabv3plus2018} and in 3D medical image modalities~\\cite{Milletari16}.",
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ]
+    },
+    {
+      "from": "1810.11654",
+      "to": "1802.02611",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Convolutional neural networks (CNN) are able to learn from examples and demonstrate state-of-the-art segmentation accuracy both in 2D natural images~\\cite{deeplabv3plus2018} and in 3D medical image modalities~\\cite{Milletari16}.",
+        "pace{-5mm} \\end{figure} \\section{Methods} \\label{sec:methods} Our segmentation approach follows encoder-decoder based CNN architecture with an asymmetrically larger encoder to extract image features and a smaller decoder to reconstruct the segmentation mask~\\cite{deeplabv3plus2018,deeplabv3plus2017,he2017maskrcnn,Ronneberger15,Milletari16}."
+      ]
+    },
+    {
+      "from": "1810.11654",
+      "to": "1811.02629",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Multimodal Brain Tumor Segmentation Challenge (BraTS) aims to evaluate state-of-the-art methods for the segmentation of brain tumors by providing a 3D MRI dataset with ground truth tumor segmentation labels annotated by physicians~\\cite{BratsAll2018,brats1,brats2,brats3,brats4}."
+      ]
+    },
+    {
+      "from": "2609.00447",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2608.17926",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "For non-tumor datasets, whose masks are binary rather than multi-region, we use a separate binary lesion segmenter per dataset, which avoids forcing the tumor label scheme onto stroke and white-matter disease (Myronenko 2018)."
+      ]
+    },
+    {
+      "from": "2608.13807",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "The compared architectures were U-Net [24], U-Net++ [19], SegResNet [25], DeepLabV3+ [26], Attention U-Net [27], TransUNet-lite adapted from TransUNet [28], and NerveDetNet."
+      ]
+    },
+    {
+      "from": "2608.05389",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "\u2026Tumor Segmentation (BraTS) benchmark providing standardized subregion labels and common evaluation metrics [Menze et al., 2015, Bakas et al., 2018, Pereira et al., 2016, Havaei et al., 2017, Kamnitsas et al., 2017, Myronenko, 2018, Hatamizadeh et al., 2022, Tang et al., 2022, Liu et al., 2023]."
+      ]
+    },
+    {
+      "from": "2607.28858",
+      "to": "1810.11654",
+      "relation": "SUCCESSOR",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": true,
+      "intents": [],
+      "contexts": [
+        "SegResNet [11] adopts an asymmetric encoder\u2013decoder architecture in which the encoder, composed of residual blocks with group normalization, is substantially deeper than the decoder.",
+        "Five representative models\u20143D U-Net [2], SegResNet [11], Swin UNETR [4], SegMamba [9], and SegMambaV2 [10]\u2014are trained and evaluated using the same preprocessing pipeline, optimization strategy, validation protocol, and inference procedure.",
+        "SegResNet [11] Residual Convolutional Asymmetric encoder\u2013decoder with residual blocks and an auxiliary variational auto-encoder branch for regularization."
+      ]
+    },
+    {
+      "from": "2607.26829",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2607.22139",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "In the study we identify four groups of architectures and associated inductive biases: (1) Standard CNNs including U-Net [31], Attention U-Net [32]s, SegResNet [33], nnUNet [34], PSP-Net [35], FPN [36], UPerNet [37], DeepLabV3 [38] and DeepLabV3+ [39]."
+      ]
+    },
+    {
+      "from": "2607.22727",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Myronenko demonstrated that a well-regularized U-Net with deep supervision and region-specific loss weighting achieves competitive BraTS performance without complex architectural modifications [16]."
+      ]
+    },
+    {
+      "from": "2607.12602",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2607.00201",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2606.30108",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "3D variants such as SegResNet [18] extend this family to volumetric segmentation, while nnU-Net [10] showed the importance of adapting preprocessing, training, inference, and postprocessing to each dataset."
+      ]
+    },
+    {
+      "from": "2606.29102",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Joint segmentation and classification has been widely studied for ultrasound [9, 13], dermoscopy [26], and brain MRI [16]."
+      ]
+    },
+    {
+      "from": "2606.19300",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Segmentation Models The primary segmentation model was a pretrained 3D SegResNet [15] sourced from the MONAI [5] model zoo bundle brats_mri_segmentation v0.",
+        "We address these questions through a two-model case study empirically evaluating MC Dropout on a high-performing pretrained SegResNet [15] and a locally trained UNet-Res [5], assessed on 126 patients from the BraTS21 dataset [2]."
+      ]
+    },
+    {
+      "from": "2606.15305",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "SegResNet follows the same general multi-resolution structure but incorporates residual blocks to improve gradient flow and feature reuse in deeper networks 23 ."
+      ]
+    },
+    {
+      "from": "2606.08421",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "In particular, T2w is sensitive to edema, while T1ce better highlights enhancing lesions and necrotic components [15]."
+      ]
+    },
+    {
+      "from": "2606.06103",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "The notion of useful context also varies by modality and task: some datasets require local boundary precision, others require volumetric continuity or broad anatomical context, and still others require robustness to scanner-or stain-induced variation [2, 3, 36, 10, 11, 37]."
+      ]
+    },
+    {
+      "from": "2605.30972",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Later methods improved feature representation through residual learning, attention gates, large-kernel convolutions, or automatic configuration, including Attention U-Net, SegRes-Net, UX-Net, MedNeXt, and nnU-Net [17], [18], [19], [20], [6]."
+      ]
+    },
+    {
+      "from": "2605.30829",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Specifically, we train five models from scratch: UNet [24], Attention UNet [21], SegResNet [19], FlexibleUNet with an EfficientNet-B0 encoder [26], and SwinUNETR [10].",
+        "Convolutional neural networks (CNNs), such as UNet [24] and its variants [19, 21, 26], are still commonly used for biomedical segmentation."
+      ]
+    },
+    {
+      "from": "2605.29163",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "\u2026with integrated task-specific modules drawn from established MRI subproblems (e.g., segmentation, detection, and correction) [1,15,10,26,12], along with workflow utilities for intermediate-state resolution (such as ED/ES frame selection) and evidence-backed decision tools that fuse\u2026"
+      ]
+    },
+    {
+      "from": "2605.22572",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Recent winners have built upon this foundation with specialized modifications, Myronenko [14] introduced an auxiliary VAE branch for autoencoder regularization, Jiang et al [18] utilized a two stage cascaded approach and Isensee et al [19] demonstrated that a self configuring nnU-Net pipeline can\u2026",
+        "The inception of BraTS has catalyzed significant advancements in brain tumor segmentation, as deep learning methods have surpassed traditional computer vision algorithms in both accuracy and reproducibility [14, 15]."
+      ]
+    },
+    {
+      "from": "2605.09666",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2605.05775",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Organ masks are predicted by a MONAI SegResNet model (Myronenko, 2019) trained on the TotalSegmentor dataset."
+      ]
+    },
+    {
+      "from": "2605.04518",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Subsequent methods attempted to address this through cascaded anisotropic convolutions [33], multi-planar fusion [2], and autoencoder-regularized volumetric segmentation [27]."
+      ]
+    },
+    {
+      "from": "2605.04008",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2605.02444",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "2605.02230",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "Later approaches, including Myronenko [11], cascaded U-Net [16], [17], and nnU-Net [18], achieved state-of-the-art performance through improved architectures and training strategies.",
+        "SegResNet [11] is configured with 32 initial filters and encoder/decoder block depths of (1,2,2,4) and (1,1,1).",
+        "Architectures such as 3D U-Net [7], V-Net [8], UNETR [9], Swin-UNETR [10], and SegResNet [11] can accurately segment the enhancing tumor, necrotic core, and peritumoral edema from multimodal MRI."
+      ]
+    },
+    {
+      "from": "2605.00916",
+      "to": "1810.11654",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": [
+        "\u2026encoder\u2013decoder (U-Net), the auto-configuring convolutional framework (nnU-Net [41]), the pure-transformer volumetric network (UNETR), the residual-convolutional variant (SegResNet [42]), the shifted-window transformer (SwinUNETR [43]), and the hybrid state-space architecture (U-Mamba [44])."
+      ]
+    }
+  ]
+}

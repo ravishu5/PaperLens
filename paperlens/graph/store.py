@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import json
+import logging
+import re
 import sqlite3
 import threading
 from datetime import datetime, timezone
@@ -41,12 +43,71 @@ class Store:
         return c
 
     def _init_schema(self) -> None:
-        self.conn.executescript(_SCHEMA.read_text())
+        script = _SCHEMA.read_text()
+        self.conn.executescript(script)
+        self._migrate(script)
         self.conn.execute(
             "INSERT OR REPLACE INTO meta(key, value) VALUES ('parser_version', ?)",
             (config.PARSER_VERSION,),
         )
         self.conn.commit()
+
+    # ── migration ─────────────────────────────────────────────────────────
+    _CREATE = re.compile(
+        r"CREATE TABLE IF NOT EXISTS\s+(\w+)\s*\((.*?)\n\);", re.S)
+
+    def _migrate(self, script: str) -> None:
+        """Rebuild tables whose definition has drifted from schema.sql.
+
+        `CREATE TABLE IF NOT EXISTS` is a no-op on an existing table, so a
+        changed CHECK constraint is silently ignored until a write fails with
+        IntegrityError against a definition nobody can see. Everything here is
+        derived from immutable sources or re-recordable, so the safe repair is to
+        rebuild the table and carry over whatever columns still exist.
+        """
+        for m in self._CREATE.finditer(script):
+            name = m.group(1)
+            desired = self._normalise_ddl(m.group(0))
+            row = self.one(
+                "SELECT sql FROM sqlite_master WHERE type='table' AND name=?",
+                (name,))
+            if row is None or row["sql"] is None:
+                continue
+            if self._normalise_ddl(row["sql"]) == desired:
+                continue
+            self._rebuild(name, m.group(0))
+
+    @staticmethod
+    def _normalise_ddl(sql: str) -> str:
+        s = re.sub(r"--[^\n]*", " ", sql)
+        s = re.sub(r"IF NOT EXISTS\s+", "", s, flags=re.I)
+        return re.sub(r"\s+", " ", s).strip().rstrip(";").lower()
+
+    def _rebuild(self, name: str, create_sql: str) -> None:
+        old_cols = {r["name"] for r in
+                    self.all(f"PRAGMA table_info({name})")}
+        tmp = f"{name}__migrating"
+        self.execute("PRAGMA foreign_keys = OFF")
+        try:
+            self.execute(f"DROP TABLE IF EXISTS {tmp}")
+            self.conn.executescript(
+                create_sql.replace(f"CREATE TABLE IF NOT EXISTS {name}",
+                                   f"CREATE TABLE {tmp}", 1))
+            new_cols = {r["name"] for r in self.all(f"PRAGMA table_info({tmp})")}
+            shared = sorted(old_cols & new_cols)
+            if shared:
+                cols = ", ".join(shared)
+                # Rows that violate a newly tightened constraint are dropped
+                # rather than blocking the migration; all of it is derived data.
+                self.execute(
+                    f"INSERT OR IGNORE INTO {tmp} ({cols}) SELECT {cols} FROM {name}")
+            self.execute(f"DROP TABLE {name}")
+            self.execute(f"ALTER TABLE {tmp} RENAME TO {name}")
+            self.commit()
+            logging.getLogger(__name__).info(
+                "migrated table %s (kept %d column(s))", name, len(shared))
+        finally:
+            self.execute("PRAGMA foreign_keys = ON")
 
     def close(self) -> None:
         c = getattr(self._local, "conn", None)

@@ -1,0 +1,457 @@
+{
+  "paper_version": "2103.10504v3",
+  "uri": "paperlens://lineage/2103.10504",
+  "predecessors": [
+    {
+      "paper": "2012.15840",
+      "title": "Rethinking semantic segmentation from a sequence-to-sequence perspective with transformers",
+      "year": 2012,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 13 time(s) in the paper's own text",
+      "contexts": [
+        "Recently, multiple methods were proposed that explore the possibility of using transformer-based models for the task of 2D image segmentation ~\\cite{zheng2020rethinking,chen2021transunet,valanarasu2021medical,zhang2021transfuse}.",
+        "Zheng \\textit{et al.}~\\cite{zheng2020rethinking} introduced the SETR model in which a pre-trained transformer encoder with different variations of CNN-based decoders were proposed for the task of semantic segmentation.",
+        "l} & \\multicolumn{1}{l}{Eso} & \\multicolumn{1}{l}{Liv} & \\multicolumn{1}{l}{Sto} & \\multicolumn{1}{l}{Aor} & \\multicolumn{1}{l}{IVC} & \\multicolumn{1}{l}{Veins} & \\multicolumn{1}{l}{Pan} &\\multicolumn{1}{l}{AG} & \\multicolumn{1}{l}{Avg.} \\\\ \\hline SETR NUP~\\cite{zheng2020rethinking} & 0.931 & 0.890 & 0.897 & 0.652 & 0.760 & 0.952 & 0.809 & 0.867 & 0.745 & 0.717 & 0.719 & 0.620 & 0.796 \\\\ SETR PUP~\\cite{zheng2020rethinking} & 0.929 & 0.893 & 0.892 & 0.649 & 0.764 & 0.954 & 0.822 & 0.869 & 0.742 & 0.715 & 0.714 &"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2012.15840"
+    },
+    {
+      "paper": "2103.03024",
+      "title": "Cotr: Efficiently bridging cnn and transformer for 3d medical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 9 time(s) in the paper's own text",
+      "contexts": [
+        "For 3D medical image segmentation, Xie~\\textit{et al.}~\\cite{xie2021cotr} proposed a framework that utilizes a backbone CNN for feature extraction, a transformer to process the encoded representation and a CNN decoder for predicting the segmentation outputs.",
+        ".914 & 0.689 & 0.760 & 0.953 & 0.812 & 0.918 & 0.807 & 0.695 & 0.720 & 0.629 & 0.811 \\\\ TransUNet~\\cite{chen2021transunet} & 0.952 & \\textbf{0.927} & 0.929 & 0.662 & 0.757 & 0.969 & 0.889 & 0.920 & 0.833 & 0.791 & 0.775 & 0.637 & 0.838 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.941 & 0.894 & 0.909 & 0.705 & 0.723 & 0.948 & 0.815 & 0.876 & 0.784 & 0.723 & 0.671 & 0.623 & 0.801 \\\\ CoTr*~\\cite{xie2021cotr} & 0.943 & 0.924 & 0.929 & 0.687 & 0.762 & 0.962 & 0.894 & 0.914 & 0.838 & \\textbf{0.796} & \\textbf{0.783} & 0",
+        "\\textbf{0.927} & 0.929 & 0.662 & 0.757 & 0.969 & 0.889 & 0.920 & 0.833 & 0.791 & 0.775 & 0.637 & 0.838 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.941 & 0.894 & 0.909 & 0.705 & 0.723 & 0.948 & 0.815 & 0.876 & 0.784 & 0.723 & 0.671 & 0.623 & 0.801 \\\\ CoTr*~\\cite{xie2021cotr} & 0.943 & 0.924 & 0.929 & 0.687 & 0.762 & 0.962 & 0.894 & 0.914 & 0.838 & \\textbf{0.796} & \\textbf{0.783} & 0.647 & 0.841 \\\\ CoTr~\\cite{xie2021cotr} & 0.958 & 0.921 & 0.936 & 0.700 & 0.764 & 0.963 & 0.854 & \\textbf{0.920} & 0.838 & 0.787 & 0"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2103.03024"
+    },
+    {
+      "paper": "bib:isensee2021nnu",
+      "title": "nnu-net: a self-configuring method for deep learning-based biomedical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 8 time(s) in the paper's own text",
+      "contexts": [
+        "Since the advent of deep learning, FCNNs and in particular ``U-shaped`` encoder-decoder architectures~\\cite{isensee2019attempt,jin2020ra,isensee2021nnu} have achieved state-of-the-art results in various medical semantic segmentation tasks~\\cite{BratsAll2018,simpson2019large,heller2019kits19}.",
+        "Some efforts proposed to extract features at multiple scales or assembled frameworks ~\\cite{isensee2021nnu}.",
+        "g} & 0.929 & 0.893 & 0.892 & 0.649 & 0.764 & 0.954 & 0.822 & 0.869 & 0.742 & 0.715 & 0.714 & 0.618 & 0.797 \\\\ SETR MLA~\\cite{zheng2020rethinking} & 0.930 & 0.889 & 0.894 & 0.650 & 0.762 & 0.953 & 0.819 & 0.872 & 0.739 & 0.720 & 0.716 & 0.614 & 0.796 \\\\ nnUNet~\\cite{isensee2021nnu} & 0.942 & 0.894 & 0.910 & 0.704 & 0.723 & 0.948 & 0.824 & 0.877 & 0.782 & 0.720 & 0.680 & 0.616 & 0.802 \\\\ ASPP~\\cite{chen2018encoder} & 0.935 & 0.892 & 0.914 & 0.689 & 0.760 & 0.953 & 0.812 & 0.918 & 0.807 & 0.695 & 0.720 & 0.629 & 0.811"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2102.04306",
+      "title": "Transunet: Transformers make strong encoders for medical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "Recently, multiple methods were proposed that explore the possibility of using transformer-based models for the task of 2D image segmentation ~\\cite{zheng2020rethinking,chen2021transunet,valanarasu2021medical,zhang2021transfuse}.",
+        "Chen \\textit{et al.}~\\cite{chen2021transunet} proposed a methodology for multi-organ segmentation by employing a transformer as an additional layer in the bottleneck of a U-Net architecture.",
+        "021nnu} & 0.942 & 0.894 & 0.910 & 0.704 & 0.723 & 0.948 & 0.824 & 0.877 & 0.782 & 0.720 & 0.680 & 0.616 & 0.802 \\\\ ASPP~\\cite{chen2018encoder} & 0.935 & 0.892 & 0.914 & 0.689 & 0.760 & 0.953 & 0.812 & 0.918 & 0.807 & 0.695 & 0.720 & 0.629 & 0.811 \\\\ TransUNet~\\cite{chen2021transunet} & 0.952 & \\textbf{0.927} & 0.929 & 0.662 & 0.757 & 0.969 & 0.889 & 0.920 & 0.833 & 0.791 & 0.775 & 0.637 & 0.838 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.941 & 0.894 & 0.909 & 0.705 & 0.723 & 0.948 & 0.815 & 0.876 & 0.784 & 0.723"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "paper": "2010.11929",
+      "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+      "year": 2010,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 6 time(s) in the paper's own text",
+      "contexts": [
+        "Additionally, in computer vision, using transformers as a backbone encoder is beneficial due to their great capability of modeling long-range dependencies and capturing global context~\\cite{dosovitskiy2020image,bello2020lambdanetworks}.",
+        "Furthermore, Vision Transformer (ViT)~\\cite{dosovitskiy2020image} and its variants have shown excellent capabilities in learning pre-text tasks that can be transferred to down-stream applications~\\cite{touvron2021training,caron2021emerging,bao2021beit}.",
+        "Dosovitskiy \\textit{et al.}~\\cite{dosovitskiy2020image} demonstrated state-of-the-art performance on image classification datasets by large-scale pre-training and fine-tuning of a pure transformer."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2010.11929"
+    },
+    {
+      "paper": "bib:landman2015miccai",
+      "title": "Miccai multi-atlas labeling beyond the cranial vault--workshop and challenge",
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "We validate the effectiveness of our method on 3D CT and MRI segmentation tasks using Beyond the Cranial Vault (BTCV) ~\\cite{landman2015miccai} and Medical Segmentation Decathlon (MSD) ~\\cite{simpson2019large} datasets.",
+        "\\item We validate the effectiveness of our proposed model for different volumetric segmentation tasks on two public datasets: BTCV~\\cite{landman2015miccai} and MSD~\\cite{simpson2019large}.",
+        "All results obtained from BTCV leaderboard.} \\label{tab:BTCV} \\end{table*} \\section{Experiments} \\subsection{Datasets} \\label{sec:datasets} To validate the effectiveness of our method, we utilize BTCV~\\cite{landman2015miccai} and MSD~\\cite{simpson2019large} datasets for three different segmentation tasks in CT and MRI imaging modalities."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:Ronneberger15",
+      "title": "U-net: Convolutional networks for biomedical image segmentation",
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "In a typical U-Net~\\cite{Ronneberger15} architecture, the encoder is responsible for learning global contextual representations by gradually downsampling the extracted features, while the decoder upsamples the extracted representations to the input resolution for pixel/voxel-wis",
+        "\\end{itemize} \\section{Related Work} \\paragraph{CNN-based Segmentation Networks}: Since the introduction of the seminal U-Net~\\cite{Ronneberger15}, CNN-based networks have achieved state-of-the-art results on various 2D and 3D various medical image segmentation tasks~\\cite{dou20163d,zhu2017deeply,yu2017volumetric,gibson2018automatic,li2018h}.",
+        "Inspired by architectures that are similar to U-Net ~\\cite{Ronneberger15}, where features from multiple resolutions of the encoder are merged with the decoder, we extract a sequence representation $\\mathbf{z}_{i}$ ($i \\in \\{3,6,9,12\\}$), with size $\\frac{H\\times W\\times D}{P^{3}}\\times K$, from the transformer a"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1902.09063",
+      "title": "A large annotated medical image dataset for the development and evaluation of segmentation algorithms",
+      "year": 1902,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "Since the advent of deep learning, FCNNs and in particular ``U-shaped`` encoder-decoder architectures~\\cite{isensee2019attempt,jin2020ra,isensee2021nnu} have achieved state-of-the-art results in various medical semantic segmentation tasks~\\cite{BratsAll2018,simpson2019large,heller2019kits19}.",
+        "We validate the effectiveness of our method on 3D CT and MRI segmentation tasks using Beyond the Cranial Vault (BTCV) ~\\cite{landman2015miccai} and Medical Segmentation Decathlon (MSD) ~\\cite{simpson2019large} datasets.",
+        "\\item We validate the effectiveness of our proposed model for different volumetric segmentation tasks on two public datasets: BTCV~\\cite{landman2015miccai} and MSD~\\cite{simpson2019large}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1902.09063"
+    },
+    {
+      "paper": "2102.10662",
+      "title": "Medical transformer: Gated axial-attention for medical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Recently, multiple methods were proposed that explore the possibility of using transformer-based models for the task of 2D image segmentation ~\\cite{zheng2020rethinking,chen2021transunet,valanarasu2021medical,zhang2021transfuse}.",
+        "Valanarasu \\textit{et al.}~\\cite{valanarasu2021medical} proposed a transformer-based axial attention mechanism for 2D medical image segmentation."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2102.10662"
+    },
+    {
+      "paper": "2103.04430",
+      "title": "Transbts: Multimodal brain tumor segmentation using transformer",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Similarly, Wang~\\textit{et al.}~\\cite{wang2021transbts} proposed to use a transformer in the bottleneck of a 3D encoder-decoder CNN for the task of semantic brain tumor segmentation.",
+        "09 \\\\ SETR MLA~\\cite{zheng2020rethinking} & 0.950 & 4.091 & 0.698 & 15.503 & 0.554 & 10.237 & 0.665 & 14.716 & 0.639 & 13.485 \\\\ TransUNet~\\cite{chen2021transunet} & 0.950 & 4.031 & 0.706 & 14.027 & 0.542 & 10.421 & 0.684 & 14.501 & 0.644 & 12.983 \\\\ TransBTS~\\cite{wang2021transbts} & - & - & 0.779 & 10.030 & 0.574 & 9.969 & 0.735 & 8.950 & 0.696 & 9.650 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.946 & 4.748 & 0.712 & 11.492 & 0.523 & 9.592 & 0.698 & 12.581 & 0.6444 & 11.221 \\\\ CoTr~\\cite{xie2021cotr} & 0.954 &"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2103.04430"
+    },
+    {
+      "paper": "2102.08005",
+      "title": "Transfuse: Fusing transformers and cnns for medical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Recently, multiple methods were proposed that explore the possibility of using transformer-based models for the task of 2D image segmentation ~\\cite{zheng2020rethinking,chen2021transunet,valanarasu2021medical,zhang2021transfuse}.",
+        "Zhang \\textit{et al.}~\\cite{zhang2021transfuse} proposed to use CNNs and transformers in separate streams and fuse their outputs."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2102.08005"
+    },
+    {
+      "paper": "bib:chen2018encoder",
+      "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation",
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "rethinking} & 0.930 & 0.889 & 0.894 & 0.650 & 0.762 & 0.953 & 0.819 & 0.872 & 0.739 & 0.720 & 0.716 & 0.614 & 0.796 \\\\ nnUNet~\\cite{isensee2021nnu} & 0.942 & 0.894 & 0.910 & 0.704 & 0.723 & 0.948 & 0.824 & 0.877 & 0.782 & 0.720 & 0.680 & 0.616 & 0.802 \\\\ ASPP~\\cite{chen2018encoder} & 0.935 & 0.892 & 0.914 & 0.689 & 0.760 & 0.953 & 0.812 & 0.918 & 0.807 & 0.695 & 0.720 & 0.629 & 0.811 \\\\ TransUNet~\\cite{chen2021transunet} & 0.952 & \\textbf{0.927} & 0.929 & 0.662 & 0.757 & 0.969 & 0.889 & 0.920 & 0.833 & 0.791 & 0.77",
+        "CNN-based segmentation models of nnUNet~\\cite{isensee2021nnu} and ASPP~\\cite{chen2018encoder} have 19.07M and 47.92M parameters and 412.65G and 44.87G FLOPs, respectively."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:li2018h",
+      "title": "H-denseunet: hybrid densely connected unet for liver and tumor segmentation from ct volumes",
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "ze} \\section{Related Work} \\paragraph{CNN-based Segmentation Networks}: Since the introduction of the seminal U-Net~\\cite{Ronneberger15}, CNN-based networks have achieved state-of-the-art results on various 2D and 3D various medical image segmentation tasks~\\cite{dou20163d,zhu2017deeply,yu2017volumetric,gibson2018automatic,li2018h}.",
+        "For volume-wise segmentation, tri-planar architectures are sometimes used to combine three-view slices for each voxel, also known for 2.5D methods ~\\cite{li2018h,liu20183d, xia20203d}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:vaswani2017attention",
+      "title": "Attention is all you need",
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "In Natural Language Processing (NLP), transformer-based models~\\cite{vaswani2017attention,devlin2018bert} achieve state-of-the-art benchmarks in various tasks.",
+        "After the embedding layer, we utilize a stack of transformer blocks~\\cite{vaswani2017attention,dosovitskiy2020image} comprising of multi-head self-attention (MSA) and multilayer perceptron (MLP) sublayers according to \\begin{equation} \\label{eq:trans2} \\mathbf{z^{\\prime}}_{i} = \\textnormal{MSA}(\\textnormal{Norm}(\\math"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2106.08254",
+      "title": "Beit: Bert pre-training of image transformers",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Furthermore, Vision Transformer (ViT)~\\cite{dosovitskiy2020image} and its variants have shown excellent capabilities in learning pre-text tasks that can be transferred to down-stream applications~\\cite{touvron2021training,caron2021emerging,bao2021beit}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2106.08254"
+    }
+  ],
+  "successors": [
+    {
+      "paper": "2105.13381",
+      "title": "Recent advances and clinical applications of deep learning in medical image analysis",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1076,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2105.13381"
+    },
+    {
+      "paper": "unknown",
+      "title": "UCTransNet: Rethinking the Skip Connections in U-Net from a Channel-Wise Perspective with Transformer",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1072,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2105.05537",
+      "title": "Swin-Unet: Unet-like Pure Transformer for Medical Image Segmentation",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 914,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2105.05537"
+    },
+    {
+      "paper": "unknown",
+      "title": "TransMed: Transformers Advance Multi-Modal Medical Image Classification",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 468,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Artificial intelligence and machine learning for medical imaging: A technology review",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 449,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Channel prior convolutional attention for medical image segmentation",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 329,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "MedSegDiff-V2: Diffusion-Based Medical Image Segmentation with Transformer",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 258,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2109.07162",
+      "title": "MISSFormer: An Effective Medical Image Segmentation Transformer",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 171,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2109.07162"
+    },
+    {
+      "paper": "unknown",
+      "title": "AFTer-UNet: Axial Fusion Transformer UNet for Medical Image Segmentation",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 169,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2109.12271",
+      "title": "BiTr-Unet: A CNN-Transformer Combined Network for MRI Brain Tumor Segmentation",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 138,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2109.12271"
+    },
+    {
+      "paper": "unknown",
+      "title": "Optimized U-Net for Brain Tumor Segmentation",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 122,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "A foundation model for joint segmentation, detection and recognition of biomedical objects across nine modalities",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 103,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Transclaw U-Net: Claw U-Net With Transformers for Medical Image Segmentation",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 100,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Are we ready for a new paradigm shift? A survey on visual deep MLP",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 98,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "HAU-Net: Hybrid CNN-transformer for breast ultrasound image segmentation",
+      "year": 2023,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 84,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 15
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

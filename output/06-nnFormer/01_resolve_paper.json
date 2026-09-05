@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "arxiv_id": "2109.03201",
+      "title": "nnFormer: Interleaved Transformer for Volumetric Segmentation",
+      "authors": [
+        "Hong-Yu Zhou",
+        "Jiansen Guo",
+        "Yinghao Zhang",
+        "Lequan Yu",
+        "Liansheng Wang",
+        "Yizhou Yu"
+      ],
+      "published_at": "2021-09-07T17:08:24Z",
+      "confidence": "CONFIRMED",
+      "why": "explicit arXiv identifier"
+    }
+  ]
+}

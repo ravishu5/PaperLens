@@ -1,0 +1,51 @@
+{
+  "uri": "paperlens://paper/1809.10486",
+  "paper_version": "1809.10486v1",
+  "title": "nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation",
+  "authors": [
+    {
+      "name": "Fabian Isensee"
+    },
+    {
+      "name": "Jens Petersen"
+    },
+    {
+      "name": "Andre Klein"
+    },
+    {
+      "name": "David Zimmerer"
+    },
+    {
+      "name": "Paul F. Jaeger"
+    },
+    {
+      "name": "Simon Kohl"
+    },
+    {
+      "name": "Jakob Wasserthal"
+    },
+    {
+      "name": "Gregor Koehler"
+    },
+    {
+      "name": "Tobias Norajitra"
+    },
+    {
+      "name": "Sebastian Wirkert"
+    },
+    {
+      "name": "Klaus H. Maier-Hein"
+    }
+  ],
+  "published_at": "2018-09-27T12:25:52Z",
+  "abstract": "The U-Net was presented in 2015. With its straight-forward and successful architecture it quickly evolved to a commonly used benchmark in medical image segmentation. The adaptation of the U-Net to novel problems, however, comprises several degrees of freedom regarding the exact architecture, preprocessing, training and inference. These choices are not independent of each other and substantially impact the overall performance. The present paper introduces the nnU-Net ('no-new-Net'), which refers to a robust and self-adapting framework on the basis of 2D and 3D vanilla U-Nets. We argue the strong case for taking away superfluous bells and whistles of many proposed network designs and instead focus on the remaining aspects that make out the performance and generalizability of a method. We evaluate the nnU-Net in the context of the Medical Segmentation Decathlon challenge, which measures segmentation performance in ten disciplines comprising distinct entities, image modalities, image geometries and dataset sizes, with no manual adjustments between datasets allowed. At the time of manuscript submission, nnU-Net achieves the highest mean dice scores across all classes and seven phase 1 tasks (except class 1 in BrainTumour) in the online leaderboard of the challenge.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 19,
+    "equations": 2,
+    "algorithms": 0,
+    "stated_values": 1,
+    "declared_urls": 2,
+    "components": 8
+  }
+}

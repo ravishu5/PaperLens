@@ -86,9 +86,55 @@ def _verb_form(token: str) -> str | None:
     return base if base.endswith("e") else base + "e"
 
 
+# Words too generic to sustain a claim that a component is absent. "no symbol
+# resembling 'V-Net Architecture'" was reported for a repository whose main file
+# is VNet.py, because the only surviving tokens were "net" and "architecture".
+_GENERIC = {"architecture", "network", "model", "module", "procedure", "method",
+            "overall", "block", "layer", "net", "part", "branch", "component",
+            "framework", "pipeline", "stage", "details", "implementation",
+            # Section-heading vocabulary. A component named only "Inference" says
+            # nothing that could be absent: every segmentation repository infers.
+            "inference", "training", "testing", "evaluation", "optimization",
+            "optimisation", "preprocessing", "postprocessing", "results",
+            "experiments", "discussion", "conclusion", "introduction", "setup"}
+
+# Source extensions. A term appearing only in a README does not make a component
+# present in the code.
+_CODE_SUFFIX = (".py", ".pyx", ".cpp", ".cc", ".c", ".h", ".hpp", ".cu", ".js",
+                ".ts", ".java", ".go", ".rs", ".jl", ".m", ".swift", ".kt",
+                ".prototxt", ".yaml", ".yml", ".json")
+
+
 def _tokens(text: str) -> list[str]:
-    return [t for t in re.split(r"[^a-z0-9]+", text.lower())
-            if len(t) > 2 and t not in _STOPWORDS]
+    out = [t for t in re.split(r"[^a-z0-9]+", text.lower())
+           if len(t) > 2 and t not in _STOPWORDS]
+    # "V-Net" survives tokenisation only as "net"; the de-hyphenated form is what
+    # actually appears in code as VNet.py.
+    for part in text.lower().split():
+        joined = re.sub(r"[^a-z0-9]", "", part)
+        if "-" in part and len(joined) > 2 and joined not in out:
+            out.append(joined)
+    return out
+
+
+def _appears_in_source(prov, repo_key: str, tokens: list[str]) -> tuple[str, str] | None:
+    """Does a distinctive token occur in this repository's source?
+
+    Checked before any absence claim. Symbol search can miss a component that is
+    plainly there under another name, and a false absence is the worst output
+    this system produces.
+    """
+    for tok in tokens:
+        if tok in _GENERIC or len(tok) < 4:
+            continue
+        try:
+            hits = prov.search_text(repo_key, tok, regex=False, limit=10)
+        except Exception:
+            continue
+        for h in hits:
+            if h.file_path.endswith(_CODE_SUFFIX):
+                return tok, f"{h.file_path}:{h.line}"
+    return None
 
 
 def _distinctive(value_text: str) -> bool:
@@ -265,6 +311,22 @@ def _map_component(store: Store, prov, repo_key: str, row,
         sections, symbols = located or (set(), set())
         described = set(_tokens(f"{name} {row['description'] or ''}"))
         overlap = described & symbols
+
+        # An absence claim needs at least one distinctive word to be about.
+        if all(t in _GENERIC or len(t) < 4 for t in toks):
+            return ("UNKNOWN", [],
+                    f"{name!r} contains no distinctive term, so neither its "
+                    f"presence nor its absence can be established by name",
+                    [], None)
+
+        found = _appears_in_source(prov, repo_key, toks)
+        if found:
+            tok, where = found
+            return ("AMBIGUOUS", [where],
+                    f"no symbol is named like {name!r}, but {tok!r} occurs in "
+                    f"source at {where}, so it is present under another name",
+                    [], None)
+
         if (sections and row["section_id"] in sections) or overlap:
             reason = (f"a constant it describes ({', '.join(sorted(overlap))}) was "
                       f"located in this repository"

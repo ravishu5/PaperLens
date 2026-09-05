@@ -1,0 +1,48 @@
+{
+  "paper_version": "1810.11654v3",
+  "method": "autoencoder",
+  "introduced_by": [],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction",
+      "uri": "paperlens://paper/1810.11654/section/1"
+    }
+  ],
+  "carried_forward_by": [
+    {
+      "paper": "2605.22572",
+      "title": "SegGuidedNet: Sub-Region-Aware Attention Supervision for Interpretable Brain Tumor Segmentation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper mentions this method where it cites the target",
+      "contexts": [
+        "Recent winners have built upon this foundation with specialized modifications, Myronenko [14] introduced an auxiliary VAE branch for autoencoder regularization, Jiang et al [18] utilized a two stage cascaded approach and Isensee et al [19] demonstrated that a self configuring nnU-Net pipeline can\u2026"
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2605.22572"
+    },
+    {
+      "paper": "2605.04518",
+      "title": "DALight-3D: A Lightweight 3D U-Net for Brain Tumor Segmentation from Multi-Modal MRI",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper mentions this method where it cites the target",
+      "contexts": [
+        "Subsequent methods attempted to address this through cascaded anisotropic convolutions [33], multi-planar fusion [2], and autoencoder-regularized volumetric segmentation [27]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2605.04518"
+    }
+  ],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed.",
+    "No sentence in this paper mentions 'autoencoder' while citing another work, so no origin can be established from its text."
+  ]
+}

@@ -11,6 +11,20 @@ ANALYZER_VERSION = "1"
 USER_AGENT = "PaperLens/0.1 (https://github.com/ravi/paperlens; MCP research tool)"
 
 
+def quiet_dependencies() -> None:
+    """Silence third-party INFO chatter.
+
+    httpx logs a line per request and arxiv-to-prompt logs to the root logger.
+    On a stdio MCP server that noise goes to the client's stderr for every call,
+    and it buries PaperLens' own warnings -- including the parser guard that
+    exists precisely to be noticed.
+    """
+    import logging
+
+    for name in ("httpx", "httpcore", "arxiv_to_prompt", "urllib3"):
+        logging.getLogger(name).setLevel(logging.WARNING)
+
+
 def home() -> Path:
     p = Path(os.environ.get("PAPERLENS_HOME", Path.home() / ".paperlens"))
     p.mkdir(parents=True, exist_ok=True)

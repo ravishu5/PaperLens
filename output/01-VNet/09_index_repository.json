@@ -1,0 +1,13 @@
+{
+  "repo": "faustomilletari/VNet",
+  "snapshot_id": "faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1",
+  "commit_sha": "584c1502f369f2547e7ed384f9cc25beb09f65e1",
+  "indexer": "jcodemunch@stdio",
+  "symbol_count": 28,
+  "file_count": 5,
+  "languages": {
+    "python": 5
+  },
+  "cached": false,
+  "warnings": []
+}

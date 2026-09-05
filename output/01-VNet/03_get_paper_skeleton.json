@@ -1,0 +1,153 @@
+{
+  "paper_version": "1606.04797v1",
+  "uri": "paperlens://paper/1606.04797",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction and Related Work",
+      "uri": "paperlens://paper/1606.04797/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Method",
+      "uri": "paperlens://paper/1606.04797/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Dice loss layer",
+      "uri": "paperlens://paper/1606.04797/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Training",
+      "uri": "paperlens://paper/1606.04797/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Testing",
+      "uri": "paperlens://paper/1606.04797/section/3.2"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Results",
+      "uri": "paperlens://paper/1606.04797/section/4"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/1606.04797/section/5"
+    },
+    {
+      "path": "6",
+      "level": 1,
+      "title": "Acknowledgement",
+      "uri": "paperlens://paper/1606.04797/section/6"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "e829e2b33458",
+      "number": null,
+      "number_confidence": "UNKNOWN",
+      "environment": "displaymath",
+      "preview": "D=\\frac{2\\sum_{i}^{N}p_{i}g_{i}}{\\sum_{i}^{N}p_{i}^{2}+\\sum_{i}^{N}g_{i}^{2}}",
+      "uri": "paperlens://paper/1606.04797/equation/e829e2b33458"
+    },
+    {
+      "hash": "c0174b065419",
+      "number": null,
+      "number_confidence": "UNKNOWN",
+      "environment": "displaymath",
+      "preview": "\\frac{\\partial D}{\\partial p_{j}}=2\\left[\\frac{g_{j}\\left(\\sum_{i}^{N}p_{i}^{2}+\\sum_{i}^{",
+      "uri": "paperlens://paper/1606.04797/equation/c0174b065419"
+    }
+  ],
+  "components": [
+    {
+      "slug": "method",
+      "name": "Method",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/method"
+    },
+    {
+      "slug": "training",
+      "name": "Training",
+      "kind": "training",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/training"
+    },
+    {
+      "slug": "results",
+      "name": "Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/results"
+    },
+    {
+      "slug": "v-net-architecture",
+      "name": "V-Net Architecture",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/v-net-architecture"
+    },
+    {
+      "slug": "dice-loss-layer",
+      "name": "Dice Loss Layer",
+      "kind": "loss",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
+    },
+    {
+      "slug": "training-procedure",
+      "name": "Training Procedure",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/training-procedure"
+    },
+    {
+      "slug": "inference",
+      "name": "Inference",
+      "kind": "inference",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/inference"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "p_j",
+      "value": "2",
+      "src_line": 144
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "http://promise12.grand-challenge.org/results/",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false
+    },
+    {
+      "url": "https://github.com/faustomilletari/VNet",
+      "owner": "faustomilletari",
+      "repo": "VNet",
+      "in_abstract": false
+    },
+    {
+      "url": "https://github.com/faustomilletari/3D-Caffe",
+      "owner": "faustomilletari",
+      "repo": "3D-Caffe",
+      "in_abstract": false
+    }
+  ],
+  "limitations": []
+}

@@ -1,0 +1,105 @@
+{
+  "paper_version": "1606.04797v1",
+  "repo": "faustomilletari/VNet",
+  "commit_sha": "584c1502f369f2547e7ed384f9cc25beb09f65e1",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 0,
+    "CONFIG_HIDDEN": 3
+  },
+  "gaps": [
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.00000001.",
+      "where": "VNet.py:92",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/faustomilletari/VNet/file/VNet.py",
+          "excerpt": "plt.pause(0.00000001)",
+          "locator": "VNet.py:92",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/1606.04797",
+          "excerpt": "none of 0.00000001 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.00000001"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.0005.",
+      "where": "VNet.py:121",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/faustomilletari/VNet/file/VNet.py",
+          "excerpt": "f.write(\"weight_decay: 0.0005 \\n\")",
+          "locator": "VNet.py:121",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/1606.04797",
+          "excerpt": "none of 0.0005 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.0005"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.00001.",
+      "where": "pyLayer.py:50",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/faustomilletari/VNet/file/pyLayer.py",
+          "excerpt": "dice[i] = 2 * self.intersection[i] / (self.union[i]+0.00001)",
+          "locator": "pyLayer.py:50",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/1606.04797",
+          "excerpt": "none of 0.00001 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.00001"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}

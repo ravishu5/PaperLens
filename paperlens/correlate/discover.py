@@ -54,6 +54,24 @@ def _code_files(files: list[str]) -> list[str]:
     return out
 
 
+# Curated reading lists cite a paper's title in Markdown and contain no code.
+# When a paper declares no repository, GitHub README search returns these, and
+# without demotion an "Awesome Transformers" list became the top candidate for
+# UNETR -- after which every downstream tool compared the paper against it.
+_CURATED_NAME = re.compile(r"awesome|paper[-_ ]?list|reading[-_ ]?list|survey|"
+                           r"collection|resources|bibliograph", re.I)
+_CURATED_DESC = re.compile(r"curated list|list of papers|paper list|collection of|"
+                           r"reading list|survey of", re.I)
+
+
+def _is_curated_list(repo: "gh.Repo", code_file_count: int) -> bool:
+    if code_file_count == 0:
+        return True
+    if _CURATED_NAME.search(repo.name) or _CURATED_NAME.search(repo.full_name):
+        return True
+    return bool(repo.description and _CURATED_DESC.search(repo.description))
+
+
 _REPRO_HINT = re.compile(
     r"\b(unofficial|reproduc|re-?implement|replicat|third[- ]party|port of|pytorch "
     r"implementation of|my implementation)\b", re.I)
@@ -70,6 +88,7 @@ class Candidate:
     coverage_kind: str            # SHALLOW | NONE
     matched_kinds: dict[str, str] = field(default_factory=dict)
     missing_kinds: list[str] = field(default_factory=list)
+    name_match: bool = False
     stars: int | None = None
     archived: bool | None = None
     license: str | None = None
@@ -79,6 +98,26 @@ class Candidate:
     @property
     def repo_id(self) -> str:
         return f"{self.owner}/{self.name}"
+
+
+def _normalise(text: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def _name_affinity(repo_name: str, title: str) -> bool:
+    """Is this repository named after the thing the paper describes?
+
+    The paper for V-Net links both faustomilletari/VNet (the implementation) and
+    faustomilletari/3D-Caffe (the framework it needs). Both are author-declared,
+    so evidence alone cannot separate them -- but only one is named after the
+    method, and the other matched every coverage pattern by accident because a
+    Caffe fork contains loss_layers.hpp and train_net.cpp.
+    """
+    rn = _normalise(repo_name)
+    if len(rn) < 3:
+        return False
+    head = _normalise(title.split(":")[0])
+    return bool(head) and (rn in head or head in rn)
 
 
 def _author_tokens(authors: list[dict]) -> set[str]:
@@ -149,12 +188,27 @@ def find_implementations(
             "src_line": r["src_line"], "url_id": r["id"],
         }
 
-    # ── widen: repositories that merely claim to implement the paper ───────
+    # ── widen: repositories named after the method, then ones citing it ────
     if kind in ("all", "reproduction") and len(seeds) < max_candidates:
-        for repo in gh.search_repos(store, f'"{title}" in:readme', limit=6):
-            k = repo.full_name.lower()
-            if repo.owner and k not in seeds:
-                seeds[k] = {"owner": repo.owner, "name": repo.name, "declared": False}
+        # Papers name their method and authors name the repository after it, so
+        # searching the name finds implementations. Searching the README finds
+        # curated lists, which is what happens when a paper declares no URL.
+        method = title.split(":")[0].strip()
+        queries = []
+        if 2 <= len(method) <= 40:
+            queries.append(f"{method} in:name")
+            compact = re.sub(r"[^A-Za-z0-9]", "", method)
+            if compact.lower() != method.lower().replace(" ", ""):
+                queries.append(f"{compact} in:name")
+        queries.append(f'"{title}" in:readme')
+        for q in queries:
+            if len(seeds) >= max_candidates:
+                break
+            for repo in gh.search_repos(store, q, limit=6):
+                k = repo.full_name.lower()
+                if repo.owner and k not in seeds:
+                    seeds[k] = {"owner": repo.owner, "name": repo.name,
+                                "declared": False}
 
     notes: list[str] = []
     if not gh.authenticated():
@@ -172,6 +226,15 @@ def find_implementations(
 
     # Candidates with no link to the paper at all are noise, not findings.
     candidates = [c for c in candidates if c.relation != "UNRELATED"]
+
+    deps = [c.repo_id for c in candidates if c.relation == "DECLARED_DEPENDENCY"]
+    if deps:
+        notes.append(
+            f"The paper links {', '.join(deps)}, but nothing identifies it as this "
+            f"paper's own implementation -- the name does not match the method, "
+            f"the README does not cite the paper, and the owner is not an author. "
+            f"Treated as a declared dependency."
+        )
 
     if kind == "official":
         candidates = [c for c in candidates if c.relation in ("OFFICIAL", "ORGANIZATION")]
@@ -195,6 +258,26 @@ def find_implementations(
             "kinds and cannot confirm that a matched file truly implements the "
             "component. Missing kinds are the more reliable half of this signal."
         )
+    listed = [c.repo_id for c in candidates if c.relation == "DERIVED"]
+    if listed:
+        notes.append(
+            f"{len(listed)} candidate(s) are curated lists or documentation "
+            f"repositories that cite the paper rather than implement it; they are "
+            f"ranked last and were not compared against the paper."
+        )
+    if not any(c.relation in ("OFFICIAL", "ORGANIZATION") for c in candidates):
+        notes.append(
+            "No official implementation was established. The paper declares no "
+            "repository URL, so these candidates come from searching GitHub for "
+            "the title -- treat them as third-party until verified."
+        )
+    if any(c.coverage_kind == "SHALLOW_SMALL_REPO" for c in candidates):
+        notes.append(
+            "Some repositories have fewer than a dozen source files, where a "
+            "compact implementation keeps several components in one file. A "
+            "missing kind there may still be implemented; confirm with "
+            "map_paper_to_code before treating it as absent."
+        )
 
     return {
         "paper_version": pv,
@@ -215,9 +298,12 @@ def _rank_key(c: Candidate) -> tuple:
     above openai/CLIP.
     """
     conf_rank = {"CONFIRMED": 3, "LIKELY": 2, "POSSIBLE": 1, "UNKNOWN": 0}[c.confidence]
-    rel_rank = {"OFFICIAL": 3, "ORGANIZATION": 2, "REPRODUCTION": 2,
-                "THIRD_PARTY": 1, "DERIVED": 0, "UNRELATED": -1}[c.relation]
-    return (conf_rank, rel_rank,
+    rel_rank = {"OFFICIAL": 4, "ORGANIZATION": 3, "REPRODUCTION": 3,
+                "THIRD_PARTY": 2, "DECLARED_DEPENDENCY": 1, "DERIVED": 0,
+                "UNRELATED": -1}[c.relation]
+    # Name affinity sits above coverage: coverage is a filename heuristic and a
+    # framework fork can satisfy every pattern without implementing the paper.
+    return (conf_rank, rel_rank, 1 if c.name_match else 0,
             c.coverage_score if c.coverage_score is not None else -1.0,
             c.stars or 0)
 
@@ -259,10 +345,14 @@ def _assess_candidate(
     # S2 -- repository owner matches the paper's authors or their organisation.
     owner_name = gh.get_owner_name(store, owner) or ""
     owner_toks = {t for t in re.split(r"[\s.\-_]+", f"{owner} {owner_name}".lower()) if len(t) > 2}
-    if owner_toks & author_toks:
+    shared = owner_toks & author_toks
+    # A single shared token is usually a common surname. "QiujieDong" matched
+    # UNETR's author "Dong Yang" on "dong" alone and was promoted to LIKELY.
+    if len(shared) >= 2:
         signals.append(Signal(
             name="author_owner_match", weight="STRONG",
-            detail=f"repository owner {owner!r} matches a paper author",
+            detail=f"repository owner {owner!r} matches a paper author "
+                   f"on {sorted(shared)}",
             evidence=[Evidence(kind="repo_metadata", uri=repo_uri,
                                excerpt=f"owner={owner} ({repo.owner_type})")],
         ))
@@ -292,8 +382,16 @@ def _assess_candidate(
         reasoning += "; repository is archived"
 
     # ── relation ───────────────────────────────────────────────────────────
+    backlinked = any(sig.name == "readme_backlink" for sig in signals)
+    authored = any(sig.name == "author_owner_match" for sig in signals)
     if meta.get("declared"):
-        relation = "OFFICIAL"
+        # A paper links the code it used as well as the code it wrote. Calling a
+        # declared toolchain the official implementation put 3D-Caffe above
+        # faustomilletari/VNet and batchgenerators above nnU-Net itself, so a
+        # declared URL must also look like *this paper's* repository.
+        relation = ("OFFICIAL"
+                    if (_name_affinity(name, title) or backlinked or authored)
+                    else "DECLARED_DEPENDENCY")
     elif _REPRO_HINT.search(readme[:4000]):
         relation = "REPRODUCTION"
     elif owner_toks & author_toks:
@@ -308,8 +406,10 @@ def _assess_candidate(
     # ── shallow coverage ───────────────────────────────────────────────────
     score, matched, missing = (None, {}, [])
     coverage_kind = "NONE"
+    code_count: int | None = None
     if verify_coverage:
         files = _code_files(gh.get_tree(store, owner, name, repo.default_branch))
+        code_count = len(files)
         if len(files) > 3000:
             # In a repository this large something matches every pattern by
             # accident, so the score would be meaningless.
@@ -317,17 +417,38 @@ def _assess_candidate(
         else:
             score, matched, missing = _shallow_coverage(files, expected_kinds)
             coverage_kind = "SHALLOW" if score is not None else "NONE"
+            if coverage_kind == "SHALLOW" and len(files) < 12:
+                # A compact implementation keeps the loss inside the model file,
+                # so a missing kind here may still be implemented. Qualify the
+                # score rather than withholding it: openai/CLIP is seven files
+                # and its missing training code is a real finding.
+                coverage_kind = "SHALLOW_SMALL_REPO"
 
+    name_match = _name_affinity(name, title)
+    if name_match:
+        reasoning += f"; repository is named after the paper's method"
+
+    # A repository with no source cannot implement anything, whatever else
+    # points at it.
+    if code_count is not None and _is_curated_list(repo, code_count):
+        relation = "DERIVED"
+        confidence = at_most(confidence, "POSSIBLE")
+        reasoning = (f"this is a curated list or documentation repository "
+                     f"({code_count} source file(s)); it references the paper "
+                     f"rather than implementing it")
+        coverage_kind = "NOT_AN_IMPLEMENTATION"
+        score, matched, missing = None, {}, []
     c = Candidate(
         owner=owner, name=name, relation=relation, confidence=confidence,
         reasoning=reasoning, coverage_score=score, coverage_kind=coverage_kind,
-        matched_kinds=matched, missing_kinds=missing, stars=repo.stars,
-        archived=repo.archived, license=repo.license,
+        matched_kinds=matched, missing_kinds=missing, name_match=name_match,
+        stars=repo.stars, archived=repo.archived, license=repo.license,
     )
 
     # Missing component kinds are recorded as absence evidence: this is what
-    # later phases diff against to find implementation gaps.
-    for kind in missing:
+    # later phases diff against to find implementation gaps. Only when coverage
+    # was actually measurable -- an unmeasured kind is not an absent one.
+    for kind in (missing if coverage_kind.startswith("SHALLOW") else []):
         signals.append(Signal(
             name=f"absent_{kind}", weight="WEAK",
             detail=f"no file plausibly implementing the {kind} component",
@@ -370,6 +491,7 @@ def _public(c: Candidate) -> dict[str, Any]:
         "confidence": c.confidence,
         "reasoning": c.reasoning,
         "rank": c.rank,
+        "name_match": c.name_match,
         "coverage": {
             "kind": c.coverage_kind,
             "score": round(c.coverage_score, 2) if c.coverage_score is not None else None,

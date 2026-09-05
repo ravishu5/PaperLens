@@ -87,31 +87,71 @@ def fetch_metadata(store: Store, arxiv_id: str) -> ArxivMetadata:
     )
 
 
+_STOP_TERMS = {"the", "a", "an", "of", "for", "and", "with", "using", "via",
+               "on", "in", "to", "paper", "arxiv"}
+
+
+def _query_variants(query: str) -> list[tuple[str, str]]:
+    """Progressively looser arXiv queries, most precise first.
+
+    An exact-phrase query alone returns nothing whenever the caller's phrasing is
+    not the literal title -- "nnU-Net self-configuring method…" found zero
+    results even though the paper exists, because the arXiv title reads
+    "Self-adapting Framework". Falling back to a term conjunction, then to the
+    title field, recovers those without loosening the precise case.
+    """
+    q = query.strip()
+    terms = [t for t in re.split(r"[^A-Za-z0-9.\-]+", q)
+             if len(t) > 2 and t.lower() not in _STOP_TERMS]
+    variants: list[tuple[str, str]] = [("phrase", f'all:"{q}"')]
+    if terms:
+        variants.append(("all_terms", " AND ".join(f"all:{t}" for t in terms[:8])))
+        variants.append(("title_terms", " AND ".join(f"ti:{t}" for t in terms[:5])))
+        if len(terms) > 3:
+            # A distinctive leading token plus a couple of topic words.
+            variants.append(("loose", " AND ".join(f"all:{t}" for t in terms[:3])))
+    return variants
+
+
 def search(store: Store, query: str, max_results: int = 8) -> list[ArxivMetadata]:
-    """Title/abstract search, used by resolve_paper when the input is not an id."""
-    _throttle(store)
-    r = httpx.get(_ATOM,
-                  params={"search_query": f'all:"{query}"', "max_results": max_results,
-                          "sortBy": "relevance"},
-                  headers={"User-Agent": config.USER_AGENT}, timeout=30.0,
-                  follow_redirects=True)
-    r.raise_for_status()
+    """Title/abstract search, used by resolve_paper when the input is not an id.
+
+    Tries increasingly loose queries and stops at the first that returns
+    anything, so a precise phrase still wins when it matches.
+    """
+    seen: set[str] = set()
     out: list[ArxivMetadata] = []
-    for entry in ET.fromstring(r.content).findall("a:entry", _NS):
-        txt = lambda tag: (e.text or "").strip() if (e := entry.find(tag, _NS)) is not None else ""
-        raw_id = txt("a:id")
-        parsed = parse_arxiv_id(raw_id)
-        if not parsed:
+    for _strategy, search_query in _query_variants(query):
+        _throttle(store)
+        try:
+            r = httpx.get(_ATOM,
+                          params={"search_query": search_query,
+                                  "max_results": max_results,
+                                  "sortBy": "relevance"},
+                          headers={"User-Agent": config.USER_AGENT}, timeout=30.0,
+                          follow_redirects=True)
+            r.raise_for_status()
+        except httpx.HTTPError:
             continue
-        aid, ver = parsed
-        out.append(ArxivMetadata(
-            arxiv_id=aid, version=ver or 1,
-            title=re.sub(r"\s+", " ", txt("a:title")),
-            abstract=re.sub(r"\s+", " ", txt("a:summary")),
-            authors=[{"name": (n.text or "").strip()}
-                     for n in entry.findall("a:author/a:name", _NS)],
-            published_at=txt("a:published"), updated_at=txt("a:updated"), doi=None,
-        ))
+        for entry in ET.fromstring(r.content).findall("a:entry", _NS):
+            txt = lambda tag: (e.text or "").strip() if (e := entry.find(tag, _NS)) is not None else ""
+            parsed = parse_arxiv_id(txt("a:id"))
+            if not parsed:
+                continue
+            aid, ver = parsed
+            if aid in seen:
+                continue
+            seen.add(aid)
+            out.append(ArxivMetadata(
+                arxiv_id=aid, version=ver or 1,
+                title=re.sub(r"\s+", " ", txt("a:title")),
+                abstract=re.sub(r"\s+", " ", txt("a:summary")),
+                authors=[{"name": (n.text or "").strip()}
+                         for n in entry.findall("a:author/a:name", _NS)],
+                published_at=txt("a:published"), updated_at=txt("a:updated"), doi=None,
+            ))
+        if out:
+            break
     return out
 
 

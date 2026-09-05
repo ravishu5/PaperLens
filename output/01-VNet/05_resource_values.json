@@ -1,0 +1,14 @@
+{
+  "uri": "paperlens://paper/1606.04797/values",
+  "paper_version": "1606.04797v1",
+  "values": [
+    {
+      "symbol": "p_j",
+      "value": "2",
+      "numeric": 2.0,
+      "section": "1606.04797v1:sec:3",
+      "src_line": 144,
+      "context": "re the sums run over the $N$ voxels, of the predicted binary segmentation volume $p_i\\in{P}$ and the ground truth binary volume $g_i\\in{G}$. This formulation of Dice can be differentiated yielding the gradient \\[ \\frac{\\partial D}{\\partial p_{j}}=2\\left[\\frac{g_{j}\\left(\\sum_{i}^{N}p_{i}^{2}+\\sum_{i}^{N}g_{i}^{2}\\right)-2p_{j}\\left(\\sum_{i}^{N}p_{i}g_{i}\\right)}{\\left(\\sum_{i}^{N}p_{i}^{2}+\\sum_{i}^{N}g_{i}^{2}\\right)^{2}}\\right] \\] computed with respect to the $j$-th voxel o"
+    }
+  ]
+}

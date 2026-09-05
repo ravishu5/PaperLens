@@ -1,0 +1,186 @@
+{
+  "paper_version": "1810.11654v3",
+  "uri": "paperlens://lineage/1810.11654",
+  "successors": [
+    {
+      "paper": "2607.28858",
+      "title": "A Unified Benchmark of Deep Learning Models for Multi-task 3D Brain Tumor Segmentation from Magnetic Resonance Imaging",
+      "year": 2026,
+      "relation": "SUCCESSOR",
+      "confidence": "LIKELY",
+      "why": "Semantic Scholar marks the citation influential",
+      "contexts": [
+        "SegResNet [11] adopts an asymmetric encoder\u2013decoder architecture in which the encoder, composed of residual blocks with group normalization, is substantially deeper than the decoder.",
+        "Five representative models\u20143D U-Net [2], SegResNet [11], Swin UNETR [4], SegMamba [9], and SegMambaV2 [10]\u2014are trained and evaluated using the same preprocessing pipeline, optimization strategy, validation protocol, and inference procedure.",
+        "SegResNet [11] Residual Convolutional Asymmetric encoder\u2013decoder with residual blocks and an auxiliary variational auto-encoder branch for regularization."
+      ],
+      "citation_count": 0,
+      "is_influential": true,
+      "intents": [],
+      "uri": "paperlens://paper/2607.28858"
+    },
+    {
+      "paper": "2605.05775",
+      "title": "The autoPET3 Challenge: Automated Lesion Segmentation in Whole-Body PET/CT - Multitracer Multicenter Generalization",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Organ masks are predicted by a MONAI SegResNet model (Myronenko, 2019) trained on the TotalSegmentor dataset."
+      ],
+      "citation_count": 12,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2605.05775"
+    },
+    {
+      "paper": "2605.04008",
+      "title": "Enhanced 3D Brain Tumor Segmentation Using Assorted Precision Training",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 4,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2605.04008"
+    },
+    {
+      "paper": "2605.02230",
+      "title": "InfiltrNet: Dual-Branch CNN-Transformer Architecture for Brain Tumor Infiltration Risk Prediction",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Later approaches, including Myronenko [11], cascaded U-Net [16], [17], and nnU-Net [18], achieved state-of-the-art performance through improved architectures and training strategies.",
+        "SegResNet [11] is configured with 32 initial filters and encoder/decoder block depths of (1,2,2,4) and (1,1,1).",
+        "Architectures such as 3D U-Net [7], V-Net [8], UNETR [9], Swin-UNETR [10], and SegResNet [11] can accurately segment the enhancing tumor, necrotic core, and peritumoral edema from multimodal MRI."
+      ],
+      "citation_count": 2,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2605.02230"
+    },
+    {
+      "paper": "2607.26829",
+      "title": "BATS: Resource-Efficient Volumetric Segmentation with Boundary-Aware Mixed-Resolution Tokens",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.26829"
+    },
+    {
+      "paper": "2609.00447",
+      "title": "Instance-Guided Report Anchoring for Text-Free 3D Abnormality Segmentation in Chest CT",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2609.00447"
+    },
+    {
+      "paper": "2608.17926",
+      "title": "PerFact: Perception-Derived Fact Prompting for 3D Brain MRI Report Generation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "For non-tumor datasets, whose masks are binary rather than multi-region, we use a separate binary lesion segmenter per dataset, which avoids forcing the tumor label scheme onto stroke and white-matter disease (Myronenko 2018)."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.17926"
+    },
+    {
+      "paper": "2608.13807",
+      "title": "Label-Free Deep-Tissue Peripheral Nerve Detection with a Handheld Multimodal OCT Probe and NerveDetNet",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "The compared architectures were U-Net [24], U-Net++ [19], SegResNet [25], DeepLabV3+ [26], Attention U-Net [27], TransUNet-lite adapted from TransUNet [28], and NerveDetNet."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.13807"
+    },
+    {
+      "paper": "2608.05389",
+      "title": "Text-Guided Refinement of Multi-sequence Glioma Subregion Segmentation with a Vision-Language Foundation Model",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "\u2026Tumor Segmentation (BraTS) benchmark providing standardized subregion labels and common evaluation metrics [Menze et al., 2015, Bakas et al., 2018, Pereira et al., 2016, Havaei et al., 2017, Kamnitsas et al., 2017, Myronenko, 2018, Hatamizadeh et al., 2022, Tang et al., 2022, Liu et al., 2023]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2608.05389"
+    },
+    {
+      "paper": "2607.22139",
+      "title": "CARDIAG: A Dense Segment Classification Benchmark of Deep Learning Architectures for Coronary Angiography",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "In the study we identify four groups of architectures and associated inductive biases: (1) Standard CNNs including U-Net [31], Attention U-Net [32]s, SegResNet [33], nnUNet [34], PSP-Net [35], FPN [36], UPerNet [37], DeepLabV3 [38] and DeepLabV3+ [39]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.22139"
+    },
+    {
+      "paper": "2607.22727",
+      "title": "Trustworthy Medical Segmentation: Uncertainty-Aware U-Net Evaluation Under Clinical Image Degradation",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Myronenko demonstrated that a well-regularized U-Net with deep supervision and region-specific loss weighting achieves competitive BraTS performance without complex architectural modifications [16]."
+      ],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.22727"
+    },
+    {
+      "paper": "2607.12602",
+      "title": "Decouple and Reason: Anatomically Guided Two-Stage Voxel-Level Grounding of Free-Text Findings in 3D Chest CT",
+      "year": 2026,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": false,
+      "intents": [],
+      "uri": "paperlens://paper/2607.12602"
+    }
+  ],
+  "notes": [
+    "Ranking uses influence and citation intent where Semantic Scholar supplies them, and citation count otherwise. Citation count alone is a measure of attention, not of improvement.",
+    "What each successor changed is not asserted here. The citing sentences are returned as evidence; read them, or the successor's own sections, before claiming an improvement."
+  ]
+}
