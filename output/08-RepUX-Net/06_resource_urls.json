@@ -1,0 +1,16 @@
+{
+  "uri": "paperlens://paper/2303.05785/urls",
+  "paper_version": "2303.05785v2",
+  "urls": [
+    {
+      "url": "https://github.com/MASILab/RepUX-Net",
+      "host": "github.com",
+      "owner": "MASILab",
+      "repo": "RepUX-Net",
+      "in_abstract": true,
+      "section": null,
+      "src_line": 32,
+      "context": "to 0.944), external validation (MSD: 0.901 to 0.932, KiTS: 0.815 to 0.847, LiTS: 0.933 to 0.949, TCIA: 0.736 to 0.779) and transfer learning (AMOS: 0.880 to 0.911) scenarios in Dice Score. Both codes and pretrained models are available at: \\url{https://github.com/MASILab/RepUX-Net} \\keywords{Bayesian Frequency Re-parameterization, Large Kernel Convolution, Medical Image Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs),"
+    }
+  ]
+}

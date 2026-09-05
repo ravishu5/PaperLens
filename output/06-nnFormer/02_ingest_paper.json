@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2109.03201",
+  "paper_version": "2109.03201v6",
+  "title": "nnFormer: Interleaved Transformer for Volumetric Segmentation",
+  "fidelity": "LATEX_EXACT",
+  "sections": 14,
+  "equations": 12,
+  "numbered_equations": 12,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 4,
+  "declared_urls": 1,
+  "components": 8,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

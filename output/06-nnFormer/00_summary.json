@@ -1,0 +1,15 @@
+{
+  "paper": "06-nnFormer",
+  "arxiv_id": "2109.03201",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "282857341/nnFormer",
+  "counts": {
+    "sections": 14,
+    "equations": 12,
+    "algorithms": 0,
+    "stated_values": 4,
+    "declared_urls": 1,
+    "components": 8
+  }
+}

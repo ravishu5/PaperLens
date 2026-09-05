@@ -1,0 +1,102 @@
+{
+  "paper_version": "1810.11654v3",
+  "repos": [
+    "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+    "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization"
+  ],
+  "errors": {},
+  "closest_to_paper": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+  "coverage": {
+    "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": {
+      "matched": 1,
+      "absent": 0,
+      "ambiguous": 4,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    },
+    "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": {
+      "matched": 1,
+      "absent": 1,
+      "ambiguous": 3,
+      "blocking_differences": 0,
+      "significant_differences": 1
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "Data Preprocessing and Augmentation",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Encoder",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Loss",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Optimization",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "alpha_0 = 1e-4",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "MATCHED",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "MATCHED"
+      }
+    },
+    {
+      "anchor": "bath size = 1",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "hline\n\t\tEnsemble = 10",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "Decoder",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Ensemble = 10",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "ABSENT"
+      }
+    },
+    {
+      "anchor": "Variational Autoencoder Branch",
+      "status": {
+        "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization": "UNKNOWN",
+        "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization": "AMBIGUOUS"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "paper_version": "2310.00199v2",
+  "repo": "MASILab/deform-uxnet",
+  "commit_sha": "b2bfad71d798a6691e4234614e8d1ca9c63e31bd",
+  "uri": "paperlens://mapping/2310.00199/MASILab/deform-uxnet",
+  "summary": {
+    "BLOCKING": 0,
+    "SIGNIFICANT": 0,
+    "MINOR": 0
+  },
+  "differences": [],
+  "notes": [
+    "Each difference pairs an exact quote from the paper with an exact search over source. The inference that a paper term implies a code term is a heuristic, which is why these are LIKELY rather than CONFIRMED.",
+    "No differences were established. That is not proof of equivalence, only that these checks found nothing."
+  ]
+}

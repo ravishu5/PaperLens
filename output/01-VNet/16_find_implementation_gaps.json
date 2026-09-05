@@ -5,12 +5,12 @@
   "summary": {
     "ABSENT_FROM_REPOSITORY": 0,
     "EXTERNAL_DEPENDENCY": 0,
-    "CONFIG_HIDDEN": 3
+    "CONFIG_HIDDEN": 2
   },
   "gaps": [
     {
       "kind": "CONFIG_HIDDEN",
-      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.00000001.",
+      "description": "2 constant(s) hard-coded in source that appear nowhere in the paper: 0.00000001, 0.0005.",
       "where": "VNet.py:92",
       "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
       "confidence": "CONFIRMED",
@@ -27,41 +27,12 @@
           "kind": "paper_url",
           "stance": "SUPPORTS",
           "uri": "paperlens://paper/1606.04797",
-          "excerpt": "none of 0.00000001 occurs in the paper source",
+          "excerpt": "none of 0.00000001, 0.0005 occurs in the paper source",
           "locator": null,
           "provenance": {
             "method": "literal_absence",
             "constants": [
-              "0.00000001"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "kind": "CONFIG_HIDDEN",
-      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.0005.",
-      "where": "VNet.py:121",
-      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
-      "confidence": "CONFIRMED",
-      "evidence": [
-        {
-          "kind": "code_file",
-          "stance": "SUPPORTS",
-          "uri": "paperlens://repo/faustomilletari/VNet/file/VNet.py",
-          "excerpt": "f.write(\"weight_decay: 0.0005 \\n\")",
-          "locator": "VNet.py:121",
-          "provenance": null
-        },
-        {
-          "kind": "paper_url",
-          "stance": "SUPPORTS",
-          "uri": "paperlens://paper/1606.04797",
-          "excerpt": "none of 0.0005 occurs in the paper source",
-          "locator": null,
-          "provenance": {
-            "method": "literal_absence",
-            "constants": [
+              "0.00000001",
               "0.0005"
             ]
           }

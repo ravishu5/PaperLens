@@ -1,0 +1,442 @@
+{
+  "paper_version": "1809.10486v1",
+  "uri": "paperlens://lineage/1809.10486",
+  "predecessors": [
+    {
+      "paper": "bib:ronneberger2015u",
+      "title": null,
+      "year": 2015,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "It resides on a set of three comparatively simple U-Net models that contain only minor modifications to the original U-Net \\cite{ronneberger2015u}.",
+        "The U-Net \\cite{ronneberger2015u} is a successful encoder-decoder network that has received a lot of attention in the recent years.",
+        "e}{decathlon.grand-challenge.org/evaluation/results}}).} \\label{tab:results} } \\end{table} \\section{Discussion} In this paper we present the nnU-Net segmentation framework for the medical domain that directly builds around the original U-Net architecture \\cite{ronneberger2015u} and dynamically adapts itself to the specifics of any given dataset."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1804.03999",
+      "title": null,
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}.",
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1804.03999"
+    },
+    {
+      "paper": "bib:isensee2017brain",
+      "title": null,
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}.",
+        "Based on past experience \\cite{isensee2017automatic,isensee2017brain} we favor this formulation over other variants \\cite{milletari2016v,sudre2017generalised}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:jegou2017one",
+      "title": null,
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}.",
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:isensee2017automatic",
+      "title": null,
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "However, there is evidence \\cite{isensee2017automatic} that conventional 3D segmentation methods deteriorate in performance if the dataset is anisotropic (cf.",
+        "Based on past experience \\cite{isensee2017automatic,isensee2017brain} we favor this formulation over other variants \\cite{milletari2016v,sudre2017generalised}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:milletari2016v",
+      "title": null,
+      "year": 2016,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}.",
+        "Based on past experience \\cite{isensee2017automatic,isensee2017brain} we favor this formulation over other variants \\cite{milletari2016v,sudre2017generalised}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1803.02579",
+      "title": null,
+      "year": 2018,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1803.02579"
+    },
+    {
+      "paper": "bib:chen2018deeplab",
+      "title": null,
+      "year": 2018,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Unlike other segmentation networks, such as FCN \\cite{long2015fully} and previous iterations of DeepLab \\cite{chen2018deeplab} this allows the U-Net to segment fine structures particularly well."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1709.07330",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "However, each segmentation benchmark seems to require specialized architectures and training scheme modifications to achieve competitive performance \\cite{isensee2017brain,li2017h,roy2018concurrent,oktay2018attention,jegou2017one}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1709.07330"
+    },
+    {
+      "paper": "bib:sudre2017generalised",
+      "title": null,
+      "year": 2017,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Based on past experience \\cite{isensee2017automatic,isensee2017brain} we favor this formulation over other variants \\cite{milletari2016v,sudre2017generalised}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:he2016identity",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "We omit recently proposed extensions such as for example the use of residual connections \\cite{he2016identity,milletari2016v}, dense connections \\cite{jegou2017one} or attention mechanisms \\cite{oktay2018attention}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1607.08022",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "slope $1e^{-2}$) and use instance normalization~\\cite{ulyanov2016instance} instead of the more popular batch normalization \\cite{ioffe2015batch}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1607.08022"
+    },
+    {
+      "paper": "bib:drozdzal2016importance",
+      "title": null,
+      "year": 2016,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "The dice loss formulation used here is a multi-class adaptation of the variant proposed in \\cite{drozdzal2016importance}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:long2015fully",
+      "title": null,
+      "year": 2015,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "Unlike other segmentation networks, such as FCN \\cite{long2015fully} and previous iterations of DeepLab \\cite{chen2018deeplab} this allows the U-Net to segment fine structures particularly well."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "1502.03167",
+      "title": null,
+      "year": 2015,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "cited 1 time(s) in the paper's own text",
+      "contexts": [
+        "slope $1e^{-2}$) and use instance normalization~\\cite{ulyanov2016instance} instead of the more popular batch normalization \\cite{ioffe2015batch}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/1502.03167"
+    }
+  ],
+  "successors": [
+    {
+      "paper": "unknown",
+      "title": "Deep learning-enabled medical computer vision",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1381,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2001.06535",
+      "title": "CHAOS Challenge - combined (CT-MR) healthy abdominal organ segmentation",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 817,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2001.06535"
+    },
+    {
+      "paper": "unknown",
+      "title": "Unified Focal loss: Generalising Dice and cross entropy-based losses to handle class imbalanced medical image segmentation",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 723,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Abstract: nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation",
+      "year": 2019,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 649,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2001.11767",
+      "title": "Automatic lung segmentation in routine imaging is primarily a data diversity problem, not a methodology problem",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 610,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2001.11767"
+    },
+    {
+      "paper": "unknown",
+      "title": "MaX-DeepLab: End-to-End Panoptic Segmentation with Mask Transformers",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 503,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "A Noise-Robust Framework for Automatic Segmentation of COVID-19 Pneumonia Lesions From CT Images",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 483,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2006.16806",
+      "title": "Uncertainty-aware multi-view co-training for semi-supervised medical image segmentation and domain adaptation",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 280,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2006.16806"
+    },
+    {
+      "paper": "unknown",
+      "title": "Self-supervision with Superpixels: Training Few-Shot Medical Image Segmentation Without Annotation",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 255,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2107.04537",
+      "title": "Modality specific U-Net variants for biomedical image segmentation: a survey",
+      "year": 2022,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 245,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2107.04537"
+    },
+    {
+      "paper": "unknown",
+      "title": "Automated Brain Tumor Segmentation Using Multimodal Brain Scans: A Survey Based on Models Submitted to the BraTS 2012\u20132018 Challenges",
+      "year": 2019,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 219,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Deep reinforcement learning in medical imaging: A literature review",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 211,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "C2FNAS: Coarse-to-Fine Neural Architecture Search for 3D Medical Image Segmentation",
+      "year": 2020,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 156,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "A New Approach for Brain Tumor Segmentation and Classification Based on Score Level Fusion Using Transfer Learning",
+      "year": 2019,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 149,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Recurrent Mask Refinement for Few-Shot Medical Image Segmentation",
+      "year": 2021,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 143,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 15
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

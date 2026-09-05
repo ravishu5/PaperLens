@@ -1,0 +1,408 @@
+{
+  "uri": "paperlens://paper/2109.03201/references",
+  "paper_version": "2109.03201v6",
+  "count": 40,
+  "resolved_to_arxiv": 22,
+  "references": [
+    {
+      "bib_key": "liu2021swin",
+      "title": null,
+      "authors": "Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, and B. Guo, ``Swin transformer: Hierarchical vision transformer using shifted windows,'' arXiv preprint arXiv:2103.14030, 2021.",
+      "year": 2021,
+      "arxiv_id": "2103.14030",
+      "doi": null,
+      "cited_times": 12,
+      "uri": "paperlens://paper/2103.14030"
+    },
+    {
+      "bib_key": "chen2021transunet",
+      "title": null,
+      "authors": "J. Chen, Y. Lu, Q. Yu, X. Luo, E. Adeli, Y. Wang, et al., ``TransUNet: Transformers make strong encoders for medical image segmentation,'' arXiv preprint arXiv:2102.04306, 2021.",
+      "year": 2021,
+      "arxiv_id": "2102.04306",
+      "doi": null,
+      "cited_times": 10,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "bib_key": "dosovitskiy2020image",
+      "title": null,
+      "authors": "A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, et al., ``An image is worth 16x16 words: Transformers for image recognition at scale,'' arXiv preprint arXiv:2010.11929, 2020.",
+      "year": 2010,
+      "arxiv_id": "2010.11929",
+      "doi": null,
+      "cited_times": 8,
+      "uri": "paperlens://paper/2010.11929"
+    },
+    {
+      "bib_key": "vaswani2017attention",
+      "title": null,
+      "authors": "A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, et al., ``Attention is all you need,'' in Advances in Neural Information Processing Systems, pp. 5998--6008, 2017.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 6,
+      "uri": null
+    },
+    {
+      "bib_key": "cao2021swin",
+      "title": null,
+      "authors": "H. Cao, Y. Wang, J. Chen, D. Jiang, X. Zhang, Q. Tian, and M. Wang, ``Swin-Unet: Unet-like pure transformer for medical image segmentation,'' arXiv preprint arXiv:2105.05537, 2021.",
+      "year": 2021,
+      "arxiv_id": "2105.05537",
+      "doi": null,
+      "cited_times": 5,
+      "uri": "paperlens://paper/2105.05537"
+    },
+    {
+      "bib_key": "xu2021levit",
+      "title": null,
+      "authors": "G. Xu, X. Wu, X. Zhang, and X. He, ``LeViT-UNet: Make faster encoders with transformer for medical image segmentation,'' arXiv preprint arXiv:2107.08623, 2021.",
+      "year": 2021,
+      "arxiv_id": "2107.08623",
+      "doi": null,
+      "cited_times": 5,
+      "uri": "paperlens://paper/2107.08623"
+    },
+    {
+      "bib_key": "Hatamizadeh_2022_WACV",
+      "title": null,
+      "authors": "A. Hatamizadeh, Y. Tang, V. Nath, D. Yang, A. Myronenko, B. Landman, H. R. Roth, and D. Xu, ``UNETR: Transformers for 3d medical image segmentation,'' in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, pp. 574--584, January 2022.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 5,
+      "uri": null
+    },
+    {
+      "bib_key": "ronneberger2015u",
+      "title": null,
+      "authors": "O. Ronneberger, P. Fischer, and T. Brox, ``U-Net: Convolutional networks for biomedical image segmentation,'' in International Conference on Medical image computing and computer-assisted intervention, pp. 234--241, Springer, 2015.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "karimi2021convolution",
+      "title": null,
+      "authors": "D. Karimi, S. Vasylechko, and A. Gholipour, ``Convolution-free medical image segmentation using transformers,'' arXiv preprint arXiv:2102.13645, 2021.",
+      "year": 2021,
+      "arxiv_id": "2102.13645",
+      "doi": null,
+      "cited_times": 4,
+      "uri": "paperlens://paper/2102.13645"
+    },
+    {
+      "bib_key": "isensee2019automated",
+      "title": null,
+      "authors": "F. Isensee, P. F. Jaeger, S. A. Kohl, J. Petersen, and K. H. Maier-Hein, ``nnu-net: a self-configuring method for deep learning-based biomedical image segmentation,'' Nature methods, vol. 18, no. 2, pp. 203--211, 2021. thebibliography",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "chang2021transclaw",
+      "title": null,
+      "authors": "Y. Chang, H. Menghan, Z. Guangtao, and Z. Xiao-Ping, ``TransClaw U-Net: Claw u-net with transformers for medical image segmentation,'' arXiv preprint arXiv:2107.05188, 2021.",
+      "year": 2021,
+      "arxiv_id": "2107.05188",
+      "doi": null,
+      "cited_times": 3,
+      "uri": "paperlens://paper/2107.05188"
+    },
+    {
+      "bib_key": "lin2021ds",
+      "title": null,
+      "authors": "A. Lin, B. Chen, J. Xu, Z. Zhang, and G. Lu, ``DS-TransUNet: Dual swin transformer u-net for medical image segmentation,'' arXiv preprint arXiv:2106.06716, 2021.",
+      "year": 2021,
+      "arxiv_id": "2106.06716",
+      "doi": null,
+      "cited_times": 3,
+      "uri": "paperlens://paper/2106.06716"
+    },
+    {
+      "bib_key": "xie2021cotr",
+      "title": null,
+      "authors": "Y. Xie, J. Zhang, C. Shen, and Y. Xia, ``CoTr: Efficiently bridging cnn and transformer for 3d medical image segmentation,'' arXiv preprint arXiv:2103.03024, 2021.",
+      "year": 2021,
+      "arxiv_id": "2103.03024",
+      "doi": null,
+      "cited_times": 3,
+      "uri": "paperlens://paper/2103.03024"
+    },
+    {
+      "bib_key": "zheng2021rethinking",
+      "title": null,
+      "authors": "S. Zheng, J. Lu, H. Zhao, X. Zhu, Z. Luo, Y. Wang, Y. Fu, J. Feng, T. Xiang, P. H. Torr, et al., ``Rethinking semantic segmentation from a sequence-to-sequence perspective with transformers,'' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 6881--6890, 2021.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 3,
+      "uri": null
+    },
+    {
+      "bib_key": "zhang2021transfuse",
+      "title": null,
+      "authors": "Y. Zhang, H. Liu, and Q. Hu, ``TransFuse: Fusing transformers and cnns for medical image segmentation,'' arXiv preprint arXiv:2102.08005, 2021.",
+      "year": 2021,
+      "arxiv_id": "2102.08005",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2102.08005"
+    },
+    {
+      "bib_key": "valanarasu2021medical",
+      "title": null,
+      "authors": "J. M. J. Valanarasu, P. Oza, I. Hacihaliloglu, and V. M. Patel, ``Medical Transformer: Gated axial-attention for medical image segmentation,'' arXiv preprint arXiv:2102.10662, 2021.",
+      "year": 2021,
+      "arxiv_id": "2102.10662",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2102.10662"
+    },
+    {
+      "bib_key": "chen2021transattunet",
+      "title": null,
+      "authors": "B. Chen, Y. Liu, Z. Zhang, G. Lu, and D. Zhang, ``TransAttUnet: Multi-level attention-guided u-net with transformer for medical image segmentation,'' arXiv preprint arXiv:2107.05274, 2021.",
+      "year": 2021,
+      "arxiv_id": "2107.05274",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2107.05274"
+    },
+    {
+      "bib_key": "wang2021transbts",
+      "title": null,
+      "authors": "W. Wang, C. Chen, M. Ding, J. Li, H. Yu, and S. Zha, ``TransBTS: Multimodal brain tumor segmentation using transformer,'' arXiv preprint arXiv:2103.04430, 2021.",
+      "year": 2021,
+      "arxiv_id": "2103.04430",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2103.04430"
+    },
+    {
+      "bib_key": "he2021masked",
+      "title": null,
+      "authors": "K. He, X. Chen, S. Xie, Y. Li, P. Doll\\'ar, and R. Girshick, ``Masked autoencoders are scalable vision learners,'' arXiv preprint arXiv:2111.06377, 2021.",
+      "year": 2021,
+      "arxiv_id": "2111.06377",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2111.06377"
+    },
+    {
+      "bib_key": "carion2020end",
+      "title": null,
+      "authors": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko, ``End-to-end object detection with transformers,'' in European Conference on Computer Vision, pp. 213--229, Springer, 2020.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "lecun1998gradient",
+      "title": null,
+      "authors": "Y. LeCun, L. Bottou, Y. Bengio, and P. Haffner, ``Gradient-based learning applied to document recognition,'' Proceedings of the IEEE, vol. 86, no. 11, pp. 2278--2324, 1998.",
+      "year": 1998,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhou2021convnets",
+      "title": null,
+      "authors": "H.-Y. Zhou, C. Lu, S. Yang, and Y. Yu, ``ConvNets vs. Transformers: Whose visual representations are more transferable?,'' ICCV Workshop on Deep Multi-Task Learning in Computer Vision, 2021.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "qu2022m3net",
+      "title": null,
+      "authors": "T. Qu, X. Wang, C. Fang, L. Mao, J. Li, P. Li, J. Qu, X. Li, H. Xue, Y. Yu, et al., ``M3net: A multi-scale multi-view framework for multi-phase pancreas segmentation based on cross-phase non-local attention,'' Medical Image Analysis, vol. 75, p. 102232, 2022.",
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhang2021cross",
+      "title": null,
+      "authors": "D. Zhang, G. Huang, Q. Zhang, J. Han, J. Han, and Y. Yu, ``Cross-modality deep feature learning for brain tumor segmentation,'' Pattern Recognition, vol. 110, p. 107562, 2021.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "tuli2021convolutional",
+      "title": null,
+      "authors": "S. Tuli, I. Dasgupta, E. Grant, and T. L. Griffiths, ``Are convolutional neural networks or transformers more like human vision?,'' arXiv preprint arXiv:2105.07197, 2021.",
+      "year": 2021,
+      "arxiv_id": "2105.07197",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2105.07197"
+    },
+    {
+      "bib_key": "li2021medical",
+      "title": null,
+      "authors": "S. Li, X. Sui, X. Luo, X. Xu, Y. Liu, and R. S. M. Goh, ``Medical image segmentation using squeeze-and-expansion transformers,'' arXiv preprint arXiv:2105.09511, 2021.",
+      "year": 2021,
+      "arxiv_id": "2105.09511",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2105.09511"
+    },
+    {
+      "bib_key": "yun2021spectr",
+      "title": null,
+      "authors": "B. Yun, Y. Wang, J. Chen, H. Wang, W. Shen, and Q. Li, ``SpecTr: Spectral transformer for hyperspectral pathology image segmentation,'' arXiv preprint arXiv:2103.03604, 2021.",
+      "year": 2021,
+      "arxiv_id": "2103.03604",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2103.03604"
+    },
+    {
+      "bib_key": "li2021more",
+      "title": null,
+      "authors": "Y. Li, W. Cai, Y. Gao, and X. Hu, ``More than encoder: Introducing transformer decoder to upsample,'' arXiv preprint arXiv:2106.10637, 2021.",
+      "year": 2021,
+      "arxiv_id": "2106.10637",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2106.10637"
+    },
+    {
+      "bib_key": "hendrycks2016gaussian",
+      "title": null,
+      "authors": "D. Hendrycks and K. Gimpel, ``Gaussian error linear units (gelus),'' arXiv preprint arXiv:1606.08415, 2016.",
+      "year": 2016,
+      "arxiv_id": "1606.08415",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1606.08415"
+    },
+    {
+      "bib_key": "ba2016layer",
+      "title": null,
+      "authors": "J. L. Ba, J. R. Kiros, and G. E. Hinton, ``Layer normalization,'' arXiv preprint arXiv:1607.06450, 2016.",
+      "year": 2016,
+      "arxiv_id": "1607.06450",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1607.06450"
+    },
+    {
+      "bib_key": "luo2016understanding",
+      "title": null,
+      "authors": "W. Luo, Y. Li, R. Urtasun, and R. Zemel, ``Understanding the effective receptive field in deep convolutional neural networks,'' in Proceedings of the 30th International Conference on Neural Information Processing Systems, pp. 4905--4913, 2016.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "liu2018receptive",
+      "title": null,
+      "authors": "S. Liu, D. Huang, et al., ``Receptive field block net for accurate and fast object detection,'' in Proceedings of the European Conference on Computer Vision, pp. 385--400, 2018.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "chen2017deeplab",
+      "title": null,
+      "authors": "L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L. Yuille, ``Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs,'' IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 40, no. 4, pp. 834--848, 2017.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "szegedy2015going",
+      "title": null,
+      "authors": "C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich, ``Going deeper with convolutions,'' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1--9, 2015.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "he2016deep",
+      "title": null,
+      "authors": "K. He, X. Zhang, S. Ren, and J. Sun, ``Deep residual learning for image recognition,'' in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 770--778, 2016.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "huang2021missformer",
+      "title": null,
+      "authors": "X. Huang, Z. Deng, D. Li, and X. Yuan, ``MISSFormer: An effective medical image segmentation transformer,'' arXiv preprint arXiv:2109.07162, 2021.",
+      "year": 2021,
+      "arxiv_id": "2109.07162",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2109.07162"
+    },
+    {
+      "bib_key": "antonelli2021medical",
+      "title": null,
+      "authors": "M. Antonelli, A. Reinke, S. Bakas, K. Farahani, B. A. Landman, G. Litjens, B. Menze, O. Ronneberger, R. M. Summers, B. van Ginneken, et al., ``The medical segmentation decathlon,'' arXiv preprint arXiv:2106.05735, 2021.",
+      "year": 2021,
+      "arxiv_id": "2106.05735",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2106.05735"
+    },
+    {
+      "bib_key": "landman2015miccai",
+      "title": null,
+      "authors": "B. Landman, Z. Xu, J. E. Igelsias, M. Styner, T. Langerak, and A. Klein, ``Miccai multi-atlas labeling beyond the cranial vault--workshop and challenge,'' in Proc. MICCAI: Multi-Atlas Labeling Beyond Cranial Vault-Workshop Challenge, 2015.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "bernard2018deep",
+      "title": null,
+      "authors": "O. Bernard, A. Lalande, C. Zotti, F. Cervenansky, X. Yang, P.-A. Heng, I. Cetin, K. Lekadir, O. Camara, M. A. G. Ballester, et al., ``Deep learning techniques for automatic mri cardiac multi-structures segmentation and diagnosis: Is the problem solved?,'' IEEE Transactions on Medical Imaging, vol. 37, no. 11, pp. 2514--2525, 2018.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "menze2014multimodal",
+      "title": null,
+      "authors": "B. H. Menze, A. Jakab, S. Bauer, J. Kalpathy-Cramer, K. Farahani, J. Kirby, Y. Burren, N. Porz, J. Slotboom, R. Wiest, et al., ``The multimodal brain tumor image segmentation benchmark (brats),'' IEEE Transactions on Medical Imaging, vol. 34, no. 10, pp. 1993--2024, 2014.",
+      "year": 1993,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    }
+  ]
+}

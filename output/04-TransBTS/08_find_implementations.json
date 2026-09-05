@@ -1,0 +1,402 @@
+{
+  "paper_version": "2103.04430v2",
+  "uri": "paperlens://paper/2103.04430/implementations",
+  "candidates": [
+    {
+      "repo": "Rubics-Xuan/TransBTS",
+      "url": "https://github.com/Rubics-Xuan/TransBTS",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the abstract); repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.5,
+        "matched": {
+          "evaluation": "test.py"
+        },
+        "missing": [
+          "architecture"
+        ]
+      },
+      "stars": 451,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "owner=Rubics-Xuan (User)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2103.04430/urls",
+          "excerpt": "https://github.com/Wenxuan-1119/TransBTS",
+          "locator": "flattened LaTeX line 38",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "repository name 'TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS#readme",
+          "excerpt": "README references arXiv:2103.04430",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "Rubics-Xuan/TransBTS",
+      "url": "https://github.com/Rubics-Xuan/TransBTS",
+      "relation": "ORGANIZATION",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.5,
+        "matched": {
+          "evaluation": "test.py"
+        },
+        "missing": [
+          "architecture"
+        ]
+      },
+      "stars": 451,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "owner=Rubics-Xuan (User)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2103.04430/urls",
+          "excerpt": "https://github.com/Wenxuan-1119/TransBTS",
+          "locator": "flattened LaTeX line 38",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "repository name 'TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS#readme",
+          "excerpt": "README references arXiv:2103.04430",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Rubics-Xuan/TransBTS",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "nivu/TransBTS",
+      "url": "https://github.com/nivu/TransBTS",
+      "relation": "THIRD_PARTY",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
+      "rank": 3,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.5,
+        "matched": {
+          "evaluation": "test.py"
+        },
+        "missing": [
+          "architecture"
+        ]
+      },
+      "stars": 1,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/nivu/TransBTS",
+          "excerpt": "repository name 'TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/nivu/TransBTS#readme",
+          "excerpt": "README references arXiv:2103.04430",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/nivu/TransBTS",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "wenhui0206/Robust-TransBTS",
+      "url": "https://github.com/wenhui0206/Robust-TransBTS",
+      "relation": "THIRD_PARTY",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
+      "rank": 4,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.5,
+        "matched": {
+          "evaluation": "test.py"
+        },
+        "missing": [
+          "architecture"
+        ]
+      },
+      "stars": 1,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/wenhui0206/Robust-TransBTS",
+          "excerpt": "repository name 'Robust-TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/wenhui0206/Robust-TransBTS#readme",
+          "excerpt": "README references arXiv:2103.04430",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/wenhui0206/Robust-TransBTS",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "JoetheReindeer/multiPI_TransBTS",
+      "url": "https://github.com/JoetheReindeer/multiPI_TransBTS",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 5,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "architecture": "mindspore/mindcv/models/model_factory.py",
+          "evaluation": "kits/metrics.py"
+        },
+        "missing": []
+      },
+      "stars": 2,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/JoetheReindeer/multiPI_TransBTS",
+          "excerpt": "repository name 'multiPI_TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "Milkomeda98/CKD-TransBTS",
+      "url": "https://github.com/Milkomeda98/CKD-TransBTS",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 6,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.5,
+        "matched": {
+          "architecture": "models/model.py"
+        },
+        "missing": [
+          "evaluation"
+        ]
+      },
+      "stars": 38,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Milkomeda98/CKD-TransBTS",
+          "excerpt": "repository name 'CKD-TransBTS' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Milkomeda98/CKD-TransBTS",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "111Kaushal/Testing-and-validation-of-TransBTSV2",
+      "url": "https://github.com/111Kaushal/Testing-and-validation-of-TransBTSV2",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 7,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.0,
+        "matched": {},
+        "missing": [
+          "architecture",
+          "evaluation"
+        ]
+      },
+      "stars": 6,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/111Kaushal/Testing-and-validation-of-TransBTSV2",
+          "excerpt": "repository name 'Testing-and-validation-of-TransBTSV2' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/111Kaushal/Testing-and-validation-of-TransBTSV2",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/111Kaushal/Testing-and-validation-of-TransBTSV2",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "dk-liang/Awesome-Visual-Transformer",
+      "url": "https://github.com/dk-liang/Awesome-Visual-Transformer",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 8,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 3592,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/dk-liang/Awesome-Visual-Transformer#readme",
+          "excerpt": "README references arXiv:2103.04430",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "1 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
+  ]
+}

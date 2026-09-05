@@ -1,0 +1,162 @@
+{
+  "paper_version": "2303.05785v2",
+  "method": "kernel",
+  "introduced_by": [
+    {
+      "paper": "2205.15242",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "To tackle the trade-off, RepOptimizer provides an alternative to re-parameterize the back-propagate gradient, instead of the structural parameters of kernel weights, to enhance the training efficiency with plain convolution block design \\cite{ding2022re}.",
+      "src_line": 60,
+      "uri": "paperlens://paper/2205.15242"
+    },
+    {
+      "paper": "2205.15242",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "\\section{Methods} Instead of changing the gradient dynamics during training \\cite{ding2022re}, we introduce RepUX-Net, a pure 3D CNN architecture that performs element-wise scaling in large kernel weights to enhance the learning convergence and effectively adapts large receptive field for volumetric segmentation.",
+      "src_line": 63,
+      "uri": "paperlens://paper/2205.15242"
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+      "src_line": 37,
+      "uri": null
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+      "src_line": 37,
+      "uri": null
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "2b) and re-parameterizes the large kernel weights during inference \\cite{ding2022scaling}.",
+      "src_line": 37,
+      "uri": null
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Inspired by the parallel branches design, RepLKNet is proposed to scale up the 2D kernel size (e.g., 31x31) with a 3x3 convolution as the parallel branch \\cite{ding2022scaling}.",
+      "src_line": 60,
+      "uri": null
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "\\subsection{Variable Learning Convergence in Multi-Branch Design} From Figure 2, the learning convergence of the large kernel convolution can be improved by either adding up the encoded outputs of parallel branches weighted by diverse scales with SR (RepLKNet \\cite{ding2022scaling}) or performing Gradient Re-parameterization (GR) by multiplying with constant values (RepOptimizer \\cite{ding2022re}) in a Single Operator (SO).",
+      "src_line": 66,
+      "uri": null
+    },
+    {
+      "paper": "2209.15076",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}.",
+      "src_line": 37,
+      "uri": "paperlens://paper/2209.15076"
+    },
+    {
+      "paper": "2207.11225",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Inspired by \\cite{li2022large}, we choose a kernel size of $21\\times 21\\times 21$ for DepthWise Convolution (DWC-21) as the optimal choice without significant trade-off between model performance and computational efficiency in 3D.",
+      "src_line": 88,
+      "uri": "paperlens://paper/2207.11225"
+    },
+    {
+      "paper": "bib:liu2022convnet",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}.",
+      "src_line": 37,
+      "uri": null
+    },
+    {
+      "paper": "2207.03620",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+      "src_line": 37,
+      "uri": "paperlens://paper/2207.03620"
+    },
+    {
+      "paper": "2207.03620",
+      "title": null,
+      "year": 2022,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+      "src_line": 37,
+      "uri": "paperlens://paper/2207.03620"
+    }
+  ],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction",
+      "uri": "paperlens://paper/2303.05785/section/1"
+    },
+    {
+      "section": "2",
+      "title": "Related Works",
+      "uri": "paperlens://paper/2303.05785/section/2"
+    },
+    {
+      "section": "3",
+      "title": "Methods",
+      "uri": "paperlens://paper/2303.05785/section/3"
+    },
+    {
+      "section": "3.1",
+      "title": "Variable Learning Convergence in Multi-Branch Design",
+      "uri": "paperlens://paper/2303.05785/section/3.1"
+    },
+    {
+      "section": "3.2",
+      "title": "Bayesian Frequency Re-parameterization (BFR)",
+      "uri": "paperlens://paper/2303.05785/section/3.2"
+    },
+    {
+      "section": "3.3",
+      "title": "Model Architecture",
+      "uri": "paperlens://paper/2303.05785/section/3.3"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed."
+  ]
+}

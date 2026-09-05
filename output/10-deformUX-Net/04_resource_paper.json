@@ -1,0 +1,39 @@
+{
+  "uri": "paperlens://paper/2310.00199",
+  "paper_version": "2310.00199v2",
+  "title": "DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Segmentation with Depthwise Deformable Convolution",
+  "authors": [
+    {
+      "name": "Ho Hin Lee"
+    },
+    {
+      "name": "Quan Liu"
+    },
+    {
+      "name": "Qi Yang"
+    },
+    {
+      "name": "Xin Yu"
+    },
+    {
+      "name": "Shunxing Bao"
+    },
+    {
+      "name": "Yuankai Huo"
+    },
+    {
+      "name": "Bennett A. Landman"
+    }
+  ],
+  "published_at": "2023-09-30T00:33:41Z",
+  "abstract": "The application of 3D ViTs to medical image segmentation has seen remarkable strides, somewhat overshadowing the budding advancements in Convolutional Neural Network (CNN)-based models. Large kernel depthwise convolution has emerged as a promising technique, showcasing capabilities akin to hierarchical transformers and facilitating an expansive effective receptive field (ERF) vital for dense predictions. Despite this, existing core operators, ranging from global-local attention to large kernel convolution, exhibit inherent trade-offs and limitations (e.g., global-local range trade-off, aggregating attentional features). We hypothesize that deformable convolution can be an exploratory alternative to combine all advantages from the previous operators, providing long-range dependency, adaptive spatial aggregation and computational efficiency as a foundation backbone. In this work, we introduce 3D DeformUX-Net, a pioneering volumetric CNN model that adeptly navigates the shortcomings traditionally associated with ViTs and large kernel convolution. Specifically, we revisit volumetric deformable convolution in depth-wise setting to adapt long-range dependency with computational efficiency. Inspired by the concepts of structural re-parameterization for convolution kernel weights, we further generate the deformable tri-planar offsets by adapting a parallel branch (starting from $1\\times1\\times1$ convolution), providing adaptive spatial aggregation across all channels. Our empirical evaluations reveal that the 3D DeformUX-Net consistently outperforms existing state-of-the-art ViTs and large kernel convolution models across four challenging public datasets, spanning various scales from organs (KiTS: 0.680 to 0.720, MSD Pancreas: 0.676 to 0.717, AMOS: 0.871 to 0.902) to vessels (e.g., MSD hepatic vessels: 0.635 to 0.671) in mean Dice.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 18,
+    "equations": 3,
+    "algorithms": 0,
+    "stated_values": 7,
+    "declared_urls": 1,
+    "components": 10
+  }
+}

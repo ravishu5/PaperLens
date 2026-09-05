@@ -1,0 +1,54 @@
+{
+  "paper_version": "2109.03201v6",
+  "uri": "paperlens://paper/2109.03201",
+  "structure": {
+    "sections": 14,
+    "equations": 12,
+    "algorithms": 0,
+    "stated_values": 4,
+    "components": 8,
+    "claims": 0
+  },
+  "implementations": [
+    "282857341/nnFormer",
+    "lixuekai2001/nnFormer",
+    "ismashiping/nnformer",
+    "lahoud/3d-vision-transformers",
+    "XuRuihan/NNFormer",
+    "xmindflow/Awesome-Transformer-in-Medical-Imaging",
+    "YellowLight021/paddle_nnformer",
+    "Yutong-Zhou-cv/Awesome-Transformer-in-CV",
+    "Syeda-Farhat/awesome-Transformers-For-Segmentation",
+    "XuRuihan/NNFormer-NNLQP"
+  ],
+  "mappings": [
+    {
+      "repo": "282857341/nnFormer",
+      "summary": {
+        "AMBIGUOUS": 6,
+        "MATCHED": 2,
+        "UNKNOWN": 4
+      },
+      "uri": "paperlens://mapping/2109.03201/282857341/nnFormer"
+    },
+    {
+      "repo": "lixuekai2001/nnFormer",
+      "summary": {
+        "AMBIGUOUS": 5,
+        "MATCHED": 2,
+        "UNKNOWN": 5
+      },
+      "uri": "paperlens://mapping/2109.03201/lixuekai2001/nnFormer"
+    }
+  ],
+  "skeleton_uri": "paperlens://paper/2109.03201",
+  "analysis_uri": "paperlens://paper/2109.03201/analysis",
+  "status": "analysed",
+  "analysis": {
+    "paper_version": "2109.03201v6",
+    "author": "agent:batch",
+    "created_at": "2026-09-05T17:46:26+00:00",
+    "schema_version": "1",
+    "fields": {}
+  }
+}

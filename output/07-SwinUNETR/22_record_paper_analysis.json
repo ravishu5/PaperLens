@@ -1,0 +1,57 @@
+{
+  "paper_version": "2201.01266v1",
+  "analysis_uri": "paperlens://paper/2201.01266/analysis",
+  "accepted": {
+    "components": [
+      {
+        "slug": "encoder",
+        "name": "Encoder",
+        "kind": "architecture",
+        "uri": "paperlens://paper/2201.01266/component/encoder",
+        "evidence": [
+          "paperlens://paper/2201.01266/section/3.1"
+        ]
+      },
+      {
+        "slug": "decoder",
+        "name": "Decoder",
+        "kind": "architecture",
+        "uri": "paperlens://paper/2201.01266/component/decoder",
+        "evidence": [
+          "paperlens://paper/2201.01266/section/3.2"
+        ]
+      },
+      {
+        "slug": "loss-function",
+        "name": "Loss Function",
+        "kind": "loss",
+        "uri": "paperlens://paper/2201.01266/component/loss-function",
+        "evidence": [
+          "paperlens://paper/2201.01266/section/3.3"
+        ]
+      },
+      {
+        "slug": "implementation-details",
+        "name": "Implementation Details",
+        "kind": "training",
+        "uri": "paperlens://paper/2201.01266/component/implementation-details",
+        "evidence": [
+          "paperlens://paper/2201.01266/section/3.4"
+        ]
+      },
+      {
+        "slug": "dataset-and-model-ensembling",
+        "name": "Dataset and Model Ensembling",
+        "kind": "dataset",
+        "uri": "paperlens://paper/2201.01266/component/dataset-and-model-ensembling",
+        "evidence": [
+          "paperlens://paper/2201.01266/section/3.5"
+        ]
+      }
+    ],
+    "claims": [],
+    "narrative_fields": []
+  },
+  "rejected": [],
+  "notes": []
+}

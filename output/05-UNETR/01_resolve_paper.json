@@ -1,0 +1,21 @@
+{
+  "candidates": [
+    {
+      "arxiv_id": "2103.10504",
+      "title": "UNETR: Transformers for 3D Medical Image Segmentation",
+      "authors": [
+        "Ali Hatamizadeh",
+        "Yucheng Tang",
+        "Vishwesh Nath",
+        "Dong Yang",
+        "Andriy Myronenko",
+        "Bennett Landman",
+        "Holger Roth",
+        "Daguang Xu"
+      ],
+      "published_at": "2021-03-18T20:17:15Z",
+      "confidence": "CONFIRMED",
+      "why": "explicit arXiv identifier"
+    }
+  ]
+}

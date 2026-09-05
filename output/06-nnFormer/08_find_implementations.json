@@ -1,0 +1,282 @@
+{
+  "paper_version": "2109.03201v6",
+  "uri": "paperlens://paper/2109.03201/implementations",
+  "candidates": [
+    {
+      "repo": "282857341/nnFormer",
+      "url": "https://github.com/282857341/nnFormer",
+      "relation": "THIRD_PARTY",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "nnformer/evaluation/evaluator.py",
+          "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
+          "training": "nnformer/inference/change_trainer.py"
+        },
+        "missing": []
+      },
+      "stars": 788,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/282857341/nnFormer",
+          "excerpt": "repository name 'nnFormer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/282857341/nnFormer#readme",
+          "excerpt": "README references arXiv:2109.03201",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "lixuekai2001/nnFormer",
+      "url": "https://github.com/lixuekai2001/nnFormer",
+      "relation": "THIRD_PARTY",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "nnformer/evaluation/evaluator.py",
+          "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
+          "training": "nnformer/inference/change_trainer.py"
+        },
+        "missing": []
+      },
+      "stars": 4,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/lixuekai2001/nnFormer",
+          "excerpt": "repository name 'nnFormer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/lixuekai2001/nnFormer#readme",
+          "excerpt": "README references arXiv:2109.03201",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "ismashiping/nnformer",
+      "url": "https://github.com/ismashiping/nnformer",
+      "relation": "THIRD_PARTY",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
+      "rank": 3,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "nnformer/evaluation/evaluator.py",
+          "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
+          "training": "nnformer/inference/change_trainer.py"
+        },
+        "missing": []
+      },
+      "stars": 1,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/ismashiping/nnformer",
+          "excerpt": "repository name 'nnformer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/ismashiping/nnformer#readme",
+          "excerpt": "README references arXiv:2109.03201",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "XuRuihan/NNFormer",
+      "url": "https://github.com/XuRuihan/NNFormer",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 4,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "benchmark.py",
+          "architecture": "neuralformer/data_process/nnlqp/feature/onnx_to_networkx.py",
+          "training": "scripts/accuracy_predict/tnasp/nasbench101/train_0.02%.sh"
+        },
+        "missing": []
+      },
+      "stars": 7,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/XuRuihan/NNFormer",
+          "excerpt": "repository name 'NNFormer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "YellowLight021/paddle_nnformer",
+      "url": "https://github.com/YellowLight021/paddle_nnformer",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 5,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "EISeg/eiseg/util/coco/cocoeval.py",
+          "architecture": "EISeg/eiseg/models.py",
+          "training": "Matting/ppmatting/core/train.py"
+        },
+        "missing": []
+      },
+      "stars": 4,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/YellowLight021/paddle_nnformer",
+          "excerpt": "repository name 'paddle_nnformer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "XuRuihan/NNFormer-NNLQP",
+      "url": "https://github.com/XuRuihan/NNFormer-NNLQP",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 6,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "neuralformer/data_process/nasbench/scripts/run_evaluation.py",
+          "architecture": "neuralformer/data_process/nasbench/scripts/augment_model.py",
+          "training": "scripts/accuracy_prediction/nasbench201/train.sh"
+        },
+        "missing": []
+      },
+      "stars": 2,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/XuRuihan/NNFormer-NNLQP",
+          "excerpt": "repository name 'NNFormer-NNLQP' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "fahadshamshad/awesome-transformers-in-medical-imaging",
+      "url": "https://github.com/fahadshamshad/awesome-transformers-in-medical-imaging",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 7,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 1297,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/fahadshamshad/awesome-transformers-in-medical-imaging#readme",
+          "excerpt": "README references arXiv:2109.03201",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "junyuchen245/Transformer_for_medical_image_analysis",
+      "url": "https://github.com/junyuchen245/Transformer_for_medical_image_analysis",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 8,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 471,
+      "archived": false,
+      "license": "GPL-3.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/junyuchen245/Transformer_for_medical_image_analysis#readme",
+          "excerpt": "README references arXiv:2109.03201",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified."
+  ]
+}

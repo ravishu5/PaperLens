@@ -1,0 +1,68 @@
+{
+  "paper_version": "2103.10504v3",
+  "repo": "mkara44/unetr_pytorch",
+  "commit_sha": "538c8aa586936cb86d72fb1c94d710365b10e35e",
+  "uri": "paperlens://mapping/2103.10504/mkara44/unetr_pytorch",
+  "summary": {
+    "BLOCKING": 0,
+    "SIGNIFICANT": 1,
+    "MINOR": 1
+  },
+  "differences": [
+    {
+      "kind": "CHANGED_HYPERPARAMETER",
+      "paper_states": "consists = 30",
+      "code_does": "The literal 30 does not appear in source.",
+      "difference": "The paper specifies consists = 30; mkara44/unetr_pytorch does not use that value.",
+      "severity": "SIGNIFICANT",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/mkara44/unetr_pytorch",
+          "excerpt": "literal '30' not found in source",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": "absent:d124bc1c68e0",
+            "method": "literal_search"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "TRAINING",
+      "paper_states": "experiments, we employed five-fold cross validation with a ratio of 95:5. In addition, we used data augmentation strategies such as random rotation of 90, 180 and 270 degrees, random flip in axial, sagittal",
+      "code_does": "No occurrence of data augmentation vocabulary in the repository.",
+      "difference": "The paper describes data augmentation, but nothing in mkara44/unetr_pytorch appears to implement it.",
+      "severity": "MINOR",
+      "confidence": "LIKELY",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2103.10504",
+          "excerpt": "experiments, we employed five-fold cross validation with a ratio of 95:5. In addition, we used data augmentation strategies such as random rotation of 90, 180 and 270 degrees, random flip in axial, sagittal",
+          "locator": "flattened LaTeX line 484",
+          "stance": "SUPPORTS",
+          "provenance": {
+            "pattern": "data augmentation|augmentations?\\b"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/mkara44/unetr_pytorch",
+          "excerpt": "no match for /augment|RandomCrop|RandomResized|RandomHorizontal/ in source",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": {
+            "method": "regex_search",
+            "behaviour": "data augmentation"
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Each difference pairs an exact quote from the paper with an exact search over source. The inference that a paper term implies a code term is a heuristic, which is why these are LIKELY rather than CONFIRMED."
+  ]
+}

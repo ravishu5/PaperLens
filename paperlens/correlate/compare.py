@@ -51,6 +51,19 @@ _NECESSITY = re.compile(
 
 # Constants specific enough that omitting them from the paper is a real gap.
 _PRECISE_CONSTANT = re.compile(r"(?<![\w.])\d\.\d{4,}(?![\w.])")
+
+# A hidden constant is one a reimplementation would have to guess -- something
+# baked into code. Numbers inside dataset files are data: a repository vendoring
+# camera calibration produced seventeen "undocumented constant" gaps from one
+# woodscape/FV.json, burying everything else.
+_CONFIG_SOURCE = (".py", ".cpp", ".cc", ".h", ".hpp", ".cu", ".js", ".ts",
+                  ".java", ".go", ".rs", ".yaml", ".yml", ".cfg", ".ini", ".toml")
+_DATA_DIR = re.compile(r"(^|/)(data|datasets?|assets?|preprocess|annotations?|"
+                       r"calib\w*|checkpoints?)(/|$)", re.I)
+
+
+def _is_config_source(path: str) -> bool:
+    return path.endswith(_CONFIG_SOURCE) and not _DATA_DIR.search(path)
 _WEIGHT_URL = re.compile(r"https?://[^\s\"']+\.(?:pt|pth|bin|ckpt|safetensors|tar|gz)")
 
 
@@ -225,19 +238,25 @@ def find_implementation_gaps(store: Store, paper_id: str, repo: str) -> dict[str
     #     not clearly documented in the paper".
     # Grouped by site: six normalization constants on one line are one gap, not
     # six, and listing them separately buries everything else.
-    by_site: dict[str, tuple[str, list[str]]] = {}
+    # Grouped per file: a dozen constants across one module is one gap.
+    by_file: dict[str, tuple[str, list[str], int]] = {}
     seen: set[str] = set()
-    for hit in prov.search_text(repo_key, r"\d\.\d{4,}", regex=True, limit=40):
+    for hit in prov.search_text(repo_key, r"\d\.\d{4,}", regex=True, limit=60):
+        if not _is_config_source(hit.file_path):
+            continue
         undocumented = [c for c in _PRECISE_CONSTANT.findall(hit.text)
                         if c not in tex and c not in seen]
         if not undocumented:
             continue
         seen.update(undocumented)
-        site = f"{hit.file_path}:{hit.line}"
-        by_site[site] = (hit.text, undocumented)
+        if hit.file_path in by_file:
+            text, consts, line = by_file[hit.file_path]
+            by_file[hit.file_path] = (text, consts + undocumented, line)
+        else:
+            by_file[hit.file_path] = (hit.text, undocumented, hit.line)
 
-    for site, (line_text, consts) in by_site.items():
-        file_path = site.rsplit(":", 1)[0]
+    for file_path, (line_text, consts, first_line) in by_file.items():
+        site = f"{file_path}:{first_line}"
         listed = ", ".join(consts[:6]) + ("…" if len(consts) > 6 else "")
         gaps.append(Gap(
             kind="CONFIG_HIDDEN",

@@ -1,0 +1,137 @@
+{
+  "paper_version": "2201.01266v1",
+  "repos": [
+    "hxhxhx33/SwinUNETR",
+    "AustinTapp/swinUNETR"
+  ],
+  "errors": {},
+  "closest_to_paper": "AustinTapp/swinUNETR",
+  "coverage": {
+    "hxhxhx33/SwinUNETR": {
+      "matched": 2,
+      "absent": 2,
+      "ambiguous": 8,
+      "blocking_differences": 0,
+      "significant_differences": 3
+    },
+    "AustinTapp/swinUNETR": {
+      "matched": 1,
+      "absent": 2,
+      "ambiguous": 7,
+      "blocking_differences": 0,
+      "significant_differences": 2
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "Dataset and Model Ensembling",
+      "status": {
+        "hxhxhx33/SwinUNETR": "UNKNOWN",
+        "AustinTapp/swinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Decoder",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "GPU = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Implementation Details",
+      "status": {
+        "hxhxhx33/SwinUNETR": "UNKNOWN",
+        "AustinTapp/swinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Jfracsum_i = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "consists = 219",
+      "status": {
+        "hxhxhx33/SwinUNETR": "ABSENT",
+        "AustinTapp/swinUNETR": "ABSENT"
+      }
+    },
+    {
+      "anchor": "frac2Jsum_j = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "i = 5",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "rate = 0.0008",
+      "status": {
+        "hxhxhx33/SwinUNETR": "ABSENT",
+        "AustinTapp/swinUNETR": "ABSENT"
+      }
+    },
+    {
+      "anchor": "segmentation output consists = 3",
+      "status": {
+        "hxhxhx33/SwinUNETR": "UNKNOWN",
+        "AustinTapp/swinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "sum_i = 1",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "times2times2times4 = 32",
+      "status": {
+        "hxhxhx33/SwinUNETR": "MATCHED",
+        "AustinTapp/swinUNETR": "MATCHED"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "Encoder",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "L = 8",
+      "status": {
+        "hxhxhx33/SwinUNETR": "MATCHED",
+        "AustinTapp/swinUNETR": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Loss Function",
+      "status": {
+        "hxhxhx33/SwinUNETR": "AMBIGUOUS",
+        "AustinTapp/swinUNETR": "UNKNOWN"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

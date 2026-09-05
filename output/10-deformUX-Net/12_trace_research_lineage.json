@@ -1,0 +1,301 @@
+{
+  "paper_version": "2310.00199v2",
+  "uri": "paperlens://lineage/2310.00199",
+  "predecessors": [
+    {
+      "paper": "bib:ying2020deformable",
+      "title": "Deformable 3d convolution for video super-resolution",
+      "year": 2020,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "\\cite{ying2020deformable,wang2023internimage}, have enhanced deformable convolution design, offering a computationally scalable approach that marries the benefits of Vision Transformers (ViTs) and CNNs for visual recognition tasks.",
+        "\\section{3D DeformUX-Net: Intuition} Inspired by \\cite{ying2020deformable} and \\cite{wang2023internimage}, we introduce 3D DeformUX-Net, a purely volumetric CNN that revisits the concepts of deformable convolution and preserves all advantages across ViTs and CNNs mechanisms.",
+        "Unlike the videos input in \\cite{ying2020deformable}, 3D medical images provide high-resolution tri-planar spatial context with substantial variability organs/tissues morphology across patients' conditions."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:lee20223d",
+      "title": "3d ux-net: A large kernel volumetric convnet modernizing hierarchical transformer for medical image segmentation",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 6 time(s) in the paper's own text",
+      "contexts": [
+        "Despite the limelight on 3D ViTs, large kernel depthwise convolution presents itself as an alternative for extracting features with a broad field of view and scalability \\cite{lee20223d}.",
+        "cluding organs, tumors, and vessels}, and (3) \\textbf{setting a novel direction in the development of foundational convolution backbones for volumetric medical image segmentation.} Diverging from the likes of SwinUNETR \\cite{hatamizadeh2022swin} and 3D UX-Net \\cite{lee20223d}, we introduce a pioneering architecture, termed 3D DeformUX-Net.",
+        "3D UX-Net further bridges the gap to adapt large kernel depthwise convolution for volumetric segmentation with high-resolution medical images \\cite{lee20223d}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:hatamizadeh2022swin",
+      "title": "Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "nce across diverse clinical scenarios, including organs, tumors, and vessels}, and (3) \\textbf{setting a novel direction in the development of foundational convolution backbones for volumetric medical image segmentation.} Diverging from the likes of SwinUNETR \\cite{hatamizadeh2022swin} and 3D UX-Net \\cite{lee20223d}, we introduce a pioneering architecture, termed 3D DeformUX-Net.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "& 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647 & 0.635\\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.942 & 0.724 & 0.425 & 0.697 & 0.737 & 0.614 & 0.676 & 0.625 & 0.678 &"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:yu2023unest",
+      "title": "Unest: local spatial representation learning with hierarchical transformer for efficient medical segmentation",
+      "year": 2023,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "& 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647 & 0.635\\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.942 & 0.724 & 0.425 & 0.697 & 0.737 & 0.614 & 0.676 & 0.625 & 0.678 & 0.652 \\\\ UNesT-B \\cite{yu2023unest} & 87.2M & 258.4G & 0.943 & 0.746 & 0.451 & 0.710 & 0.778 & 0.601 & 0.690 & 0.611 & 0.645 & 0.640 \\\\ \\midrule \\textbf{DeformUX-Net (Ours)} & 55.8M & 635.8G & \\textbf{0.948} & \\textbf{0.763} & \\textbf{0.450} & \\textbf{0.720}",
+        "& 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647 & 0.635\\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.942 & 0.724 & 0.425 & 0.697 & 0.737 & 0.614 & 0.676 & 0.625 & 0.678 & 0.652 \\\\ UNesT-B \\cite{yu2023unest} & 87.2M & 258.4G & 0.943 & 0.746 & 0.451 & 0.710 & 0.778 & 0.601 & 0.690 & 0.611 & 0.645 & 0.640 \\\\ UNesT-L \\cite{yu2023unest} & 279.5M & 597.8G & 0.948 & \\textbf{0.774} & \\textbf{0.479} & \\textbf{0.734} & 0.784 & 0.630 & 0.707 & 0",
+        "223d} & 53.0M & 639.4G & 0.942 & 0.724 & 0.425 & 0.697 & 0.737 & 0.614 & 0.676 & 0.625 & 0.678 & 0.652 \\\\ UNesT-B \\cite{yu2023unest} & 87.2M & 258.4G & 0.943 & 0.746 & 0.451 & 0.710 & 0.778 & 0.601 & 0.690 & 0.611 & 0.645 & 0.640 \\\\ UNesT-L \\cite{yu2023unest} & 279.5M & 597.8G & 0.948 & \\textbf{0.774} & \\textbf{0.479} & \\textbf{0.734} & 0.784 & 0.630 & 0.707 & 0.620 & 0.693 & 0.657 \\\\ \\midrule \\textbf{DeformUX-Net (Ours)} & 55.8M & 635.8G & \\textbf{0.948} & 0.763 & 0.450 & 0.720"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:ding2022scaling",
+      "title": "Scaling up your kernels to 31x31: Revisiting large kernel design in cnns",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "Preceding the deformable convolution operations, we incorporate concepts from structural re-parameterization of large kernel convolution weights \\cite{ding2022scaling} and present a parallel branch design to compute the deformable tri-planar offsets, ensuring adaptive spatial aggregation for deformable convolution across all feature channels.",
+        "Furthermore, we observe that the offset computation mechanism have similar block design to the parallel branch design for structural re-parameterization to adapt large kernel convolutions \\cite{ding2022scaling}.",
+        "As kernel sizes for deformable convolution increase, the parallel branch kernel size must also scale concurrently, as inspired by \\cite{ding2022scaling}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:hatamizadeh2022unetr",
+      "title": "Unetr: Transformers for 3d medical image segmentation",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "There's been a substantial shift towards incorporating ViTs for enhanced dense predictions (e.g., TransUNet \\cite{chen2021transunet}, LeViT \\cite{xu2021levit}, CoTr \\cite{xie2021cotr}, UNETR \\cite{hatamizadeh2022unetr}).",
+        ".3G & 0.943 & 0.732 & 0.443 & 0.706 & 0.775 & 0.630 & 0.703 & 0.623 & 0.695 & 0.660\\\\ \\midrule TransBTS \\cite{wang2021transbts} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 &"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2109.03201",
+      "title": "nnformer: Interleaved transformer for volumetric segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2109.03201"
+    },
+    {
+      "paper": "bib:wang2023internimage",
+      "title": "Internimage: Exploring large-scale vision foundation models with deformable convolutions",
+      "year": 2023,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "\\cite{ying2020deformable,wang2023internimage}, have enhanced deformable convolution design, offering a computationally scalable approach that marries the benefits of Vision Transformers (ViTs) and CNNs for visual recognition tasks.",
+        "\\section{3D DeformUX-Net: Intuition} Inspired by \\cite{ying2020deformable} and \\cite{wang2023internimage}, we introduce 3D DeformUX-Net, a purely volumetric CNN that revisits the concepts of deformable convolution and preserves all advantages across ViTs and CNNs mechanisms."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:antonelli2022medical",
+      "title": "The medical segmentation decathlon",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "enge dataset (kidney, tumor and cyst) \\cite{heller2019kits19}, 2) MICCAI Challenge 2022 AMOS (multi-organ) \\cite{ji2022amos}, 3) Medical Segmentation Decatholon (MSD) Pancreas dataset (pancreas, tumor) and 4) hepatic vessels dataset (hepatic vessel and tumor) \\cite{antonelli2022medical}.",
+        "umors, vessels), which comprising with 1) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2019kits19}, 2) MICCAI 2022 AMOS Challenge dataset (AMOS) \\cite{ji2022amos}, 3) Medical Segmentation Decathlon (MSD) pancreas dataset and 4) hepatic vessel dataset \\cite{antonelli2022medical}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "2206.08023",
+      "title": "Amos: A large-scale abdominal multi-organ benchmark for versatile medical image segmentation",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "We evaluate 3D DeformUX-Net on supervised volumetric segmentation tasks across various scales using four prominent datasets: 1) MICCAI 2019 KiTS Challenge dataset (kidney, tumor and cyst) \\cite{heller2019kits19}, 2) MICCAI Challenge 2022 AMOS (multi-organ) \\cite{ji2022amos}, 3) Medical Segmentation Decatholon (MSD) Pancreas dataset (pancreas, tumor) and 4) hepatic vessels dataset (hepatic vessel and tumor) \\cite{antonelli2022medical}.",
+        "ation datasets across organs/tissues from different scales (large (e.g., liver, stomach) to small (e.g., tumors, vessels), which comprising with 1) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2019kits19}, 2) MICCAI 2022 AMOS Challenge dataset (AMOS) \\cite{ji2022amos}, 3) Medical Segmentation Decathlon (MSD) pancreas dataset and 4) hepatic vessel dataset \\cite{antonelli2022medical}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": "paperlens://paper/2206.08023"
+    },
+    {
+      "paper": "bib:isensee2021nnu",
+      "title": "nnu-net: a self-configuring method for deep learning-based biomedical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "Moreover, nnUNet is proposed to provide a complete hierarchical framework design to maximize the coarse-to-fine capabilities of 3D UNet \\cite{isensee2021nnu}.",
+        "ko20183d} & 1.18M & 15.6G & 0.935 & 0.713 & 0.401 & 0.683 & 0.740 & 0.613 & 0.677 & 0.620 & 0.656 & 0.638\\\\ RAP-Net \\cite{lee2021rap} & 38.2M & 101.2G & 0.931 & 0.710 & 0.427 & 0.689 & 0.742 & 0.621 & 0.682 & 0.610 & 0.643 & 0.627\\\\ nn-UNet \\cite{isensee2021nnu} & 31.2M & 743.3G & 0.943 & 0.732 & 0.443 & 0.706 & 0.775 & 0.630 & 0.703 & 0.623 & 0.695 & 0.660\\\\ \\midrule TransBTS \\cite{wang2021transbts} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.58"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:wang2021transbts",
+      "title": "Transbts: Multimodal brain tumor segmentation using transformer",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        ".2G & 0.931 & 0.710 & 0.427 & 0.689 & 0.742 & 0.621 & 0.682 & 0.610 & 0.643 & 0.627\\\\ nn-UNet \\cite{isensee2021nnu} & 31.2M & 743.3G & 0.943 & 0.732 & 0.443 & 0.706 & 0.775 & 0.630 & 0.703 & 0.623 & 0.695 & 0.660\\\\ \\midrule TransBTS \\cite{wang2021transbts} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.59"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:xie2021cotr",
+      "title": "Cotr: Efficiently bridging cnn and transformer for 3d medical image segmentation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "There's been a substantial shift towards incorporating ViTs for enhanced dense predictions (e.g., TransUNet \\cite{chen2021transunet}, LeViT \\cite{xu2021levit}, CoTr \\cite{xie2021cotr}, UNETR \\cite{hatamizadeh2022unetr})."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:myronenko20183d",
+      "title": "3d mri brain tumor segmentation using autoencoder regularization",
+      "year": 2018,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "A variety of network structure designs also propose (e.g., V-Net \\cite{milletari2016v}, UNet++ \\cite{zhou2018unet++}, H-DenseUNet \\cite{li2018h}, SegResNet \\cite{myronenko20183d}) to adapt different imaging modalities and organ semantics.",
+        "& Kidney & Tumor & Cyst & Mean & Pancreas & Tumor & Mean & Hepatic & Tumor & Mean \\\\ \\midrule 3D U-Net \\cite{cciccek20163d} & 4.81M & 135.9G & 0.918 & 0.657 & 0.361 & 0.645 & 0.711 & 0.584 & 0.648 & 0.569 & 0.609 & 0.589\\\\ SegResNet \\cite{myronenko20183d} & 1.18M & 15.6G & 0.935 & 0.713 & 0.401 & 0.683 & 0.740 & 0.613 & 0.677 & 0.620 & 0.656 & 0.638\\\\ RAP-Net \\cite{lee2021rap} & 38.2M & 101.2G & 0.931 & 0.710 & 0.427 & 0.689 & 0.742 & 0.621 & 0.682 & 0.610 & 0.643 & 0.627\\\\"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:cciccek20163d",
+      "title": "3d u-net: learning dense volumetric segmentation from sparse annotation",
+      "year": 2016,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 2 time(s) in the paper's own text",
+      "contexts": [
+        "former module.} \\end{figure*} \\section{Timeline for Segmentation Network: From CNNs to ViTs} In the realm of medical image segmentation, 2D/3D U-Net is the starting point to demonstrate the feasibility of performing dense prediction with supervised training \\cite{ronneberger2015u,cciccek20163d}.",
+        "\\toprule & & & \\multicolumn{4}{|c}{KiTS} & \\multicolumn{6}{|c}{MSD} \\\\ \\midrule Methods & \\#Params & FLOPs & Kidney & Tumor & Cyst & Mean & Pancreas & Tumor & Mean & Hepatic & Tumor & Mean \\\\ \\midrule 3D U-Net \\cite{cciccek20163d} & 4.81M & 135.9G & 0.918 & 0.657 & 0.361 & 0.645 & 0.711 & 0.584 & 0.648 & 0.569 & 0.609 & 0.589\\\\ SegResNet \\cite{myronenko20183d} & 1.18M & 15.6G & 0.935 & 0.713 & 0.401 & 0.683 & 0.740 & 0.613 & 0.677 & 0.620 & 0.656 & 0.638\\\\"
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "successors": [
+    {
+      "paper": "unknown",
+      "title": "Dynamically Adaptive Deformable Feature Fusion for multi-scale character detection in ancient documents",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 5,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "MG-Net: A fetal brain tissue segmentation method based on multiscale feature fusion and graph convolution attention mechanisms",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 4,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Wavelet\u2010Enhanced Deformable Convolutional Network for Breast Cancer Classification in High\u2010Resolution Histopathology Images",
+      "year": 2025,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 0,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 3
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "paper_version": "2201.01266v1",
+  "title": "Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images",
+  "repo": "hxhxhx33/SwinUNETR",
+  "commit_sha": "503050ca68e60bc44667b594599e16a4646b8f5f",
+  "uri": "paperlens://plan/2201.01266/hxhxhx33/SwinUNETR",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "KNOWN",
+      "items": [
+        {
+          "file": "requirements.txt",
+          "declared": [
+            "torch==1.13.1+cu117",
+            "pylint==2.16.2",
+            "black==23.1.0",
+            "einops==0.6.0",
+            "monai==1.1.0",
+            "typed-argument-parser==1.7.2",
+            "nibabel==5.0.1"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/file/requirements.txt",
+          "excerpt": null,
+          "locator": "requirements.txt"
+        }
+      ]
+    },
+    "dataset": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Dataset and Model Ensembling",
+          "kind": "dataset",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2201.01266/component/dataset-and-model-ensembling"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in hxhxhx33/SwinUNETR, so this section rests on the paper alone."
+    },
+    "dataset_preparation": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind preprocessing has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Encoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2201.01266/component/encoder",
+          "implemented_by": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3AEncoder%23class"
+        },
+        {
+          "component": "Decoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2201.01266/component/decoder",
+          "implemented_by": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3ADecoder%23class"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3AEncoder%23class",
+          "excerpt": null,
+          "locator": ":Encoder#class"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3ADecoder%23class",
+          "excerpt": null,
+          "locator": ":Decoder#class"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in hxhxhx33/SwinUNETR, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Loss Function",
+          "kind": "loss",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2201.01266/component/loss-function",
+          "implemented_by": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3ATrainer.forward_loss%23method"
+        },
+        {
+          "component": "Implementation Details",
+          "kind": "training",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2201.01266/component/implementation-details"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/%3ATrainer.forward_loss%23method",
+          "excerpt": null,
+          "locator": ":Trainer.forward_loss#method"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in hxhxhx33/SwinUNETR, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "symbol": "segmentation output consists",
+          "value": "3",
+          "stated_at": "LaTeX line 57",
+          "found_in_code": "UNKNOWN",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "times2times2times4",
+          "value": "32",
+          "stated_at": "LaTeX line 83",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "L",
+          "value": "8",
+          "stated_at": "LaTeX line 83",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "i",
+          "value": "5",
+          "stated_at": "LaTeX line 93",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "frac2Jsum_j",
+          "value": "1",
+          "stated_at": "LaTeX line 122",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "Jfracsum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 122",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "sum_i",
+          "value": "1",
+          "stated_at": "LaTeX line 122",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "rate",
+          "value": "0.0008",
+          "stated_at": "LaTeX line 130",
+          "found_in_code": "ABSENT",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "GPU",
+          "value": "1",
+          "stated_at": "LaTeX line 130",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "consists",
+          "value": "219",
+          "stated_at": "LaTeX line 135",
+          "found_in_code": "ABSENT",
+          "confidence": "CONFIRMED"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2201.01266/values",
+          "excerpt": "times2times2times4 = 32",
+          "locator": "LaTeX line 83"
+        },
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2201.01266/values",
+          "excerpt": "L = 8",
+          "locator": "LaTeX line 83"
+        }
+      ],
+      "note": "2 of 10 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Results and Discussion",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2201.01266/component/results-and-discussion"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in hxhxhx33/SwinUNETR, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [
+    {
+      "severity": "SIGNIFICANT",
+      "kind": "TRAINING",
+      "risk": "The paper describes learning-rate warmup, but nothing in hxhxhx33/SwinUNETR appears to implement it.",
+      "paper_states": "tch size per GPU was set to 1. All models were trained for a total of 800 epochs with a linear warmup and using a cosine annealing learning rate scheduler. Fonr inference, we use a sliding window",
+      "code_does": "No occurrence of learning-rate warmup vocabulary in the repository.",
+      "confidence": "LIKELY"
+    },
+    {
+      "severity": "SIGNIFICANT",
+      "kind": "CHANGED_HYPERPARAMETER",
+      "risk": "The paper specifies rate = 0.0008; hxhxhx33/SwinUNETR does not use that value.",
+      "paper_states": "rate = 0.0008",
+      "code_does": "The literal 0.0008 does not appear in source.",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "severity": "SIGNIFICANT",
+      "kind": "CHANGED_HYPERPARAMETER",
+      "risk": "The paper specifies consists = 219; hxhxhx33/SwinUNETR does not use that value.",
+      "paper_states": "consists = 219",
+      "code_does": "The literal 219 does not appear in source.",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "missing_information": [
+    {
+      "item": "the literal 0.0008 does not appear anywhere in the repository",
+      "source": "mapping"
+    },
+    {
+      "item": "the literal 219 does not appear anywhere in the repository",
+      "source": "mapping"
+    }
+  ],
+  "verification_strategy": {
+    "status": "PARTIAL",
+    "items": [
+      {
+        "check": "assert the value used for times2times2times4 equals 32",
+        "where": "base/argument.py:48",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      },
+      {
+        "check": "assert the value used for L equals 8",
+        "where": "cmd/evaluate.py:104",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      }
+    ],
+    "note": "These checks follow from anchors that were verified. They do not constitute a full test plan."
+  },
+  "lineage": {
+    "predecessors_recorded": 15,
+    "uri": "paperlens://lineage/2201.01266"
+  },
+  "readiness": {
+    "sections_known": 1,
+    "sections_partial": 5,
+    "sections_unknown": 2,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

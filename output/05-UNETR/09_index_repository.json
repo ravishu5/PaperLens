@@ -1,0 +1,14 @@
+{
+  "repo": "mkara44/unetr_pytorch",
+  "snapshot_id": "mkara44/unetr_pytorch@538c8aa586936cb86d72fb1c94d710365b10e35e",
+  "commit_sha": "538c8aa586936cb86d72fb1c94d710365b10e35e",
+  "indexer": "jcodemunch@stdio",
+  "symbol_count": 72,
+  "file_count": 9,
+  "languages": {
+    "yaml": 1,
+    "python": 8
+  },
+  "cached": false,
+  "warnings": []
+}

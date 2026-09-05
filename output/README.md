@@ -42,12 +42,12 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | Architecture | Top candidate | Relation | Confidence |
 |---|---|---|---|
 | V-Net | `faustomilletari/VNet` | OFFICIAL | CONFIRMED |
-| SegResNet | `sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization` | REPRODUCTION | POSSIBLE |
-| nnU-Net | `MIC-DKFZ/batchgenerators` | DECLARED_DEPENDENCY | CONFIRMED |
+| SegResNet | `sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization` | REPRODUCTION | LIKELY |
+| nnU-Net | `MIC-DKFZ/nnUNet` | THIRD_PARTY | POSSIBLE |
 | TransBTS | `Rubics-Xuan/TransBTS` | OFFICIAL | CONFIRMED |
-| UNETR | `mkara44/unetr_pytorch` | REPRODUCTION | POSSIBLE |
-| nnFormer | `282857341/nnFormer` | THIRD_PARTY | POSSIBLE |
-| Swin UNETR | `hxhxhx33/SwinUNETR` | THIRD_PARTY | POSSIBLE |
+| UNETR | `mkara44/unetr_pytorch` | REPRODUCTION | LIKELY |
+| nnFormer | `282857341/nnFormer` | THIRD_PARTY | LIKELY |
+| Swin UNETR | `hxhxhx33/SwinUNETR` | THIRD_PARTY | LIKELY |
 | RepUX-Net | `MASILab/RepUX-Net` | OFFICIAL | CONFIRMED |
 | UNesT | `MASILab/UNesT` | OFFICIAL | CONFIRMED |
 | DeformUX-Net | `MASILab/deform-uxnet` | OFFICIAL | CONFIRMED |
@@ -56,16 +56,16 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 
 | Architecture | Matched | Absent | Ambiguous | Unknown | Blocking | Significant | Gaps | Predecessors |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| V-Net | 1 | 0 | 6 | 1 | 0 | 0 | 3 | 15 |
+| V-Net | 1 | 0 | 6 | 1 | 0 | 0 | 2 | 15 |
 | SegResNet | 1 | 0 | 6 | 6 | 0 | 0 | 0 | 15 |
 | nnU-Net | 0 | 0 | 5 | 4 | 0 | 0 | 2 | 15 |
-| TransBTS | 0 | 1 | 10 | 5 | 0 | 1 | 2 | 15 |
+| TransBTS | 0 | 1 | 10 | 5 | 0 | 1 | 1 | 15 |
 | UNETR | 2 | 1 | 9 | 11 | 0 | 1 | 0 | 15 |
-| nnFormer | 2 | 0 | 6 | 4 | 0 | 0 | 8 | 15 |
+| nnFormer | 2 | 0 | 6 | 4 | 0 | 0 | 2 | 15 |
 | Swin UNETR | 2 | 2 | 8 | 4 | 0 | 3 | 0 | 15 |
-| RepUX-Net | 0 | 1 | 6 | 3 | 0 | 1 | 21 | 15 |
+| RepUX-Net | 0 | 1 | 6 | 3 | 0 | 1 | 4 | 15 |
 | UNesT | 3 | 2 | 16 | 11 | 0 | 0 | 3 | 15 |
-| DeformUX-Net | 1 | 0 | 8 | 8 | 0 | 0 | 22 | 15 |
+| DeformUX-Net | 1 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
 
 ## Files in each folder
 

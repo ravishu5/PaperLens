@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "arxiv_id": "2103.04430",
+      "title": "TransBTS: Multimodal Brain Tumor Segmentation Using Transformer",
+      "authors": [
+        "Wenxuan Wang",
+        "Chen Chen",
+        "Meng Ding",
+        "Jiangyun Li",
+        "Hong Yu",
+        "Sen Zha"
+      ],
+      "published_at": "2021-03-07T19:12:14Z",
+      "confidence": "CONFIRMED",
+      "why": "explicit arXiv identifier"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "paper_version": "2209.14378v2",
+  "uri": "paperlens://paper/2209.14378/implementations",
+  "candidates": [
+    {
+      "repo": "MASILab/UNesT",
+      "url": "https://github.com/MASILab/UNesT",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the abstract); repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.8,
+        "matched": {
+          "evaluation": "multiorganSeg/networks/nest/layers/test_time_pool.py",
+          "architecture": "multiorganSeg/networks/nest/layers/lambda_layer.py",
+          "dataset": "multiorganSeg/networks/nest/data/dataset.py",
+          "preprocessing": "multiorganSeg/networks/nest/data/auto_augment.py"
+        },
+        "missing": [
+          "training"
+        ]
+      },
+      "stars": 26,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2209.14378/urls",
+          "excerpt": "https://github.com/MASILab/UNesT",
+          "locator": "flattened LaTeX line 91",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MASILab/UNesT",
+          "excerpt": "repository name 'UNesT' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MASILab/UNesT#readme",
+          "excerpt": "README references arXiv:2209.14378",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MASILab/UNesT",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "hieuvmphan/MICCAI2024-UNest",
+      "url": "https://github.com/hieuvmphan/MICCAI2024-UNest",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "general_evaluation/evaluation.py",
+          "architecture": "models/base_model.py",
+          "dataset": "data/aligned_dataset.py",
+          "preprocessing": "data/augmentations.py",
+          "training": "options/train_options.py"
+        },
+        "missing": []
+      },
+      "stars": 21,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/hieuvmphan/MICCAI2024-UNest",
+          "excerpt": "repository name 'MICCAI2024-UNest' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "grantmccord/UNest",
+      "url": "https://github.com/grantmccord/UNest",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 3,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.8,
+        "matched": {
+          "evaluation": "node_modules/buffer-equal-constant-time/test.js",
+          "architecture": "unest-app/frontend/home-page/home-page/src/Components/SearchBar/SearchBar.jsx",
+          "dataset": "node_modules/jws/lib/data-stream.js",
+          "preprocessing": "node_modules/jsonwebtoken/lib/JsonWebTokenError.js"
+        },
+        "missing": [
+          "training"
+        ]
+      },
+      "stars": 1,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/grantmccord/UNest",
+          "excerpt": "repository name 'UNest' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/grantmccord/UNest",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "Project-MONAI/model-zoo",
+      "url": "https://github.com/Project-MONAI/model-zoo",
+      "relation": "DECLARED_DEPENDENCY",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the body)",
+      "rank": 4,
+      "name_match": false,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "ci/unit_tests/test_brain_image_synthesis_latent_diffusion_model.py",
+          "architecture": "ci/unit_tests/test_brain_image_synthesis_latent_diffusion_model.py",
+          "dataset": "models/breast_density_classification/scripts/create_dataset.py",
+          "preprocessing": "models/maisi_ct_generative/scripts/augmentation.py",
+          "training": "models/brats_mri_axial_slices_generative_diffusion/scripts/ldm_trainer.py"
+        },
+        "missing": []
+      },
+      "stars": 333,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2209.14378/urls",
+          "excerpt": "https://github.com/Project-MONAI/model-zoo/tree/dev/models/renalStructures_UNEST_segmentation",
+          "locator": "flattened LaTeX line 761",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "DarkenCode/unest",
+      "url": "https://github.com/DarkenCode/unest",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 5,
+      "name_match": true,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 2,
+      "archived": false,
+      "license": "GPL-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/DarkenCode/unest",
+          "excerpt": "repository name 'unest' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "SARMAD-ALI-cyber/Transfer-Learning-based-QOT-Estimation-of-an-Unestablished-Lightpath",
+      "url": "https://github.com/SARMAD-ALI-cyber/Transfer-Learning-based-QOT-Estimation-of-an-Unestablished-Lightpath",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 6,
+      "name_match": true,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 2,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/SARMAD-ALI-cyber/Transfer-Learning-based-QOT-Estimation-of-an-Unestablished-Lightpath",
+          "excerpt": "repository name 'Transfer-Learning-based-QOT-Estimation-of-an-Unestablished-Lightpath' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "ftmrxo/Unesty",
+      "url": "https://github.com/ftmrxo/Unesty",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 7,
+      "name_match": true,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 1,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/ftmrxo/Unesty",
+          "excerpt": "repository name 'Unesty' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "Ammexm/Attention-Mechanisms-in-Medical-Image-Segmentation",
+      "url": "https://github.com/Ammexm/Attention-Mechanisms-in-Medical-Image-Segmentation",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 8,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 41,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Ammexm/Attention-Mechanisms-in-Medical-Image-Segmentation#readme",
+          "excerpt": "README references arXiv:2209.14378",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "The paper links Project-MONAI/model-zoo, but nothing identifies it as this paper's own implementation -- the name does not match the method, the README does not cite the paper, and the owner is not an author. Treated as a declared dependency.",
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "4 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper."
+  ]
+}

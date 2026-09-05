@@ -1,0 +1,17 @@
+{
+  "repo": "MASILab/RepUX-Net",
+  "snapshot_id": "MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31",
+  "commit_sha": "3cd20c4764fcca69e874600bc5a052a2e4125e31",
+  "indexer": "jcodemunch@stdio",
+  "symbol_count": 2345,
+  "file_count": 277,
+  "languages": {
+    "python": 233,
+    "bash": 9,
+    "json": 4,
+    "c": 9,
+    "cpp": 22
+  },
+  "cached": false,
+  "warnings": []
+}

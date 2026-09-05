@@ -1,0 +1,265 @@
+{
+  "paper_version": "2303.05785v2",
+  "repo": "MASILab/RepUX-Net",
+  "commit_sha": "3cd20c4764fcca69e874600bc5a052a2e4125e31",
+  "uri": "paperlens://mapping/2303.05785/MASILab/RepUX-Net",
+  "summary": {
+    "MATCHED": 0,
+    "ABSENT": 1,
+    "AMBIGUOUS": 6,
+    "UNKNOWN": 3
+  },
+  "mappings": [
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:0",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "k = 7",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 7 appears 20 times; no single site is identifiable",
+      "symbol_uri": null,
+      "candidates": [
+        "lib/datasets/preprocess/cityscapes/dt_offset_generator.py:47",
+        "lib/datasets/preprocess/cityscapes/instance_dt_offset_generator.py:47",
+        "lib/datasets/preprocess/cityscapes/instance_edge_generator.py:88",
+        "lib/datasets/preprocess/cityscapes/instance_edge_generator.py:139"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:1",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "k = 21",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 21 appears 20 times; no single site is identifiable",
+      "symbol_uri": null,
+      "candidates": [
+        "lib/datasets/preprocess/cityscapes/dt_offset_generator.py:47",
+        "lib/datasets/preprocess/cityscapes/instance_dt_offset_generator.py:47",
+        "lib/datasets/preprocess/cityscapes/instance_edge_generator.py:88",
+        "lib/datasets/preprocess/cityscapes/instance_edge_generator.py:138"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:2",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "beginadjustboxwidth = 0.85",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "ABSENT",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 0.85 does not appear anywhere in the repository",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/MASILab/RepUX-Net",
+          "excerpt": "literal '0.85' not found in source",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": "absent:b78287fa606d",
+            "method": "literal_search"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:3",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "alpha = 1",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "this reads as a reported result rather than a hyperparameter, so its absence from source would not be meaningful",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:4",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "alpha = 0.5",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "this reads as a reported result rather than a hyperparameter, so its absence from source would not be meaningful",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|stated_value|2303.05785v2:val:5",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "alpha = 8",
+        "uri": "paperlens://paper/2303.05785/values"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "this reads as a reported result rather than a hyperparameter, so its absence from source would not be meaningful",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|component|2303.05785v2:comp:results",
+      "anchor": {
+        "kind": "component",
+        "label": "Results",
+        "uri": "paperlens://paper/2303.05785/component/results"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Results' matches 1/1 of its name tokens against lib/metrics/cityscapes/evaluation/evalInstanceLevelSemanticLabeling.py::prepareJSONDataForResults#function",
+      "symbol_uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Fmetrics%2Fcityscapes%2Fevaluation%2FevalInstanceLevelSemanticLabeling.py%3A%3AprepareJSONDataForResults%23function",
+      "candidates": [
+        "lib/metrics/cityscapes/evaluation/evalInstanceLevelSemanticLabeling.py::prepareJSONDataForResults#function",
+        "lib/metrics/cityscapes/evaluation/evalInstanceLevelSemanticLabeling.py::printResults#function",
+        "lib/metrics/cityscapes_evaluator.py::CityscapesEvaluator.evaluate#method",
+        "lib/models/backbones/resnet/resnet_backbone.py::ResNetBackbone#class"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2303.05785/component/results",
+          "excerpt": "Results (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Fmetrics%2Fcityscapes%2Fevaluation%2FevalInstanceLevelSemanticLabeling.py%3A%3AprepareJSONDataForResults%23function",
+          "excerpt": "def prepareJSONDataForResults(avgDict, aps, args)",
+          "locator": "lib/metrics/cityscapes/evaluation/evalInstanceLevelSemanticLabeling.py:640",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|component|2303.05785v2:comp:bayesian-frequency-re-parameterization",
+      "anchor": {
+        "kind": "component",
+        "label": "Bayesian Frequency Re-parameterization",
+        "uri": "paperlens://paper/2303.05785/component/bayesian-frequency-re-parameterization"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "no symbol is named like 'Bayesian Frequency Re-parameterization', but 'bayesian' occurs in source at networks/RepUXNet_3D/repuxnet_encoder.py:59, so it is present under another name",
+      "symbol_uri": null,
+      "candidates": [
+        "networks/RepUXNet_3D/repuxnet_encoder.py:59"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|component|2303.05785v2:comp:model-architecture",
+      "anchor": {
+        "kind": "component",
+        "label": "Model Architecture",
+        "uri": "paperlens://paper/2303.05785/component/model-architecture"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Model Architecture' matches 1/2 of its name tokens against lib/models/backbones/hrnet/hrnet_config.py::MODEL_CONFIGS#constant",
+      "symbol_uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Fmodels%2Fbackbones%2Fhrnet%2Fhrnet_config.py%3A%3AMODEL_CONFIGS%23constant",
+      "candidates": [
+        "lib/models/backbones/hrnet/hrnet_config.py::MODEL_CONFIGS#constant",
+        "lib/models/backbones/resnet/dcn_resnet_models.py::DCNResNetModels#class",
+        "lib/models/backbones/resnet/resnest_models.py::ResNeStModels#class",
+        "lib/models/backbones/resnet/resnet_models.py::ResNetModels#class"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2303.05785/component/model-architecture",
+          "excerpt": "Model Architecture (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Fmodels%2Fbackbones%2Fhrnet%2Fhrnet_config.py%3A%3AMODEL_CONFIGS%23constant",
+          "excerpt": "MODEL_CONFIGS = {\n    'hrnet18': HRNET_18,\n    'hrnet32': HRNET_32,\n    'hrnet48': HRNET_48,\n   ",
+          "locator": "lib/models/backbones/hrnet/hrnet_config.py:175",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2303.05785v2|MASILab/RepUX-Net@3cd20c4764fcca69e874600bc5a052a2e4125e31|component|2303.05785v2:comp:experimental-setup",
+      "anchor": {
+        "kind": "component",
+        "label": "Experimental Setup",
+        "uri": "paperlens://paper/2303.05785/component/experimental-setup"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Experimental Setup' matches 1/2 of its name tokens against lib/utils/distributed.py::_setup_process_group#function",
+      "symbol_uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Futils%2Fdistributed.py%3A%3A_setup_process_group%23function",
+      "candidates": [
+        "lib/utils/distributed.py::_setup_process_group#function",
+        "networks/nnFormer/neural_network.py::SegmentationNetwork.predict_2D#method",
+        "networks/nnFormer/neural_network.py::SegmentationNetwork.predict_3D#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2303.05785/component/experimental-setup",
+          "excerpt": "Experimental Setup (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2303.05785/component/experimental-setup",
+          "excerpt": "Experimental Setup (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/RepUX-Net/symbol/lib%2Futils%2Fdistributed.py%3A%3A_setup_process_group%23function",
+          "excerpt": "def _setup_process_group(args)",
+          "locator": "lib/utils/distributed.py:71",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Nothing in this paper could be located in this repository. That is the expected result when the repository does not implement the paper.",
+    "1 anchor(s) are established as absent from this repository, with citable evidence: beginadjustboxwidth = 0.85."
+  ]
+}

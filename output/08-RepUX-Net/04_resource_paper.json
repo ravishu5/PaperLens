@@ -1,0 +1,48 @@
+{
+  "uri": "paperlens://paper/2303.05785",
+  "paper_version": "2303.05785v2",
+  "title": "Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for Medical Image Segmentation",
+  "authors": [
+    {
+      "name": "Ho Hin Lee"
+    },
+    {
+      "name": "Quan Liu"
+    },
+    {
+      "name": "Shunxing Bao"
+    },
+    {
+      "name": "Qi Yang"
+    },
+    {
+      "name": "Xin Yu"
+    },
+    {
+      "name": "Leon Y. Cai"
+    },
+    {
+      "name": "Thomas Li"
+    },
+    {
+      "name": "Yuankai Huo"
+    },
+    {
+      "name": "Xenofon Koutsoukos"
+    },
+    {
+      "name": "Bennett A. Landman"
+    }
+  ],
+  "published_at": "2023-03-10T08:38:34Z",
+  "abstract": "With the inspiration of vision transformers, the concept of depth-wise convolution revisits to provide a large Effective Receptive Field (ERF) using Large Kernel (LK) sizes for medical image segmentation. However, the segmentation performance might be saturated and even degraded as the kernel sizes scaled up (e.g., $21\\times 21\\times 21$) in a Convolutional Neural Network (CNN). We hypothesize that convolution with LK sizes is limited to maintain an optimal convergence for locality learning. While Structural Re-parameterization (SR) enhances the local convergence with small kernels in parallel, optimal small kernel branches may hinder the computational efficiency for training. In this work, we propose RepUX-Net, a pure CNN architecture with a simple large kernel block design, which competes favorably with current network state-of-the-art (SOTA) (e.g., 3D UX-Net, SwinUNETR) using 6 challenging public datasets. We derive an equivalency between kernel re-parameterization and the branch-wise variation in kernel convergence. Inspired by the spatial frequency in the human visual system, we extend to vary the kernel convergence into element-wise setting and model the spatial frequency as a Bayesian prior to re-parameterize convolutional weights during training. Specifically, a reciprocal function is leveraged to estimate a frequency-weighted value, which rescales the corresponding kernel element for stochastic gradient descent. From the experimental results, RepUX-Net consistently outperforms 3D SOTA benchmarks with internal validation (FLARE: 0.929 to 0.944), external validation (MSD: 0.901 to 0.932, KiTS: 0.815 to 0.847, LiTS: 0.933 to 0.949, TCIA: 0.736 to 0.779) and transfer learning (AMOS: 0.880 to 0.911) scenarios in Dice Score.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 11,
+    "equations": 9,
+    "algorithms": 0,
+    "stated_values": 6,
+    "declared_urls": 1,
+    "components": 4
+  }
+}

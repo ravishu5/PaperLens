@@ -95,3 +95,23 @@ def test_url_inside_abstract_is_flagged():
     by_repo = {u.repo: u for u in extract_declared_urls(tex)}
     assert by_repo["b"].in_abstract is True
     assert by_repo["d"].in_abstract is False
+
+
+def test_latex_markup_residue_is_not_a_stated_value():
+    r"""\begin{adjustbox}{width=0.85} collapses to "beginadjustboxwidth" and
+    $2\times2\times4$ to "times2times2times4". Both were extracted as
+    hyperparameters and then reported CONFIRMED-absent from repositories, which
+    is noise dressed as a finding."""
+    from paperlens.paper.structure import _plausible_identifier
+    for residue in ("beginadjustboxwidth", "times2times2times4", "endtabular"):
+        assert not _plausible_identifier(residue)
+    for real in ("tau", "d_ff", "warmup_steps", "P", "learning rate"):
+        assert _plausible_identifier(real)
+
+
+def test_prose_counts_are_not_hyperparameters():
+    """"the dataset consists of 30 subjects" is not a hyperparameter named
+    "consists"."""
+    tex = r"The training set consists of 30 subjects and contains 219 scans."
+    got = {v.symbol for v in extract_stated_values(tex)}
+    assert "consists" not in got and "contains" not in got

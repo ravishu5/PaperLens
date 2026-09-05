@@ -1,0 +1,62 @@
+{
+  "paper_version": "2209.14378v2",
+  "uri": "paperlens://lineage/2209.14378",
+  "successors": [
+    {
+      "paper": "unknown",
+      "title": "Data-Oriented Octree Inverse Hierarchical Order Aggregation Hybrid Transformer-CNN for 3D Medical Segmentation",
+      "year": 2025,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 4,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Assisting embodied AI: a survey of 3D segmentation models for medical CT images",
+      "year": 2025,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 3,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "Graph Convolutional Networks with Spatial and Channel Attention for Medical Image Segmentation",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "unknown",
+      "title": "A Pseudo-3d Coarse-to-Fine Architecture for 3d Medical Landmark Detection",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 1,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "notes": [
+    "Ranking uses influence and citation intent where Semantic Scholar supplies them, and citation count otherwise. Citation count alone is a measure of attention, not of improvement.",
+    "What each successor changed is not asserted here. The citing sentences are returned as evidence; read them, or the successor's own sections, before claiming an improvement."
+  ]
+}

@@ -1,0 +1,410 @@
+{
+  "paper_version": "2201.01266v1",
+  "repo": "hxhxhx33/SwinUNETR",
+  "commit_sha": "503050ca68e60bc44667b594599e16a4646b8f5f",
+  "uri": "paperlens://mapping/2201.01266/hxhxhx33/SwinUNETR",
+  "summary": {
+    "MATCHED": 2,
+    "ABSENT": 2,
+    "AMBIGUOUS": 8,
+    "UNKNOWN": 4
+  },
+  "mappings": [
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:0",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "segmentation output consists = 3",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "'segmentation output consists' is a prose phrase rather than a named quantity, so no claim about the code follows from it",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:1",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "times2times2times4 = 32",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "MATCHED",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the paper states times2times2times4 = 32 and the identical literal appears at base/argument.py:48",
+      "symbol_uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/base%2Fargument.py%3A%3ACommonArgument%23class",
+      "candidates": [
+        "base/argument.py:48"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2201.01266/values",
+          "excerpt": "times2times2times4 = 32",
+          "locator": "LaTeX line 83",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/base%2Fargument.py%3A%3ACommonArgument%23class",
+          "excerpt": "seed: int = random.randrange(2**32)",
+          "locator": "base/argument.py:48",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:2",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "L = 8",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "MATCHED",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the paper states L = 8 and the identical literal appears at cmd/evaluate.py:104",
+      "symbol_uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/cmd%2Fevaluate.py%3A%3A_main%23function",
+      "candidates": [
+        "cmd/evaluate.py:104",
+        "cmd/predict.py:17",
+        "cmd/train.py:22",
+        "model/swin/stage.py:57"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2201.01266/values",
+          "excerpt": "L = 8",
+          "locator": "LaTeX line 83",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/cmd%2Fevaluate.py%3A%3A_main%23function",
+          "excerpt": "with open(args.fold_map, encoding=\"utf-8\") as file:",
+          "locator": "cmd/evaluate.py:104",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:3",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "i = 5",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "5 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "base/argument.py:74"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:4",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "frac2Jsum_j = 1",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "1 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "base/argument.py:55",
+        "base/argument.py:68",
+        "base/predictor.py:49",
+        "base/train.py:66"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:5",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "Jfracsum_i = 1",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "1 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "base/argument.py:55",
+        "base/argument.py:68",
+        "base/predictor.py:49",
+        "base/train.py:66"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:6",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "sum_i = 1",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "1 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "base/argument.py:55",
+        "base/argument.py:68",
+        "base/predictor.py:49",
+        "base/train.py:66"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:7",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "rate = 0.0008",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "ABSENT",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 0.0008 does not appear anywhere in the repository",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR",
+          "excerpt": "literal '0.0008' not found in source",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": null,
+            "method": "literal_search"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:8",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "GPU = 1",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "1 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "base/argument.py:55",
+        "base/argument.py:68",
+        "base/predictor.py:49",
+        "base/train.py:66"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|stated_value|2201.01266v1:val:9",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "consists = 219",
+        "uri": "paperlens://paper/2201.01266/values"
+      },
+      "status": "ABSENT",
+      "confidence": "CONFIRMED",
+      "method": "mapper:stated_value",
+      "reasoning": "the literal 219 does not appear anywhere in the repository",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": [
+        {
+          "kind": "code_absence",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR",
+          "excerpt": "literal '219' not found in source",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "absence_ref": null,
+            "method": "literal_search"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:results-and-discussion",
+      "anchor": {
+        "kind": "component",
+        "label": "Results and Discussion",
+        "uri": "paperlens://paper/2201.01266/component/results-and-discussion"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Results and Discussion' is a section heading rather than a named method component, so its absence from code is not informative",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:encoder",
+      "anchor": {
+        "kind": "component",
+        "label": "Encoder",
+        "uri": "paperlens://paper/2201.01266/component/encoder"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Encoder' matches 1/1 of its name tokens against model/network.py::Encoder#class",
+      "symbol_uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/model%2Fnetwork.py%3A%3AEncoder%23class",
+      "candidates": [
+        "model/network.py::Encoder#class"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2201.01266/component/encoder",
+          "excerpt": "Encoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/model%2Fnetwork.py%3A%3AEncoder%23class",
+          "excerpt": "class Encoder(nn.Module)",
+          "locator": "model/network.py:95",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:decoder",
+      "anchor": {
+        "kind": "component",
+        "label": "Decoder",
+        "uri": "paperlens://paper/2201.01266/component/decoder"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Decoder' matches 1/1 of its name tokens against model/network.py::Decoder#class",
+      "symbol_uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/model%2Fnetwork.py%3A%3ADecoder%23class",
+      "candidates": [
+        "model/network.py::Decoder#class"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2201.01266/component/decoder",
+          "excerpt": "Decoder (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/model%2Fnetwork.py%3A%3ADecoder%23class",
+          "excerpt": "class Decoder(nn.Module)",
+          "locator": "model/network.py:172",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:loss-function",
+      "anchor": {
+        "kind": "component",
+        "label": "Loss Function",
+        "uri": "paperlens://paper/2201.01266/component/loss-function"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Loss Function' matches 1/2 of its name tokens against base/trainer.py::Trainer.forward_loss#method",
+      "symbol_uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/base%2Ftrainer.py%3A%3ATrainer.forward_loss%23method",
+      "candidates": [
+        "base/trainer.py::Trainer.forward_loss#method",
+        "cmd/pipeline/trainer.py::Trainer.forward_loss#method",
+        "dataset/option.py::with_prediction_path_lookup#function",
+        "base/predictor.py::Predictor.forward#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2201.01266/component/loss-function",
+          "excerpt": "Loss Function (loss)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/hxhxhx33/SwinUNETR/symbol/base%2Ftrainer.py%3A%3ATrainer.forward_loss%23method",
+          "excerpt": "def forward_loss(self, inferer: nn.Module, batch: TensorDict) -> torch.Tensor",
+          "locator": "base/trainer.py:72",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:implementation-details",
+      "anchor": {
+        "kind": "component",
+        "label": "Implementation Details",
+        "uri": "paperlens://paper/2201.01266/component/implementation-details"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Implementation Details' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2201.01266v1|hxhxhx33/SwinUNETR@503050ca68e60bc44667b594599e16a4646b8f5f|component|2201.01266v1:comp:dataset-and-model-ensembling",
+      "anchor": {
+        "kind": "component",
+        "label": "Dataset and Model Ensembling",
+        "uri": "paperlens://paper/2201.01266/component/dataset-and-model-ensembling"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Dataset and Model Ensembling' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "cmd/argument.py::DatasetArgument#class",
+        "base/predict.py::Options.model_factory#field",
+        "base/predictor.py::Options.model#field",
+        "base/train.py::Options.model_factory#field"
+      ],
+      "evidence": []
+    }
+  ],
+  "notes": [
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components.",
+    "2 anchor(s) are established as absent from this repository, with citable evidence: rate = 0.0008, consists = 219."
+  ]
+}

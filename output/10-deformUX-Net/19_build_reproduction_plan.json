@@ -1,0 +1,264 @@
+{
+  "paper_version": "2310.00199v2",
+  "title": "DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Segmentation with Depthwise Deformable Convolution",
+  "repo": "MASILab/deform-uxnet",
+  "commit_sha": "b2bfad71d798a6691e4234614e8d1ca9c63e31bd",
+  "uri": "paperlens://plan/2310.00199/MASILab/deform-uxnet",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "file": "requirements.txt",
+          "declared": [
+            "numpy",
+            "tqdm",
+            "tensorboard",
+            "scipy",
+            "scikit-learn",
+            "scikit-image",
+            "ptflops",
+            "nibabel",
+            "pillow",
+            "timm"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/requirements.txt",
+          "excerpt": null,
+          "locator": "requirements.txt"
+        }
+      ],
+      "note": "10 dependency(ies) are declared without a version (numpy, tqdm, tensorboard, scipy, scikit-learn, scikit-image). A reproduction should pin them, since the paper's results predate current releases."
+    },
+    "dataset": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Public Datasets Details",
+          "kind": "dataset",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/public-datasets-details"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in MASILab/deform-uxnet, so this section rests on the paper alone."
+    },
+    "dataset_preparation": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind preprocessing has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Timeline for Segmentation Network: From CNNs to ViTs",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/timeline-for-segmentation-network-from-cnns-to-vits"
+        },
+        {
+          "component": "Data Preprocessing \\& Model Training",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2310.00199/component/data-preprocessing-model-training",
+          "implemented_by": "paperlens://repo/MASILab/deform-uxnet/symbol/%3Apreprocess_for_train%23function"
+        },
+        {
+          "component": "Depthwise Deformable Convolution",
+          "kind": "module",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/depthwise-deformable-convolution"
+        },
+        {
+          "component": "Complete Architecture",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/complete-architecture"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/symbol/%3Apreprocess_for_train%23function",
+          "excerpt": null,
+          "locator": ":preprocess_for_train#function"
+        }
+      ],
+      "note": "The paper describes 4 item(s) here, but none was located in MASILab/deform-uxnet, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Experimental Setup",
+          "kind": "training",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2310.00199/component/experimental-setup",
+          "implemented_by": "paperlens://repo/MASILab/deform-uxnet/symbol/%3A_setup_process_group%23function"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/symbol/%3A_setup_process_group%23function",
+          "excerpt": null,
+          "locator": ":_setup_process_group#function"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in MASILab/deform-uxnet, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "symbol": "sum_k",
+          "value": "1",
+          "stated_at": "LaTeX line 144",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "K",
+          "value": "27",
+          "stated_at": "LaTeX line 148",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "sum_g",
+          "value": "1",
+          "stated_at": "LaTeX line 151",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "Gsum_k",
+          "value": "1",
+          "stated_at": "LaTeX line 151",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "C",
+          "value": "48",
+          "stated_at": "LaTeX line 158",
+          "found_in_code": "UNKNOWN",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "k",
+          "value": "7",
+          "stated_at": "LaTeX line 204",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "beginadjustboxwidth",
+          "value": "0.7",
+          "stated_at": "LaTeX line 372",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2310.00199/values",
+          "excerpt": "beginadjustboxwidth = 0.7",
+          "locator": "LaTeX line 372"
+        }
+      ],
+      "note": "1 of 7 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Results",
+          "kind": "evaluation",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2310.00199/component/results",
+          "implemented_by": "paperlens://repo/MASILab/deform-uxnet/symbol/%3AprepareJSONDataForResults%23function"
+        },
+        {
+          "component": "Evaluation on Organ/Vessel \\& Tumor Segmentation",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/evaluation-on-organ-vessel-tumor-segmentation"
+        },
+        {
+          "component": "Evaluation on Multi-Organ Segmentation",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/evaluation-on-multi-organ-segmentation"
+        },
+        {
+          "component": "Ablation Analysis",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2310.00199/component/ablation-analysis"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/symbol/%3AprepareJSONDataForResults%23function",
+          "excerpt": null,
+          "locator": ":prepareJSONDataForResults#function"
+        }
+      ],
+      "note": "The paper describes 4 item(s) here, but none was located in MASILab/deform-uxnet, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "PARTIAL",
+    "items": [
+      {
+        "check": "assert the value used for beginadjustboxwidth equals 0.7",
+        "where": "lib/vis/seg_visualizer.py:194",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      }
+    ],
+    "note": "These checks follow from anchors that were verified. They do not constitute a full test plan."
+  },
+  "lineage": {
+    "predecessors_recorded": 11,
+    "uri": "paperlens://lineage/2310.00199"
+  },
+  "readiness": {
+    "sections_known": 0,
+    "sections_partial": 6,
+    "sections_unknown": 2,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

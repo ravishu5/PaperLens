@@ -1,0 +1,435 @@
+{
+  "paper_version": "2103.10504v3",
+  "uri": "paperlens://paper/2103.10504/implementations",
+  "candidates": [
+    {
+      "repo": "mkara44/unetr_pytorch",
+      "url": "https://github.com/mkara44/unetr_pytorch",
+      "relation": "REPRODUCTION",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.10504; repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.2,
+        "matched": {
+          "training": "train.py"
+        },
+        "missing": [
+          "evaluation",
+          "architecture",
+          "loss",
+          "dataset"
+        ]
+      },
+      "stars": 25,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "repository name 'unetr_pytorch' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/mkara44/unetr_pytorch#readme",
+          "excerpt": "README references arXiv:2103.10504",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "no filename matches the dataset component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "dataset"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "tamasino52/UNETR",
+      "url": "https://github.com/tamasino52/UNETR",
+      "relation": "REPRODUCTION",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.10504; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.0,
+        "matched": {},
+        "missing": [
+          "evaluation",
+          "architecture",
+          "loss",
+          "dataset",
+          "training"
+        ]
+      },
+      "stars": 198,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "repository name 'UNETR' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/tamasino52/UNETR#readme",
+          "excerpt": "README references arXiv:2103.10504",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the dataset component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "dataset"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "Amshaker/unetr_plus_plus",
+      "url": "https://github.com/Amshaker/unetr_plus_plus",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 3,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "evaluation_scripts/run_evaluation_acdc.sh",
+          "architecture": "unetr_pp/network_architecture/acdc/model_components.py",
+          "loss": "unetr_pp/training/loss_functions/TopK_loss.py",
+          "dataset": "unetr_pp/experiment_planning/DatasetAnalyzer.py",
+          "training": "unetr_pp/training/network_training/Trainer_acdc.py"
+        },
+        "missing": []
+      },
+      "stars": 533,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Amshaker/unetr_plus_plus",
+          "excerpt": "repository name 'unetr_plus_plus' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "OSUPCVLab/MobileUNETR",
+      "url": "https://github.com/OSUPCVLab/MobileUNETR",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 4,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.8,
+        "matched": {
+          "architecture": "architectures/build_architecture.py",
+          "loss": "losses/losses.py",
+          "dataset": "dataloaders/build_dataset.py",
+          "training": "optimizers/optimizers.py"
+        },
+        "missing": [
+          "evaluation"
+        ]
+      },
+      "stars": 64,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/OSUPCVLab/MobileUNETR",
+          "excerpt": "repository name 'MobileUNETR' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/OSUPCVLab/MobileUNETR",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "hxhxhx33/SwinUNETR",
+      "url": "https://github.com/hxhxhx33/SwinUNETR",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 5,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.8,
+        "matched": {
+          "evaluation": "cmd/evaluate.py",
+          "architecture": "model/network.py",
+          "dataset": "dataset/loader.py",
+          "training": "base/train.py"
+        },
+        "missing": [
+          "loss"
+        ]
+      },
+      "stars": 30,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/hxhxhx33/SwinUNETR",
+          "excerpt": "repository name 'SwinUNETR' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/hxhxhx33/SwinUNETR",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "aigzhusmart/Slim-UNETR",
+      "url": "https://github.com/aigzhusmart/Slim-UNETR",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 6,
+      "name_match": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.6,
+        "matched": {
+          "architecture": "src/SlimUNETR/Decoder.py",
+          "dataset": "src/loader.py",
+          "training": "src/optimizer.py"
+        },
+        "missing": [
+          "evaluation",
+          "loss"
+        ]
+      },
+      "stars": 41,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/aigzhusmart/Slim-UNETR",
+          "excerpt": "repository name 'Slim-UNETR' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/aigzhusmart/Slim-UNETR",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/aigzhusmart/Slim-UNETR",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "fahadshamshad/awesome-transformers-in-medical-imaging",
+      "url": "https://github.com/fahadshamshad/awesome-transformers-in-medical-imaging",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 7,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 1297,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/fahadshamshad/awesome-transformers-in-medical-imaging#readme",
+          "excerpt": "README references arXiv:2103.10504",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "lxtGH/Awesome-Segmentation-With-Transformer",
+      "url": "https://github.com/lxtGH/Awesome-Segmentation-With-Transformer",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 8,
+      "name_match": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 755,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/lxtGH/Awesome-Segmentation-With-Transformer#readme",
+          "excerpt": "README references arXiv:2103.10504",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified.",
+    "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
+  ]
+}

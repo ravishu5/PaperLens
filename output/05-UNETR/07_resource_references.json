@@ -1,0 +1,558 @@
+{
+  "uri": "paperlens://paper/2103.10504/references",
+  "paper_version": "2103.10504v3",
+  "count": 55,
+  "resolved_to_arxiv": 24,
+  "references": [
+    {
+      "bib_key": "zheng2020rethinking",
+      "title": "Rethinking semantic segmentation from a sequence-to-sequence perspective with transformers",
+      "authors": "Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al.",
+      "year": 2012,
+      "arxiv_id": "2012.15840",
+      "doi": null,
+      "cited_times": 13,
+      "uri": "paperlens://paper/2012.15840"
+    },
+    {
+      "bib_key": "xie2021cotr",
+      "title": "Cotr: Efficiently bridging cnn and transformer for 3d medical image segmentation",
+      "authors": "Yutong Xie, Jianpeng Zhang, Chunhua Shen, and Yong Xia.",
+      "year": 2021,
+      "arxiv_id": "2103.03024",
+      "doi": null,
+      "cited_times": 9,
+      "uri": "paperlens://paper/2103.03024"
+    },
+    {
+      "bib_key": "isensee2021nnu",
+      "title": "nnu-net: a self-configuring method for deep learning-based biomedical image segmentation",
+      "authors": "Fabian Isensee, Paul F Jaeger, Simon AA Kohl, Jens Petersen, and Klaus H Maier-Hein.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 8,
+      "uri": null
+    },
+    {
+      "bib_key": "chen2021transunet",
+      "title": "Transunet: Transformers make strong encoders for medical image segmentation",
+      "authors": "Jieneng Chen, Yongyi Lu, Qihang Yu, Xiangde Luo, Ehsan Adeli, Yan Wang, Le Lu, Alan L Yuille, and Yuyin Zhou.",
+      "year": 2021,
+      "arxiv_id": "2102.04306",
+      "doi": null,
+      "cited_times": 7,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "bib_key": "dosovitskiy2020image",
+      "title": "An image is worth 16x16 words: Transformers for image recognition at scale",
+      "authors": "Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al.",
+      "year": 2010,
+      "arxiv_id": "2010.11929",
+      "doi": null,
+      "cited_times": 6,
+      "uri": "paperlens://paper/2010.11929"
+    },
+    {
+      "bib_key": "landman2015miccai",
+      "title": "Miccai multi-atlas labeling beyond the cranial vault--workshop and challenge",
+      "authors": "B Landman, Z Xu, J Igelsias, M Styner, T Langerak, and A Klein.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "Ronneberger15",
+      "title": "U-net: Convolutional networks for biomedical image segmentation",
+      "authors": "O. Ronneberger, P.Fischer, and T. Brox.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 4,
+      "uri": null
+    },
+    {
+      "bib_key": "simpson2019large",
+      "title": "A large annotated medical image dataset for the development and evaluation of segmentation algorithms",
+      "authors": "Amber L Simpson, Michela Antonelli, Spyridon Bakas, Michel Bilello, Keyvan Farahani, Bram Van Ginneken, Annette Kopp-Schneider, Bennett A Landman, Geert Litjens, Bjoern Menze, et al.",
+      "year": 1902,
+      "arxiv_id": "1902.09063",
+      "doi": null,
+      "cited_times": 4,
+      "uri": "paperlens://paper/1902.09063"
+    },
+    {
+      "bib_key": "chen2018encoder",
+      "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation",
+      "authors": "Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig Adam.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "li2018h",
+      "title": "H-denseunet: hybrid densely connected unet for liver and tumor segmentation from ct volumes",
+      "authors": "Xiaomeng Li, Hao Chen, Xiaojuan Qi, Qi Dou, Chi-Wing Fu, and Pheng-Ann Heng.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "valanarasu2021medical",
+      "title": "Medical transformer: Gated axial-attention for medical image segmentation",
+      "authors": "Jeya Maria Jose Valanarasu, Poojan Oza, Ilker Hacihaliloglu, and Vishal M Patel.",
+      "year": 2021,
+      "arxiv_id": "2102.10662",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2102.10662"
+    },
+    {
+      "bib_key": "vaswani2017attention",
+      "title": "Attention is all you need",
+      "authors": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, ukasz Kaiser, and Illia Polosukhin.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 2,
+      "uri": null
+    },
+    {
+      "bib_key": "wang2021transbts",
+      "title": "Transbts: Multimodal brain tumor segmentation using transformer",
+      "authors": "Wenxuan Wang, Chen Chen, Meng Ding, Jiangyun Li, Hong Yu, and Sen Zha.",
+      "year": 2021,
+      "arxiv_id": "2103.04430",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2103.04430"
+    },
+    {
+      "bib_key": "zhang2021transfuse",
+      "title": "Transfuse: Fusing transformers and cnns for medical image segmentation",
+      "authors": "Yundong Zhang, Huiye Liu, and Qiang Hu.",
+      "year": 2021,
+      "arxiv_id": "2102.08005",
+      "doi": null,
+      "cited_times": 2,
+      "uri": "paperlens://paper/2102.08005"
+    },
+    {
+      "bib_key": "ba2016layer",
+      "title": "Layer normalization",
+      "authors": "Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hinton.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "BratsAll2018",
+      "title": "Identifying the best machine learning algorithms for brain tumor segmentation, progression assessment, and overall survival prediction in the BRATS challenge",
+      "authors": "Spyridon Bakas, Mauricio Reyes, et Int, and Bjoern Menze.",
+      "year": 2018,
+      "arxiv_id": "1811.02629",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1811.02629"
+    },
+    {
+      "bib_key": "bao2021beit",
+      "title": "Beit: Bert pre-training of image transformers",
+      "authors": "Hangbo Bao, Li Dong, and Furu Wei.",
+      "year": 2021,
+      "arxiv_id": "2106.08254",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2106.08254"
+    },
+    {
+      "bib_key": "bello2020lambdanetworks",
+      "title": "Lambdanetworks: Modeling long-range interactions without attention",
+      "authors": "Irwan Bello.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "carion2020end",
+      "title": "End-to-end object detection with transformers",
+      "authors": "Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey Zagoruyko.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "caron2021emerging",
+      "title": "Emerging properties in self-supervised vision transformers",
+      "authors": "Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\\'e J\\'egou, Julien Mairal, Piotr Bojanowski, and Armand Joulin.",
+      "year": 2021,
+      "arxiv_id": "2104.14294",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2104.14294"
+    },
+    {
+      "bib_key": "chen2016combining",
+      "title": "Combining fully convolutional and recurrent neural networks for 3d biomedical image segmentation",
+      "authors": "Jianxu Chen, Lin Yang, Yizhe Zhang, Mark Alber, and Danny Z Chen.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "chen2017deeplab",
+      "title": "Deeplab: Semantic image segmentation with deep convolutional nets, atrous convolution, and fully connected crfs",
+      "authors": "Liang-Chieh Chen, George Papandreou, Iasonas Kokkinos, Kevin Murphy, and Alan L Yuille.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "deeplabv3plus2018",
+      "title": "Encoder-decoder with atrous separable convolution for semantic image segmentation",
+      "authors": "Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig Adam.",
+      "year": 2018,
+      "arxiv_id": "1802.02611",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1802.02611"
+    },
+    {
+      "bib_key": "chu2021twins",
+      "title": "Twins: Revisiting the design of spatial attention in vision transformers",
+      "authors": "Xiangxiang Chu, Zhi Tian, Yuqing Wang, Bo Zhang, Haibing Ren, Xiaolin Wei, Huaxia Xia, and Chunhua Shen.",
+      "year": 2021,
+      "arxiv_id": "2104.13840",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2104.13840"
+    },
+    {
+      "bib_key": "devlin2018bert",
+      "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+      "authors": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.",
+      "year": 2018,
+      "arxiv_id": "1810.04805",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1810.04805"
+    },
+    {
+      "bib_key": "dou20163d",
+      "title": "3d deeply supervised network for automatic liver segmentation from ct volumes",
+      "authors": "Qi Dou, Hao Chen, Yueming Jin, Lequan Yu, Jing Qin, and Pheng-Ann Heng.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "fu2019dual",
+      "title": "Dual attention network for scene segmentation",
+      "authors": "Jun Fu, Jing Liu, Haijie Tian, Yong Li, Yongjun Bao, Zhiwei Fang, and Hanqing Lu.",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "gibson2018automatic",
+      "title": "Automatic multi-organ segmentation on abdominal ct with dense v-networks",
+      "authors": "Eli Gibson, Francesco Giganti, Yipeng Hu, Ester Bonmati, Steve Bandula, Kurinchi Gurusamy, Brian Davidson, Stephen P Pereira, Matthew J Clarkson, and Dean C Barratt.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "gu2019net",
+      "title": "Ce-net: Context encoder network for 2d medical image segmentation",
+      "authors": "Zaiwang Gu, Jun Cheng, Huazhu Fu, Kang Zhou, Huaying Hao, Yitian Zhao, Tianyang Zhang, Shenghua Gao, and Jiang Liu.",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "heller2019kits19",
+      "title": "The kits19 challenge data: 300 kidney tumor cases with clinical context, ct semantic segmentations, and surgical outcomes",
+      "authors": "Nicholas Heller, Niranjan Sathianathen, Arveen Kalapara, Edward Walczak, Keenan Moore, Heather Kaluzniak, Joel Rosenberg, Paul Blake, Zachary Rengel, Makinna Oestreich, et al.",
+      "year": 1904,
+      "arxiv_id": "1904.00445",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1904.00445"
+    },
+    {
+      "bib_key": "hu2019local",
+      "title": "Local relation networks for image recognition",
+      "authors": "Han Hu, Zheng Zhang, Zhenda Xie, and Stephen Lin.",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "isensee2019attempt",
+      "title": "An attempt at beating the 3d u-net",
+      "authors": "Fabian Isensee and Klaus H Maier-Hein.",
+      "year": 1908,
+      "arxiv_id": "1908.02182",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1908.02182"
+    },
+    {
+      "bib_key": "jin2020ra",
+      "title": "Ra-unet: A hybrid deep attention-aware network to extract liver and tumor in ct scans",
+      "authors": "Qiangguo Jin, Zhaopeng Meng, Changming Sun, Hui Cui, and Ran Su.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "kamnitsas2015multi",
+      "title": "Multi-scale 3d convolutional neural networks for lesion segmentation in brain mri",
+      "authors": "Konstantinos Kamnitsas, Liang Chen, Christian Ledig, Daniel Rueckert, and Ben Glocker.",
+      "year": 2015,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "kamnitsas2017efficient",
+      "title": "Efficient multi-scale 3d cnn with fully connected crf for accurate brain lesion segmentation",
+      "authors": "Konstantinos Kamnitsas, Christian Ledig, Virginia FJ Newcombe, Joanna P Simpson, Andrew D Kane, David K Menon, Daniel Rueckert, and Ben Glocker.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "li2017compactness",
+      "title": "On the compactness, efficiency, and representation of 3d convolutional networks: brain parcellation as a pretext task",
+      "authors": "Wenqi Li, Guotai Wang, Lucas Fidon, Sebastien Ourselin, M Jorge Cardoso, and Tom Vercauteren.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "liu20183d",
+      "title": "3d anisotropic hybrid network: Transferring convolutional features from 2d images to 3d anisotropic volumes",
+      "authors": "Siqi Liu, Daguang Xu, S Kevin Zhou, Olivier Pauly, Sasa Grbic, Thomas Mertelmeier, Julia Wicklein, Anna Jerebko, Weidong Cai, and Dorin Comaniciu.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "liu2021swin",
+      "title": "Swin transformer: Hierarchical vision transformer using shifted windows",
+      "authors": "Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo.",
+      "year": 2021,
+      "arxiv_id": "2103.14030",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2103.14030"
+    },
+    {
+      "bib_key": "loshchilov2017decoupled",
+      "title": "Decoupled weight decay regularization",
+      "authors": "Ilya Loshchilov and Frank Hutter.",
+      "year": 2017,
+      "arxiv_id": "1711.05101",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1711.05101"
+    },
+    {
+      "bib_key": "milletari2016v",
+      "title": "V-net: Fully convolutional neural networks for volumetric medical image segmentation",
+      "authors": "Fausto Milletari, Nassir Navab, and Seyed-Ahmad Ahmadi.",
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "monteiro2020multiclass",
+      "title": "Multiclass semantic segmentation and quantification of traumatic brain injury lesions on head ct using deep learning: an algorithm development and multicentre validation study",
+      "authors": "Miguel Monteiro, Virginia FJ Newcombe, Francois Mathieu, Krishma Adatia, Konstantinos Kamnitsas, Enzo Ferrante, Tilak Das, Daniel Whitehouse, Daniel Rueckert, David K Menon, et al.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "oktay2018attention",
+      "title": "Attention u-net: Learning where to look for the pancreas",
+      "authors": "Ozan Oktay, Jo Schlemper, Loic Le Folgoc, Matthew Lee, Mattias Heinrich, Kazunari Misawa, Kensaku Mori, Steven McDonagh, Nils Y Hammerla, Bernhard Kainz, et al.",
+      "year": 2018,
+      "arxiv_id": "1804.03999",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1804.03999"
+    },
+    {
+      "bib_key": "ramachandran2019stand",
+      "title": "Stand-alone self-attention in vision models",
+      "authors": "Prajit Ramachandran, Niki Parmar, Ashish Vaswani, Irwan Bello, Anselm Levskaya, and Jonathon Shlens.",
+      "year": 1906,
+      "arxiv_id": "1906.05909",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1906.05909"
+    },
+    {
+      "bib_key": "roth2017hierarchical",
+      "title": "Hierarchical 3d fully convolutional networks for multi-organ segmentation",
+      "authors": "Holger R Roth, Hirohisa Oda, Yuichiro Hayashi, Masahiro Oda, Natsuki Shimizu, Michitaka Fujiwara, Kazunari Misawa, and Kensaku Mori.",
+      "year": 2017,
+      "arxiv_id": "1704.06382",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/1704.06382"
+    },
+    {
+      "bib_key": "tang2021high",
+      "title": "High-resolution 3d abdominal segmentation with random patch network fusion",
+      "authors": "Yucheng Tang, Riqiang Gao, Ho Hin Lee, Shizhong Han, Yunqiang Chen, Dashan Gao, Vishwesh Nath, Camilo Bermudez, Michael R Savona, Richard G Abramson, et al.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "touvron2021training",
+      "title": "Training data-efficient image transformers \\& distillation through attention",
+      "authors": "Hugo Touvron, Matthieu Cord, Matthijs Douze, Francisco Massa, Alexandre Sablayrolles, and Herv\\'e J\\'egou.",
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "wang2021pyramid",
+      "title": "Pyramid vision transformer: A versatile backbone for dense prediction without convolutions",
+      "authors": "Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, Kaitao Song, Ding Liang, Tong Lu, Ping Luo, and Ling Shao.",
+      "year": 2021,
+      "arxiv_id": "2102.12122",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2102.12122"
+    },
+    {
+      "bib_key": "wang2018non",
+      "title": "Non-local neural networks",
+      "authors": "Xiaolong Wang, Ross Girshick, Abhinav Gupta, and Kaiming He.",
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "xia20203d",
+      "title": "3d semi-supervised learning with uncertainty-aware multi-view co-training",
+      "authors": "Yingda Xia, Fengze Liu, Dong Yang, Jinzheng Cai, Lequan Yu, Zhuotun Zhu, Daguang Xu, Alan Yuille, and Holger Roth.",
+      "year": 2020,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "xu2021co",
+      "title": "Co-scale conv-attentional image transformers",
+      "authors": "Weijian Xu, Yifan Xu, Tyler Chang, and Zhuowen Tu.",
+      "year": 2021,
+      "arxiv_id": "2104.06399",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2104.06399"
+    },
+    {
+      "bib_key": "yu2017volumetric",
+      "title": "Volumetric convnets with mixed residual connections for automated prostate segmentation from 3d mr images",
+      "authors": "Lequan Yu, Xin Yang, Hao Chen, Jing Qin, and Pheng Ann Heng.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhang2019self",
+      "title": "Self-attention generative adversarial networks",
+      "authors": "Han Zhang, Ian Goodfellow, Dimitris Metaxas, and Augustus Odena.",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhou2019prior",
+      "title": "Prior-aware neural network for partially-supervised multi-organ segmentation",
+      "authors": "Yuyin Zhou, Zhe Li, Song Bai, Chong Wang, Xinlei Chen, Mei Han, Elliot Fishman, and Alan L Yuille.",
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhu2017deeply",
+      "title": "Deeply-supervised cnn for prostate segmentation",
+      "authors": "Qikui Zhu, Bo Du, Baris Turkbey, Peter L Choyke, and Pingkun Yan.",
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 1,
+      "uri": null
+    },
+    {
+      "bib_key": "zhu2020deformable",
+      "title": "Deformable detr: Deformable transformers for end-to-end object detection",
+      "authors": "Xizhou Zhu, Weijie Su, Lewei Lu, Bin Li, Xiaogang Wang, and Jifeng Dai.",
+      "year": 2010,
+      "arxiv_id": "2010.04159",
+      "doi": null,
+      "cited_times": 1,
+      "uri": "paperlens://paper/2010.04159"
+    }
+  ]
+}

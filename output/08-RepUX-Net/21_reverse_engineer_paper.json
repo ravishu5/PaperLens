@@ -1,0 +1,51 @@
+{
+  "paper_version": "2303.05785v2",
+  "uri": "paperlens://paper/2303.05785",
+  "structure": {
+    "sections": 11,
+    "equations": 9,
+    "algorithms": 0,
+    "stated_values": 6,
+    "components": 4,
+    "claims": 0
+  },
+  "implementations": [
+    "MASILab/RepUX-Net",
+    "leeh43/Rep3D",
+    "huangzsdy/ai-conf-tracker",
+    "MI2DataLab/SwinSMT",
+    "JunMa11/MICCAI-OpenSourcePapers",
+    "qiuchengjian/MICCAI-RegistrationSegmentationClassificationRelatedOpenSourcePapers"
+  ],
+  "mappings": [
+    {
+      "repo": "MASILab/RepUX-Net",
+      "summary": {
+        "ABSENT": 1,
+        "AMBIGUOUS": 6,
+        "UNKNOWN": 3
+      },
+      "uri": "paperlens://mapping/2303.05785/MASILab/RepUX-Net"
+    },
+    {
+      "repo": "leeh43/Rep3D",
+      "summary": {
+        "ABSENT": 1,
+        "AMBIGUOUS": 1,
+        "MATCHED": 2,
+        "UNKNOWN": 6
+      },
+      "uri": "paperlens://mapping/2303.05785/leeh43/Rep3D"
+    }
+  ],
+  "skeleton_uri": "paperlens://paper/2303.05785",
+  "analysis_uri": "paperlens://paper/2303.05785/analysis",
+  "status": "analysed",
+  "analysis": {
+    "paper_version": "2303.05785v2",
+    "author": "agent:batch",
+    "created_at": "2026-09-05T17:46:30+00:00",
+    "schema_version": "1",
+    "fields": {}
+  }
+}

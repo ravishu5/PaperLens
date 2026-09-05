@@ -1,0 +1,95 @@
+{
+  "paper_version": "2303.05785v2",
+  "repos": [
+    "MASILab/RepUX-Net",
+    "leeh43/Rep3D"
+  ],
+  "errors": {},
+  "closest_to_paper": "leeh43/Rep3D",
+  "coverage": {
+    "MASILab/RepUX-Net": {
+      "matched": 0,
+      "absent": 1,
+      "ambiguous": 5,
+      "blocking_differences": 0,
+      "significant_differences": 1
+    },
+    "leeh43/Rep3D": {
+      "matched": 2,
+      "absent": 1,
+      "ambiguous": 1,
+      "blocking_differences": 0,
+      "significant_differences": 1
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "Experimental Setup",
+      "status": {
+        "MASILab/RepUX-Net": "AMBIGUOUS",
+        "leeh43/Rep3D": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "alpha = 0.5",
+      "status": {
+        "MASILab/RepUX-Net": "UNKNOWN",
+        "leeh43/Rep3D": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "alpha = 1",
+      "status": {
+        "MASILab/RepUX-Net": "UNKNOWN",
+        "leeh43/Rep3D": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "alpha = 8",
+      "status": {
+        "MASILab/RepUX-Net": "UNKNOWN",
+        "leeh43/Rep3D": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "beginadjustboxwidth = 0.85",
+      "status": {
+        "MASILab/RepUX-Net": "ABSENT",
+        "leeh43/Rep3D": "ABSENT"
+      }
+    }
+  ],
+  "differ_on": [
+    {
+      "anchor": "Bayesian Frequency Re-parameterization",
+      "status": {
+        "MASILab/RepUX-Net": "AMBIGUOUS",
+        "leeh43/Rep3D": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Model Architecture",
+      "status": {
+        "MASILab/RepUX-Net": "AMBIGUOUS",
+        "leeh43/Rep3D": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "k = 21",
+      "status": {
+        "MASILab/RepUX-Net": "AMBIGUOUS",
+        "leeh43/Rep3D": "MATCHED"
+      }
+    },
+    {
+      "anchor": "k = 7",
+      "status": {
+        "MASILab/RepUX-Net": "AMBIGUOUS",
+        "leeh43/Rep3D": "MATCHED"
+      }
+    }
+  ],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+  ]
+}

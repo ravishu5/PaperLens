@@ -1,0 +1,155 @@
+{
+  "uri": "paperlens://lineage/2310.00199",
+  "paper_version": "2310.00199v2",
+  "edges": [
+    {
+      "from": "2310.00199",
+      "to": "2105.05537",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Similarly, 2D architectures like Swin-Unet \\cite{cao2021swin} and SwinBTS \\cite{jiang2022swinbts} incorporate the Swin Transformer to learn intricate semantic features from images."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2102.04306",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "There's been a substantial shift towards incorporating ViTs for enhanced dense predictions (e.g., TransUNet \\cite{chen2021transunet}, LeViT \\cite{xu2021levit}, CoTr \\cite{xie2021cotr}, UNETR \\cite{hatamizadeh2022unetr})."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2205.15242",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "This method would allow for the adaptation of deformable convolution without the need for parallel branch offset computation, as posited by \\cite{ding2022re}."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2010.11929",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "1904.00445",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "We evaluate 3D DeformUX-Net on supervised volumetric segmentation tasks across various scales using four prominent datasets: 1) MICCAI 2019 KiTS Challenge dataset (kidney, tumor and cyst) \\cite{heller2019kits19}, 2) MICCAI Challenge 2022 AMOS (multi-organ) \\cite{ji2022amos}, 3) Medical Segmentation Decatholon (MSD) Pancreas dataset (pancreas, tumor) and 4) hepatic vessels dataset (hepatic vessel and tumor) \\cite{antonelli2022medical}.",
+        "Setup} \\textbf{Datasets} We conduct experiments on five public segmentation datasets across organs/tissues from different scales (large (e.g., liver, stomach) to small (e.g., tumors, vessels), which comprising with 1) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2019kits19}, 2) MICCAI 2022 AMOS Challenge dataset (AMOS) \\cite{ji2022amos}, 3) Medical Segmentation Decathlon (MSD) pancreas dataset and 4) hepatic vessel dataset \\cite{antonelli2022medical}."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2206.08023",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "We evaluate 3D DeformUX-Net on supervised volumetric segmentation tasks across various scales using four prominent datasets: 1) MICCAI 2019 KiTS Challenge dataset (kidney, tumor and cyst) \\cite{heller2019kits19}, 2) MICCAI Challenge 2022 AMOS (multi-organ) \\cite{ji2022amos}, 3) Medical Segmentation Decatholon (MSD) Pancreas dataset (pancreas, tumor) and 4) hepatic vessels dataset (hepatic vessel and tumor) \\cite{antonelli2022medical}.",
+        "ation datasets across organs/tissues from different scales (large (e.g., liver, stomach) to small (e.g., tumors, vessels), which comprising with 1) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2019kits19}, 2) MICCAI 2022 AMOS Challenge dataset (AMOS) \\cite{ji2022amos}, 3) Medical Segmentation Decathlon (MSD) pancreas dataset and 4) hepatic vessel dataset \\cite{antonelli2022medical}."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2303.05785",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "r, such large kernel design is limited to address the clinical scenarios of segmenting multi-scale tissues (e.g., tumors, vessels) \\cite{kuang2023towards} and additional prior knowledge may need to enhance learning convergence for locality in the large kernel \\cite{lee2023scaling}."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2107.08623",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "There's been a substantial shift towards incorporating ViTs for enhanced dense predictions (e.g., TransUNet \\cite{chen2021transunet}, LeViT \\cite{xu2021levit}, CoTr \\cite{xie2021cotr}, UNETR \\cite{hatamizadeh2022unetr})."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
+        "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
+        "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2206.08023",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "We evaluate 3D DeformUX-Net on supervised volumetric segmentation tasks across various scales using four prominent datasets: 1) MICCAI 2019 KiTS Challenge dataset (kidney, tumor and cyst) \\cite{heller2019kits19}, 2) MICCAI Challenge 2022 AMOS (multi-organ) \\cite{ji2022amos}, 3) Medical Segmentation Decatholon (MSD) Pancreas dataset (pancreas, tumor) and 4) hepatic vessels dataset (hepatic vessel and tumor) \\cite{antonelli2022medical}.",
+        "ation datasets across organs/tissues from different scales (large (e.g., liver, stomach) to small (e.g., tumors, vessels), which comprising with 1) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2019kits19}, 2) MICCAI 2022 AMOS Challenge dataset (AMOS) \\cite{ji2022amos}, 3) Medical Segmentation Decathlon (MSD) pancreas dataset and 4) hepatic vessel dataset \\cite{antonelli2022medical}."
+      ]
+    },
+    {
+      "from": "unknown",
+      "to": "2310.00199",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

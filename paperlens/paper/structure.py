@@ -188,7 +188,11 @@ _VALUE_PATTERNS = [
     # "a learning rate of 1e-4", "dropout of 0.1"
     re.compile(r"\b([a-z][a-z\s\-]{2,30}?)\s+of\s+(" + _NUM + r")\b", re.I),
 ]
-_STOP = {"one", "two", "table", "figure", "section", "equation", "which", "that", "the"}
+_STOP = {"one", "two", "table", "figure", "section", "equation", "which",
+         "that", "the",
+         # Verbs that introduce a count in prose: "consists of 30 subjects".
+         "consists", "comprises", "contains", "includes", "uses", "requires",
+         "consisting", "containing", "including", "total", "set", "number"}
 # Function words that mark a match as prose rather than a named quantity.
 _FUNCTION_WORDS = {"to", "the", "a", "an", "and", "or", "is", "was", "were", "are",
                    "be", "been", "that", "which", "from", "with", "by", "for",
@@ -201,6 +205,24 @@ _LAYOUT_KEYWORDS = {"width", "height", "scale", "trim", "clip", "angle", "column
                     "hsize", "vsize", "parskip", "parindent", "col", "row", "pt", "em",
                     "aboverulesep", "belowrulesep", "heavyrulewidth",
                     "lightrulewidth", "cmidrulewidth", "out"}
+
+
+# Residue of LaTeX markup rather than a quantity: "\begin{adjustbox}{width=0.85}"
+# collapses to "beginadjustboxwidth", and "$2\times2\times4$" to
+# "times2times2times4". Both produced confident absence claims about literals no
+# repository would ever contain.
+_MARKUP_PREFIX = re.compile(r"^(begin|end|adjustbox|includegraphics|multirow|"
+                            r"multicolumn|cmidrule|midrule|toprule|bottomrule)", re.I)
+_REPEATED_MACRO = re.compile(r"(times|frac|cdot|quad|hspace|vspace).*\1", re.I)
+
+
+def _plausible_identifier(symbol: str) -> bool:
+    """Could this plausibly be a name a paper gives a quantity?"""
+    if _MARKUP_PREFIX.match(symbol) or _REPEATED_MACRO.search(symbol):
+        return False
+    # A single run of 19+ characters with no separator is markup residue, not a
+    # symbol an author would write.
+    return not (len(symbol) > 18 and not any(c in symbol for c in "_ -"))
 
 
 @dataclass
@@ -233,6 +255,8 @@ def extract_stated_values(tex: str, max_values: int = 400) -> list[StatedValue]:
                     continue  # prose, not a named quantity
                 if words[-1] in _LAYOUT_KEYWORDS:
                     continue  # typesetting option, not a model quantity
+                if not _plausible_identifier(sym):
+                    continue
                 val = m.group(2).replace(" ", "")
                 key = (sym.lower(), val)
                 if key in seen:

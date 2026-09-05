@@ -1,0 +1,26 @@
+{
+  "uri": "paperlens://paper/1809.10486/urls",
+  "paper_version": "1809.10486v1",
+  "urls": [
+    {
+      "url": "https://github.com/MIC-DKFZ/batchgenerators",
+      "host": "github.com",
+      "owner": "MIC-DKFZ",
+      "repo": "batchgenerators",
+      "in_abstract": false,
+      "section": "1809.10486v1:sec:2.3.1",
+      "src_line": 209,
+      "context": "applied on the fly during training: random rotations, random scaling, random elastic deformations, gamma correction augmentation and mirroring. Data augmentation was done with our own in-house framework which is publically available at \\href{https://github.com/MIC-DKFZ/batchgenerators}{\\color{blue}{github.com/MIC-DKFZ/batchgenerators}}. We define sets of data augmentation parameters for the 2D and 3D U-Net separately. These parameters are not modified between dataset"
+    },
+    {
+      "url": "https://decathlon.grand-challenge.org/evaluation/results",
+      "host": "decathlon.grand-challenge.org",
+      "owner": null,
+      "repo": null,
+      "in_abstract": false,
+      "section": "1809.10486v1:sec:3",
+      "src_line": 263,
+      "context": "highlighted in bold. The dice scores of the test sets are shown at the bottom of the table. Test dice scores in bold denote that at the time of manuscript submission these scores were the highest in the online leaderboard of the challenge (\\href{https://decathlon.grand-challenge.org/evaluation/results}{\\color{blue}{decathlon.grand-challenge.org/evaluation/results}}).} \\label{tab:results} } \\end{table} \\section{Discussion} In this paper we present the nnU-Net segmentation"
+    }
+  ]
+}

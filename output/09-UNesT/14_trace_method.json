@@ -1,0 +1,162 @@
+{
+  "paper_version": "2209.14378v2",
+  "method": "transformer",
+  "introduced_by": [
+    {
+      "paper": "bib:ba2016layer",
+      "title": "titleLayer normalization . %Type = Article",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Each block is fed into sequential of transformer layers\\cite{sharir2021image} separately, which consist of the canonical multi-head self-attention (MSA), multi-layer perceptron (MLP) with skip connection~\\cite{he2016identity}, and layer normalization (LN)~\\cite{ba2016layer}.",
+      "src_line": 160,
+      "uri": null
+    },
+    {
+      "paper": "2004.05150",
+      "title": "titleLongformer: The long-document transformer",
+      "year": 2004,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Moreover, the self-attention mechanism for modeling multi-scale features for high-resolution medical volumes is computationally expensive~\\citep{beltagy2020longformer,han2021transformer,liu2021swin}.",
+      "src_line": 107,
+      "uri": "paperlens://paper/2004.05150"
+    },
+    {
+      "paper": "2105.05537",
+      "title": "titleSwin-unet: Unet-like pure transformer for medical image segmentation",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "To improve representation learning in transformers in small datasets, recent works envision the use of local self-attention~\\citep{liu2021swin,cao2021swin,han2021transformer}.",
+      "src_line": 109,
+      "uri": "paperlens://paper/2105.05537"
+    },
+    {
+      "paper": "2105.05537",
+      "title": "titleSwin-unet: Unet-like pure transformer for medical image segmentation",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Swin UNet~\\cite{cao2021swin} is a pure transformer model designed for 2D medical images.",
+      "src_line": 143,
+      "uri": "paperlens://paper/2105.05537"
+    },
+    {
+      "paper": "2102.04306",
+      "title": "titleTransunet: Transformers make strong encoders for medical image segmentation",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "One early use of vanilla transformer blocks for medical segmentation is the TransUNet~\\cite{chen2021transunet}, which used 12 2D transformer layers for encoding bottleneck features.",
+      "src_line": 139,
+      "uri": "paperlens://paper/2102.04306"
+    },
+    {
+      "paper": "1911.03584",
+      "title": "titleOn the relationship between self-attention and convolutional layers",
+      "year": 1911,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "However, by tokenizing the image into 1D patches, transformers are less able to capture local positional information compared to CNNs, due to the lack of locality inductive bias inherent to CNNs~\\citep{cordonnier2019relationship,dosovitskiy2020image}.",
+      "src_line": 107,
+      "uri": "paperlens://paper/1911.03584"
+    },
+    {
+      "paper": "bib:deng2021transbridge",
+      "title": "titleTransbridge: A lightweight transformer for left ventricle segmentation in echocardiography, in: booktitleInternational Workshop on Advances in Simplifying Medical Ultrasound, organizationSpringer. pp. pages63--72. %Type = Article",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "In addition, TransBTS~\\cite{wang2021transbts}, CoTr~\\cite{xie2021cotr}, and TrasnBridge~\\cite{deng2021transbridge} explored variant modules such as deformable transformer blocks for 3D image segmentation tasks.",
+      "src_line": 139,
+      "uri": null
+    },
+    {
+      "paper": "2108.06932",
+      "title": "titlePolyp-pvt: Polyp segmentation with pyramid vision transformers",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "BAT~\\cite{wang2021boundary} and Poly-PVT~\\cite{dong2021polyp} used grouping or boundary-aware designs to improve transformer robustness with cross-slice attention.",
+      "src_line": 139,
+      "uri": "paperlens://paper/2108.06932"
+    },
+    {
+      "paper": "bib:dosovitskiy2020image",
+      "title": "titleAn image is worth 16x16 words: Transformers for image recognition at scale, in: booktitleInternational Conference on Learning Representations. %Type = Inproceedings",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Vision Transformers (ViT), on the other hand, are capable of learning long-range dependencies and have recently demonstrated exceptional representational learning capabilities and effectiveness in computer vision and medical image applications \\citep{dosovitskiy2020image,hatamizadeh2022unetr,zhou2021nnformer}.",
+      "src_line": 107,
+      "uri": null
+    },
+    {
+      "paper": "bib:dosovitskiy2020image",
+      "title": "titleAn image is worth 16x16 words: Transformers for image recognition at scale, in: booktitleInternational Conference on Learning Representations. %Type = Inproceedings",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "However, by tokenizing the image into 1D patches, transformers are less able to capture local positional information compared to CNNs, due to the lack of locality inductive bias inherent to CNNs~\\citep{cordonnier2019relationship,dosovitskiy2020image}.",
+      "src_line": 107,
+      "uri": null
+    },
+    {
+      "paper": "bib:dosovitskiy2020image",
+      "title": "titleAn image is worth 16x16 words: Transformers for image recognition at scale, in: booktitleInternational Conference on Learning Representations. %Type = Inproceedings",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "To employ the vanilla Transformer~\\cite{dosovitskiy2020image} for medical images, recent works proposed variant architectures that use ViT as network components.",
+      "src_line": 133,
+      "uri": null
+    },
+    {
+      "paper": "bib:dosovitskiy2020image",
+      "title": "titleAn image is worth 16x16 words: Transformers for image recognition at scale, in: booktitleInternational Conference on Learning Representations. %Type = Inproceedings",
+      "year": null,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "Pre-training transformers with a large-scale dataset are of potential value to boost transformer model performance~\\cite{dosovitskiy2020image}.",
+      "src_line": 145,
+      "uri": null
+    }
+  ],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction",
+      "uri": "paperlens://paper/2209.14378/section/1"
+    },
+    {
+      "section": "2",
+      "title": "Related Works",
+      "uri": "paperlens://paper/2209.14378/section/2"
+    },
+    {
+      "section": "3.1",
+      "title": "Hierarchical Transformer Encoder",
+      "uri": "paperlens://paper/2209.14378/section/3.1"
+    },
+    {
+      "section": "3.2",
+      "title": "3D Block Aggregation",
+      "uri": "paperlens://paper/2209.14378/section/3.2"
+    },
+    {
+      "section": "3.3",
+      "title": "Decoder",
+      "uri": "paperlens://paper/2209.14378/section/3.3"
+    },
+    {
+      "section": "4.2.5",
+      "title": "Brain Tumor Segmentation",
+      "uri": "paperlens://paper/2209.14378/section/4.2.5"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed."
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "paper_version": "2109.03201v6",
+  "title": "nnFormer: Interleaved Transformer for Volumetric Segmentation",
+  "repo": "282857341/nnFormer",
+  "commit_sha": "d48aaeb05612a09538f70c38a2357149ea3a7ac0",
+  "uri": "paperlens://plan/2109.03201/282857341/nnFormer",
+  "sections": {
+    "environment": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "cuda": "10.1"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/282857341/nnFormer/file/README.md",
+          "excerpt": "CUDA 10.1",
+          "locator": "README.md"
+        }
+      ]
+    },
+    "dependencies": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "file": "setup.py",
+          "declared": [
+            "nnformer",
+            "nnformer",
+            "torch>=1.6.0a",
+            "tqdm",
+            "dicom2nifti",
+            "scikit-image>=0.14",
+            "medpy",
+            "scipy",
+            "batchgenerators>=0.21",
+            "numpy",
+            "sklearn",
+            "SimpleITK",
+            "pandas",
+            "requests",
+            "nibabel",
+            "tifffile",
+            "console_scripts"
+          ]
+        },
+        {
+          "file": "environment.yml",
+          "declared": [
+            "channels:",
+            "dependencies:"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/282857341/nnFormer/file/setup.py",
+          "excerpt": null,
+          "locator": "setup.py"
+        },
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/282857341/nnFormer/file/environment.yml",
+          "excerpt": null,
+          "locator": "environment.yml"
+        }
+      ],
+      "note": "16 dependency(ies) are declared without a version (nnformer, nnformer, tqdm, dicom2nifti, medpy, scipy). A reproduction should pin them, since the paper's results predate current releases."
+    },
+    "dataset": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind dataset has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "dataset_preparation": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind preprocessing has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Method",
+          "kind": "module",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2109.03201/component/method",
+          "implemented_by": "paperlens://repo/282857341/nnFormer/symbol/%3AExperimentPlannerAllConv3x3.get_properties_for_stage%23method"
+        },
+        {
+          "component": "Encoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2109.03201/component/encoder",
+          "implemented_by": "paperlens://repo/282857341/nnFormer/symbol/%3AEncoder%23class"
+        },
+        {
+          "component": "Bottleneck",
+          "kind": "module",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2109.03201/component/bottleneck"
+        },
+        {
+          "component": "Decoder",
+          "kind": "architecture",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2109.03201/component/decoder",
+          "implemented_by": "paperlens://repo/282857341/nnFormer/symbol/%3ADecoder%23class"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/282857341/nnFormer/symbol/%3AExperimentPlannerAllConv3x3.get_properties_for_stage%23method",
+          "excerpt": null,
+          "locator": ":ExperimentPlannerAllConv3x3.get_properties_for_stage#method"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/282857341/nnFormer/symbol/%3AEncoder%23class",
+          "excerpt": null,
+          "locator": ":Encoder#class"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/282857341/nnFormer/symbol/%3ADecoder%23class",
+          "excerpt": null,
+          "locator": ":Decoder#class"
+        }
+      ],
+      "note": "The paper describes 4 item(s) here, but none was located in 282857341/nnFormer, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Implementation details",
+          "kind": "training",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2109.03201/component/implementation-details"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in 282857341/nnFormer, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "symbol": "stride",
+          "value": "2",
+          "stated_at": "LaTeX line 209",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "be",
+          "value": "1",
+          "stated_at": "LaTeX line 209",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        },
+        {
+          "symbol": "rate",
+          "value": "0.01",
+          "stated_at": "LaTeX line 339",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        },
+        {
+          "symbol": "decay",
+          "value": "3e-5",
+          "stated_at": "LaTeX line 339",
+          "found_in_code": "MATCHED",
+          "confidence": "CONFIRMED"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2109.03201/values",
+          "excerpt": "rate = 0.01",
+          "locator": "LaTeX line 339"
+        },
+        {
+          "kind": "paper_stated_value",
+          "uri": "paperlens://paper/2109.03201/values",
+          "excerpt": "decay = 3e-5",
+          "locator": "LaTeX line 339"
+        }
+      ],
+      "note": "2 of 4 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Experiments",
+          "kind": "evaluation",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/2109.03201/component/experiments",
+          "implemented_by": "paperlens://repo/282857341/nnFormer/symbol/%3Acreate_custom_splits_for_experiments%23function"
+        },
+        {
+          "component": "Ablation study",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2109.03201/component/ablation-study"
+        },
+        {
+          "component": "Visualization of segmentation results",
+          "kind": "evaluation",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/2109.03201/component/visualization-of-segmentation-results"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/282857341/nnFormer/symbol/%3Acreate_custom_splits_for_experiments%23function",
+          "excerpt": null,
+          "locator": ":create_custom_splits_for_experiments#function"
+        }
+      ],
+      "note": "The paper describes 3 item(s) here, but none was located in 282857341/nnFormer, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "PARTIAL",
+    "items": [
+      {
+        "check": "assert the value used for rate equals 0.01",
+        "where": "nnformer/preprocessing/preprocessing.py:334",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      },
+      {
+        "check": "assert the value used for decay equals 3e-5",
+        "where": "nnformer/training/network_training/nnFormerTrainer.py:127",
+        "why": "the paper states this value and the identical literal was located in source",
+        "confidence": "CONFIRMED"
+      }
+    ],
+    "note": "These checks follow from anchors that were verified. They do not constitute a full test plan."
+  },
+  "lineage": {
+    "predecessors_recorded": 32,
+    "uri": "paperlens://lineage/2109.03201"
+  },
+  "readiness": {
+    "sections_known": 0,
+    "sections_partial": 6,
+    "sections_unknown": 2,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

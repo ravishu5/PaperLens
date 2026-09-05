@@ -1,0 +1,15 @@
+{
+  "paper": "09-UNesT",
+  "arxiv_id": "2209.14378",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "MASILab/UNesT",
+  "counts": {
+    "sections": 40,
+    "equations": 2,
+    "algorithms": 2,
+    "stated_values": 17,
+    "declared_urls": 6,
+    "components": 13
+  }
+}

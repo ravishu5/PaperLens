@@ -1,0 +1,63 @@
+{
+  "uri": "paperlens://paper/2209.14378",
+  "paper_version": "2209.14378v2",
+  "title": "UNesT: Local Spatial Representation Learning with Hierarchical Transformer for Efficient Medical Segmentation",
+  "authors": [
+    {
+      "name": "Xin Yu"
+    },
+    {
+      "name": "Qi Yang"
+    },
+    {
+      "name": "Yinchi Zhou"
+    },
+    {
+      "name": "Leon Y. Cai"
+    },
+    {
+      "name": "Riqiang Gao"
+    },
+    {
+      "name": "Ho Hin Lee"
+    },
+    {
+      "name": "Thomas Li"
+    },
+    {
+      "name": "Shunxing Bao"
+    },
+    {
+      "name": "Zhoubing Xu"
+    },
+    {
+      "name": "Thomas A. Lasko"
+    },
+    {
+      "name": "Richard G. Abramson"
+    },
+    {
+      "name": "Zizhao Zhang"
+    },
+    {
+      "name": "Yuankai Huo"
+    },
+    {
+      "name": "Bennett A. Landman"
+    },
+    {
+      "name": "Yucheng Tang"
+    }
+  ],
+  "published_at": "2022-09-28T19:14:38Z",
+  "abstract": "Transformer-based models, capable of learning better global dependencies, have recently demonstrated exceptional representation learning capabilities in computer vision and medical image analysis. Transformer reformats the image into separate patches and realizes global communication via the self-attention mechanism. However, positional information between patches is hard to preserve in such 1D sequences, and loss of it can lead to sub-optimal performance when dealing with large amounts of heterogeneous tissues of various sizes in 3D medical image segmentation. Additionally, current methods are not robust and efficient for heavy-duty medical segmentation tasks such as predicting a large number of tissue classes or modeling globally inter-connected tissue structures. To address such challenges and inspired by the nested hierarchical structures in vision transformer, we proposed a novel 3D medical image segmentation method (UNesT), employing a simplified and faster-converging transformer encoder design that achieves local communication among spatially adjacent patch sequences by aggregating them hierarchically. We extensively validate our method on multiple challenging datasets, consisting of multiple modalities, anatomies, and a wide range of tissue classes, including 133 structures in the brain, 14 organs in the abdomen, 4 hierarchical components in the kidneys, inter-connected kidney tumors and brain tumors. We show that UNesT consistently achieves state-of-the-art performance and evaluate its generalizability and data efficiency. Particularly, the model achieves whole brain segmentation task complete ROI with 133 tissue classes in a single network, outperforming prior state-of-the-art method SLANT27 ensembled with 27 networks.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 40,
+    "equations": 2,
+    "algorithms": 2,
+    "stated_values": 17,
+    "declared_urls": 6,
+    "components": 13
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "uri": "paperlens://paper/2109.03201",
+  "paper_version": "2109.03201v6",
+  "title": "nnFormer: Interleaved Transformer for Volumetric Segmentation",
+  "authors": [
+    {
+      "name": "Hong-Yu Zhou"
+    },
+    {
+      "name": "Jiansen Guo"
+    },
+    {
+      "name": "Yinghao Zhang"
+    },
+    {
+      "name": "Lequan Yu"
+    },
+    {
+      "name": "Liansheng Wang"
+    },
+    {
+      "name": "Yizhou Yu"
+    }
+  ],
+  "published_at": "2021-09-07T17:08:24Z",
+  "abstract": "Transformer, the model of choice for natural language processing, has drawn scant attention from the medical imaging community. Given the ability to exploit long-term dependencies, transformers are promising to help atypical convolutional neural networks to overcome their inherent shortcomings of spatial inductive bias. However, most of recently proposed transformer-based segmentation approaches simply treated transformers as assisted modules to help encode global context into convolutional representations. To address this issue, we introduce nnFormer, a 3D transformer for volumetric medical image segmentation. nnFormer not only exploits the combination of interleaved convolution and self-attention operations, but also introduces local and global volume-based self-attention mechanism to learn volume representations. Moreover, nnFormer proposes to use skip attention to replace the traditional concatenation/summation operations in skip connections in U-Net like architecture. Experiments show that nnFormer significantly outperforms previous transformer-based counterparts by large margins on three public datasets. Compared to nnUNet, nnFormer produces significantly lower HD95 and comparable DSC results. Furthermore, we show that nnFormer and nnUNet are highly complementary to each other in model ensembling.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 14,
+    "equations": 12,
+    "algorithms": 0,
+    "stated_values": 4,
+    "declared_urls": 1,
+    "components": 8
+  }
+}

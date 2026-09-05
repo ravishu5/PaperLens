@@ -1,0 +1,15 @@
+{
+  "paper": "10-deformUX-Net",
+  "arxiv_id": "2310.00199",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "MASILab/deform-uxnet",
+  "counts": {
+    "sections": 18,
+    "equations": 3,
+    "algorithms": 0,
+    "stated_values": 7,
+    "declared_urls": 1,
+    "components": 10
+  }
+}

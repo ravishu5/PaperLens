@@ -1,0 +1,171 @@
+{
+  "uri": "paperlens://mapping/1809.10486/MIC-DKFZ/batchgenerators",
+  "paper_version": "1809.10486v1",
+  "repo": "MIC-DKFZ/batchgenerators",
+  "summary": {
+    "MATCHED": 0,
+    "ABSENT": 0,
+    "AMBIGUOUS": 5,
+    "UNKNOWN": 4
+  },
+  "mappings": [
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:data-augmentation",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:data-augmentation",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Data Augmentation' matches 1/2 of its name tokens against batchgenerators/augmentations/color_augmentations.py::augment_PCA_shift#function",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1809.10486/component/data-augmentation",
+          "excerpt": "Data Augmentation (preprocessing)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/batchgenerators%2Faugmentations%2Fcolor_augmentations.py%3A%3Aaugment_PCA_shift%23function",
+          "excerpt": "def augment_PCA_shift(data, U, s, sigma=0.2)",
+          "locator": "batchgenerators/augmentations/color_augmentations.py:160",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:experiments-and-results",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:experiments-and-results",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Experiments and Results' matches 1/2 of its name tokens against batchgenerators/dataloading/multi_threaded_augmenter.py::results_loop#function",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1809.10486/component/experiments-and-results",
+          "excerpt": "Experiments and Results (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/batchgenerators%2Fdataloading%2Fmulti_threaded_augmenter.py%3A%3Aresults_loop%23function",
+          "excerpt": "def results_loop(in_queues: List[Queue], out_queue: thrQueue, abort_event: Event, pin_memory: bool,\n                 gpu: Union[int, None], wait_time: float, worker_list: list)",
+          "locator": "batchgenerators/dataloading/multi_threaded_augmenter.py:74",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:preprocessing",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:preprocessing",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Preprocessing' matches 1/1 of its name tokens against batchgenerators/examples/brats2017/brats2017_preprocessing.py::load_and_preprocess#function",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1809.10486/component/preprocessing",
+          "excerpt": "Preprocessing (preprocessing)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/batchgenerators%2Fexamples%2Fbrats2017%2Fbrats2017_preprocessing.py%3A%3Aload_and_preprocess%23function",
+          "excerpt": "def load_and_preprocess(case, patient_name, output_folder)",
+          "locator": "batchgenerators/examples/brats2017/brats2017_preprocessing.py:42",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:training-procedure",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:training-procedure",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Training Procedure' matches 1/2 of its name tokens against batchgenerators/dataloading/data_loader.py::DataLoaderBase.generate_train_batch#method",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1809.10486/component/training-procedure",
+          "excerpt": "Training Procedure (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/batchgenerators%2Fdataloading%2Fdata_loader.py%3A%3ADataLoaderBase.generate_train_batch%23method",
+          "excerpt": "def generate_train_batch(self)",
+          "locator": "batchgenerators/dataloading/data_loader.py:90",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|stated_value|1809.10486v1:val:0",
+      "anchor_kind": "stated_value",
+      "anchor_id": "1809.10486v1:val:0",
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "0 is too common a value for an exact match to be evidence",
+      "evidence": []
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:dynamic-adaptation-of-network-topologies",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:dynamic-adaptation-of-network-topologies",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Dynamic adaptation of network topologies' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:inference",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:inference",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Inference' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "evidence": []
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:network-architectures",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:network-architectures",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Network Architectures' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "1809.10486v1|MIC-DKFZ/batchgenerators@9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e|component|1809.10486v1:comp:postprocessing",
+      "anchor_kind": "component",
+      "anchor_id": "1809.10486v1:comp:postprocessing",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Postprocessing' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "evidence": []
+    }
+  ]
+}

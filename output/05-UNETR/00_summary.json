@@ -1,0 +1,15 @@
+{
+  "paper": "05-UNETR",
+  "arxiv_id": "2103.10504",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "mkara44/unetr_pytorch",
+  "counts": {
+    "sections": 19,
+    "equations": 9,
+    "algorithms": 0,
+    "stated_values": 12,
+    "declared_urls": 3,
+    "components": 11
+  }
+}

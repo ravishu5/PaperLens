@@ -1,0 +1,235 @@
+{
+  "paper_version": "1809.10486v1",
+  "title": "nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation",
+  "repo": "MIC-DKFZ/batchgenerators",
+  "commit_sha": "9dc3d49b68ea11e0f37c14d5b75658d9eb364a5e",
+  "uri": "paperlens://plan/1809.10486/MIC-DKFZ/batchgenerators",
+  "sections": {
+    "environment": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "Neither the repository nor the paper states a Python or CUDA version. Pin one from the framework version below and record what you used."
+    },
+    "dependencies": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "file": "requirements.txt",
+          "declared": [
+            "pillow>=7.1.2",
+            "threadpoolctl",
+            "scikit-learn",
+            "numpy>=1.10.2",
+            "scipy",
+            "scikit-image",
+            "scikit-learn",
+            "unittest2"
+          ]
+        },
+        {
+          "file": "pyproject.toml",
+          "declared": [
+            "setuptools>=61",
+            "wheel",
+            "setuptools.build_meta",
+            "batchgenerators",
+            "0.25.3",
+            "README.md",
+            "LICENSE",
+            "pillow>=7.1.2",
+            "numpy>=1.10.2",
+            "scipy",
+            "scikit-image",
+            "scikit-learn",
+            "future",
+            "pandas",
+            "unittest2",
+            "threadpoolctl",
+            "tests"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/file/requirements.txt",
+          "excerpt": null,
+          "locator": "requirements.txt"
+        },
+        {
+          "kind": "code_file",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/file/pyproject.toml",
+          "excerpt": null,
+          "locator": "pyproject.toml"
+        }
+      ],
+      "note": "20 dependency(ies) are declared without a version (threadpoolctl, scikit-learn, scipy, scikit-image, scikit-learn, unittest2). A reproduction should pin them, since the paper's results predate current releases."
+    },
+    "dataset": {
+      "status": "UNKNOWN",
+      "items": [],
+      "note": "No component of kind dataset has been recorded for this paper. Call record_paper_analysis so this section has something to stand on."
+    },
+    "dataset_preparation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Data Augmentation",
+          "kind": "preprocessing",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1809.10486/component/data-augmentation",
+          "implemented_by": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aaugment_PCA_shift%23function"
+        },
+        {
+          "component": "Preprocessing",
+          "kind": "preprocessing",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1809.10486/component/preprocessing",
+          "implemented_by": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aload_and_preprocess%23function"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aaugment_PCA_shift%23function",
+          "excerpt": null,
+          "locator": ":augment_PCA_shift#function"
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aload_and_preprocess%23function",
+          "excerpt": null,
+          "locator": ":load_and_preprocess#function"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in MIC-DKFZ/batchgenerators, so this section rests on the paper alone."
+    },
+    "model_architecture": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Dynamic adaptation of network topologies",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1809.10486/component/dynamic-adaptation-of-network-topologies"
+        },
+        {
+          "component": "Network Architectures",
+          "kind": "architecture",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1809.10486/component/network-architectures"
+        }
+      ],
+      "note": "The paper describes 2 item(s) here, but none was located in MIC-DKFZ/batchgenerators, so this section rests on the paper alone."
+    },
+    "training_pipeline": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Training Procedure",
+          "kind": "training",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1809.10486/component/training-procedure",
+          "implemented_by": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3ADataLoaderBase.generate_train_batch%23method"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3ADataLoaderBase.generate_train_batch%23method",
+          "excerpt": null,
+          "locator": ":DataLoaderBase.generate_train_batch#method"
+        }
+      ],
+      "note": "The paper describes 1 item(s) here, but none was located in MIC-DKFZ/batchgenerators, so this section rests on the paper alone."
+    },
+    "hyperparameters": {
+      "status": "UNKNOWN",
+      "items": [
+        {
+          "symbol": "mask",
+          "value": "0",
+          "stated_at": "LaTeX line 186",
+          "found_in_code": "AMBIGUOUS",
+          "confidence": "UNKNOWN"
+        }
+      ],
+      "note": "0 of 1 stated values were located in source. The rest are unverified against the code."
+    },
+    "evaluation": {
+      "status": "PARTIAL",
+      "items": [
+        {
+          "component": "Experiments and Results",
+          "kind": "evaluation",
+          "status_in_repo": "AMBIGUOUS",
+          "confidence": "POSSIBLE",
+          "uri": "paperlens://paper/1809.10486/component/experiments-and-results",
+          "implemented_by": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aresults_loop%23function"
+        },
+        {
+          "component": "Inference",
+          "kind": "inference",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1809.10486/component/inference"
+        },
+        {
+          "component": "Postprocessing",
+          "kind": "inference",
+          "status_in_repo": "UNKNOWN",
+          "confidence": "UNKNOWN",
+          "uri": "paperlens://paper/1809.10486/component/postprocessing"
+        }
+      ],
+      "evidence": [
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/MIC-DKFZ/batchgenerators/symbol/%3Aresults_loop%23function",
+          "excerpt": null,
+          "locator": ":results_loop#function"
+        }
+      ],
+      "note": "The paper describes 3 item(s) here, but none was located in MIC-DKFZ/batchgenerators, so this section rests on the paper alone."
+    }
+  },
+  "expected_results": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "Reported figures as stated in the paper. They are the target, not a prediction: none has been reproduced here."
+  },
+  "reproduction_risks": [
+    {
+      "severity": "MINOR",
+      "kind": "TRAINING",
+      "risk": "The paper describes exponential moving average, but nothing in MIC-DKFZ/batchgenerators appears to implement it.",
+      "paper_states": "ts. We define an epoch as the iteration over 250 training batches. During training, we keep an exponential moving average of the validation ($l_{MA}^{v}$) and training ($l_{MA}^{t}$) losses. Whenever $l_{MA}^{t}$ did",
+      "code_does": "No occurrence of exponential moving average vocabulary in the repository.",
+      "confidence": "LIKELY"
+    }
+  ],
+  "missing_information": [],
+  "verification_strategy": {
+    "status": "UNKNOWN",
+    "items": [],
+    "note": "No anchor was confirmed against this repository, so no verification step can be grounded. Run map_paper_to_code first."
+  },
+  "lineage": {
+    "predecessors_recorded": 6,
+    "uri": "paperlens://lineage/1809.10486"
+  },
+  "readiness": {
+    "sections_known": 0,
+    "sections_partial": 5,
+    "sections_unknown": 3,
+    "blocking_risks": 0
+  },
+  "notes": [
+    "Nothing in this plan is asserted beyond what was established and cited elsewhere in the graph. Sections marked UNKNOWN are genuinely unknown."
+  ]
+}

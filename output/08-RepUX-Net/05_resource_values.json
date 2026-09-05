@@ -1,0 +1,54 @@
+{
+  "uri": "paperlens://paper/2303.05785/values",
+  "paper_version": "2303.05785v2",
+  "values": [
+    {
+      "symbol": "k",
+      "value": "7",
+      "numeric": 7.0,
+      "section": "2303.05785v2:sec:4",
+      "src_line": 118,
+      "context": "240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.981 & 0.969 & 0.982 & 0.801 & 0.934 & 0.926 & 0.836 & 0.939 & 0.750\\\\ 3D UX-Net (k=21) \\cite{lee20223d} & 65.9M & 757.6G & 0.980 & 0.968 & 0.979 & 0.795 & 0.930 & 0.908 & 0.808 & 0.929 & 0"
+    },
+    {
+      "symbol": "k",
+      "value": "21",
+      "numeric": 21.0,
+      "section": "2303.05785v2:sec:4",
+      "src_line": 119,
+      "context": "2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.981 & 0.969 & 0.982 & 0.801 & 0.934 & 0.926 & 0.836 & 0.939 & 0.750\\\\ 3D UX-Net (k=21) \\cite{lee20223d} & 65.9M & 757.6G & 0.980 & 0.968 & 0.979 & 0.795 & 0.930 & 0.908 & 0.808 & 0.929 & 0.720 \\\\ \\midrule \\textbf{RepOptimizer \\cite{ding2022re}} & 65.8M & 757.4G & 0.981 & 0.969 & 0.981 & 0.822 & 0.937 &"
+    },
+    {
+      "symbol": "beginadjustboxwidth",
+      "value": "0.85",
+      "numeric": 0.85,
+      "section": "2303.05785v2:sec:4",
+      "src_line": 131,
+      "context": "abular} \\end{adjustbox} \\label{baselines_compare} \\end{table*} \\begin{table*}[t!] \\centering \\caption{Ablation studies with quantitative Comparison on Block Designs with/out frequency modeling using different optimizer} \\begin{adjustbox}{width=0.85\\textwidth} \\begin{tabular}{*{1}{c}|*{3}{c}|*{3}{c}|*{1}{c}} \\toprule Optimizer\\: & \\:Main Branch & Para. Branch & BFR\\: & \\:Train Steps & Main LR & Para. LR\\: & Mean Dice \\\\ \\midrule"
+    },
+    {
+      "symbol": "alpha",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2303.05785v2:sec:5",
+      "src_line": 155,
+      "context": "e segmentation performance outperforms the parallel branch design significantly with a Dice score of 0.944.\\\\ \\textbf{Effectiveness on Different Frequency Distribution.} From Figure 2 in SM, RepUX-Net demonstrates the best performance when $\\alpha=1$, while comparable performance is demonstrated in both $\\alpha=0.5$ and $\\alpha=8$. A possible family of Bayesian distributions (different shapes) may need to further optimize the learning convergence of kernels across each channe"
+    },
+    {
+      "symbol": "alpha",
+      "value": "0.5",
+      "numeric": 0.5,
+      "section": "2303.05785v2:sec:5",
+      "src_line": 155,
+      "context": "significantly with a Dice score of 0.944.\\\\ \\textbf{Effectiveness on Different Frequency Distribution.} From Figure 2 in SM, RepUX-Net demonstrates the best performance when $\\alpha=1$, while comparable performance is demonstrated in both $\\alpha=0.5$ and $\\alpha=8$. A possible family of Bayesian distributions (different shapes) may need to further optimize the learning convergence of kernels across each channel.\\\\ \\textbf{Limitations.} The shape of the generated Bayesian di"
+    },
+    {
+      "symbol": "alpha",
+      "value": "8",
+      "numeric": 8.0,
+      "section": "2303.05785v2:sec:5",
+      "src_line": 155,
+      "context": "th a Dice score of 0.944.\\\\ \\textbf{Effectiveness on Different Frequency Distribution.} From Figure 2 in SM, RepUX-Net demonstrates the best performance when $\\alpha=1$, while comparable performance is demonstrated in both $\\alpha=0.5$ and $\\alpha=8$. A possible family of Bayesian distributions (different shapes) may need to further optimize the learning convergence of kernels across each channel.\\\\ \\textbf{Limitations.} The shape of the generated Bayesian distribution is fix"
+    }
+  ]
+}

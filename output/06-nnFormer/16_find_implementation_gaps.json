@@ -1,0 +1,84 @@
+{
+  "paper_version": "2109.03201v6",
+  "repo": "282857341/nnFormer",
+  "commit_sha": "d48aaeb05612a09538f70c38a2357149ea3a7ac0",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 0,
+    "CONFIG_HIDDEN": 2
+  },
+  "gaps": [
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "8 constant(s) hard-coded in source that appear nowhere in the paper: 0.74199998, 0.74199998, 0.7441, 0.7543, 0.7527, 0.7513\u2026.",
+      "where": "nnformer/dataset_conversion/Task115_COVIDSegChallenge.py:131",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/282857341/nnFormer/file/nnformer/dataset_conversion/Task115_COVIDSegChallenge.py",
+          "excerpt": "'current_spacing': array([5.        , 0.74199998, 0.74199998]),",
+          "locator": "nnformer/dataset_conversion/Task115_COVIDSegChallenge.py:131",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2109.03201",
+          "excerpt": "none of 0.74199998, 0.74199998, 0.7441, 0.7543, 0.7527, 0.7513\u2026 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.74199998",
+              "0.74199998",
+              "0.7441",
+              "0.7543",
+              "0.7527",
+              "0.7513",
+              "0.7498",
+              "0.7532"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "3 constant(s) hard-coded in source that appear nowhere in the paper: 5.9999094, 0.50781202, 0.50781202.",
+      "where": "nnformer/experiment_planning/common_utils.py:266",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/282857341/nnFormer/file/nnformer/experiment_planning/common_utils.py",
+          "excerpt": "spacing = [5.9999094, 0.50781202, 0.50781202]",
+          "locator": "nnformer/experiment_planning/common_utils.py:266",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2109.03201",
+          "excerpt": "none of 5.9999094, 0.50781202, 0.50781202 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "5.9999094",
+              "0.50781202",
+              "0.50781202"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}
