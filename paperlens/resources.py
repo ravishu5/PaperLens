@@ -202,6 +202,40 @@ def declared_urls(store: Store, paper_id: str) -> dict[str, Any]:
     }
 
 
+def implementations(store: Store, paper_id: str) -> dict[str, Any]:
+    """Stored implementation candidates. Read-only: run find_implementations to
+    populate or refresh it."""
+    from .evidence.confidence import evidence_for
+
+    pv = _pv(store, paper_id)
+    rows = store.all(
+        "SELECT c.*, r.stars, r.license, r.archived FROM implementation_candidates c "
+        "JOIN repos r ON r.id = c.repo_id WHERE c.paper_version = ? ORDER BY c.rank",
+        (pv,),
+    )
+    if not rows:
+        return {
+            "uri": f"paperlens://paper/{pv.split('v')[0]}/implementations",
+            "paper_version": pv, "candidates": [],
+            "note": "No implementation search has been run for this paper yet. "
+                    "Call find_implementations.",
+        }
+    return {
+        "uri": f"paperlens://paper/{pv.split('v')[0]}/implementations",
+        "paper_version": pv,
+        "candidates": [{
+            "repo": r["repo_id"], "url": f"https://github.com/{r['repo_id']}",
+            "relation": r["relation"], "confidence": r["confidence"],
+            "coverage_score": r["coverage_score"],
+            "coverage_checked": bool(r["coverage_checked"]),
+            "rank": r["rank"], "stars": r["stars"], "license": r["license"],
+            "archived": bool(r["archived"]),
+            "evidence": evidence_for(store, "implementation_candidate",
+                                     f"{pv}|{r['repo_id']}"),
+        } for r in rows],
+    }
+
+
 # ── dispatch ──────────────────────────────────────────────────────────────
 _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)$"), lambda s, m: paper_overview(s, m[0])),
@@ -215,6 +249,8 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
      lambda s, m: algorithm(s, m[0], m[1])),
     (re.compile(r"^paperlens://paper/([^/]+)/values$"), lambda s, m: stated_values(s, m[0])),
     (re.compile(r"^paperlens://paper/([^/]+)/urls$"), lambda s, m: declared_urls(s, m[0])),
+    (re.compile(r"^paperlens://paper/([^/]+)/implementations$"),
+     lambda s, m: implementations(s, m[0])),
 ]
 
 

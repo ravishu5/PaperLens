@@ -16,6 +16,7 @@ from mcp.server.caching import CacheHint
 
 from . import resources as res
 from .graph.store import Store
+from .correlate.discover import find_implementations as _discover
 from .paper.ingest import ingest_paper as _ingest
 from .sources import arxiv
 
@@ -181,6 +182,24 @@ def get_paper_skeleton(paper_id: str) -> dict[str, Any]:
 
 
 @mcp.tool(
+    title="Find implementations",
+    description="Find and rank GitHub repositories implementing a paper, with "
+                "evidence for each. Ranks by evidential strength and reports "
+                "content coverage, so an official repository that does not "
+                "actually implement the method is visibly incomplete.",
+)
+def find_implementations(paper_id: str, kind: str = "all",
+                         verify_coverage: bool = True) -> dict[str, Any]:
+    if kind not in ("all", "official", "reproduction"):
+        return {"error": "ValueError",
+                "message": "kind must be 'all', 'official' or 'reproduction'"}
+    try:
+        return _discover(store(), paper_id, kind=kind, verify_coverage=verify_coverage)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
     title="Fetch a PaperLens resource",
     description="Read any paperlens:// URI. Identical to the MCP resource of the "
                 "same URI; provided for clients without resource support.",
@@ -217,6 +236,11 @@ def r_component(arxiv_id: str, slug: str) -> dict[str, Any]:
 @mcp.resource("paperlens://paper/{arxiv_id}/algorithm/{slug}", mime_type="application/json")
 def r_algorithm(arxiv_id: str, slug: str) -> dict[str, Any]:
     return res.algorithm(store(), arxiv_id, slug)
+
+
+@mcp.resource("paperlens://paper/{arxiv_id}/implementations", mime_type="application/json")
+def r_implementations(arxiv_id: str) -> dict[str, Any]:
+    return res.implementations(store(), arxiv_id)
 
 
 @mcp.resource("paperlens://paper/{arxiv_id}/values", mime_type="application/json")

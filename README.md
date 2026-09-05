@@ -4,7 +4,7 @@ An MCP server for **research engineering**: going from a paper to a working unde
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
 
-**Status: Phase 2 of 8.** Paper ingestion works end to end. Implementation discovery, code intelligence and correlation are not built yet. See [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan and [RESEARCH.md](RESEARCH.md) for why it is designed this way.
+**Status: Phase 3 of 8.** Paper ingestion and implementation discovery work end to end. Code intelligence, paper↔code mapping and lineage are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
 
 ---
 
@@ -29,12 +29,15 @@ Register with an MCP client (Claude Code / Claude Desktop):
 
 State lives in `~/.paperlens/` (`graph.db` plus cached arXiv sources). Override with `PAPERLENS_HOME`.
 
+GitHub access is optional but strongly recommended: PaperLens uses `GITHUB_TOKEN`/`GH_TOKEN` if set, otherwise the `gh` CLI's token, otherwise anonymous access at 60 requests/hour.
+
 ## Use
 
 ```
 resolve_paper("Learning Transferable Visual Models…")   → candidates + arXiv ids
 ingest_paper("2103.00020")                              → structure counts + URIs
 get_paper_skeleton("2103.00020")                        → every addressable anchor
+find_implementations("2103.00020")                      → ranked repos + evidence
 ```
 
 Then read only what you need:
@@ -47,15 +50,18 @@ paperlens://paper/2103.00020/component/{slug}
 paperlens://paper/2103.00020/algorithm/{slug}
 paperlens://paper/2103.00020/values
 paperlens://paper/2103.00020/urls
+paperlens://paper/2103.00020/implementations
 ```
 
 `paperlens_fetch(uri)` returns identical content, for clients without resource support.
 
-## Three things worth knowing
+## Four things worth knowing
 
 **LaTeX, not PDF.** arXiv e-print source preserves section structure, exact math and the authors' own `\url{}` links. PDF extraction destroys all three. Papers without source are marked `UNAVAILABLE` rather than silently degraded.
 
 **Equations are addressed by content hash, not number.** Equation numbers do not exist in LaTeX source — they are assigned by a counter at compile time, and authors almost never `\label` them. *Attention Is All You Need* numbers three equations and labels none; its only `\label{eq:attention}` is commented out. PaperLens replays the counter, so `…/equation/1` works, but the number carries its own confidence and is never better than `LIKELY` without checking the compiled PDF.
+
+**Official is not the same as complete.** `find_implementations` ranks by evidential strength and reports content coverage for every candidate. `openai/CLIP` comes back first — `OFFICIAL`, `CONFIRMED`, cited to the URL in the paper's own abstract — with `missing: [dataset, training, inference]` on the face of the result, because the official repository ships inference weights and not the contrastive objective the paper is about.
 
 **`UNKNOWN` is a normal answer.** A tool that cannot say "I could not establish this" will invent mappings. Asking CLIP for an equation returns an error explaining it has none — not a guess.
 
@@ -75,6 +81,7 @@ Test corpus ground truth was verified by hand in Phase 0:
 
 ## Docs
 
+- [docs/PHASES.md](docs/PHASES.md) — per-phase log: what was built, verified, and broken
 - [RESEARCH.md](RESEARCH.md) — what already exists, what died with Papers With Code, and what is genuinely new
 - [ARCHITECTURE.md](ARCHITECTURE.md) — decisions, schema, tool surface, build plan
 - [DECISIONS.md](DECISIONS.md) — what was chosen, what was rejected, why
