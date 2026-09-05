@@ -19,25 +19,51 @@ class ResourceNotFound(LookupError):
 
 
 def _pv(store: Store, paper_id: str) -> str:
-    """Resolve a possibly-unversioned paper id to a stored paper_version."""
-    row = store.one(
-        "SELECT latest_version FROM papers WHERE arxiv_id = ? OR doi = ? OR arxiv_id LIKE ?",
-        (paper_id, paper_id, f"%{paper_id}%"),
-    )
-    if row and row["latest_version"]:
-        return row["latest_version"]
-    if store.paper_version_row(paper_id):
-        return paper_id
+    """Resolve a paper identifier to a stored paper_version.
+
+    Resolution is exact at every step. An earlier substring fallback
+    (``arxiv_id LIKE '%id%'``) meant that ``_pv(".")`` or ``_pv("1")`` silently
+    resolved to whichever paper SQLite returned first, and that paper then flowed
+    into mappings and reports as though it had been asked for. An ambiguous
+    identifier must raise, never pick.
+    """
+    paper_id = (paper_id or "").strip()
+    if not paper_id:
+        raise ResourceNotFound("empty paper identifier")
+
+    # 1. An explicit arXiv identifier resolves by parsing, not by searching.
     parsed = parse_arxiv_id(paper_id)
-    if not parsed:
-        raise ResourceNotFound(f"{paper_id!r} is not an arXiv identifier or ingested paper")
-    arxiv_id, version = parsed
-    pv = f"{arxiv_id}v{version}" if version else store.latest_version_of(arxiv_id)
-    if not pv or not store.paper_version_row(pv):
+    if parsed:
+        arxiv_id, version = parsed
+        pv = f"{arxiv_id}v{version}" if version else store.latest_version_of(arxiv_id)
+        if pv and store.paper_version_row(pv):
+            return pv
         raise ResourceNotFound(
             f"{arxiv_id} has not been ingested. Call ingest_paper first."
         )
-    return pv
+
+    # 2. A stored paper_version id, verbatim (e.g. "2103.00020v1").
+    if store.paper_version_row(paper_id):
+        return paper_id
+
+    # 3. Non-arXiv papers (DOI- or PDF-sourced) resolve by exact id or DOI.
+    rows = store.all(
+        "SELECT arxiv_id, doi, latest_version FROM papers "
+        "WHERE (arxiv_id = ? OR doi = ?) AND latest_version IS NOT NULL",
+        (paper_id, paper_id),
+    )
+    if len(rows) == 1:
+        return rows[0]["latest_version"]
+    if len(rows) > 1:
+        ids = ", ".join(r["arxiv_id"] for r in rows[:5])
+        raise ResourceNotFound(
+            f"{paper_id!r} matches {len(rows)} ingested papers ({ids}). Use a full "
+            f"identifier; PaperLens will not guess which one you meant."
+        )
+    raise ResourceNotFound(
+        f"{paper_id!r} is not an arXiv identifier, and no ingested paper has that "
+        f"id or DOI. Call resolve_paper to find it, then ingest_paper."
+    )
 
 
 def paper_overview(store: Store, paper_id: str) -> dict[str, Any]:

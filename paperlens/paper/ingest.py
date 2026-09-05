@@ -63,17 +63,26 @@ class IngestResult:
 
 
 def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResult:
-    # Check if paper was already ingested into store (e.g. from PDF/DOI)
-    existing_paper = store.one(
-        "SELECT * FROM papers WHERE arxiv_id = ? OR doi = ? OR arxiv_id LIKE ?",
-        (paper_id, paper_id, f"%{paper_id}%"),
-    )
-    if existing_paper and existing_paper["latest_version"]:
-        pv = existing_paper["latest_version"]
-        pv_row = store.paper_version_row(pv)
-        if pv_row:
-            return _summarize(store, pv, existing_paper["title"], pv_row["fidelity"],
-                              ["loaded from local store: already ingested"])
+    # A paper already in the store may have arrived from a non-arXiv source
+    # (DOI, PDF), in which case there is nothing to fetch. Matching is exact:
+    # a substring fallback here resolved any short string to an arbitrary paper.
+    if not force:
+        existing = store.all(
+            "SELECT * FROM papers WHERE (arxiv_id = ? OR doi = ?) "
+            "AND latest_version IS NOT NULL",
+            (paper_id.strip(), paper_id.strip()),
+        )
+        if len(existing) > 1:
+            raise ValueError(
+                f"{paper_id!r} matches {len(existing)} ingested papers. Use a full "
+                f"identifier."
+            )
+        if len(existing) == 1:
+            pv = existing[0]["latest_version"]
+            if (pv_row := store.paper_version_row(pv)) is not None:
+                return _summarize(store, pv, existing[0]["title"],
+                                  pv_row["fidelity"],
+                                  ["loaded from local store: already ingested"])
 
     parsed = arxiv.parse_arxiv_id(paper_id)
     if not parsed:
