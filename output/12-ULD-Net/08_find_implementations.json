@@ -1,0 +1,148 @@
+{
+  "paper_version": "uld-netv1",
+  "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/implementations",
+  "candidates": [
+    {
+      "repo": "caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+      "url": "https://github.com/caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 1,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.5,
+        "matched": {
+          "architecture": "data/modelnet40_eval_dataset.py",
+          "preprocessing": "data/custom_transforms_random.py"
+        },
+        "missing": [
+          "loss",
+          "optimizer"
+        ]
+      },
+      "stars": 0,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+          "excerpt": "repository name 'ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+          "excerpt": "no filename matches the optimizer component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "optimizer"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "xiexi51/ULD-Net",
+      "url": "https://github.com/xiexi51/ULD-Net",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 2,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.0,
+        "matched": {},
+        "missing": [
+          "architecture",
+          "preprocessing",
+          "loss",
+          "optimizer"
+        ]
+      },
+      "stars": 2,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/xiexi51/ULD-Net",
+          "excerpt": "repository name 'ULD-Net' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/xiexi51/ULD-Net",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/xiexi51/ULD-Net",
+          "excerpt": "no filename matches the preprocessing component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "preprocessing"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/xiexi51/ULD-Net",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/xiexi51/ULD-Net",
+          "excerpt": "no filename matches the optimizer component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "optimizer"
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop, xiexi51/ULD-Net share the paper's name but describe themselves as being about something else, so the name is being reused rather than referring to this work.",
+    "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "paper": "11-arXiv-2404.13024-BANF",
+  "arxiv_id": "2404.13024",
+  "steps": {},
+  "fidelity": "LATEX_EXACT",
+  "repo": "theialab/banf",
+  "counts": {
+    "sections": 19,
+    "equations": 22,
+    "algorithms": 0,
+    "stated_values": 1,
+    "declared_urls": 1,
+    "components": 10
+  }
+}

@@ -25,7 +25,7 @@ def rows():
         # Mirror the runner: a candidate whose only link to the paper is a
         # matching name was not compared against, so do not present it as the
         # implementation found.
-        usable = [c for c in cands if not c.get("name_is_only_evidence")
+        usable = [c for c in cands if not c.get("name_contradicted_by_description")
                   and c.get("relation") not in ("DERIVED", "UNRELATED")]
         top = usable[0] if usable else {}
         yield d, {

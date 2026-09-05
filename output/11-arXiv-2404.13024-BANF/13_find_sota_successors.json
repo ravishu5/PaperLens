@@ -1,0 +1,27 @@
+{
+  "paper_version": "2404.13024v2",
+  "uri": "paperlens://lineage/2404.13024",
+  "successors": [
+    {
+      "paper": "851fc7bcaf6de9c8e63394b7227344ad8a68514d",
+      "title": "Spatial Annealing for Efficient Few-shot Neural Rendering",
+      "year": 2025,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Based on recent research, the band limit of an optimized field can be determined by the sampling kernel under specific conditions (Shabanov et al. 2024).",
+        "Building on recent research into grid-based models (Zhao et al. 2024; Shabanov et al. 2024), we construct the mathematical form of the tri-plane represented field and deduce the filtering process of the base architecture, which subsequently motivates the establishment of the spatial annealing\u2026",
+        "General grid-based models (Zhao et al. 2024; Shabanov et al. 2024) reconstruct the optimized continues field f ( x ) from discrete feature points by applying a convolution process with a kernel function \u03ba : where \u03b4 is the impulse function, \u03c9 is the frequency band-width of the kernel, and x n \u2208 R 3\u2026"
+      ],
+      "citation_count": 2,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "notes": [
+    "Ranking uses influence and citation intent where Semantic Scholar supplies them, and citation count otherwise. Citation count alone is a measure of attention, not of improvement.",
+    "What each successor changed is not asserted here. The citing sentences are returned as evidence; read them, or the successor's own sections, before claiming an improvement."
+  ]
+}

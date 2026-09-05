@@ -1,0 +1,39 @@
+{
+  "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746",
+  "paper_version": "uld-netv1",
+  "title": "ULD-Net: A U-shaped branch large kernel depthwise convolution volume network for 3D medical image segmentation",
+  "authors": [
+    {
+      "name": "Weisheng Li",
+      "affiliation": "Chongqing University of Posts and Telecommunications",
+      "email": "liws@cqupt.edu.cn"
+    },
+    {
+      "name": "JunTong Ci",
+      "affiliation": "Chongqing University of Posts and Telecommunications"
+    },
+    {
+      "name": "Feiyan Li",
+      "affiliation": "Chongqing University of Posts and Telecommunications"
+    },
+    {
+      "name": "Guofeng Zeng",
+      "affiliation": "Chongqing University of Posts and Telecommunications"
+    },
+    {
+      "name": "Zhaopeng Huang",
+      "affiliation": "Chongqing University of Posts and Telecommunications"
+    }
+  ],
+  "published_at": "2025-10-07",
+  "abstract": "Recently, the hierarchical Transformers model represented by Swin UNETR has achieved the most advanced performance in the field of 3D medical image segmentation. This improvement largely relies on the inherent advantages of Transformers such as large receptive fields, while the inductive bias inherent in convolution has not been fully utilized. Therefore, problems such as missing organ boundaries and incorrect organ types are prone to occur during segmentation. We found that large kernel (LK) depthwise convolution can not only simulate these characteristics of Transformers, but also solve the above problems to some extent. In this work, we propose a 3D medical image segmentation network ULD-Net, which simulates large receptive fields through LK depthwise convolution for robust volume segmentation. And in order to accurately and exhaustively obtain features in volume segmentation, we simultaneously used depthwise convolutions with different kernel sizes and utilized branch structures to balance them. Furthermore, we will improve the sparse MLP (sMLP) applied to 2D image recognition to 3D ULD sMLP (UMLP). Use UMLP with fewer parameters and better performance to replace MLP with feature scaling in the Swin Transformer block. At the same time, we have also made some minor adjustments and improvements in the micro design. On the BTCV, FLARE 2021 and AMOS 2022 abdominal multi-organ data sets, ULD-Net outperforms existing SOTA models.",
+  "fidelity": "PDF_DERIVED",
+  "counts": {
+    "sections": 19,
+    "equations": 4,
+    "algorithms": 0,
+    "stated_values": 12,
+    "declared_urls": 0,
+    "components": 12
+  }
+}

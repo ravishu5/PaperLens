@@ -1,0 +1,186 @@
+{
+  "uri": "paperlens://lineage/2303.05785",
+  "paper_version": "2303.05785v2",
+  "edges": [
+    {
+      "from": "2303.05785",
+      "to": "2205.15242",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To tackle the trade-off, RepOptimizer provides an alternative to re-parameterize the back-propagate gradient, instead of the structural parameters of kernel weights, to enhance the training efficiency with plain convolution block design \\cite{ding2022re}.",
+        "\\section{Methods} Instead of changing the gradient dynamics during training \\cite{ding2022re}, we introduce RepUX-Net, a pure 3D CNN architecture that performs element-wise scaling in large kernel weights to enhance the learning convergence and effectively adapts large receptive field for volumetric segmentation.",
+        "Note the theoretical derivation depends on the optimization with first-order gradient-driven optimizer (e.g., SGD, AdamW) \\cite{ding2022re}.",
+        "nel convolution can be improved by either adding up the encoded outputs of parallel branches weighted by diverse scales with SR (RepLKNet \\cite{ding2022scaling}) or performing Gradient Re-parameterization (GR) by multiplying with constant values (RepOptimizer \\cite{ding2022re}) in a Single Operator (SO)."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2010.11929",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "The key contribution of ViTs is largely credited to the large Effective Receptive Field (ERF) with a multi-head self-attention mechanism \\cite{dosovitskiy2020image}."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2209.15076",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}.",
+        "\\subsection{Model Architecture} The backbone of RepUX-Net is based on 3D UX-Net \\cite{lee20223d}, which comprises multiple volumetric convolution blocks that directly utilize 3D patches and leverage skip connections to transfer hierarchical multi-resolution features for end-to-end optimization.",
+        "All preprocessing and training details including baselines, are followed with \\cite{lee20223d} for benchmarking.",
+        "mer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.981 & 0.969 & 0.982 & 0.801 & 0.934 & 0.926 & 0.836 & 0.939 & 0.750\\\\ 3D UX-Net (k=21) \\cite{lee20223d} & 65.9M & 757.6G & 0.980 & 0.968 & 0.979 & 0.795 & 0.930 & 0.908 & 0.808 & 0.929 & 0.720 \\\\ \\midrule"
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2207.03620",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+        "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+        "SLaK further extends the kernel size to 51x51 by decomposing the large kernel into two rectangular parallel kernels with sparse groups and training the model with dynamic sparsity \\cite{liu2022more}."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2109.03201",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2205.15242",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "To tackle the trade-off, RepOptimizer provides an alternative to re-parameterize the back-propagate gradient, instead of the structural parameters of kernel weights, to enhance the training efficiency with plain convolution block design \\cite{ding2022re}.",
+        "\\section{Methods} Instead of changing the gradient dynamics during training \\cite{ding2022re}, we introduce RepUX-Net, a pure 3D CNN architecture that performs element-wise scaling in large kernel weights to enhance the learning convergence and effectively adapts large receptive field for volumetric segmentation.",
+        "Note the theoretical derivation depends on the optimization with first-order gradient-driven optimizer (e.g., SGD, AdamW) \\cite{ding2022re}."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2209.15076",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Therefore, the concept of depth-wise convolution is revisited to provide a scalable and efficient feature computation with large ERF using large kernel sizes (e.g., $7\\times 7\\times 7$) \\cite{liu2022convnet, lee20223d}.",
+        "\\subsection{Model Architecture} The backbone of RepUX-Net is based on 3D UX-Net \\cite{lee20223d}, which comprises multiple volumetric convolution blocks that directly utilize 3D patches and leverage skip connections to transfer hierarchical multi-resolution features for end-to-end optimization.",
+        "All preprocessing and training details including baselines, are followed with \\cite{lee20223d} for benchmarking."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2207.03620",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "However, either from prior works or our experiments, the model performance becomes saturated or even degraded when the kernel size is scaled up in encoder blocks \\cite{ding2022scaling, liu2022more}.",
+        "Recently, the feasibility of leveraging large kernel convolutions (e.g., $31\\times 31$ \\cite{ding2022scaling}, $51\\times 51$\\cite{liu2022more}) has been shown with natural image domain with Structural Re-parameterization (SR), which adapts Constant-Scale Linear Addition (CSLA) block (Fig.",
+        "SLaK further extends the kernel size to 51x51 by decomposing the large kernel into two rectangular parallel kernels with sparse groups and training the model with dynamic sparsity \\cite{liu2022more}."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2206.08023",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "3) MICCAI 2019 KiTS Challenge dataset (KiTS) \\cite{heller2020international}, 4) NIH TCIA Pancreas-CT dataset (TCIA) \\cite{roth2015deeporgan}, 5) MICCAI 2021 FLARE Challenge dataset (FLARE) \\cite{AbdomenCT-1K}, and 6) MICCAI 2022 AMOS challenge dataset (AMOS) \\cite{ji2022amos}."
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2207.11225",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Inspired by \\cite{li2022large}, we choose a kernel size of $21\\times 21\\times 21$ for DepthWise Convolution (DWC-21) as the optimal choice without significant trade-off between model performance and computational efficiency in 3D."
+      ]
+    },
+    {
+      "from": "2310.00199",
+      "to": "2303.05785",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "r, such large kernel design is limited to address the clinical scenarios of segmenting multi-scale tissues (e.g., tumors, vessels) \\cite{kuang2023towards} and additional prior knowledge may need to enhance learning convergence for locality in the large kernel \\cite{lee2023scaling}."
+      ]
+    },
+    {
+      "from": "0f4be00866b3de3fdf04afe5e8b62f6fc98182bb",
+      "to": "2303.05785",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "960f5000ed60eb50b3b352c01cc56e7f075dcce4",
+      "to": "2303.05785",
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "source": "citation_index",
+      "is_influential": false,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}

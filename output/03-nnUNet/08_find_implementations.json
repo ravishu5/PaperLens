@@ -11,6 +11,7 @@
       "rank": 1,
       "name_match": true,
       "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -46,6 +47,7 @@
       "rank": 2,
       "name_match": true,
       "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -73,130 +75,15 @@
       ]
     },
     {
-      "repo": "Godthumb/mini-nnU-Net",
-      "url": "https://github.com/Godthumb/mini-nnU-Net",
+      "repo": "nadunnr/Lung-Cancer-Segmentation-nnU-Net",
+      "url": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
       "relation": "THIRD_PARTY",
       "confidence": "POSSIBLE",
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 3,
       "name_match": true,
       "name_is_only_evidence": true,
-      "coverage": {
-        "kind": "SHALLOW_SMALL_REPO",
-        "score": 0.8,
-        "matched": {
-          "architecture": "model.py",
-          "preprocessing": "preprocessing.py",
-          "training": "training.py",
-          "inference": "predict.py"
-        },
-        "missing": [
-          "evaluation"
-        ]
-      },
-      "stars": 6,
-      "archived": false,
-      "license": null,
-      "evidence": [
-        {
-          "kind": "repo_metadata",
-          "uri": "https://github.com/Godthumb/mini-nnU-Net",
-          "excerpt": "repository name 'mini-nnU-Net' matches the paper's method",
-          "locator": null,
-          "stance": "SUPPORTS",
-          "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/Godthumb/mini-nnU-Net",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        }
-      ]
-    },
-    {
-      "repo": "ImagingDataCommons/nnU-Net-BPR-annotations",
-      "url": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-      "relation": "THIRD_PARTY",
-      "confidence": "POSSIBLE",
-      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 4,
-      "name_match": true,
-      "name_is_only_evidence": true,
-      "coverage": {
-        "kind": "SHALLOW_SMALL_REPO",
-        "score": 0.4,
-        "matched": {
-          "preprocessing": "nnunet/src/utils/preprocessing.py",
-          "evaluation": "nnunet/src/utils/eval.py"
-        },
-        "missing": [
-          "architecture",
-          "training",
-          "inference"
-        ]
-      },
-      "stars": 8,
-      "archived": false,
-      "license": "BSD-3-Clause",
-      "evidence": [
-        {
-          "kind": "repo_metadata",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "repository name 'nnU-Net-BPR-annotations' matches the paper's method",
-          "locator": null,
-          "stance": "SUPPORTS",
-          "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "no filename matches the architecture component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "architecture"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "no filename matches the training component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "training"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
-        }
-      ]
-    },
-    {
-      "repo": "nadunnr/Lung-Cancer-Segmentation-nnU-Net",
-      "url": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
-      "relation": "THIRD_PARTY",
-      "confidence": "POSSIBLE",
-      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 5,
-      "name_match": true,
-      "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -269,94 +156,15 @@
       ]
     },
     {
-      "repo": "WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-      "url": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-      "relation": "THIRD_PARTY",
-      "confidence": "POSSIBLE",
-      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 6,
-      "name_match": true,
-      "name_is_only_evidence": true,
-      "coverage": {
-        "kind": "SHALLOW_SMALL_REPO",
-        "score": 0.2,
-        "matched": {
-          "inference": "prepare_prediction_images.py"
-        },
-        "missing": [
-          "architecture",
-          "preprocessing",
-          "evaluation",
-          "training"
-        ]
-      },
-      "stars": 6,
-      "archived": false,
-      "license": null,
-      "evidence": [
-        {
-          "kind": "repo_metadata",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "repository name 'Carotid-Artery-Segmentation-with-nnU-Net' matches the paper's method",
-          "locator": null,
-          "stance": "SUPPORTS",
-          "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the architecture component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "architecture"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the preprocessing component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "preprocessing"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the training component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "training"
-          }
-        }
-      ]
-    },
-    {
       "repo": "Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
       "url": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
       "relation": "THIRD_PARTY",
       "confidence": "POSSIBLE",
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 7,
+      "rank": 4,
       "name_match": true,
       "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.0,
@@ -444,9 +252,10 @@
       "relation": "DECLARED_DEPENDENCY",
       "confidence": "CONFIRMED",
       "reasoning": "the paper itself links this repository (in the body)",
-      "rank": 8,
+      "rank": 5,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.6,
@@ -495,12 +304,212 @@
           }
         }
       ]
+    },
+    {
+      "repo": "Godthumb/mini-nnU-Net",
+      "url": "https://github.com/Godthumb/mini-nnU-Net",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 6,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.8,
+        "matched": {
+          "architecture": "model.py",
+          "preprocessing": "preprocessing.py",
+          "training": "training.py",
+          "inference": "predict.py"
+        },
+        "missing": [
+          "evaluation"
+        ]
+      },
+      "stars": 6,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/Godthumb/mini-nnU-Net",
+          "excerpt": "repository name 'mini-nnU-Net' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Godthumb/mini-nnU-Net",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "ImagingDataCommons/nnU-Net-BPR-annotations",
+      "url": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 7,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.4,
+        "matched": {
+          "preprocessing": "nnunet/src/utils/preprocessing.py",
+          "evaluation": "nnunet/src/utils/eval.py"
+        },
+        "missing": [
+          "architecture",
+          "training",
+          "inference"
+        ]
+      },
+      "stars": 8,
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "repository name 'nnU-Net-BPR-annotations' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+      "url": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 8,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.2,
+        "matched": {
+          "inference": "prepare_prediction_images.py"
+        },
+        "missing": [
+          "architecture",
+          "preprocessing",
+          "evaluation",
+          "training"
+        ]
+      },
+      "stars": 6,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "repository name 'Carotid-Artery-Segmentation-with-nnU-Net' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the preprocessing component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "preprocessing"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
     }
   ],
   "notes": [
     "The paper links MIC-DKFZ/batchgenerators, but nothing identifies it as this paper's own implementation -- the name does not match the method, the README does not cite the paper, and the owner is not an author. Treated as a declared dependency.",
     "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
-    "For MIC-DKFZ/nnUNet, nikh9l/NNU-Net, Godthumb/mini-nnU-Net the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
+    "Godthumb/mini-nnU-Net, ImagingDataCommons/nnU-Net-BPR-annotations, WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net share the paper's name but describe themselves as being about something else, so the name is being reused rather than referring to this work.",
+    "For MIC-DKFZ/nnUNet, nikh9l/NNU-Net, nadunnr/Lung-Cancer-Segmentation-nnU-Net the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified.",
     "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
   ]

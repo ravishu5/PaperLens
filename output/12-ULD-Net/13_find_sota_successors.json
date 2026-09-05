@@ -1,0 +1,9 @@
+{
+  "paper_version": "uld-netv1",
+  "uri": "paperlens://lineage/10.1016%2Fj.bspc.2025.108746",
+  "successors": [],
+  "notes": [
+    "Ranking uses influence and citation intent where Semantic Scholar supplies them, and citation count otherwise. Citation count alone is a measure of attention, not of improvement.",
+    "What each successor changed is not asserted here. The citing sentences are returned as evidence; read them, or the successor's own sections, before claiming an improvement."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "paper_version": "2404.13024v2",
+  "method": "band-limited",
+  "introduced_by": [
+    {
+      "paper": "bib:SignalProcessing",
+      "title": "Introduction to Signal Processing",
+      "year": 1988,
+      "confidence": "CONFIRMED",
+      "why": "the paper discusses this method in the sentence that cites this reference",
+      "context": "= \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\: \\mathbb{E}_\\mathbf{x} \\| f(\\mathbf{x}; {\\boldsymbol{\\theta}}) - f(\\mathbf{x}) \\|_2^2 \\label{eq:neuralfield} \\end{equation} Thanks to the commutativity of the Fourier transform and linear operators~\\cite{SignalProcessing}, we can represent \\textit{any} signal, as the superposition of band-limited signals: \\begin{equation} f(\\mathbf{x}) = f_0(\\mathbf{x}) + \\dots + f_K(\\mathbf{x}) \\end{equation} where the discrete set of frequencies is denoted as $\\{\\o",
+      "src_line": 181,
+      "uri": null
+    }
+  ],
+  "discussed_in_paper": [
+    {
+      "section": "1",
+      "title": "Introduction",
+      "uri": "paperlens://paper/2404.13024/section/1"
+    },
+    {
+      "section": "2",
+      "title": "Related work",
+      "uri": "paperlens://paper/2404.13024/section/2"
+    },
+    {
+      "section": "3",
+      "title": "Method",
+      "uri": "paperlens://paper/2404.13024/section/3"
+    },
+    {
+      "section": "3.1",
+      "title": "Filtering via optimization",
+      "uri": "paperlens://paper/2404.13024/section/3.1"
+    },
+    {
+      "section": "3.2",
+      "title": "Cascaded training",
+      "uri": "paperlens://paper/2404.13024/section/3.2"
+    },
+    {
+      "section": "E",
+      "title": "Ablations",
+      "uri": "paperlens://paper/2404.13024/section/E"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed."
+  ]
+}

@@ -11,6 +11,7 @@
       "rank": 1,
       "name_match": true,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -99,6 +100,7 @@
       "rank": 2,
       "name_match": true,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -187,6 +189,7 @@
       "rank": 3,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -222,6 +225,7 @@
       "rank": 4,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.0,
@@ -312,6 +316,7 @@
       "rank": 5,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -341,6 +346,7 @@
       "rank": 6,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,

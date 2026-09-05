@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "arxiv_id": "2201.01266",
+      "title": "Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images",
+      "authors": [
+        "Ali Hatamizadeh",
+        "Vishwesh Nath",
+        "Yucheng Tang",
+        "Dong Yang",
+        "Holger Roth",
+        "Daguang Xu"
+      ],
+      "published_at": "2022-01-04T18:01:34Z",
+      "confidence": "CONFIRMED",
+      "why": "explicit arXiv identifier"
+    }
+  ]
+}

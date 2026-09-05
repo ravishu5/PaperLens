@@ -1,0 +1,15 @@
+{
+  "paper": "12-ULD-Net",
+  "arxiv_id": "10.1016/j.bspc.2025.108746",
+  "steps": {},
+  "fidelity": "PDF_DERIVED",
+  "repo": null,
+  "counts": {
+    "sections": 19,
+    "equations": 4,
+    "algorithms": 0,
+    "stated_values": 12,
+    "declared_urls": 0,
+    "components": 12
+  }
+}

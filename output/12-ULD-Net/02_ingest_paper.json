@@ -1,0 +1,18 @@
+{
+  "arxiv_id": "10.1016/j.bspc.2025.108746",
+  "paper_version": "uld-netv1",
+  "title": "ULD-Net: A U-shaped branch large kernel depthwise convolution volume network for 3D medical image segmentation",
+  "fidelity": "PDF_DERIVED",
+  "sections": 19,
+  "equations": 4,
+  "numbered_equations": 4,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 12,
+  "declared_urls": 0,
+  "components": 12,
+  "notes": [
+    "loaded from local store: already ingested",
+    "Parsed by parser version 2, current is 3. This record came from PDF and cannot be re-derived, so it is served as stored rather than discarded."
+  ]
+}

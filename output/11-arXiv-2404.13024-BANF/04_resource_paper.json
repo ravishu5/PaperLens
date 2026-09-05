@@ -1,0 +1,39 @@
+{
+  "uri": "paperlens://paper/2404.13024",
+  "paper_version": "2404.13024v2",
+  "title": "BANF: Band-limited Neural Fields for Levels of Detail Reconstruction",
+  "authors": [
+    {
+      "name": "Ahan Shabanov"
+    },
+    {
+      "name": "Shrisudhan Govindarajan"
+    },
+    {
+      "name": "Cody Reading"
+    },
+    {
+      "name": "Lily Goli"
+    },
+    {
+      "name": "Daniel Rebain"
+    },
+    {
+      "name": "Kwang Moo Yi"
+    },
+    {
+      "name": "Andrea Tagliasacchi"
+    }
+  ],
+  "published_at": "2024-04-19T17:39:50Z",
+  "abstract": "Largely due to their implicit nature, neural fields lack a direct mechanism for filtering, as Fourier analysis from discrete signal processing is not directly applicable to these representations. Effective filtering of neural fields is critical to enable level-of-detail processing in downstream applications, and support operations that involve sampling the field on regular grids (e.g. marching cubes). Existing methods that attempt to decompose neural fields in the frequency domain either resort to heuristics or require extensive modifications to the neural field architecture. We show that via a simple modification, one can obtain neural fields that are low-pass filtered, and in turn show how this can be exploited to obtain a frequency decomposition of the entire signal. We demonstrate the validity of our technique by investigating level-of-detail reconstruction, and showing how coarser representations can be computed effectively.",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 19,
+    "equations": 22,
+    "algorithms": 0,
+    "stated_values": 1,
+    "declared_urls": 1,
+    "components": 10
+  }
+}

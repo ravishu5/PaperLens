@@ -109,7 +109,7 @@ def run(slug: str, arxiv_id: str, method_term: str) -> dict:
     # absences that say nothing about the paper.
     repo = None
     usable = [c for c in (impl.get("candidates") or [])
-              if not c.get("name_is_only_evidence")
+              if not c.get("name_contradicted_by_description")
               and c.get("relation") not in ("DERIVED", "UNRELATED")]
     for cand in usable:
         if cand["confidence"] in ("CONFIRMED", "LIKELY"):

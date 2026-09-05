@@ -1,0 +1,48 @@
+{
+  "paper_version": "1606.04797v1",
+  "analysis_uri": "paperlens://paper/1606.04797/analysis",
+  "accepted": {
+    "components": [
+      {
+        "slug": "v-net-architecture",
+        "name": "V-Net Architecture",
+        "kind": "architecture",
+        "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
+        "evidence": [
+          "paperlens://paper/1606.04797/section/2"
+        ]
+      },
+      {
+        "slug": "dice-loss-layer",
+        "name": "Dice Loss Layer",
+        "kind": "loss",
+        "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
+        "evidence": [
+          "paperlens://paper/1606.04797/section/3"
+        ]
+      },
+      {
+        "slug": "training-procedure",
+        "name": "Training Procedure",
+        "kind": "training",
+        "uri": "paperlens://paper/1606.04797/component/training-procedure",
+        "evidence": [
+          "paperlens://paper/1606.04797/section/3.1"
+        ]
+      },
+      {
+        "slug": "inference",
+        "name": "Inference",
+        "kind": "inference",
+        "uri": "paperlens://paper/1606.04797/component/inference",
+        "evidence": [
+          "paperlens://paper/1606.04797/section/3.2"
+        ]
+      }
+    ],
+    "claims": [],
+    "narrative_fields": []
+  },
+  "rejected": [],
+  "notes": []
+}

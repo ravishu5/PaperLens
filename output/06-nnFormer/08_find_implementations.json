@@ -11,6 +11,7 @@
       "rank": 1,
       "name_match": true,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -52,6 +53,7 @@
       "rank": 2,
       "name_match": true,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -93,6 +95,7 @@
       "rank": 3,
       "name_match": true,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -126,47 +129,15 @@
       ]
     },
     {
-      "repo": "XuRuihan/NNFormer",
-      "url": "https://github.com/XuRuihan/NNFormer",
+      "repo": "YellowLight021/paddle_nnformer",
+      "url": "https://github.com/YellowLight021/paddle_nnformer",
       "relation": "THIRD_PARTY",
       "confidence": "POSSIBLE",
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 4,
       "name_match": true,
       "name_is_only_evidence": true,
-      "coverage": {
-        "kind": "SHALLOW",
-        "score": 1.0,
-        "matched": {
-          "evaluation": "benchmark.py",
-          "architecture": "neuralformer/data_process/nnlqp/feature/onnx_to_networkx.py",
-          "training": "scripts/accuracy_predict/tnasp/nasbench101/train_0.02%.sh"
-        },
-        "missing": []
-      },
-      "stars": 7,
-      "archived": false,
-      "license": "MIT",
-      "evidence": [
-        {
-          "kind": "repo_metadata",
-          "uri": "https://github.com/XuRuihan/NNFormer",
-          "excerpt": "repository name 'NNFormer' matches the paper's method",
-          "locator": null,
-          "stance": "SUPPORTS",
-          "provenance": null
-        }
-      ]
-    },
-    {
-      "repo": "YellowLight021/paddle_nnformer",
-      "url": "https://github.com/YellowLight021/paddle_nnformer",
-      "relation": "THIRD_PARTY",
-      "confidence": "POSSIBLE",
-      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 5,
-      "name_match": true,
-      "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -197,9 +168,10 @@
       "relation": "THIRD_PARTY",
       "confidence": "POSSIBLE",
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
-      "rank": 6,
+      "rank": 5,
       "name_match": true,
       "name_is_only_evidence": true,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -225,6 +197,40 @@
       ]
     },
     {
+      "repo": "XuRuihan/NNFormer",
+      "url": "https://github.com/XuRuihan/NNFormer",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
+      "rank": 6,
+      "name_match": true,
+      "name_is_only_evidence": true,
+      "name_contradicted_by_description": true,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 1.0,
+        "matched": {
+          "evaluation": "benchmark.py",
+          "architecture": "neuralformer/data_process/nnlqp/feature/onnx_to_networkx.py",
+          "training": "scripts/accuracy_predict/tnasp/nasbench101/train_0.02%.sh"
+        },
+        "missing": []
+      },
+      "stars": 7,
+      "archived": false,
+      "license": "MIT",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/XuRuihan/NNFormer",
+          "excerpt": "repository name 'NNFormer' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
       "repo": "fahadshamshad/awesome-transformers-in-medical-imaging",
       "url": "https://github.com/fahadshamshad/awesome-transformers-in-medical-imaging",
       "relation": "DERIVED",
@@ -233,6 +239,7 @@
       "rank": 7,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -262,6 +269,7 @@
       "rank": 8,
       "name_match": false,
       "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -284,7 +292,8 @@
     }
   ],
   "notes": [
-    "For XuRuihan/NNFormer, YellowLight021/paddle_nnformer, XuRuihan/NNFormer-NNLQP the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
+    "XuRuihan/NNFormer share the paper's name but describe themselves as being about something else, so the name is being reused rather than referring to this work.",
+    "For YellowLight021/paddle_nnformer, XuRuihan/NNFormer-NNLQP the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
     "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified."
   ]

@@ -1,0 +1,37 @@
+{
+  "paper_version": "uld-netv1",
+  "method": "depthwise",
+  "introduced_by": [],
+  "discussed_in_paper": [
+    {
+      "section": "2.2",
+      "title": "ConvNets based model",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/2.2"
+    },
+    {
+      "section": "3.1.1",
+      "title": "Branch LK depthwise convolution block (BLDC)",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.1.1"
+    },
+    {
+      "section": "4.2",
+      "title": "Ablation experiment",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4.2"
+    },
+    {
+      "section": "4.3",
+      "title": "Comparison with other convolutional structures or networks",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4.3"
+    },
+    {
+      "section": "5",
+      "title": "Conclusion",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/5"
+    }
+  ],
+  "carried_forward_by": [],
+  "notes": [
+    "Origins are drawn from the paper's own citing sentences and are quotable. Later work is matched on citing-sentence text, so a method discussed without naming it will be missed.",
+    "No sentence in this paper mentions 'depthwise' while citing another work, so no origin can be established from its text."
+  ]
+}

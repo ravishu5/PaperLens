@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2310.00199",
+  "paper_version": "2310.00199v2",
+  "title": "DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Segmentation with Depthwise Deformable Convolution",
+  "fidelity": "LATEX_EXACT",
+  "sections": 18,
+  "equations": 3,
+  "numbered_equations": 3,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 6,
+  "declared_urls": 1,
+  "components": 10,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

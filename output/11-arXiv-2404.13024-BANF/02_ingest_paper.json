@@ -1,0 +1,17 @@
+{
+  "arxiv_id": "2404.13024",
+  "paper_version": "2404.13024v2",
+  "title": "BANF: Band-limited Neural Fields for Levels of Detail Reconstruction",
+  "fidelity": "LATEX_EXACT",
+  "sections": 19,
+  "equations": 22,
+  "numbered_equations": 22,
+  "algorithms": 0,
+  "unextractable_algorithms": 0,
+  "stated_values": 1,
+  "declared_urls": 1,
+  "components": 10,
+  "notes": [
+    "loaded from local store: already ingested"
+  ]
+}

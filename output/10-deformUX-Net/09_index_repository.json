@@ -1,0 +1,17 @@
+{
+  "repo": "MASILab/deform-uxnet",
+  "snapshot_id": "MASILab/deform-uxnet@b2bfad71d798a6691e4234614e8d1ca9c63e31bd",
+  "commit_sha": "b2bfad71d798a6691e4234614e8d1ca9c63e31bd",
+  "indexer": "jcodemunch@stdio",
+  "symbol_count": 3237,
+  "file_count": 377,
+  "languages": {
+    "python": 327,
+    "bash": 10,
+    "json": 4,
+    "c": 9,
+    "cpp": 27
+  },
+  "cached": false,
+  "warnings": []
+}

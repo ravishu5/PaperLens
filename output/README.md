@@ -59,7 +59,7 @@ Papers processed: **12**.
 | UNesT | `MASILab/UNesT` | OFFICIAL | CONFIRMED |
 | DeformUX-Net | `MASILab/deform-uxnet` | OFFICIAL | CONFIRMED |
 | BANF (supplied as ULD-Net) | `theialab/banf` | THIRD_PARTY | LIKELY |
-| ULD-Net | `caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop` | THIRD_PARTY | POSSIBLE |
+| ULD-Net | `— none established` | — | — |
 
 ## Correlation and comparison
 
@@ -76,7 +76,7 @@ Papers processed: **12**.
 | UNesT | 2 | 0 | 15 | 12 | 0 | 0 | 3 | 15 |
 | DeformUX-Net | 0 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
 | BANF (supplied as ULD-Net) | 0 | 0 | 4 | 7 | 0 | 0 | 4 | 15 |
-| ULD-Net | 1 | 11 | 3 | 9 | 0 | 10 | 1 | 15 |
+| ULD-Net | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 15 |
 
 ## Files in each folder
 

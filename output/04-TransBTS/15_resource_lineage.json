@@ -168,19 +168,6 @@
       ]
     },
     {
-      "from": "2103.10504",
-      "to": "2103.04430",
-      "relation": "PREDECESSOR",
-      "confidence": "CONFIRMED",
-      "source": "bibliography",
-      "is_influential": null,
-      "intents": [],
-      "contexts": [
-        "Similarly, Wang~\\textit{et al.}~\\cite{wang2021transbts} proposed to use a transformer in the bottleneck of a 3D encoder-decoder CNN for the task of semantic brain tumor segmentation.",
-        "09 \\\\ SETR MLA~\\cite{zheng2020rethinking} & 0.950 & 4.091 & 0.698 & 15.503 & 0.554 & 10.237 & 0.665 & 14.716 & 0.639 & 13.485 \\\\ TransUNet~\\cite{chen2021transunet} & 0.950 & 4.031 & 0.706 & 14.027 & 0.542 & 10.421 & 0.684 & 14.501 & 0.644 & 12.983 \\\\ TransBTS~\\cite{wang2021transbts} & - & - & 0.779 & 10.030 & 0.574 & 9.969 & 0.735 & 8.950 & 0.696 & 9.650 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.946 & 4.748 & 0.712 & 11.492 & 0.523 & 9.592 & 0.698 & 12.581 & 0.6444 & 11.221 \\\\ CoTr~\\cite{xie2021cotr} & 0.954 &"
-      ]
-    },
-    {
       "from": "2109.03201",
       "to": "2103.04430",
       "relation": "CITES",
@@ -206,6 +193,19 @@
         "Compared to some prior related works such as TransBTS~\\cite{wang2021transbts} and CoTr~\\cite{xie2021cotr}, our design employs the hierarchical transformer directly on images and extracts representations at multiple scales without convolutional layers.",
         "hline nnUNet~\\cite{isensee2021nnu} & 30.7M & 358.6 & 0.7168 & 10.7321 & 0.4337 & inf \\\\ TransBTS~\\cite{wang2021transbts} & 33.0M & 111.9 & 0.6537 & inf & 0.6043 & inf \\\\ nnFormer~\\cite{z",
         "DSC & HD & DSC & HD \\\\ \\hline nnUNet~\\cite{isensee2021nnu} & 0.7062 & 14.0101 & 0.3930 & inf \\\\ TransBTS~\\cite{wang2021transbts} & 0.6542 & inf & 0.5991 & inf \\\\ nnFormer~\\cite{zhou2021nnformer} & 0.7007 & 10.423 & 0.6420 & inf"
+      ]
+    },
+    {
+      "from": "2103.10504",
+      "to": "2103.04430",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Similarly, Wang~\\textit{et al.}~\\cite{wang2021transbts} proposed to use a transformer in the bottleneck of a 3D encoder-decoder CNN for the task of semantic brain tumor segmentation.",
+        "09 \\\\ SETR MLA~\\cite{zheng2020rethinking} & 0.950 & 4.091 & 0.698 & 15.503 & 0.554 & 10.237 & 0.665 & 14.716 & 0.639 & 13.485 \\\\ TransUNet~\\cite{chen2021transunet} & 0.950 & 4.031 & 0.706 & 14.027 & 0.542 & 10.421 & 0.684 & 14.501 & 0.644 & 12.983 \\\\ TransBTS~\\cite{wang2021transbts} & - & - & 0.779 & 10.030 & 0.574 & 9.969 & 0.735 & 8.950 & 0.696 & 9.650 \\\\ CoTr w/o CNN encoder~\\cite{xie2021cotr} & 0.946 & 4.748 & 0.712 & 11.492 & 0.523 & 9.592 & 0.698 & 12.581 & 0.6444 & 11.221 \\\\ CoTr~\\cite{xie2021cotr} & 0.954 &"
       ]
     },
     {

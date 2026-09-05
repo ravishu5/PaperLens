@@ -1,0 +1,102 @@
+{
+  "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/values",
+  "paper_version": "uld-netv1",
+  "values": [
+    {
+      "symbol": "C",
+      "value": "48",
+      "numeric": null,
+      "section": "uld-netv1:sec:3.3",
+      "src_line": null,
+      "context": "Initial feature dimension projected by stem"
+    },
+    {
+      "symbol": "stem_kernel",
+      "value": "7x7x7",
+      "numeric": null,
+      "section": "uld-netv1:sec:3.2.1",
+      "src_line": null,
+      "context": "Patch embedding convolution kernel size"
+    },
+    {
+      "symbol": "stem_padding",
+      "value": "3",
+      "numeric": null,
+      "section": "uld-netv1:sec:3.2.1",
+      "src_line": null,
+      "context": "Patch embedding convolution padding"
+    },
+    {
+      "symbol": "downsampling_kernel",
+      "value": "2x2x2",
+      "numeric": null,
+      "section": "uld-netv1:sec:3.3",
+      "src_line": null,
+      "context": "Downsampling standard convolution kernel size"
+    },
+    {
+      "symbol": "bldc_kernels",
+      "value": "9, 7, 5, 3",
+      "numeric": null,
+      "section": "uld-netv1:sec:3.1.1",
+      "src_line": null,
+      "context": "Branch depthwise convolution kernel sizes"
+    },
+    {
+      "symbol": "learning_rate",
+      "value": "0.0001",
+      "numeric": null,
+      "section": "uld-netv1:sec:4",
+      "src_line": null,
+      "context": "Initial learning rate for AdamW optimizer"
+    },
+    {
+      "symbol": "amos_epochs",
+      "value": "2000",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Training epochs on AMOS 2022 dataset"
+    },
+    {
+      "symbol": "btcv_epochs",
+      "value": "4000",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Training epochs on BTCV dataset"
+    },
+    {
+      "symbol": "flare_epochs",
+      "value": "4000",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Training epochs on FLARE 2021 dataset"
+    },
+    {
+      "symbol": "params_M",
+      "value": "55.85",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Total parameter count in millions"
+    },
+    {
+      "symbol": "flops_G",
+      "value": "655.22",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Total computational complexity in GFLOPs"
+    },
+    {
+      "symbol": "dice_amos",
+      "value": "0.915",
+      "numeric": null,
+      "section": "uld-netv1:sec:4.1",
+      "src_line": null,
+      "context": "Best average Dice index on AMOS 2022"
+    }
+  ]
+}

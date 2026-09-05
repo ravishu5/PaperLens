@@ -1,0 +1,17 @@
+{
+  "skipped": "No implementation candidate was established. Candidates whose only link to the paper is a matching repository name are not compared against, because that manufactures absences which say nothing about the paper.",
+  "rejected_candidates": [
+    {
+      "repo": "caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "name_is_only_evidence": true
+    },
+    {
+      "repo": "xiexi51/ULD-Net",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "name_is_only_evidence": true
+    }
+  ]
+}

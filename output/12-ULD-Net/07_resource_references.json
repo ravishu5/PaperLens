@@ -1,0 +1,538 @@
+{
+  "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/references",
+  "paper_version": "uld-netv1",
+  "count": 53,
+  "resolved_to_arxiv": 0,
+  "references": [
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0005",
+      "title": "DCNet: diversity convolutional network for ventricle segmentation on short-axis cardiac magnetic resonance images",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": "10.1016/j.knosys.2022.110033",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0010",
+      "title": "MIA-Net: multi-information aggregation network combining transformers and convolutional feature learning for polyp segmentation",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": "10.1016/j.knosys.2022.108824",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0015",
+      "title": "Large-kernel attention for 3d medical image segmentation",
+      "authors": null,
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0020",
+      "title": "MAXFormer: enhanced transformer for medical image segmentation with multi-attention and multi-scale features fusion",
+      "authors": null,
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": "10.1016/j.knosys.2023.110987",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0025",
+      "title": "Transbts: multimodal brain tumor segmentation using transformer",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0030",
+      "title": "H.-Y. Zhou, J. Guo, Y. Zhang, L. Yu, L. Wang, and Y. Yu, \u201cnnformer: Interleaved transformer for volumetric segmentation,\u201d arXiv preprint arXiv:2109.03201, 2021.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0035",
+      "title": "A. Dosovitskiy et al., \u201cAn image is worth 16x16 words: Transformers for image recognition at scale,\u201d arXiv preprint arXiv:2010.11929, 2020.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0040",
+      "title": "TransUNet: rethinking the U-Net architecture design for medical image segmentation through the lens of transformers",
+      "authors": null,
+      "year": 2024,
+      "arxiv_id": null,
+      "doi": "10.1016/j.media.2024.103280",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0045",
+      "title": "H. Bao, L. Dong, S. Piao, and F. Wei, \u201cBeit: Bert pre-training of image transformers,\u201d arXiv preprint arXiv:2106.08254, 2021.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0050",
+      "title": "Self-supervised pre-training of swin transformers for 3d medical image analysis",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0055",
+      "title": "Swin transformer: hierarchical vision transformer using shifted windows",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0060",
+      "title": "Unetr: transformers for 3d medical image segmentation",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0065",
+      "title": "Swin unetr: Swin transformers for semantic segmentation of brain tumors in mri images",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0070",
+      "title": "Sparse MLP for image recognition: is self-attention really necessary?",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": "10.1609/aaai.v36i2.20133",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0075",
+      "title": "B. Landman, Z. Xu, J. Igelsias, M. Styner, T. Langerak, and A. Klein, \u201cMiccai multi-atlas labeling beyond the cranial vault\u2013workshop and challenge,\u201d in Proc. MICCAI Multi-Atlas Labeling Beyond Cranial Vault\u2014Workshop Challenge, 2015, vol. 5, p. 12.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0080",
+      "title": "Abdomenct-1k: is abdominal organ segmentation a solved problem?",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": "10.1109/tpami.2021.3100536",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0085",
+      "title": "Amos: a large-scale abdominal multi-organ benchmark for versatile medical image segmentation",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0090",
+      "title": "J. Chen et al., \u201cTransunet: Transformers make strong encoders for medical image segmentation,\u201d arXiv preprint arXiv:2102.04306, 2021.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0095",
+      "title": "Swin-unet: unet-like pure transformer for medical image segmentation",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0100",
+      "title": "Unest: local spatial representation learning with hierarchical transformer for efficient medical segmentation",
+      "authors": null,
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": "10.1016/j.media.2023.102939",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0105",
+      "title": "Depthwise convolution is all you need for learning multiple visual domains",
+      "authors": null,
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": "10.1609/aaai.v33i01.33018368",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0110",
+      "title": "3D U 2-net: a 3D universal U-Net for multi-domain medical image segmentation",
+      "authors": null,
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0115",
+      "title": "Splenomegaly segmentation on multi-modal MRI using deep convolutional networks",
+      "authors": null,
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": "10.1109/tmi.2018.2881110",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0120",
+      "title": "A convnet for the 2020s",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0125",
+      "title": "Scaling up 3d kernels with bayesian frequency re-parameterization for medical image segmentation",
+      "authors": null,
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0130",
+      "title": "H. H. Lee, S. Bao, Y. Huo, and B. A. Landman, \u201c3d ux-net: A large kernel volumetric convnet modernizing hierarchical transformer for medical image segmentation,\u201d arXiv preprint arXiv:2209.15076, 2022.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0135",
+      "title": "H. H. Lee et al., \u201cDeformux-net: Exploring a 3d foundation backbone for medical image segmentation with depthwise deformable convolution,\u201d arXiv preprint arXiv:2310.00199, 2023.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0140",
+      "title": "Attention is all you need",
+      "authors": null,
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0145",
+      "title": "Understanding the effective receptive field in deep convolutional neural networks",
+      "authors": null,
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0150",
+      "title": "Scaling up your kernels to 31x31: Revisiting large kernel design in cnns",
+      "authors": null,
+      "year": 2022,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0155",
+      "title": "K. Simonyan, \u201cVery deep convolutional networks for large-scale image recognition,\u201d arXiv preprint arXiv:1409.1556, 2014.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0160",
+      "title": "Deep residual learning for image recognition",
+      "authors": null,
+      "year": 2016,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0165",
+      "title": "S. Tuli, I. Dasgupta, E. Grant, and T. L. Griffiths, \u201cAre convolutional neural networks or transformers more like human vision?,\u201d arXiv preprint arXiv:2105.07197, 2021.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0170",
+      "title": "Xception: deep learning with depthwise separable convolutions",
+      "authors": null,
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0175",
+      "title": "Mobilenets: efficient convolutional neural networks for mobile vision applications",
+      "authors": null,
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0180",
+      "title": "Shufflenet v2: practical guidelines for efficient cnn architecture design",
+      "authors": null,
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0185",
+      "title": "UcUNet: a lightweight and precise medical image segmentation network based on efficient large kernel U-shaped convolutional module design",
+      "authors": null,
+      "year": 2023,
+      "arxiv_id": null,
+      "doi": "10.1016/j.knosys.2023.110868",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0190",
+      "title": "Segmamba: long-range sequential modeling mamba for 3d medical image segmentation",
+      "authors": null,
+      "year": 2024,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0195",
+      "title": "Repvgg: making vgg-style convnets great again",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0200",
+      "title": "Batch renormalization: towards reducing minibatch dependence in batch-normalized models",
+      "authors": null,
+      "year": 2017,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0205",
+      "title": "Y. Wu and J. Johnson, \u201cRethinking\u201d batch\u201c in batchnorm,\u201d arXiv preprint arXiv:2105.07576, 2021.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0210",
+      "title": "UTNet: a hybrid transformer architecture for medical image segmentation",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0215",
+      "title": "J. L. Ba, J. R. Kiros, and G. E. Hinton, \u201cLayer normalization,\u201d arXiv preprint arXiv:1607.06450, 2016.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0220",
+      "title": "Group normalization",
+      "authors": null,
+      "year": 2018,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0225",
+      "title": "Rectified linear units improve restricted boltzmann machines",
+      "authors": null,
+      "year": 2010,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0230",
+      "title": "D. Hendrycks and K. Gimpel, \u201cGaussian error linear units (gelus),\u201d arXiv preprint arXiv:1606.08415, 2016.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0235",
+      "title": "D. Ulyanov, A. Vedaldi, and V. Lempitsky, \u201cInstance normalization: The missing ingredient for fast stylization,\u201d arXiv preprint arXiv:1607.08022, 2016.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0240",
+      "title": "F. Milletari, N. Navab, and S.-A. Ahmadi, \u201cV-net: Fully convolutional neural networks for volumetric medical image segmentation,\u201d in 2016 fourth international conference on 3D vision (3DV), 2016: Ieee, pp. 565-571.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": "10.1109/3dv.2016.79",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0245",
+      "title": "I. Loshchilov and F. Hutter, \u201cDecoupled weight decay regularization,\u201d arXiv preprint arXiv:1711.05101, 2017.",
+      "authors": null,
+      "year": null,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0250",
+      "title": "3D MRI brain tumor segmentation using autoencoder regularization",
+      "authors": null,
+      "year": 2019,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0255",
+      "title": "nnU-net: a self-configuring method for deep learning-based biomedical image segmentation",
+      "authors": null,
+      "year": 2021,
+      "arxiv_id": null,
+      "doi": "10.1038/s41592-020-01008-z",
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0260",
+      "title": "Fisher\u2019s least significant difference (LSD) test",
+      "authors": null,
+      "year": 2010,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    },
+    {
+      "bib_key": "10.1016/j.bspc.2025.108746_b0265",
+      "title": "Emcad: efficient multi-scale convolutional attention decoding for medical image segmentation",
+      "authors": null,
+      "year": 2024,
+      "arxiv_id": null,
+      "doi": null,
+      "cited_times": 0,
+      "uri": null
+    }
+  ]
+}

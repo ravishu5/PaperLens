@@ -1,0 +1,388 @@
+{
+  "paper_version": "2404.13024v2",
+  "uri": "paperlens://paper/2404.13024",
+  "fidelity": "LATEX_EXACT",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/2404.13024/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related work",
+      "uri": "paperlens://paper/2404.13024/section/2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Method",
+      "uri": "paperlens://paper/2404.13024/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Filtering via optimization",
+      "uri": "paperlens://paper/2404.13024/section/3.1"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Cascaded training",
+      "uri": "paperlens://paper/2404.13024/section/3.2"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Experiments",
+      "uri": "paperlens://paper/2404.13024/section/4"
+    },
+    {
+      "path": "4.1",
+      "level": 2,
+      "title": "Image filtering (2D)",
+      "uri": "paperlens://paper/2404.13024/section/4.1"
+    },
+    {
+      "path": "4.2",
+      "level": 2,
+      "title": "Signed Distance Fields (3D)",
+      "uri": "paperlens://paper/2404.13024/section/4.2"
+    },
+    {
+      "path": "4.3",
+      "level": 2,
+      "title": "Inverse rendering (3D from 2D)",
+      "uri": "paperlens://paper/2404.13024/section/4.3"
+    },
+    {
+      "path": "4.4",
+      "level": 2,
+      "title": "Ablations",
+      "uri": "paperlens://paper/2404.13024/section/4.4"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Conclusions",
+      "uri": "paperlens://paper/2404.13024/section/5"
+    },
+    {
+      "path": "A",
+      "level": 1,
+      "title": "Appendix",
+      "uri": "paperlens://paper/2404.13024/section/A"
+    },
+    {
+      "path": "B",
+      "level": 1,
+      "title": "Radiance field decomposition",
+      "uri": "paperlens://paper/2404.13024/section/B"
+    },
+    {
+      "path": "C",
+      "level": 1,
+      "title": "Image filtering (cont'd)",
+      "uri": "paperlens://paper/2404.13024/section/C"
+    },
+    {
+      "path": "D",
+      "level": 1,
+      "title": "Higher order kernels",
+      "uri": "paperlens://paper/2404.13024/section/D"
+    },
+    {
+      "path": "E",
+      "level": 1,
+      "title": "Ablations",
+      "uri": "paperlens://paper/2404.13024/section/E"
+    },
+    {
+      "path": "F",
+      "level": 1,
+      "title": "Additional 3D reconstruction results",
+      "uri": "paperlens://paper/2404.13024/section/F"
+    },
+    {
+      "path": "G",
+      "level": 1,
+      "title": "Evaluation of geometry and color reconstruction on NeRF Synthetic Dataset",
+      "uri": "paperlens://paper/2404.13024/section/G"
+    },
+    {
+      "path": "H",
+      "level": 1,
+      "title": "Proof of filtering via optimization",
+      "uri": "paperlens://paper/2404.13024/section/H"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "5a3531166191",
+      "number": "1",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "{\\boldsymbol{\\theta}}^* = \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\: \\mathbb{E}_\\",
+      "uri": "paperlens://paper/2404.13024/equation/5a3531166191"
+    },
+    {
+      "hash": "757e0eb9dba0",
+      "number": "2",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "f(\\mathbf{x}) = f_0(\\mathbf{x}) + \\dots + f_K(\\mathbf{x})",
+      "uri": "paperlens://paper/2404.13024/equation/757e0eb9dba0"
+    },
+    {
+      "hash": "7268c115027a",
+      "number": "3",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "f(\\mathbf{x}; \\{{\\boldsymbol{\\theta}}_k\\}) = f_0(\\mathbf{x}; {\\boldsymbol{\\theta}}_0) + \\d",
+      "uri": "paperlens://paper/2404.13024/equation/7268c115027a"
+    },
+    {
+      "hash": "ccb506138357",
+      "number": "4",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "f_{[0, \\omega_k]}(\\mathbf{x}) = \\kappa_{\\omega_k}(\\mathbf{x}) \\circledast f(\\mathbf{x})\n\\l",
+      "uri": "paperlens://paper/2404.13024/equation/ccb506138357"
+    },
+    {
+      "hash": "7c1d5d5f8774",
+      "number": "5",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "f_k(\\mathbf{x}) = \\kappa_{\\omega_{k+1}}(\\mathbf{x}) \\circledast f(\\mathbf{x}) -  \\kappa_{\\",
+      "uri": "paperlens://paper/2404.13024/equation/7c1d5d5f8774"
+    },
+    {
+      "hash": "44c391eb9b01",
+      "number": "6",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\hat{f}(\\mathbf{x}) = \\hat{\\kappa}(\\mathbf{x}) \\circledast \\sum_t f[t] \\cdot \\delta(\\mathb",
+      "uri": "paperlens://paper/2404.13024/equation/44c391eb9b01"
+    },
+    {
+      "hash": "7bc32f1950c0",
+      "number": "7",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}})\n    = \\kappa_{\\omega}(\\mathbf{x}) \\circled",
+      "uri": "paperlens://paper/2404.13024/equation/7bc32f1950c0"
+    },
+    {
+      "hash": "554c5b91c070",
+      "number": "8",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}}) &=\n    \\Lambda_\\omega(\\mathbf{x}) \\circled",
+      "uri": "paperlens://paper/2404.13024/equation/554c5b91c070"
+    },
+    {
+      "hash": "9d42abf165cc",
+      "number": "9",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "&\\equiv \\text{Interp}(\\mathbf{x}; \\{f(\\mathbf{x}_t; {\\boldsymbol{\\theta}})\\})\n    \\label{e",
+      "uri": "paperlens://paper/2404.13024/equation/9d42abf165cc"
+    },
+    {
+      "hash": "3fe852ba16da",
+      "number": "11",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}}^*) \\approx \\kappa_{\\omega}(\\mathbf{x}) \\cir",
+      "uri": "paperlens://paper/2404.13024/equation/3fe852ba16da"
+    },
+    {
+      "hash": "477317d35895",
+      "number": "12",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "{\\boldsymbol{\\theta}}^*_0 &= \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}_0} \\: \\mathbb",
+      "uri": "paperlens://paper/2404.13024/equation/477317d35895"
+    },
+    {
+      "hash": "5b462ed2b9d7",
+      "number": "13",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "{\\boldsymbol{\\theta}}^*_1 = \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}_1} \\: \\mathbb{",
+      "uri": "paperlens://paper/2404.13024/equation/5b462ed2b9d7"
+    },
+    {
+      "hash": "aa99692ef43a",
+      "number": "14",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}_k} \\: \\mathbb{E}_\\mathbf{x}\n\\| \\hatf_k(\\ma",
+      "uri": "paperlens://paper/2404.13024/equation/aa99692ef43a"
+    },
+    {
+      "hash": "ed6162482c11",
+      "number": "15",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "\\hat{f}(\\mathbf{x}; {\\boldsymbol{\\theta}}^*) &= \\sum_k \\hatf_k(\\mathbf{x}; {\\boldsymbol{\\t",
+      "uri": "paperlens://paper/2404.13024/equation/ed6162482c11"
+    },
+    {
+      "hash": "318b53b40d3c",
+      "number": "16",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\:\\: \\sum_{\\{\\mathbf{x}_n\\}}\n\\| \\text{Int",
+      "uri": "paperlens://paper/2404.13024/equation/318b53b40d3c"
+    },
+    {
+      "hash": "f20e5be266e7",
+      "number": "17",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\operatorname*{arg\\,min}_{\\mathbf{X}} \\:\\: \\| \\mathbf{A} \\mathbf{X}   - \\mathbf{b} \\|_2^2",
+      "uri": "paperlens://paper/2404.13024/equation/f20e5be266e7"
+    },
+    {
+      "hash": "ff0f1be641a6",
+      "number": "18",
+      "number_confidence": "LIKELY",
+      "environment": "align",
+      "preview": "{\\boldsymbol{\\theta}}^* &= \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\: \\mathbb{E}_",
+      "uri": "paperlens://paper/2404.13024/equation/ff0f1be641a6"
+    },
+    {
+      "hash": "979ab289e458",
+      "number": "19",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "{\\boldsymbol{\\theta}}^* = \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\: \\mathbb{E}_\\",
+      "uri": "paperlens://paper/2404.13024/equation/979ab289e458"
+    },
+    {
+      "hash": "810fb18dcff0",
+      "number": "20",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}})\n    = \\kappa_{\\omega}(\\mathbf{x}) \\circled",
+      "uri": "paperlens://paper/2404.13024/equation/810fb18dcff0"
+    },
+    {
+      "hash": "4d420e02fd53",
+      "number": "21",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\mathcal{F} \\{ \\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}}) \\}\n    = \\mathcal{F} \\{\\kap",
+      "uri": "paperlens://paper/2404.13024/equation/4d420e02fd53"
+    },
+    {
+      "hash": "27bee27de8b2",
+      "number": "22",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "\\mathcal{F} \\{ \\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}}) \\}\n    = \\mathcal{F} \\{\\kap",
+      "uri": "paperlens://paper/2404.13024/equation/27bee27de8b2"
+    },
+    {
+      "hash": "e6797e22a9c2",
+      "number": "23",
+      "number_confidence": "LIKELY",
+      "environment": "equation",
+      "preview": "{\\boldsymbol{\\theta}}^* = \\operatorname*{arg\\,min}_{{\\boldsymbol{\\theta}}} \\: \\mathbb{E}_\\",
+      "uri": "paperlens://paper/2404.13024/equation/e6797e22a9c2"
+    }
+  ],
+  "components": [
+    {
+      "slug": "method",
+      "name": "Method",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/method"
+    },
+    {
+      "slug": "experiments",
+      "name": "Experiments",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/experiments"
+    },
+    {
+      "slug": "ablations",
+      "name": "Ablations",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/ablations"
+    },
+    {
+      "slug": "additional-3d-reconstruction-results",
+      "name": "Additional 3D reconstruction results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/additional-3d-reconstruction-results"
+    },
+    {
+      "slug": "evaluation-of-geometry-and-color-reconstruction-on-nerf-synt",
+      "name": "Evaluation of geometry and color reconstruction on NeRF Synthetic Dataset",
+      "kind": "dataset",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/evaluation-of-geometry-and-color-reconstruction-on-nerf-synt"
+    },
+    {
+      "slug": "proof-of-filtering-via-optimization",
+      "name": "Proof of filtering via optimization",
+      "kind": "optimizer",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/2404.13024/component/proof-of-filtering-via-optimization"
+    },
+    {
+      "slug": "filtering-via-optimization",
+      "name": "Filtering via optimization",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2404.13024/component/filtering-via-optimization"
+    },
+    {
+      "slug": "cascaded-training",
+      "name": "Cascaded training",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2404.13024/component/cascaded-training"
+    },
+    {
+      "slug": "image-filtering",
+      "name": "Image filtering",
+      "kind": "evaluation",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2404.13024/component/image-filtering"
+    },
+    {
+      "slug": "signed-distance-fields",
+      "name": "Signed Distance Fields",
+      "kind": "evaluation",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2404.13024/component/signed-distance-fields"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "Sigma_l",
+      "value": "0",
+      "src_line": 313
+    }
+  ],
+  "declared_urls": [
+    {
+      "url": "https://theialab.github.io/banf",
+      "owner": null,
+      "repo": null,
+      "in_abstract": true
+    }
+  ],
+  "limitations": []
+}

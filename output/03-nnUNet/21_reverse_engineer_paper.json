@@ -12,15 +12,15 @@
   "implementations": [
     "MIC-DKFZ/nnUNet",
     "nikh9l/NNU-Net",
-    "Godthumb/mini-nnU-Net",
-    "ImagingDataCommons/nnU-Net-BPR-annotations",
-    "gift-surg/MONAIfbs",
-    "apple1986/medicalSegReview",
     "nadunnr/Lung-Cancer-Segmentation-nnU-Net",
-    "WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-    "damminhtien/awesome-semantic-segmentation",
     "Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
-    "MIC-DKFZ/batchgenerators"
+    "gift-surg/MONAIfbs",
+    "MIC-DKFZ/batchgenerators",
+    "apple1986/medicalSegReview",
+    "Godthumb/mini-nnU-Net",
+    "damminhtien/awesome-semantic-segmentation",
+    "ImagingDataCommons/nnU-Net-BPR-annotations",
+    "WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net"
   ],
   "mappings": [
     {
@@ -47,7 +47,7 @@
   "analysis": {
     "paper_version": "1809.10486v1",
     "author": "agent:batch",
-    "created_at": "2026-09-05T17:56:31+00:00",
+    "created_at": "2026-09-05T18:29:06+00:00",
     "schema_version": "1",
     "fields": {}
   }

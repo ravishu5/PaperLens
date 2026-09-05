@@ -1,0 +1,67 @@
+{
+  "paper_version": "2404.13024v2",
+  "repos": [
+    "theialab/banf",
+    "StatCan/gensol-banff"
+  ],
+  "errors": {},
+  "closest_to_paper": null,
+  "coverage": {
+    "theialab/banf": {
+      "matched": 0,
+      "absent": 0,
+      "ambiguous": 3,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    },
+    "StatCan/gensol-banff": {
+      "matched": 0,
+      "absent": 0,
+      "ambiguous": 3,
+      "blocking_differences": 0,
+      "significant_differences": 0
+    }
+  },
+  "agree_on": [
+    {
+      "anchor": "Cascaded training",
+      "status": {
+        "theialab/banf": "AMBIGUOUS",
+        "StatCan/gensol-banff": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Filtering via optimization",
+      "status": {
+        "theialab/banf": "UNKNOWN",
+        "StatCan/gensol-banff": "UNKNOWN"
+      }
+    },
+    {
+      "anchor": "Image filtering",
+      "status": {
+        "theialab/banf": "AMBIGUOUS",
+        "StatCan/gensol-banff": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Sigma_l = 0",
+      "status": {
+        "theialab/banf": "AMBIGUOUS",
+        "StatCan/gensol-banff": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Signed Distance Fields",
+      "status": {
+        "theialab/banf": "UNKNOWN",
+        "StatCan/gensol-banff": "UNKNOWN"
+      }
+    }
+  ],
+  "differ_on": [],
+  "notes": [
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper.",
+    "theialab/banf and StatCan/gensol-banff score identically on these checks, so no claim is made about which is closer to the paper."
+  ]
+}

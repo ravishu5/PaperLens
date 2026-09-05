@@ -1,0 +1,308 @@
+{
+  "paper_version": "uld-netv1",
+  "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746",
+  "fidelity": "PDF_DERIVED",
+  "sections": [
+    {
+      "path": "1",
+      "level": 1,
+      "title": "Introduction",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/1"
+    },
+    {
+      "path": "2",
+      "level": 1,
+      "title": "Related work",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/2"
+    },
+    {
+      "path": "2.1",
+      "level": 2,
+      "title": "Transformers based model",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/2.1"
+    },
+    {
+      "path": "2.2",
+      "level": 2,
+      "title": "ConvNets based model",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/2.2"
+    },
+    {
+      "path": "3",
+      "level": 1,
+      "title": "Method",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3"
+    },
+    {
+      "path": "3.1",
+      "level": 2,
+      "title": "Core module design",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.1"
+    },
+    {
+      "path": "3.1.1",
+      "level": 3,
+      "title": "Branch LK depthwise convolution block (BLDC)",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.1.1"
+    },
+    {
+      "path": "3.1.2",
+      "level": 3,
+      "title": "3D ULD sMLP (UMLP)",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.1.2"
+    },
+    {
+      "path": "3.2",
+      "level": 2,
+      "title": "Micro design",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.2"
+    },
+    {
+      "path": "3.2.1",
+      "level": 3,
+      "title": "Patch-wise features input",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.2.1"
+    },
+    {
+      "path": "3.2.2",
+      "level": 3,
+      "title": "Layer normalization",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.2.2"
+    },
+    {
+      "path": "3.2.3",
+      "level": 3,
+      "title": "GELU",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.2.3"
+    },
+    {
+      "path": "3.3",
+      "level": 2,
+      "title": "Network details",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.3"
+    },
+    {
+      "path": "3.4",
+      "level": 2,
+      "title": "Data preprocessing",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/3.4"
+    },
+    {
+      "path": "4",
+      "level": 1,
+      "title": "Results and discussion",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4"
+    },
+    {
+      "path": "4.1",
+      "level": 2,
+      "title": "Comparative experiment",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4.1"
+    },
+    {
+      "path": "4.2",
+      "level": 2,
+      "title": "Ablation experiment",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4.2"
+    },
+    {
+      "path": "4.3",
+      "level": 2,
+      "title": "Comparison with other convolutional structures or networks",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/4.3"
+    },
+    {
+      "path": "5",
+      "level": 1,
+      "title": "Conclusion",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/section/5"
+    }
+  ],
+  "equations": [
+    {
+      "hash": "48a859ae426f0abc",
+      "number": "(1)",
+      "number_confidence": "CONFIRMED",
+      "environment": "equation",
+      "preview": "X^{out} \\in FC(concat(X_W \\times X_H \\times X_D \\times X))",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/equation/48a859ae426f0abc"
+    },
+    {
+      "hash": "74448a9890e26878",
+      "number": "(2)",
+      "number_confidence": "CONFIRMED",
+      "environment": "equation",
+      "preview": "\\hat{z}^l = BLDC(LN(z^{l-1})) + z^{l-1}; z^l = UMLP(LN(\\hat{z}^l)) + \\hat{z}^l; \\hat{z}^{l",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/equation/74448a9890e26878"
+    },
+    {
+      "hash": "3197b7e836b99d96",
+      "number": "(3)",
+      "number_confidence": "CONFIRMED",
+      "environment": "equation",
+      "preview": "\\mathcal{L}(G, Y) = (1 - \\frac{2}{J} \\sum_{j=1}^J \\frac{\\sum_{i=1}^I G_{i,j} Y_{i,j}}{\\sum",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/equation/3197b7e836b99d96"
+    },
+    {
+      "hash": "ced02c1c25c4f9d8",
+      "number": "(4)",
+      "number_confidence": "CONFIRMED",
+      "environment": "equation",
+      "preview": "Dice(G, P) = \\frac{2 \\sum_{i=1}^I G_i P_i}{\\sum_{i=1}^I G_i + \\sum_{i=1}^I P_i}",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/equation/ced02c1c25c4f9d8"
+    }
+  ],
+  "components": [
+    {
+      "slug": "bldc",
+      "name": "Branch LK Depthwise Convolution Block",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/bldc"
+    },
+    {
+      "slug": "umlp",
+      "name": "3D ULD Sparse MLP",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/umlp"
+    },
+    {
+      "slug": "uld-block",
+      "name": "ULD Block",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/uld-block"
+    },
+    {
+      "slug": "stem",
+      "name": "Patch-wise Feature Input",
+      "kind": "preprocessing",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/stem"
+    },
+    {
+      "slug": "downsampling",
+      "name": "Stage Downsampling Layer",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/downsampling"
+    },
+    {
+      "slug": "decoder",
+      "name": "Swin UNETR CNN Decoder",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/decoder"
+    },
+    {
+      "slug": "loss",
+      "name": "Soft Dice + Cross Entropy Loss",
+      "kind": "loss",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/loss"
+    },
+    {
+      "slug": "optimizer",
+      "name": "AdamW Optimizer",
+      "kind": "optimizer",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/optimizer"
+    },
+    {
+      "slug": "branch-lk-depthwise-convolution-block",
+      "name": "Branch LK Depthwise Convolution Block",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/branch-lk-depthwise-convolution-block"
+    },
+    {
+      "slug": "3d-uld-sparse-mlp",
+      "name": "3D ULD Sparse MLP",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/3d-uld-sparse-mlp"
+    },
+    {
+      "slug": "patch-wise-feature-input",
+      "name": "Patch-wise Feature Input",
+      "kind": "preprocessing",
+      "source": "AGENT",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/patch-wise-feature-input"
+    },
+    {
+      "slug": "compound-soft-dice-and-cross-entropy-loss",
+      "name": "Compound Soft Dice and Cross Entropy Loss",
+      "kind": "loss",
+      "source": "AGENT",
+      "uri": "paperlens://paper/10.1016%2Fj.bspc.2025.108746/component/compound-soft-dice-and-cross-entropy-loss"
+    }
+  ],
+  "algorithms": [],
+  "stated_values": [
+    {
+      "symbol": "C",
+      "value": "48",
+      "src_line": null
+    },
+    {
+      "symbol": "stem_kernel",
+      "value": "7x7x7",
+      "src_line": null
+    },
+    {
+      "symbol": "stem_padding",
+      "value": "3",
+      "src_line": null
+    },
+    {
+      "symbol": "downsampling_kernel",
+      "value": "2x2x2",
+      "src_line": null
+    },
+    {
+      "symbol": "bldc_kernels",
+      "value": "9, 7, 5, 3",
+      "src_line": null
+    },
+    {
+      "symbol": "learning_rate",
+      "value": "0.0001",
+      "src_line": null
+    },
+    {
+      "symbol": "amos_epochs",
+      "value": "2000",
+      "src_line": null
+    },
+    {
+      "symbol": "btcv_epochs",
+      "value": "4000",
+      "src_line": null
+    },
+    {
+      "symbol": "flare_epochs",
+      "value": "4000",
+      "src_line": null
+    },
+    {
+      "symbol": "params_M",
+      "value": "55.85",
+      "src_line": null
+    },
+    {
+      "symbol": "flops_G",
+      "value": "655.22",
+      "src_line": null
+    },
+    {
+      "symbol": "dice_amos",
+      "value": "0.915",
+      "src_line": null
+    }
+  ],
+  "declared_urls": [],
+  "limitations": [
+    "Reduced fidelity: PDF_DERIVED."
+  ]
+}

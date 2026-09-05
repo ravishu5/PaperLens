@@ -1,0 +1,19 @@
+{
+  "candidates": [
+    {
+      "doi": "10.1016/j.bspc.2025.108746",
+      "title": "ULD-Net: A U-shaped branch large kernel depthwise convolution volume network for 3D medical image segmentation",
+      "venue": "Biomedical Signal Processing and Control",
+      "year": 2026,
+      "authors": [
+        "Weisheng Li",
+        "JunTong Ci",
+        "Feiyan Li",
+        "Guofeng Zeng",
+        "Zhaopeng Huang"
+      ],
+      "confidence": "CONFIRMED",
+      "why": "explicit DOI"
+    }
+  ]
+}

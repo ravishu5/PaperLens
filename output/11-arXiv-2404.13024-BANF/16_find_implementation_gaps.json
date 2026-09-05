@@ -1,0 +1,145 @@
+{
+  "paper_version": "2404.13024v2",
+  "repo": "theialab/banf",
+  "commit_sha": "30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 0,
+    "CONFIG_HIDDEN": 4
+  },
+  "gaps": [
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 0.0001.",
+      "where": "3D_reconstruction/banf/banf_field.py:57",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/theialab/banf/file/3D_reconstruction/banf/banf_field.py",
+          "excerpt": "def __init__(self, init_val, beta_min=0.0001):",
+          "locator": "3D_reconstruction/banf/banf_field.py:57",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2404.13024",
+          "excerpt": "none of 0.0001 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.0001"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "2 constant(s) hard-coded in source that appear nowhere in the paper: 0.000125, 0.9999.",
+      "where": "3D_reconstruction/banf/banf_model.py:67",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/theialab/banf/file/3D_reconstruction/banf/banf_model.py",
+          "excerpt": "delta_val: float = 0.000125",
+          "locator": "3D_reconstruction/banf/banf_model.py:67",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2404.13024",
+          "excerpt": "none of 0.000125, 0.9999 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.000125",
+              "0.9999"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "1 constant(s) hard-coded in source that appear nowhere in the paper: 2.956033378250884.",
+      "where": "NeRFing/app/nerf/configs/nerf_hash.yaml:43",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/theialab/banf/file/NeRFing/app/nerf/configs/nerf_hash.yaml",
+          "excerpt": "prune_min_density: 2.956033378250884  # prune parameter for occupancy blas according to feature struct",
+          "locator": "NeRFing/app/nerf/configs/nerf_hash.yaml:43",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2404.13024",
+          "excerpt": "none of 2.956033378250884 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "2.956033378250884"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "CONFIG_HIDDEN",
+      "description": "10 constant(s) hard-coded in source that appear nowhere in the paper: 0.28209479177387814, 0.4886025119029199, 1.0925484305920792, 0.31539156525252005, 0.5462742152960396, 0.5900435899266435\u2026.",
+      "where": "NeRFing/local_scripts/sh.py:2",
+      "reproducibility_impact": "A reimplementation would have to guess these values or copy them from this repository.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/theialab/banf/file/NeRFing/local_scripts/sh.py",
+          "excerpt": "C0 = 0.28209479177387814",
+          "locator": "NeRFing/local_scripts/sh.py:2",
+          "provenance": null
+        },
+        {
+          "kind": "paper_url",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://paper/2404.13024",
+          "excerpt": "none of 0.28209479177387814, 0.4886025119029199, 1.0925484305920792, 0.31539156525252005, 0.5462742152960396, 0.5900435899266435\u2026 occurs in the paper source",
+          "locator": null,
+          "provenance": {
+            "method": "literal_absence",
+            "constants": [
+              "0.28209479177387814",
+              "0.4886025119029199",
+              "1.0925484305920792",
+              "0.31539156525252005",
+              "0.5462742152960396",
+              "0.5900435899266435",
+              "2.890611442640554",
+              "0.4570457994644658",
+              "0.3731763325901154",
+              "1.445305721320277"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}

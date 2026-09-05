@@ -1,0 +1,36 @@
+{
+  "paper_version": "2303.05785v2",
+  "uri": "paperlens://lineage/2303.05785",
+  "successors": [
+    {
+      "paper": "0f4be00866b3de3fdf04afe5e8b62f6fc98182bb",
+      "title": "A foundation model for joint segmentation, detection and recognition of biomedical objects across nine modalities",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 103,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "960f5000ed60eb50b3b352c01cc56e7f075dcce4",
+      "title": "LKFlowNet: A deep neural network based on large kernel convolution for fast and accurate nonlinear fluid-changing prediction",
+      "year": 2024,
+      "relation": "CITES",
+      "confidence": "LIKELY",
+      "why": "present in the citation index; not verified from source",
+      "contexts": [],
+      "citation_count": 2,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "notes": [
+    "Ranking uses influence and citation intent where Semantic Scholar supplies them, and citation count otherwise. Citation count alone is a measure of attention, not of improvement.",
+    "What each successor changed is not asserted here. The citing sentences are returned as evidence; read them, or the successor's own sections, before claiming an improvement."
+  ]
+}

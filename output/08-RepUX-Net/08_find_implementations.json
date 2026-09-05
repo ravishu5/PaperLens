@@ -1,0 +1,295 @@
+{
+  "paper_version": "2303.05785v2",
+  "uri": "paperlens://paper/2303.05785/implementations",
+  "candidates": [
+    {
+      "repo": "MASILab/RepUX-Net",
+      "url": "https://github.com/MASILab/RepUX-Net",
+      "relation": "OFFICIAL",
+      "confidence": "CONFIRMED",
+      "reasoning": "the paper itself links this repository (in the abstract)",
+      "rank": 1,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "SHALLOW",
+        "score": 0.67,
+        "matched": {
+          "evaluation": "lib/extensions/dcn/test.py",
+          "architecture": "lib/extensions/syncbn/module.py"
+        },
+        "missing": [
+          "training"
+        ]
+      },
+      "stars": 9,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/2303.05785/urls",
+          "excerpt": "https://github.com/MASILab/RepUX-Net",
+          "locator": "flattened LaTeX line 32",
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MASILab/RepUX-Net#readme",
+          "excerpt": "README references arXiv:2303.05785",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MASILab/RepUX-Net",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "leeh43/Rep3D",
+      "url": "https://github.com/leeh43/Rep3D",
+      "relation": "REPRODUCTION",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README cites arXiv:2303.05785",
+      "rank": 2,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.67,
+        "matched": {
+          "evaluation": "test_seg.py",
+          "architecture": "networks/Rep3D/network_backbone.py"
+        },
+        "missing": [
+          "training"
+        ]
+      },
+      "stars": 3,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/leeh43/Rep3D#readme",
+          "excerpt": "README references arXiv:2303.05785",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/leeh43/Rep3D",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "huangzsdy/ai-conf-tracker",
+      "url": "https://github.com/huangzsdy/ai-conf-tracker",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README cites arXiv:2303.05785",
+      "rank": 3,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.33,
+        "matched": {
+          "evaluation": "tests/test_update_papers.py"
+        },
+        "missing": [
+          "architecture",
+          "training"
+        ]
+      },
+      "stars": 0,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/huangzsdy/ai-conf-tracker#readme",
+          "excerpt": "README references arXiv:2303.05785",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/huangzsdy/ai-conf-tracker",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/huangzsdy/ai-conf-tracker",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "MI2DataLab/SwinSMT",
+      "url": "https://github.com/MI2DataLab/SwinSMT",
+      "relation": "THIRD_PARTY",
+      "confidence": "POSSIBLE",
+      "reasoning": "the repository README quotes the paper title",
+      "rank": 4,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "SHALLOW_SMALL_REPO",
+        "score": 0.0,
+        "matched": {},
+        "missing": [
+          "evaluation",
+          "architecture",
+          "training"
+        ]
+      },
+      "stars": 29,
+      "archived": false,
+      "license": null,
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/MI2DataLab/SwinSMT#readme",
+          "excerpt": null,
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MI2DataLab/SwinSMT",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MI2DataLab/SwinSMT",
+          "excerpt": "no filename matches the architecture component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "architecture"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/MI2DataLab/SwinSMT",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
+          }
+        }
+      ]
+    },
+    {
+      "repo": "JunMa11/MICCAI-OpenSourcePapers",
+      "url": "https://github.com/JunMa11/MICCAI-OpenSourcePapers",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 5,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 1293,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/JunMa11/MICCAI-OpenSourcePapers#readme",
+          "excerpt": null,
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "repo": "qiuchengjian/MICCAI-RegistrationSegmentationClassificationRelatedOpenSourcePapers",
+      "url": "https://github.com/qiuchengjian/MICCAI-RegistrationSegmentationClassificationRelatedOpenSourcePapers",
+      "relation": "DERIVED",
+      "confidence": "POSSIBLE",
+      "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
+      "rank": 6,
+      "name_match": false,
+      "name_is_only_evidence": false,
+      "name_contradicted_by_description": false,
+      "coverage": {
+        "kind": "NOT_AN_IMPLEMENTATION",
+        "score": null,
+        "matched": {},
+        "missing": []
+      },
+      "stars": 2,
+      "archived": false,
+      "license": "Apache-2.0",
+      "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/qiuchengjian/MICCAI-RegistrationSegmentationClassificationRelatedOpenSourcePapers#readme",
+          "excerpt": null,
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
+    "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
+  ]
+}

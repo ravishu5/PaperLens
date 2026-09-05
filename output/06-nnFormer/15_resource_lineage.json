@@ -447,19 +447,6 @@
       ]
     },
     {
-      "from": "2303.05785",
-      "to": "2109.03201",
-      "relation": "PREDECESSOR",
-      "confidence": "CONFIRMED",
-      "source": "bibliography",
-      "is_influential": null,
-      "intents": [],
-      "contexts": [
-        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
-        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
-      ]
-    },
-    {
       "from": "2209.14378",
       "to": "2109.03201",
       "relation": "CITES",
@@ -475,20 +462,6 @@
       ]
     },
     {
-      "from": "2209.14378",
-      "to": "2109.03201",
-      "relation": "PREDECESSOR",
-      "confidence": "CONFIRMED",
-      "source": "bibliography",
-      "is_influential": null,
-      "intents": [],
-      "contexts": [
-        "Vision Transformers (ViT), on the other hand, are capable of learning long-range dependencies and have recently demonstrated exceptional representational learning capabilities and effectiveness in computer vision and medical image applications \\citep{dosovitskiy2020image,hatamizadeh2022unetr,zhou2021nnformer}.",
-        "To overcome this, ViT usually requires a large amount of training data which is expensive to acquire~\\citep{tang2022self,zhou2021nnformer}.",
-        "The nnFormer~\\cite{zhou2021nnformer} is another promising network that used 3D transformers and combined encoder and decoder with self-attention operations."
-      ]
-    },
-    {
       "from": "2310.00199",
       "to": "2109.03201",
       "relation": "CITES",
@@ -500,6 +473,33 @@
         "\\end{abstract} \\section{Introduction} Recent advancements have seen the integration of Vision Transformers (ViTs) \\cite{dosovitskiy2020image} into 3D medical applications, notably in volumetric segmentation benchmarks \\cite{wang2021transbts, hatamizadeh2022unetr, zhou2021nnformer, xie2021cotr}.",
         "Works like SwinUNETR \\cite{hatamizadeh2022swin} and nnFormer \\cite{zhou2021nnformer}, directly employ Swin Transformer blocks within the encoder to improve organ and tumor segmentation in 3D medical images.",
         "} & 31.6M & 110.3G & 0.932 & 0.691 & 0.384 & 0.669 & 0.749 & 0.610 & 0.679 & 0.589 & 0.636 & 0.613\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.5G & 0.921 & 0.669 & 0.354 & 0.648 & 0.735 & 0.598 & 0.667 & 0.567 & 0.612 & 0.590\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 213.0G & 0.930 & 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647"
+      ]
+    },
+    {
+      "from": "2303.05785",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Segmentation.} \\end{abstract} \\section{Introduction} With the introduction of Vision Transformers (ViTs), CNNs have been greatly challenged as seen with the leading performance in multiple volumetric data benchmarks, especially for medical image segmentation \\cite{hatamizadeh2022unetr, hatamizadeh2022swin, tang2022self, zhou2021nnformer}.",
+        "wang2021transbts} & 31.6M & 110.4G & 0.964 & 0.959 & 0.974 & 0.711 & 0.902 & 0.881 & 0.797 & 0.926 & 0.699\\\\ UNETR \\cite{hatamizadeh2022unetr} & 92.8M & 82.6G & 0.927 & 0.947 & 0.960 & 0.710 & 0.886 & 0.857 & 0.801 & 0.920 & 0.679\\\\ nnFormer \\cite{zhou2021nnformer} & 149.3M & 240.2G & 0.973 & 0.960 & 0.975 & 0.717 & 0.906 & 0.880 & 0.774 & 0.927 & 0.690\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.4G & 0.979 & 0.965 & 0.980 & 0.788 & 0.929 & 0.901 & 0.815 & 0.933 & 0.736 \\\\"
+      ]
+    },
+    {
+      "from": "2209.14378",
+      "to": "2109.03201",
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "source": "bibliography",
+      "is_influential": null,
+      "intents": [],
+      "contexts": [
+        "Vision Transformers (ViT), on the other hand, are capable of learning long-range dependencies and have recently demonstrated exceptional representational learning capabilities and effectiveness in computer vision and medical image applications \\citep{dosovitskiy2020image,hatamizadeh2022unetr,zhou2021nnformer}.",
+        "To overcome this, ViT usually requires a large amount of training data which is expensive to acquire~\\citep{tang2022self,zhou2021nnformer}.",
+        "The nnFormer~\\cite{zhou2021nnformer} is another promising network that used 3D transformers and combined encoder and decoder with self-attention operations."
       ]
     },
     {

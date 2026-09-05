@@ -91,6 +91,7 @@ class Candidate:
     missing_kinds: list[str] = field(default_factory=list)
     name_match: bool = False
     name_only: bool = False
+    name_contradicted: bool = False
     stars: int | None = None
     archived: bool | None = None
     license: str | None = None
@@ -120,6 +121,39 @@ def _name_affinity(repo_name: str, title: str) -> bool:
         return False
     head = _normalise(title.split(":")[0])
     return bool(head) and (rn in head or head in rn)
+
+
+# Words that say nothing about a paper's subject.
+_GENERIC_TOPIC = {"net", "network", "networks", "official", "implementation",
+                  "code", "pytorch", "tensorflow", "model", "models", "deep",
+                  "learning", "the", "for", "and", "with", "using", "based",
+                  "3d", "2d", "a", "an", "of", "in", "on", "to", "via"}
+
+
+def _topic_tokens(text: str) -> set[str]:
+    return {t for t in re.split(r"[^a-z0-9]+", (text or "").lower())
+            if len(t) > 2 and t not in _GENERIC_TOPIC}
+
+
+def _description_contradicts(repo: "gh.Repo", title: str) -> bool:
+    """Does the repository say it is about something else?
+
+    An acronym is not unique. Searching for "ULD-Net" returns a private-inference
+    network ("Ultra-Low-Degree Fully Polynomial…") and a point-cloud paper
+    ("3D Unsupervised Learning by Dense Similarity Learning…") -- each expanding
+    the same letters a different way. Where a repository states its subject and
+    shares nothing with the paper's, a matching name is a false friend.
+
+    A repository with no description cannot contradict anything, and many real
+    ones have none: MIC-DKFZ/nnUNet and 282857341/nnFormer both do.
+    """
+    if not repo.description:
+        return False
+    # The method's own name appears on both sides by construction -- a namesake
+    # repeats the acronym it happens to share -- so it cannot evidence agreement.
+    method = _topic_tokens(title.split(":")[0])
+    return not ((_topic_tokens(repo.description) - method)
+                & (_topic_tokens(title) - method))
 
 
 def _author_tokens(authors: list[dict]) -> set[str]:
@@ -260,7 +294,15 @@ def find_implementations(
             "kinds and cannot confirm that a matched file truly implements the "
             "component. Missing kinds are the more reliable half of this signal."
         )
-    name_only = [c.repo_id for c in candidates if c.name_only]
+    contradicted = [c.repo_id for c in candidates if c.name_contradicted]
+    if contradicted:
+        notes.append(
+            f"{', '.join(contradicted[:3])} share the paper's name but describe "
+            f"themselves as being about something else, so the name is being "
+            f"reused rather than referring to this work."
+        )
+    name_only = [c.repo_id for c in candidates
+                 if c.name_only and not c.name_contradicted]
     if name_only:
         notes.append(
             f"For {', '.join(name_only[:3])} the only evidence is that the "
@@ -311,7 +353,10 @@ def _rank_key(c: Candidate) -> tuple:
     # A declared dependency and a curated list are explicitly *not* this paper's
     # implementation, so they rank below anything that might be -- however well
     # evidenced their link to the paper is.
-    is_impl = 0 if c.relation in ("DECLARED_DEPENDENCY", "DERIVED") else 1
+    # A namesake whose own description places it in another field is not a
+    # candidate implementation at all.
+    is_impl = 0 if (c.relation in ("DECLARED_DEPENDENCY", "DERIVED")
+                    or c.name_contradicted) else 1
     conf_rank = {"CONFIRMED": 3, "LIKELY": 2, "POSSIBLE": 1, "UNKNOWN": 0}[c.confidence]
     rel_rank = {"OFFICIAL": 4, "ORGANIZATION": 3, "REPRODUCTION": 3,
                 "THIRD_PARTY": 2, "DECLARED_DEPENDENCY": 1, "DERIVED": 0,
@@ -473,6 +518,8 @@ def _assess_candidate(
         reasoning=reasoning, coverage_score=score, coverage_kind=coverage_kind,
         matched_kinds=matched, missing_kinds=missing, name_match=name_match,
         name_only=bool(name_match and not corroborating),
+        name_contradicted=bool(name_match and not corroborating
+                               and _description_contradicts(repo, title)),
         stars=repo.stars, archived=repo.archived, license=repo.license,
     )
 
@@ -524,6 +571,7 @@ def _public(c: Candidate) -> dict[str, Any]:
         "rank": c.rank,
         "name_match": c.name_match,
         "name_is_only_evidence": c.name_only,
+        "name_contradicted_by_description": c.name_contradicted,
         "coverage": {
             "kind": c.coverage_kind,
             "score": round(c.coverage_score, 2) if c.coverage_score is not None else None,

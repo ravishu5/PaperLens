@@ -1,0 +1,49 @@
+{
+  "paper_version": "2404.13024v2",
+  "uri": "paperlens://paper/2404.13024",
+  "structure": {
+    "sections": 19,
+    "equations": 22,
+    "algorithms": 0,
+    "stated_values": 1,
+    "components": 10,
+    "claims": 0
+  },
+  "implementations": [
+    "theialab/banf",
+    "StatCan/gensol-banff",
+    "StatCan/gensol-banff-processor",
+    "WithHades/banfoStyle",
+    "Brucepk/banfo_pics",
+    "banfieldlab/BanfieldLabProjects",
+    "52CV/CVPR-2024-Papers"
+  ],
+  "mappings": [
+    {
+      "repo": "StatCan/gensol-banff",
+      "summary": {
+        "AMBIGUOUS": 4,
+        "UNKNOWN": 7
+      },
+      "uri": "paperlens://mapping/2404.13024/StatCan/gensol-banff"
+    },
+    {
+      "repo": "theialab/banf",
+      "summary": {
+        "AMBIGUOUS": 4,
+        "UNKNOWN": 7
+      },
+      "uri": "paperlens://mapping/2404.13024/theialab/banf"
+    }
+  ],
+  "skeleton_uri": "paperlens://paper/2404.13024",
+  "analysis_uri": "paperlens://paper/2404.13024/analysis",
+  "status": "analysed",
+  "analysis": {
+    "paper_version": "2404.13024v2",
+    "author": "agent:batch",
+    "created_at": "2026-09-05T18:29:25+00:00",
+    "schema_version": "1",
+    "fields": {}
+  }
+}

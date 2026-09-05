@@ -1,0 +1,110 @@
+{
+  "paper_version": "2310.00199v2",
+  "repo": "MASILab/deform-uxnet",
+  "commit_sha": "b2bfad71d798a6691e4234614e8d1ca9c63e31bd",
+  "summary": {
+    "ABSENT_FROM_REPOSITORY": 0,
+    "EXTERNAL_DEPENDENCY": 5,
+    "CONFIG_HIDDEN": 0
+  },
+  "gaps": [
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 2 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "lib/datasets/preprocess/pascal_context/pascal_context_generator.sh (2 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/lib/datasets/preprocess/pascal_context/pascal_context_generator.sh",
+          "excerpt": "15: https://hangzh.s3.amazonaws.com/encoding/data/pcontext/train.pt; 20: https://hangzh.s3.amazonaws.com/encoding/data/pcontext/val.pt",
+          "locator": "lib/datasets/preprocess/pascal_context/pascal_context_generator.sh",
+          "provenance": {
+            "count": 2
+          }
+        }
+      ]
+    },
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 5 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "lib/models/backbones/resnet/resnet_models.py (5 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/lib/models/backbones/resnet/resnet_models.py",
+          "excerpt": "20: https://download.pytorch.org/models/resnet18-5c106cde.pt; 21: https://download.pytorch.org/models/resnet34-333f7ec4.pt; 22: https://download.pytorch.org/models/resnet50-19c8e357.pt; 23: https://download.pytorch.org/models/resnet101-5d3b4d8f.pt",
+          "locator": "lib/models/backbones/resnet/resnet_models.py",
+          "provenance": {
+            "count": 5
+          }
+        }
+      ]
+    },
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 7 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "lib/models/backbones/resnet/resnext_models.py (7 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/lib/models/backbones/resnet/resnext_models.py",
+          "excerpt": "19: https://download.pytorch.org/models/resnet18-5c106cde.pt; 20: https://download.pytorch.org/models/resnet34-333f7ec4.pt; 21: https://download.pytorch.org/models/resnet50-19c8e357.pt; 22: https://download.pytorch.org/models/resnet101-5d3b4d8f.pt",
+          "locator": "lib/models/backbones/resnet/resnext_models.py",
+          "provenance": {
+            "count": 7
+          }
+        }
+      ]
+    },
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 4 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "lib/models/backbones/resnet/wsl_resnext_models.py (4 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/lib/models/backbones/resnet/wsl_resnext_models.py",
+          "excerpt": "15: https://download.pytorch.org/models/ig_resnext101_32x8-c38310e5.pt; 16: https://download.pytorch.org/models/ig_resnext101_32x16-c6f796b0.pt; 17: https://download.pytorch.org/models/ig_resnext101_32x32-e4b90b00.pt; 18: https://download.pytorch.org/models/ig_resnext101_32x48-3e41cc8a.pt",
+          "locator": "lib/models/backbones/resnet/wsl_resnext_models.py",
+          "provenance": {
+            "count": 4
+          }
+        }
+      ]
+    },
+    {
+      "kind": "EXTERNAL_DEPENDENCY",
+      "description": "The repository downloads 2 pretrained artifact(s) rather than producing them from the described procedure.",
+      "where": "networks/UNesT/nest_transformer_3D.py (2 URL(s))",
+      "reproducibility_impact": "Results obtained with these artifacts do not demonstrate that the training procedure reproduces.",
+      "confidence": "CONFIRMED",
+      "evidence": [
+        {
+          "kind": "code_file",
+          "stance": "SUPPORTS",
+          "uri": "paperlens://repo/MASILab/deform-uxnet/file/networks/UNesT/nest_transformer_3D.py",
+          "excerpt": "50: https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vt3p-weights/jx_nest_base-8bc41011.pt; 52: https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-vt3p-weights/jx_nest_small-422eaded.pt",
+          "locator": "networks/UNesT/nest_transformer_3D.py",
+          "provenance": {
+            "count": 2
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Gaps are established, not inferred: a hidden constant is one that occurs in source and does not occur in the paper source."
+  ]
+}

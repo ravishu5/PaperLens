@@ -1,0 +1,16 @@
+{
+  "paper_version": "2404.13024v2",
+  "repo": "theialab/banf",
+  "commit_sha": "30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d",
+  "uri": "paperlens://mapping/2404.13024/theialab/banf",
+  "summary": {
+    "BLOCKING": 0,
+    "SIGNIFICANT": 0,
+    "MINOR": 0
+  },
+  "differences": [],
+  "notes": [
+    "Each difference pairs an exact quote from the paper with an exact search over source. The inference that a paper term implies a code term is a heuristic, which is why these are LIKELY rather than CONFIRMED.",
+    "No differences were established. That is not proof of equivalence, only that these checks found nothing."
+  ]
+}

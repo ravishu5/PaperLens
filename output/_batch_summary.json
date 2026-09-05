@@ -1,5 +1,170 @@
 [
   {
+    "paper": "01-VNet",
+    "arxiv_id": "1606.04797",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "faustomilletari/VNet",
+    "counts": {
+      "sections": 8,
+      "equations": 2,
+      "algorithms": 0,
+      "stated_values": 1,
+      "declared_urls": 3,
+      "components": 7
+    }
+  },
+  {
+    "paper": "02-SegResNet",
+    "arxiv_id": "1810.11654",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+    "counts": {
+      "sections": 12,
+      "equations": 5,
+      "algorithms": 0,
+      "stated_values": 4,
+      "declared_urls": 1,
+      "components": 9
+    }
+  },
+  {
+    "paper": "03-nnUNet",
+    "arxiv_id": "1809.10486",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "MIC-DKFZ/batchgenerators",
+    "counts": {
+      "sections": 19,
+      "equations": 2,
+      "algorithms": 0,
+      "stated_values": 1,
+      "declared_urls": 2,
+      "components": 8
+    }
+  },
+  {
+    "paper": "04-TransBTS",
+    "arxiv_id": "2103.04430",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "Rubics-Xuan/TransBTS",
+    "counts": {
+      "sections": 12,
+      "equations": 3,
+      "algorithms": 0,
+      "stated_values": 7,
+      "declared_urls": 1,
+      "components": 9
+    }
+  },
+  {
+    "paper": "05-UNETR",
+    "arxiv_id": "2103.10504",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "mkara44/unetr_pytorch",
+    "counts": {
+      "sections": 19,
+      "equations": 9,
+      "algorithms": 0,
+      "stated_values": 11,
+      "declared_urls": 3,
+      "components": 11
+    }
+  },
+  {
+    "paper": "06-nnFormer",
+    "arxiv_id": "2109.03201",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "282857341/nnFormer",
+    "counts": {
+      "sections": 14,
+      "equations": 12,
+      "algorithms": 0,
+      "stated_values": 4,
+      "declared_urls": 1,
+      "components": 8
+    }
+  },
+  {
+    "paper": "07-SwinUNETR",
+    "arxiv_id": "2201.01266",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "hxhxhx33/SwinUNETR",
+    "counts": {
+      "sections": 10,
+      "equations": 3,
+      "algorithms": 0,
+      "stated_values": 8,
+      "declared_urls": 4,
+      "components": 6
+    }
+  },
+  {
+    "paper": "08-RepUX-Net",
+    "arxiv_id": "2303.05785",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "MASILab/RepUX-Net",
+    "counts": {
+      "sections": 11,
+      "equations": 9,
+      "algorithms": 0,
+      "stated_values": 5,
+      "declared_urls": 1,
+      "components": 4
+    }
+  },
+  {
+    "paper": "09-UNesT",
+    "arxiv_id": "2209.14378",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "MASILab/UNesT",
+    "counts": {
+      "sections": 40,
+      "equations": 2,
+      "algorithms": 2,
+      "stated_values": 14,
+      "declared_urls": 6,
+      "components": 13
+    }
+  },
+  {
+    "paper": "10-deformUX-Net",
+    "arxiv_id": "2310.00199",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "MASILab/deform-uxnet",
+    "counts": {
+      "sections": 18,
+      "equations": 3,
+      "algorithms": 0,
+      "stated_values": 6,
+      "declared_urls": 1,
+      "components": 10
+    }
+  },
+  {
+    "paper": "11-arXiv-2404.13024-BANF",
+    "arxiv_id": "2404.13024",
+    "steps": {},
+    "fidelity": "LATEX_EXACT",
+    "repo": "theialab/banf",
+    "counts": {
+      "sections": 19,
+      "equations": 22,
+      "algorithms": 0,
+      "stated_values": 1,
+      "declared_urls": 1,
+      "components": 10
+    }
+  },
+  {
     "paper": "12-ULD-Net",
     "arxiv_id": "10.1016/j.bspc.2025.108746",
     "steps": {},

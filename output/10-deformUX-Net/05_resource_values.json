@@ -1,0 +1,54 @@
+{
+  "uri": "paperlens://paper/2310.00199/values",
+  "paper_version": "2310.00199v2",
+  "values": [
+    {
+      "symbol": "sum_k",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2310.00199v2:sec:4.1",
+      "src_line": 144,
+      "context": "address all trade-offs. Given a volumetric input $x\\in\\mathcal{R}^{C\\times H\\times W\\times D}$ and the current centered voxel $v_0$ in the kernel, the operation of deformable convolution can be formulated as: \\begin{equation} y(v_0) = \\sum_{k=1}^{K} w(v_k)\\cdot x(v_0 + v_k) \\end{equation} where $v_0$ represents an arbitrary location in the output feature $y$ and $v_k$ represents the $k_{th}$ value in the convolution sampling grid $G={(-1,-1,-1),(-1,-1,0),...,(1,1,0), (1,"
+    },
+    {
+      "symbol": "K",
+      "value": "27",
+      "numeric": 27.0,
+      "section": "2310.00199v2:sec:4.1",
+      "src_line": 148,
+      "context": "s an arbitrary location in the output feature $y$ and $v_k$ represents the $k_{th}$ value in the convolution sampling grid $G={(-1,-1,-1),(-1,-1,0),...,(1,1,0), (1,1,1)}$ with $3\\times 3\\times 3$ convolution kernel as the foundation basis. $K=27$ is the size of the sampling grid. $w\\in \\mathcal{R}^{C\\times C}$ denotes the projection weight of the k-th sampling point in the convolution kernel. To enlarge the receptive field of a $3\\times 3\\times 3$ convolution, adapting learna"
+    },
+    {
+      "symbol": "sum_g",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2310.00199v2:sec:4.1",
+      "src_line": 151,
+      "context": "onvolution, enhancing the adaptive spatial aggregation with efficiency. We define our proposed deformable convolution mechanism at layer $l$ as follows: \\begin{equation} \\begin{aligned} & \\Delta v_0 = MLP(y^{l-1}(v_0))\\\\ & y^l(v_0) = \\sum_{g=1}^{G}\\sum_{k=1}^{K} w_g(v_k)\\cdot x_g(v_0+v_k+\\Delta v_0) \\end{aligned} \\end{equation} where $G$ defines as the total number of aggregation groups in the depth-wise setting. For the g-th group, $w_g\\in\\mathcal{R}^{C\\times C^\\prime}"
+    },
+    {
+      "symbol": "Gsum_k",
+      "value": "1",
+      "numeric": 1.0,
+      "section": "2310.00199v2:sec:4.1",
+      "src_line": 151,
+      "context": "enhancing the adaptive spatial aggregation with efficiency. We define our proposed deformable convolution mechanism at layer $l$ as follows: \\begin{equation} \\begin{aligned} & \\Delta v_0 = MLP(y^{l-1}(v_0))\\\\ & y^l(v_0) = \\sum_{g=1}^{G}\\sum_{k=1}^{K} w_g(v_k)\\cdot x_g(v_0+v_k+\\Delta v_0) \\end{aligned} \\end{equation} where $G$ defines as the total number of aggregation groups in the depth-wise setting. For the g-th group, $w_g\\in\\mathcal{R}^{C\\times C^\\prime}$ denotes as"
+    },
+    {
+      "symbol": "C",
+      "value": "48",
+      "numeric": 48.0,
+      "section": "2310.00199v2:sec:4.2",
+      "src_line": 158,
+      "context": "we follow the similar architecture with the encoder in 3D UX-Net, which first leverage a large kernel convolution layer to compute the partitioned feature map with dimension $\\frac{H}{2}\\times\\frac{W}{2}\\times\\frac{D}{2}$ and project to a $C=48$-dimensional space. We then directly substitute the main operator of large kernel convolution with our proposed Depth-wise Deformable Convolution (DDC) using kernel size of $3\\times 3\\times 3$. Furthermore, we further perform experime"
+    },
+    {
+      "symbol": "k",
+      "value": "7",
+      "numeric": 7.0,
+      "section": "2310.00199v2:sec:6.1",
+      "src_line": 204,
+      "context": "& 0.687 & 0.376 & 0.664 & 0.769 & 0.603 & 0.686 & 0.591 & 0.635 & 0.613\\\\ SwinUNETR \\cite{hatamizadeh2022swin} & 62.2M & 328.1G & 0.939 & 0.702 & 0.400 & 0.680 & 0.785 & 0.632 & 0.708 & 0.622 & 0.647 & 0.635\\\\ 3D UX-Net (k=7) \\cite{lee20223d} & 53.0M & 639.4G & 0.942 & 0.724 & 0.425 & 0.697 & 0.737 & 0.614 & 0.676 & 0.625 & 0.678 & 0.652 \\\\ UNesT-B \\cite{yu2023unest} & 87.2M & 258.4G & 0.943 & 0.746 & 0.451 & 0.710 & 0.778 & 0.601 & 0.690 & 0.611"
+    }
+  ]
+}

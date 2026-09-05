@@ -1,0 +1,287 @@
+{
+  "paper_version": "2404.13024v2",
+  "uri": "paperlens://lineage/2404.13024",
+  "predecessors": [
+    {
+      "paper": "bib:lindell2021bacon",
+      "title": "Bacon: Band-limited coordinate networks for multiscale scene representation",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "One can build over the theory of multiplicative filter networks~\\cite{fathony2021multiplicative} to realize signal decomposition for neural fields~\\cite{lindell2021bacon, Polynomial, dou2023mfld}.",
+        "BACON~\\cite{lindell2021bacon} utilizes a multi-layer MFN for signal reconstruction, providing frequency upper-bound estimates at each layer.",
+        "We evaluate our method qualitatively on images from the DIV2K dataset~\\cite{div2k}, resampled to a resolution of $256^2$ following~\\cite{lindell2021bacon}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:wang2021neus",
+      "title": "Neus: Learning neural implicit surfaces by volume rendering for multi-view reconstruction",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "Many neural rendering techniques employ \\textit{neural fields} as the underlying 3D representation -- coordinate neural networks that can represent a variety of signals including images~\\cite{martel2021acorn, sitzmann2019siren}, surface manifolds~\\cite{park2019deepsdf, wang2021neus, volsdf}, and volumetric densities~\\cite{mildenhall2020nerf}.",
+        "Arguably the most well-known example of neural fields is neural radiance fields, enabling novel view synthesis through volumetric~\\cite{mildenhall2020nerf} or surface~\\cite{wang2021neus} rendering.",
+        "As in~\\citet{wang2021neus}, the coarsest level's MLP is specifically initialized to produce a sphere for stable training."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:SignalProcessing",
+      "title": "Introduction to Signal Processing",
+      "year": 1988,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 7 time(s) in the paper's own text",
+      "contexts": [
+        "In classical signal processing, frequency decomposition can be studied via the Fourier transform~\\cite{SignalProcessing}.",
+        "One could apply these classical techniques by first \\textit{sampling} neural fields on a regular lattice, but the Nyquist theorem tells us that signals ought to be properly filtered before being sampled so to avoid aliasing~\\cite{SignalProcessing}.",
+        "In traditional signal processing, signals are often converted to the frequency domain with the Fourier Transform~\\cite{SignalProcessing}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:barron2021mipnerf",
+      "title": "Mip-nerf: A multiscale representation for anti-aliasing neural radiance fields",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 6 time(s) in the paper's own text",
+      "contexts": [
+        "\\citet{barron2021mipnerf}~extended positional encoding to \\textit{integrated} positional encoding to enable \\textit{anti-aliased} multi-scale neural rendering.",
+        "These methods necessitate \\textit{explicit multi-scale supervision} through downsampling images~\\cite{barron2021mipnerf, xi2022bungeenerf} and are primarily designed for filtering in 2D screen space ---- for novel-view synthesis applications.",
+        "We show qualitative results on on the Synthetic NeRF Dataset~\\cite{barron2021mipnerf}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:mildenhall2020nerf",
+      "title": "Nerf: Representing scenes as neural radiance fields for view synthesis",
+      "year": 2020,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 6 time(s) in the paper's own text",
+      "contexts": [
+        "ds} as the underlying 3D representation -- coordinate neural networks that can represent a variety of signals including images~\\cite{martel2021acorn, sitzmann2019siren}, surface manifolds~\\cite{park2019deepsdf, wang2021neus, volsdf}, and volumetric densities~\\cite{mildenhall2020nerf}.",
+        "Arguably the most well-known example of neural fields is neural radiance fields, enabling novel view synthesis through volumetric~\\cite{mildenhall2020nerf} or surface~\\cite{wang2021neus} rendering.",
+        "Classical neural fields~\\cite{park2019deepsdf, mildenhall2020nerf} use a multilayer perceptron (MLP) to map an input coordinate to a signal value."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:div2k",
+      "title": "Ntire 2017 challenge on single image super-resolution: Dataset and study",
+      "year": 2017,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 6 time(s) in the paper's own text",
+      "contexts": [
+        "We evaluate our method qualitatively on images from the DIV2K dataset~\\cite{div2k}, resampled to a resolution of $256^2$ following~\\cite{lindell2021bacon}.",
+        "} \\label{fig:3d_color_supp} \\end{figure} \\section{Image filtering (cont'd)} We show additional quantitative and qualitative results on the DIV2K~\\cite{div2k} dataset in \\Cref{fig:2dsupp,tab:2dsuppl}.",
+        "\\begin{figure*} \\begin{center} \\includegraphics[width=\\textwidth]{fig/1_2d_supp.png} \\includegraphics[width=\\textwidth]{fig/2_2d_supp.png} \\end{center} \\vspace{-1em} \\captionof{figure}{ \\textbf{Image Filtering -- } Comparison of 2D filtering results on DIV2K~\\cite{div2k} to BACON~\\cite{lindell2021bacon} and PNF~\\cite{pnf}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:mueller2022instant",
+      "title": "Instant neural graphics primitives with a multiresolution hash encoding",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "Hybrid models combining explicit representations (grid~\\cite{Sun2022DVGo}, hash table \\cite{mueller2022instant}, K-Planes~\\cite{Chen2022TensoRF}) with a small MLP finally emerged, achieving both fast training speed and high quality reconstruction.",
+        "el $\\Lambda_\\omega(\\mathbf{x})$ with local support equal to the period $T$, then the convolution above amounts to typical linear interpolation that is used to propagate features within voxels~\\cite{takikawa2021nglod} that is found in many NeRF implementations~\\cite{mueller2022instant}.: \\begin{align} \\hatf_\\omega(\\mathbf{x}; {\\boldsymbol{\\theta}}) &= \\Lambda_\\omega(\\mathbf{x}) \\circledast \\sum_t f(\\mathbf{x}_t; {\\boldsymbol{\\theta}}) \\cdot \\delta(\\mathbf{x}-\\mathbf{x}_t) \\\\ &\\equiv \\text{Interp}(\\ma",
+        "We use an iNGP~\\cite{mueller2022instant} backbone for images, with an MLP with~$3$ hidden layers, each with~$32$ neurons to convert deep features into color."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:takikawa2021nglod",
+      "title": "Neural geometric level of detail: Real-time rendering with implicit 3D shapes",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "Interestingly, early research in neural fields exploited the duality of time and frequency scaling to realize (explicit) multi-scale training architectures~\\cite{takikawa2021nglod, liu2020neural}.",
+        "tion does execute a form of filtering, but this filtering affects the field feature space, rather than, as we desire, in the field co-domain.} However, these methods require the multi-resolution structure of the signal to either be specified \\textit{a-priori}~\\cite{takikawa2021nglod}, or by monitoring the training process via heuristics~\\cite{liu2020neural}.",
+        "Neural fields can be trained with spatial decomposition to produce coarse-to-fine LODs, where varying levels of detail are modeled with multi-resolution grids such as octrees~\\cite{takikawa2021nglod} or multi-resolution tri-planes~\\cite{zhuang2023lod}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:MarchingCubes",
+      "title": "Marching cubes: A high resolution 3d surface construction algorithm",
+      "year": 1987,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 4 time(s) in the paper's own text",
+      "contexts": [
+        "Our minimal yet impactful enhancements to the training process achieves anti-aliased coarse-to-fine signal reconstruction, seamlessly integrating with commonly used mesh extraction techniques~\\cite{MarchingCubes}, significantly surpassing prior methods in quality.",
+        "This is particularly critical for methods that target surface reconstruction~\\cite{neurangelo}, as these techniques often rely on marching cubes to extract manifolds from fields~\\cite{MarchingCubes}, and this process involves sampling neural fields on \\textit{regular} grids; see~\\cref{fig:teaser} for an example.",
+        "We then extract the meshes at the same resolutions as before using marching cubes~\\cite{MarchingCubes}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:mobilebrick",
+      "title": "Mobilebrick: Building lego for 3d reconstruction on mobile devices",
+      "year": 2023,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "4.21} & \\textbf{4.63} & 4.42 & \\textbf{2.76} & \\textbf{10.7} & 10.0 & \\textbf{2.58} & \\textbf{5.18} & 2.37 & 4.56 & \\textbf{5.93} & \\textbf{5.38} \\\\ \\end{tabular} } \\caption{\\textbf{Inverse rendering -- } We show qualitative results on the MobileBrick dataset~\\cite{mobilebrick}.",
+        "We evaluate our method on the~(Synthetic) NeRF dataset~\\cite{barron2021mipnerf} and the~(real) MobileBrick dataset~\\cite{mobilebrick}.",
+        "we also provide a qualitative comparison using the MobileBrick dataset \\cite{mobilebrick}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:yu2022plenoxels",
+      "title": "Plenoxels: Radiance fields without neural networks",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "Non-neural variants that optimize explicit feature grids later emerged~\\cite{karnewar2022relufields, yu2022plenoxels}, sacrificing slightly worse reconstructions for faster training speed.",
+        "Here, we adopt the spherical harmonics (SH) representation proposed in Plenoxels ~\\cite{yu2022plenoxels} and~\\cite{yu2021plenoctrees} to perform color frequency decomposition.",
+        "The SH coefficients of second order were used similar to ~\\cite{yu2022plenoxels} and~\\cite{yu2021plenoctrees}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:pnf",
+      "title": "Panoptic Neural Fields: A Semantic Object-Aware Neural Scene Representation",
+      "year": 2022,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "These representations are now used in a plethora of applications that include robotics~\\cite{adamkiewicz2022vision}, semantic understanding~\\cite{pnf}, scene capture~\\cite{neurangelo}, editing~\\cite{instructnerf}, and generative modeling from natural language~\\cite{dreamfusion}.",
+        "Our method is trained on original images downsampled to $256^2$ resolution and compared to BACON~\\cite{lindell2021bacon} and PNF~\\cite{pnf}, trained in a similar fashion.",
+        "=\\textwidth]{fig/1_2d_supp.png} \\includegraphics[width=\\textwidth]{fig/2_2d_supp.png} \\end{center} \\vspace{-1em} \\captionof{figure}{ \\textbf{Image Filtering -- } Comparison of 2D filtering results on DIV2K~\\cite{div2k} to BACON~\\cite{lindell2021bacon} and PNF~\\cite{pnf}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:fathony2021multiplicative",
+      "title": "Multiplicative filter networks",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "One can build over the theory of multiplicative filter networks~\\cite{fathony2021multiplicative} to realize signal decomposition for neural fields~\\cite{lindell2021bacon, Polynomial, dou2023mfld}.",
+        "Multiplicative filter networks~(MFNs)~\\cite{fathony2021multiplicative} introduce an architecture that outputs a linear combination of sinusoidal bases, enabling explicit frequency control.",
+        "We select BACON~\\cite{lindell2021bacon} as a representative baseline in 2D image decomposition using the Multiplicative Filter Network~(MFN)~\\cite{fathony2021multiplicative} architecture."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:martel2021acorn",
+      "title": "Acorn: Adaptive coordinate networks for neural scene representation",
+      "year": 2021,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "Many neural rendering techniques employ \\textit{neural fields} as the underlying 3D representation -- coordinate neural networks that can represent a variety of signals including images~\\cite{martel2021acorn, sitzmann2019siren}, surface manifolds~\\cite{park2019deepsdf, wang2021neus, volsdf}, and volumetric densities~\\cite{mildenhall2020nerf}.",
+        "Neural fields can effectively represent many signals, including 2D images~\\cite{martel2021acorn, sitzmann2019siren}, and 3D geometry in the form of Signed Distance Functions~\\cite{park2019deepsdf} and Occupancy Fields~\\cite{mescheder2019occupancy}.",
+        "Adaptive data structures allow for increased resolution in high-frequency regions, which can be identified for further subdivision using indicators such as high local training error~\\cite{martel2021acorn} or high density~\\cite{liu2020neural}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    },
+    {
+      "paper": "bib:liu2020neural",
+      "title": "Neural sparse voxel fields",
+      "year": 2020,
+      "relation": "PREDECESSOR",
+      "confidence": "CONFIRMED",
+      "why": "cited 3 time(s) in the paper's own text",
+      "contexts": [
+        "Interestingly, early research in neural fields exploited the duality of time and frequency scaling to realize (explicit) multi-scale training architectures~\\cite{takikawa2021nglod, liu2020neural}.",
+        "ture space, rather than, as we desire, in the field co-domain.} However, these methods require the multi-resolution structure of the signal to either be specified \\textit{a-priori}~\\cite{takikawa2021nglod}, or by monitoring the training process via heuristics~\\cite{liu2020neural}.",
+        "Adaptive data structures allow for increased resolution in high-frequency regions, which can be identified for further subdivision using indicators such as high local training error~\\cite{martel2021acorn} or high density~\\cite{liu2020neural}."
+      ],
+      "citation_count": null,
+      "is_influential": null,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "successors": [
+    {
+      "paper": "851fc7bcaf6de9c8e63394b7227344ad8a68514d",
+      "title": "Spatial Annealing for Efficient Few-shot Neural Rendering",
+      "year": 2025,
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "why": "the citing paper's own sentences are available",
+      "contexts": [
+        "Based on recent research, the band limit of an optimized field can be determined by the sampling kernel under specific conditions (Shabanov et al. 2024).",
+        "Building on recent research into grid-based models (Zhao et al. 2024; Shabanov et al. 2024), we construct the mathematical form of the tri-plane represented field and deduce the filtering process of the base architecture, which subsequently motivates the establishment of the spatial annealing\u2026",
+        "General grid-based models (Zhao et al. 2024; Shabanov et al. 2024) reconstruct the optimized continues field f ( x ) from discrete feature points by applying a convolution process with a kernel function \u03ba : where \u03b4 is the impulse function, \u03c9 is the frequency band-width of the kernel, and x n \u2208 R 3\u2026"
+      ],
+      "citation_count": 2,
+      "is_influential": false,
+      "intents": [],
+      "uri": null
+    }
+  ],
+  "counts": {
+    "predecessors": 15,
+    "successors": 1
+  },
+  "notes": [
+    "Backward edges come from the paper's own bibliography and are quotable. Forward edges come from a citation index and were not verified against the citing paper's source."
+  ]
+}

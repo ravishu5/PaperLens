@@ -1,0 +1,36 @@
+{
+  "uri": "paperlens://paper/2201.01266",
+  "paper_version": "2201.01266v1",
+  "title": "Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images",
+  "authors": [
+    {
+      "name": "Ali Hatamizadeh"
+    },
+    {
+      "name": "Vishwesh Nath"
+    },
+    {
+      "name": "Yucheng Tang"
+    },
+    {
+      "name": "Dong Yang"
+    },
+    {
+      "name": "Holger Roth"
+    },
+    {
+      "name": "Daguang Xu"
+    }
+  ],
+  "published_at": "2022-01-04T18:01:34Z",
+  "abstract": "Semantic segmentation of brain tumors is a fundamental medical image analysis task involving multiple MRI imaging modalities that can assist clinicians in diagnosing the patient and successively studying the progression of the malignant entity. In recent years, Fully Convolutional Neural Networks (FCNNs) approaches have become the de facto standard for 3D medical image segmentation. The popular \"U-shaped\" network architecture has achieved state-of-the-art performance benchmarks on different 2D and 3D semantic segmentation tasks and across various imaging modalities. However, due to the limited kernel size of convolution layers in FCNNs, their performance of modeling long-range information is sub-optimal, and this can lead to deficiencies in the segmentation of tumors with variable sizes. On the other hand, transformer models have demonstrated excellent capabilities in capturing such long-range information in multiple domains, including natural language processing and computer vision. Inspired by the success of vision transformers and their variants, we propose a novel segmentation model termed Swin UNEt TRansformers (Swin UNETR). Specifically, the task of 3D brain tumor semantic segmentation is reformulated as a sequence to sequence prediction problem wherein multi-modal input data is projected into a 1D sequence of embedding and used as an input to a hierarchical Swin transformer as the encoder. The swin transformer encoder extracts features at five different resolutions by utilizing shifted windows for computing self-attention and is connected to an FCNN-based decoder at each resolution via skip connections. We have participated in BraTS 2021 segmentation challenge, and our proposed model ranks among the top-performing approaches in the validation phase. Code: https://monai.io/research/swin-unetr",
+  "fidelity": "LATEX_EXACT",
+  "counts": {
+    "sections": 10,
+    "equations": 3,
+    "algorithms": 0,
+    "stated_values": 8,
+    "declared_urls": 4,
+    "components": 6
+  }
+}

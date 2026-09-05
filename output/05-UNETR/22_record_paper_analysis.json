@@ -1,0 +1,48 @@
+{
+  "paper_version": "2103.10504v3",
+  "analysis_uri": "paperlens://paper/2103.10504/analysis",
+  "accepted": {
+    "components": [
+      {
+        "slug": "architecture",
+        "name": "Architecture",
+        "kind": "architecture",
+        "uri": "paperlens://paper/2103.10504/component/architecture",
+        "evidence": [
+          "paperlens://paper/2103.10504/section/3.1"
+        ]
+      },
+      {
+        "slug": "loss-function",
+        "name": "Loss Function",
+        "kind": "loss",
+        "uri": "paperlens://paper/2103.10504/component/loss-function",
+        "evidence": [
+          "paperlens://paper/2103.10504/section/3.2"
+        ]
+      },
+      {
+        "slug": "datasets",
+        "name": "Datasets",
+        "kind": "dataset",
+        "uri": "paperlens://paper/2103.10504/component/datasets",
+        "evidence": [
+          "paperlens://paper/2103.10504/section/4.1"
+        ]
+      },
+      {
+        "slug": "implementation-details",
+        "name": "Implementation Details",
+        "kind": "training",
+        "uri": "paperlens://paper/2103.10504/component/implementation-details",
+        "evidence": [
+          "paperlens://paper/2103.10504/section/4.3"
+        ]
+      }
+    ],
+    "claims": [],
+    "narrative_fields": []
+  },
+  "rejected": [],
+  "notes": []
+}

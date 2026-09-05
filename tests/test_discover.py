@@ -46,3 +46,52 @@ def test_missing_component_kinds_are_reported():
 def test_coverage_is_none_when_there_is_nothing_to_measure():
     assert _shallow_coverage([], ["training"])[0] is None
     assert _shallow_coverage(["a.py"], [])[0] is None
+
+
+class _Repo:
+    def __init__(self, name, description=None):
+        self.name = name
+        self.full_name = f"o/{name}"
+        self.description = description
+
+
+def test_a_namesake_describing_another_field_is_a_false_friend():
+    """Searching for "ULD-Net" returns a private-inference network and a
+    point-cloud paper, each expanding the same letters a different way."""
+    from paperlens.correlate.discover import _description_contradicts
+
+    title = ("ULD-Net: A U-shaped branch large kernel depthwise convolution "
+             "volume network for 3D medical image segmentation")
+    assert _description_contradicts(
+        _Repo("ULD-Net", 'Official Implementation of "ULD-Net: Enabling '
+                         'Ultra-Low-Degree Fully Polynomial private inference"'), title)
+    assert _description_contradicts(
+        _Repo("ULD-Net-3D", "ULD-Net: 3D Unsupervised Learning by Dense "
+                            "Similarity Learning with Equivariant Crop"), title)
+
+
+def test_a_repository_on_the_papers_own_subject_is_not_contradicted():
+    from paperlens.correlate.discover import _description_contradicts
+
+    title = ("ULD-Net: A U-shaped branch large kernel depthwise convolution "
+             "volume network for 3D medical image segmentation")
+    assert not _description_contradicts(
+        _Repo("ULD-Net", "PyTorch code for ULD-Net medical image segmentation"), title)
+
+
+def test_a_repository_with_no_description_cannot_contradict_anything():
+    """Many real implementations have none: MIC-DKFZ/nnUNet and
+    282857341/nnFormer both do."""
+    from paperlens.correlate.discover import _description_contradicts
+
+    assert not _description_contradicts(_Repo("nnUNet", None),
+                                        "nnU-Net: Self-adapting Framework")
+
+
+def test_the_shared_acronym_alone_is_not_agreement():
+    """Both sides repeat the name by construction, so it evidences nothing."""
+    from paperlens.correlate.discover import _description_contradicts
+
+    assert _description_contradicts(
+        _Repo("ULD-Net", "ULD-Net for polynomial private inference"),
+        "ULD-Net: medical image segmentation")

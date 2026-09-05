@@ -1,0 +1,126 @@
+{
+  "uri": "paperlens://lineage/10.1016%2Fj.bspc.2025.108746",
+  "paper_version": "uld-netv1",
+  "edges": [
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.knosys.2022.110033",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.knosys.2022.108824",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.knosys.2023.110987",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.media.2024.103280",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1609/aaai.v36i2.20133",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1109/tpami.2021.3100536",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.media.2023.102939",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1609/aaai.v33i01.33018368",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1109/tmi.2018.2881110",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1016/j.knosys.2023.110868",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1109/3dv.2016.79",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    },
+    {
+      "from": "10.1016/j.bspc.2025.108746",
+      "to": "10.1038/s41592-020-01008-z",
+      "relation": "CITES",
+      "confidence": "CONFIRMED",
+      "source": "crossref",
+      "is_influential": null,
+      "intents": [],
+      "contexts": []
+    }
+  ]
+}
