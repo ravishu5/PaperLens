@@ -34,7 +34,8 @@
     {
       "repo": "MIC-DKFZ/nnUNet",
       "summary": {
-        "AMBIGUOUS": 8,
+        "AMBIGUOUS": 7,
+        "MATCHED": 1,
         "UNKNOWN": 1
       },
       "uri": "paperlens://mapping/1809.10486/MIC-DKFZ/nnUNet"

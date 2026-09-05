@@ -49,4 +49,5 @@ RATE_LIMITS: dict[str, tuple[float, float]] = {
     "openalex": (10.0, 10.0),       # polite pool via mailto=
     "github": (30.0, 5000 / 3600),  # 5,000/hr authenticated
     "huggingface": (10.0, 5.0),
+    "crossref": (10.0, 5.0),   # polite pool, no key required
 }

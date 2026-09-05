@@ -16,7 +16,8 @@ from mcp.server.caching import CacheHint
 
 from . import config
 from . import resources as res
-from .graph.store import Store
+from .resources import _aid, encode_paper, paper_uri
+from .graph.store import base_id, Store
 from .code.indexer import index_repository as _index_repo
 from .code.indexer import provider as _code_provider
 from .code.indexer import require_snapshot as _require_snapshot
@@ -143,8 +144,8 @@ def get_paper_skeleton(paper_id: str) -> dict[str, Any]:
         pv = res._pv(store(), paper_id)
     except Exception as exc:
         return _err(exc)
-    s, aid = store(), pv.split("v")[0]
-    base = f"paperlens://paper/{aid}"
+    s, aid = store(), _aid(store(), pv)
+    base = paper_uri(aid)
 
     sections = [
         {"path": r["section_path"], "level": r["level"], "title": r["title"],
@@ -350,8 +351,8 @@ def reverse_engineer_paper(paper_id: str) -> dict[str, Any]:
         pv = res._pv(store(), paper_id)
     except Exception as exc:
         return _err(exc)
-    s, aid = store(), pv.split("v")[0]
-    base = f"paperlens://paper/{aid}"
+    s, aid = store(), _aid(store(), pv)
+    base = paper_uri(aid)
     counts = {t: s.one(f"SELECT COUNT(*) c FROM {t} WHERE paper_version = ?", (pv,))["c"]
               for t in ("sections", "equations", "algorithms", "stated_values",
                         "components", "claims")}

@@ -72,39 +72,11 @@
   ],
   "components": [
     {
-      "slug": "v-net-architecture",
-      "name": "V-Net Architecture",
-      "kind": "architecture",
-      "source": "AGENT",
-      "uri": "paperlens://paper/1606.04797/component/v-net-architecture"
-    },
-    {
-      "slug": "training-procedure",
-      "name": "Training Procedure",
-      "kind": "training",
-      "source": "AGENT",
-      "uri": "paperlens://paper/1606.04797/component/training-procedure"
-    },
-    {
-      "slug": "inference",
-      "name": "Inference",
-      "kind": "inference",
-      "source": "AGENT",
-      "uri": "paperlens://paper/1606.04797/component/inference"
-    },
-    {
       "slug": "method",
       "name": "Method",
       "kind": "module",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/1606.04797/component/method"
-    },
-    {
-      "slug": "dice-loss-layer",
-      "name": "Dice loss layer",
-      "kind": "loss",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
     },
     {
       "slug": "training",
@@ -119,6 +91,34 @@
       "kind": "evaluation",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/1606.04797/component/results"
+    },
+    {
+      "slug": "v-net-architecture",
+      "name": "V-Net Architecture",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/v-net-architecture"
+    },
+    {
+      "slug": "dice-loss-layer",
+      "name": "Dice Loss Layer",
+      "kind": "loss",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
+    },
+    {
+      "slug": "training-procedure",
+      "name": "Training Procedure",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/training-procedure"
+    },
+    {
+      "slug": "inference",
+      "name": "Inference",
+      "kind": "inference",
+      "source": "AGENT",
+      "uri": "paperlens://paper/1606.04797/component/inference"
     }
   ],
   "algorithms": [],

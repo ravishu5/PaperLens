@@ -19,8 +19,8 @@ import re
 from dataclasses import dataclass, field
 from typing import Any
 
-from ..graph.store import Store
-from ..resources import _pv
+from ..graph.store import base_id, Store
+from ..resources import _aid, encode_paper, paper_uri, _pv
 from ..sources import openalex
 from ..sources import semanticscholar as s2
 
@@ -152,7 +152,7 @@ def _pub(n: Node) -> dict[str, Any]:
 def trace_research_lineage(store: Store, paper_id: str, direction: str = "both",
                            limit: int = 20) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     notes: list[str] = []
     back: list[Node] = []
     fwd: list[Node] = []
@@ -177,7 +177,7 @@ def trace_research_lineage(store: Store, paper_id: str, direction: str = "both",
         "the citing paper's source."
     )
     return {
-        "paper_version": pv, "uri": f"paperlens://lineage/{arxiv_id}",
+        "paper_version": pv, "uri": f"paperlens://lineage/{encode_paper(arxiv_id)}",
         "predecessors": [_pub(n) for n in back],
         "successors": [_pub(n) for n in fwd],
         "counts": {"predecessors": len(back), "successors": len(fwd)},
@@ -187,7 +187,7 @@ def trace_research_lineage(store: Store, paper_id: str, direction: str = "both",
 
 def find_sota_successors(store: Store, paper_id: str, limit: int = 15) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     nodes, notes = _forward(store, arxiv_id, max(limit * 3, 40))
     _persist(store, arxiv_id, nodes, forward=True)
 
@@ -208,7 +208,7 @@ def find_sota_successors(store: Store, paper_id: str, limit: int = 15) -> dict[s
         "before claiming an improvement."
     )
     return {
-        "paper_version": pv, "uri": f"paperlens://lineage/{arxiv_id}",
+        "paper_version": pv, "uri": f"paperlens://lineage/{encode_paper(arxiv_id)}",
         "successors": [_pub(n) for n in ranked],
         "notes": notes,
     }
@@ -218,7 +218,7 @@ def trace_method(store: Store, paper_id: str, method: str,
                  limit: int = 12) -> dict[str, Any]:
     """Follow one method backwards and forwards through quoted citations."""
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     terms = [t for t in re.split(r"[^a-z0-9]+", method.lower()) if len(t) > 2]
     if not terms:
         return {"error": "ValueError", "message": "method must contain a word"}
@@ -254,7 +254,7 @@ def trace_method(store: Store, paper_id: str, method: str,
                                  "cites the target"})
 
     in_paper = [{"section": r["section_path"], "title": r["title"],
-                 "uri": f"paperlens://paper/{arxiv_id}/section/{r['section_path']}"}
+                 "uri": f"paperlens://paper/{encode_paper(arxiv_id)}/section/{r['section_path']}"}
                 for r in store.all(
                     "SELECT section_path, title FROM sections WHERE paper_version = ? "
                     "AND (LOWER(title) LIKE ? OR LOWER(body) LIKE ?) ORDER BY ordinal",

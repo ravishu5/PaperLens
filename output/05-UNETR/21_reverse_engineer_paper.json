@@ -15,8 +15,10 @@
     "Amshaker/unetr_plus_plus",
     "Jianing-Qiu/Awesome-Healthcare-Foundation-Models",
     "OSUPCVLab/MobileUNETR",
+    "hxhxhx33/SwinUNETR",
     "QiujieDong/Mesh_Segmentation",
     "aigzhusmart/Slim-UNETR",
+    "fahadshamshad/awesome-transformers-in-medical-imaging",
     "lxtGH/Awesome-Segmentation-With-Transformer"
   ],
   "mappings": [
@@ -32,9 +34,10 @@
     {
       "repo": "tamasino52/UNETR",
       "summary": {
-        "AMBIGUOUS": 8,
+        "ABSENT": 1,
+        "AMBIGUOUS": 9,
         "MATCHED": 3,
-        "UNKNOWN": 11
+        "UNKNOWN": 9
       },
       "uri": "paperlens://mapping/2103.10504/tamasino52/UNETR"
     }

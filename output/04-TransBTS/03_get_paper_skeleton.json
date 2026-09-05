@@ -104,13 +104,6 @@
   ],
   "components": [
     {
-      "slug": "overall-architecture",
-      "name": "Overall Architecture",
-      "kind": "architecture",
-      "source": "AGENT",
-      "uri": "paperlens://paper/2103.04430/component/overall-architecture"
-    },
-    {
       "slug": "method",
       "name": "Method",
       "kind": "module",
@@ -123,20 +116,6 @@
       "kind": "architecture",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2103.04430/component/overall-architecture-of-transbts"
-    },
-    {
-      "slug": "network-encoder",
-      "name": "Network Encoder",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2103.04430/component/network-encoder"
-    },
-    {
-      "slug": "network-decoder",
-      "name": "Network Decoder",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2103.04430/component/network-decoder"
     },
     {
       "slug": "experiments",
@@ -165,6 +144,27 @@
       "kind": "evaluation",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2103.04430/component/ablation-study"
+    },
+    {
+      "slug": "overall-architecture",
+      "name": "Overall Architecture",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.04430/component/overall-architecture"
+    },
+    {
+      "slug": "network-encoder",
+      "name": "Network Encoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.04430/component/network-encoder"
+    },
+    {
+      "slug": "network-decoder",
+      "name": "Network Decoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.04430/component/network-decoder"
     }
   ],
   "algorithms": [],

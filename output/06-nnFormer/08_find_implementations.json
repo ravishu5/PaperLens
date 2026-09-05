@@ -10,13 +10,14 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "nnformer/inference/change_trainer.py",
+          "evaluation": "nnformer/evaluation/evaluator.py",
           "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
-          "evaluation": "nnformer/evaluation/evaluator.py"
+          "training": "nnformer/inference/change_trainer.py"
         },
         "missing": []
       },
@@ -50,13 +51,14 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "nnformer/inference/change_trainer.py",
+          "evaluation": "nnformer/evaluation/evaluator.py",
           "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
-          "evaluation": "nnformer/evaluation/evaluator.py"
+          "training": "nnformer/inference/change_trainer.py"
         },
         "missing": []
       },
@@ -90,13 +92,14 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2109.03201; repository is named after the paper's method",
       "rank": 3,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "nnformer/inference/change_trainer.py",
+          "evaluation": "nnformer/evaluation/evaluator.py",
           "architecture": "nnformer/inference/pretrained_models/collect_pretrained_models.py",
-          "evaluation": "nnformer/evaluation/evaluator.py"
+          "training": "nnformer/inference/change_trainer.py"
         },
         "missing": []
       },
@@ -130,13 +133,14 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 4,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "scripts/accuracy_predict/tnasp/nasbench101/train_0.02%.sh",
+          "evaluation": "benchmark.py",
           "architecture": "neuralformer/data_process/nnlqp/feature/onnx_to_networkx.py",
-          "evaluation": "benchmark.py"
+          "training": "scripts/accuracy_predict/tnasp/nasbench101/train_0.02%.sh"
         },
         "missing": []
       },
@@ -162,13 +166,14 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 5,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "Matting/ppmatting/core/train.py",
+          "evaluation": "EISeg/eiseg/util/coco/cocoeval.py",
           "architecture": "EISeg/eiseg/models.py",
-          "evaluation": "EISeg/eiseg/util/coco/cocoeval.py"
+          "training": "Matting/ppmatting/core/train.py"
         },
         "missing": []
       },
@@ -194,13 +199,14 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 6,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "scripts/accuracy_prediction/nasbench201/train.sh",
+          "evaluation": "neuralformer/data_process/nasbench/scripts/run_evaluation.py",
           "architecture": "neuralformer/data_process/nasbench/scripts/augment_model.py",
-          "evaluation": "neuralformer/data_process/nasbench/scripts/run_evaluation.py"
+          "training": "scripts/accuracy_prediction/nasbench201/train.sh"
         },
         "missing": []
       },
@@ -226,6 +232,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 7,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -254,6 +261,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 8,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -276,6 +284,7 @@
     }
   ],
   "notes": [
+    "For XuRuihan/NNFormer, YellowLight021/paddle_nnformer, XuRuihan/NNFormer-NNLQP the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
     "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified."
   ]

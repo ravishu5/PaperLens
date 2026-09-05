@@ -17,8 +17,8 @@ import json
 import uuid
 from typing import Any
 
-from ..graph.store import Store, utcnow
-from ..resources import ResourceNotFound, resolve
+from ..graph.store import base_id, Store, utcnow
+from ..resources import _aid, encode_paper, paper_uri, ResourceNotFound, resolve
 from ..resources import _pv
 from ..paper.structure import slugify
 
@@ -54,7 +54,7 @@ def record_paper_analysis(
     author: str = "agent",
 ) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     ok = _resolver(store)
 
     accepted_components: list[dict[str, Any]] = []
@@ -100,7 +100,7 @@ def record_paper_analysis(
             (name, (item.get("description") or "")[:2000], f"{pv}:comp:{slug}", pv))
         accepted_components.append({
             "slug": slug, "name": name, "kind": kind,
-            "uri": f"paperlens://paper/{arxiv_id}/component/{slug}",
+            "uri": f"paperlens://paper/{encode_paper(arxiv_id)}/component/{slug}",
             "evidence": good,
         })
 
@@ -163,7 +163,7 @@ def record_paper_analysis(
 
     return {
         "paper_version": pv,
-        "analysis_uri": f"paperlens://paper/{arxiv_id}/analysis",
+        "analysis_uri": paper_uri(arxiv_id, "analysis"),
         "accepted": {"components": accepted_components, "claims": accepted_claims,
                      "narrative_fields": sorted(fields)},
         "rejected": rejected,

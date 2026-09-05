@@ -188,39 +188,11 @@
   ],
   "components": [
     {
-      "slug": "bottleneck",
-      "name": "Bottleneck",
-      "kind": "module",
-      "source": "AGENT",
-      "uri": "paperlens://paper/2109.03201/component/bottleneck"
-    },
-    {
-      "slug": "implementation-details",
-      "name": "Implementation details",
-      "kind": "training",
-      "source": "AGENT",
-      "uri": "paperlens://paper/2109.03201/component/implementation-details"
-    },
-    {
       "slug": "method",
       "name": "Method",
       "kind": "module",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2109.03201/component/method"
-    },
-    {
-      "slug": "encoder",
-      "name": "Encoder",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2109.03201/component/encoder"
-    },
-    {
-      "slug": "decoder",
-      "name": "Decoder",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2109.03201/component/decoder"
     },
     {
       "slug": "experiments",
@@ -242,6 +214,34 @@
       "kind": "evaluation",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2109.03201/component/visualization-of-segmentation-results"
+    },
+    {
+      "slug": "encoder",
+      "name": "Encoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/encoder"
+    },
+    {
+      "slug": "bottleneck",
+      "name": "Bottleneck",
+      "kind": "module",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/bottleneck"
+    },
+    {
+      "slug": "decoder",
+      "name": "Decoder",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/decoder"
+    },
+    {
+      "slug": "implementation-details",
+      "name": "Implementation details",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2109.03201/component/implementation-details"
     }
   ],
   "algorithms": [],

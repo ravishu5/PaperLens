@@ -16,8 +16,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from ..graph.store import Store
-from ..resources import _pv, symbol_uri
+from ..graph.store import base_id, Store
+from ..resources import _aid, encode_paper, paper_uri, _pv, symbol_uri
 
 _REQ_FILES = ("requirements.txt", "requirements-training.txt", "pyproject.toml",
               "setup.py", "environment.yml", "environment.yaml", "Pipfile")
@@ -132,7 +132,7 @@ def _from_components(store: Store, pv: str, snapshot_id: str, arxiv_id: str,
         item = {"component": r["name"], "kind": r["kind"],
                 "status_in_repo": r["status"] or "UNMAPPED",
                 "confidence": r["confidence"] or "UNKNOWN",
-                "uri": f"paperlens://paper/{arxiv_id}/component/{r['slug']}"}
+                "uri": f"paperlens://paper/{encode_paper(arxiv_id)}/component/{r['slug']}"}
         if r["symbol_id"]:
             qn = r["symbol_id"].split(":", 2)[-1]
             item["implemented_by"] = symbol_uri(repo_key, qn)
@@ -174,7 +174,7 @@ def _hyperparameters(store: Store, pv: str, snapshot_id: str,
                       "confidence": r["confidence"] or "UNKNOWN"})
         if r["status"] == "MATCHED":
             evidence.append(_ev("paper_stated_value",
-                                f"paperlens://paper/{arxiv_id}/values",
+                                paper_uri(arxiv_id, "values"),
                                 excerpt=f"{r['symbol']} = {r['value_text']}",
                                 locator=f"LaTeX line {r['src_line']}"))
     confirmed = sum(1 for i in items if i["found_in_code"] == "MATCHED")
@@ -238,7 +238,7 @@ def build_reproduction_plan(store: Store, paper_id: str,
     from ..code.indexer import require_snapshot
 
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     paper = store.one("SELECT * FROM papers WHERE arxiv_id = ?", (arxiv_id,))
     notes: list[str] = []
 
@@ -311,14 +311,14 @@ def build_reproduction_plan(store: Store, paper_id: str,
     return {
         "paper_version": pv, "title": paper["title"] if paper else None,
         "repo": repo_key, "commit_sha": snap["commit_sha"],
-        "uri": f"paperlens://plan/{arxiv_id}/{repo_key}",
+        "uri": f"paperlens://plan/{encode_paper(arxiv_id)}/{repo_key}",
         "sections": {k: v.pub() for k, v in sections.items()},
         "expected_results": expected.pub(),
         "reproduction_risks": risks,
         "missing_information": missing,
         "verification_strategy": _verification(store, pv, snapshot_id, repo_key).pub(),
         "lineage": {"predecessors_recorded": lineage_count,
-                    "uri": f"paperlens://lineage/{arxiv_id}"},
+                    "uri": f"paperlens://lineage/{encode_paper(arxiv_id)}"},
         "readiness": {
             "sections_known": sum(1 for s in sections.values() if s.status == "KNOWN"),
             "sections_partial": sum(1 for s in sections.values() if s.status == "PARTIAL"),

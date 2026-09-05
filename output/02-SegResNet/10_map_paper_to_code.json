@@ -363,6 +363,7 @@
     }
   ],
   "notes": [
-    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components."
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components.",
+    "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization is not established as this paper's implementation (relation REPRODUCTION, confidence LIKELY). Read every result below as a comparison against that repository, not against the paper's own code."
   ]
 }

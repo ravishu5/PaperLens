@@ -7,7 +7,7 @@ from dataclasses import dataclass
 
 from .. import config
 from ..graph.store import Store
-from ..sources import arxiv
+from ..sources import arxiv, crossref
 from .citations import collect as collect_citations
 from .equations import extract_equations
 from .structure import (Section, extract_algorithms, extract_declared_urls,
@@ -63,6 +63,100 @@ class IngestResult:
     notes: list[str]
 
 
+def enrich_references_from_crossref(store: Store, paper_version: str,
+                                    doi: str) -> int:
+    """Add a publisher-registered reference list to a paper that has none.
+
+    A record ingested from a PDF carries the body text but no bibliography we can
+    resolve, and a metadata-only record has no body at all. Either way Crossref
+    holds the reference list the publisher registered, which is what the backward
+    half of a lineage needs.
+    """
+    have = store.one("SELECT COUNT(*) c FROM bib_entries WHERE paper_version = ?",
+                     (paper_version,))["c"]
+    if have:
+        return 0
+    try:
+        w = crossref.work(store, doi)
+    except crossref.CrossrefUnavailable:
+        return 0
+    if w is None:
+        return 0
+    paper_id = store.paper_id_of(paper_version)
+    for r in w.references:
+        store.execute(
+            "INSERT OR REPLACE INTO bib_entries (id, paper_version, bib_key, raw, "
+            "authors, title, year, arxiv_id, doi, cite_count) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (f"{paper_version}:bib:{r.key}", paper_version, r.key, r.raw, None,
+             r.title, r.year, None, r.doi, 0))
+        if r.doi:
+            store.execute(
+                "INSERT OR REPLACE INTO lineage_edges (id, from_paper, to_paper, "
+                "relation, is_influential, intents_json, contexts_json, confidence, "
+                "source) VALUES (?,?,?,?,?,?,?,?,?)",
+                (f"{paper_id}->{r.doi}:CITES", paper_id, r.doi, "CITES", None,
+                 None, None, "CONFIRMED", "crossref"))
+    store.commit()
+    return len(w.references)
+
+
+def ingest_metadata_only(store: Store, doi: str) -> IngestResult:
+    """Ingest a paper that has no retrievable full text.
+
+    Most medical-imaging work is published in closed-access journals: there is no
+    LaTeX source and no readable PDF, so sections, equations and stated values
+    are simply unavailable. What Crossref does register is the reference list,
+    which is enough to place the paper in a research lineage. Fidelity is
+    UNAVAILABLE and every downstream tool is expected to say so rather than
+    infer around the gap.
+    """
+    w = crossref.work(store, doi)
+    if w is None:
+        raise LookupError(
+            f"Crossref has no record for DOI {doi!r}. Check the identifier, or "
+            f"supply an arXiv id if a preprint exists."
+        )
+    paper_version = f"{w.doi}v1"
+    store.upsert_paper(w.doi, w.title, abstract=w.abstract, doi=w.doi,
+                       published_at=w.published_at, authors=w.authors,
+                       latest_version=paper_version)
+    store.upsert_paper_version(paper_version, w.doi, 1, source_kind="NONE",
+                               fidelity="UNAVAILABLE", source_sha256=None,
+                               flattened_tex=None)
+    store.clear_paper_artifacts(paper_version)
+
+    for r in w.references:
+        store.execute(
+            "INSERT OR REPLACE INTO bib_entries (id, paper_version, bib_key, raw, "
+            "authors, title, year, arxiv_id, doi, cite_count) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (f"{paper_version}:bib:{r.key}", paper_version, r.key, r.raw, None,
+             r.title, r.year, None, r.doi, 0))
+        if r.doi:
+            store.execute(
+                "INSERT OR REPLACE INTO lineage_edges (id, from_paper, to_paper, "
+                "relation, is_influential, intents_json, contexts_json, confidence, "
+                "source) VALUES (?,?,?,?,?,?,?,?,?)",
+                (f"{w.doi}->{r.doi}:CITES", w.doi, r.doi, "CITES", None, None,
+                 None, "CONFIRMED", "crossref"))
+    store.commit()
+
+    notes = [
+        f"Published in {w.venue}." if w.venue else "No venue recorded.",
+        "No full text is available for this paper: it is not on arXiv and the "
+        "publisher record carries no open-access copy. Sections, equations, "
+        "stated values and declared repository URLs are therefore UNAVAILABLE, "
+        "and any tool that depends on them will say so.",
+        f"{len(w.references)} reference(s) recorded from the publisher's "
+        f"registered reference list; {sum(1 for r in w.references if r.doi)} "
+        f"carry a DOI and became lineage edges.",
+    ]
+    if not w.abstract:
+        notes.append("The publisher registered no abstract with Crossref.")
+    return _summarize(store, paper_version, w.title, "UNAVAILABLE", notes)
+
+
 def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResult:
     # A paper already in the store may have arrived from a non-arXiv source
     # (DOI, PDF), in which case there is nothing to fetch. Matching is exact:
@@ -86,15 +180,43 @@ def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResu
             # mechanism entirely: a parser fix changed nothing on any paper that
             # had already been ingested, and stale extractions kept reappearing
             # in output that had supposedly been regenerated.
-            if pv_row is not None and pv_row["parser_version"] == config.PARSER_VERSION:
-                return _summarize(store, pv, existing[0]["title"],
-                                  pv_row["fidelity"],
-                                  ["loaded from local store: already ingested"])
+            if pv_row is not None:
+                stale = pv_row["parser_version"] != config.PARSER_VERSION
+                # A LaTeX paper can always be re-fetched and re-parsed, so a
+                # parser upgrade must invalidate it. A PDF-derived or
+                # metadata-only record cannot be reproduced from anything we
+                # still hold -- re-parsing it would destroy content and replace
+                # it with nothing.
+                reproducible = pv_row["source_kind"] == "LATEX"
+                if not stale or not reproducible:
+                    notes = ["loaded from local store: already ingested"]
+                    if existing[0]["doi"]:
+                        added = enrich_references_from_crossref(
+                            store, pv, existing[0]["doi"])
+                        if added:
+                            notes.append(
+                                f"{added} reference(s) added from the publisher's "
+                                f"registered reference list, which this record did "
+                                f"not carry.")
+                    if stale:
+                        notes.append(
+                            f"Parsed by parser version {pv_row['parser_version']}, "
+                            f"current is {config.PARSER_VERSION}. This record came "
+                            f"from {pv_row['source_kind']} and cannot be re-derived, "
+                            f"so it is served as stored rather than discarded."
+                        )
+                    return _summarize(store, pv, existing[0]["title"],
+                                      pv_row["fidelity"], notes)
 
     parsed = arxiv.parse_arxiv_id(paper_id)
     if not parsed:
+        # Not on arXiv: fall back to publisher metadata, which is all a
+        # closed-access journal article makes available.
+        if (doi := crossref.parse_doi(paper_id)):
+            return ingest_metadata_only(store, doi)
         raise ValueError(
-            f"{paper_id!r} is not an arXiv identifier. Use resolve_paper first."
+            f"{paper_id!r} is neither an arXiv identifier nor a DOI. "
+            f"Use resolve_paper first."
         )
     arxiv_id, want_version = parsed
 
@@ -287,7 +409,9 @@ def _count(store: Store, table: str, pv: str, where: str = "") -> int:
 
 def _summarize(store: Store, pv: str, title: str, fidelity: str,
                notes: list[str]) -> IngestResult:
-    arxiv_id = pv.split("v")[0]
+    # Looked up, not derived: a PDF-ingested record may be versioned
+    # "uld-netv1" while the paper itself is keyed by DOI.
+    arxiv_id = store.paper_id_of(pv)
     return IngestResult(
         arxiv_id=arxiv_id, paper_version=pv, title=title, fidelity=fidelity,
         sections=_count(store, "sections", pv),

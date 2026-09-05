@@ -340,6 +340,7 @@
     }
   ],
   "notes": [
-    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components."
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components.",
+    "282857341/nnFormer is not established as this paper's implementation (relation THIRD_PARTY, confidence LIKELY). Read every result below as a comparison against that repository, not against the paper's own code."
   ]
 }

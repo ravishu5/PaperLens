@@ -10,6 +10,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.10504; repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -17,9 +18,9 @@
           "training": "train.py"
         },
         "missing": [
+          "evaluation",
           "architecture",
           "loss",
-          "evaluation",
           "dataset"
         ]
       },
@@ -46,6 +47,17 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/mkara44/unetr_pytorch",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/mkara44/unetr_pytorch",
           "excerpt": "no filename matches the architecture component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -63,17 +75,6 @@
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "loss"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/mkara44/unetr_pytorch",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
           }
         },
         {
@@ -97,16 +98,17 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.10504; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.0,
         "matched": {},
         "missing": [
-          "training",
+          "evaluation",
           "architecture",
           "loss",
-          "evaluation",
-          "dataset"
+          "dataset",
+          "training"
         ]
       },
       "stars": 198,
@@ -132,12 +134,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/tamasino52/UNETR",
-          "excerpt": "no filename matches the training component kind",
+          "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "training"
+            "kind": "evaluation"
           }
         },
         {
@@ -165,23 +167,23 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/tamasino52/UNETR",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/tamasino52/UNETR",
           "excerpt": "no filename matches the dataset component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "dataset"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/tamasino52/UNETR",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
           }
         }
       ]
@@ -194,15 +196,16 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 3,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "unetr_pp/training/network_training/Trainer_acdc.py",
+          "evaluation": "evaluation_scripts/run_evaluation_acdc.sh",
           "architecture": "unetr_pp/network_architecture/acdc/model_components.py",
           "loss": "unetr_pp/training/loss_functions/TopK_loss.py",
-          "evaluation": "evaluation_scripts/run_evaluation_acdc.sh",
-          "dataset": "unetr_pp/experiment_planning/DatasetAnalyzer.py"
+          "dataset": "unetr_pp/experiment_planning/DatasetAnalyzer.py",
+          "training": "unetr_pp/training/network_training/Trainer_acdc.py"
         },
         "missing": []
       },
@@ -228,14 +231,15 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 4,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.8,
         "matched": {
-          "training": "optimizers/optimizers.py",
           "architecture": "architectures/build_architecture.py",
           "loss": "losses/losses.py",
-          "dataset": "dataloaders/build_dataset.py"
+          "dataset": "dataloaders/build_dataset.py",
+          "training": "optimizers/optimizers.py"
         },
         "missing": [
           "evaluation"
@@ -274,14 +278,15 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 5,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.8,
         "matched": {
-          "training": "base/train.py",
-          "architecture": "model/network.py",
           "evaluation": "cmd/evaluate.py",
-          "dataset": "dataset/loader.py"
+          "architecture": "model/network.py",
+          "dataset": "dataset/loader.py",
+          "training": "base/train.py"
         },
         "missing": [
           "loss"
@@ -320,17 +325,18 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 6,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.6,
         "matched": {
-          "training": "src/optimizer.py",
           "architecture": "src/SlimUNETR/Decoder.py",
-          "dataset": "src/loader.py"
+          "dataset": "src/loader.py",
+          "training": "src/optimizer.py"
         },
         "missing": [
-          "loss",
-          "evaluation"
+          "evaluation",
+          "loss"
         ]
       },
       "stars": 41,
@@ -348,23 +354,23 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/aigzhusmart/Slim-UNETR",
-          "excerpt": "no filename matches the loss component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "loss"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/aigzhusmart/Slim-UNETR",
           "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/aigzhusmart/Slim-UNETR",
+          "excerpt": "no filename matches the loss component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "loss"
           }
         }
       ]
@@ -377,6 +383,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 7,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -405,6 +412,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 8,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -428,6 +436,7 @@
   ],
   "notes": [
     "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "For Amshaker/unetr_plus_plus, OSUPCVLab/MobileUNETR, hxhxhx33/SwinUNETR the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
     "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified.",
     "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."

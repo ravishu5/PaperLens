@@ -249,6 +249,7 @@
   ],
   "notes": [
     "Nothing in this paper could be located in this repository. That is the expected result when the repository does not implement the paper.",
-    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components."
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components.",
+    "MIC-DKFZ/batchgenerators is not established as this paper's implementation (relation DECLARED_DEPENDENCY, confidence CONFIRMED). Read every result below as a comparison against that repository, not against the paper's own code."
   ]
 }

@@ -5,7 +5,7 @@
     "tamasino52/UNETR"
   ],
   "errors": {},
-  "closest_to_paper": "tamasino52/UNETR",
+  "closest_to_paper": "mkara44/unetr_pytorch",
   "coverage": {
     "mkara44/unetr_pytorch": {
       "matched": 2,
@@ -16,13 +16,20 @@
     },
     "tamasino52/UNETR": {
       "matched": 3,
-      "absent": 0,
-      "ambiguous": 8,
+      "absent": 1,
+      "ambiguous": 9,
       "blocking_differences": 0,
       "significant_differences": 0
     }
   },
   "agree_on": [
+    {
+      "anchor": "Architecture",
+      "status": {
+        "mkara44/unetr_pytorch": "UNKNOWN",
+        "tamasino52/UNETR": "UNKNOWN"
+      }
+    },
     {
       "anchor": "C = 4",
       "status": {
@@ -103,10 +110,24 @@
   ],
   "differ_on": [
     {
+      "anchor": "Datasets",
+      "status": {
+        "mkara44/unetr_pytorch": "UNKNOWN",
+        "tamasino52/UNETR": "ABSENT"
+      }
+    },
+    {
       "anchor": "L = 12",
       "status": {
         "mkara44/unetr_pytorch": "AMBIGUOUS",
         "tamasino52/UNETR": "MATCHED"
+      }
+    },
+    {
+      "anchor": "Loss Function",
+      "status": {
+        "mkara44/unetr_pytorch": "UNKNOWN",
+        "tamasino52/UNETR": "AMBIGUOUS"
       }
     }
   ],

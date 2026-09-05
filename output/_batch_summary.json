@@ -1,17 +1,17 @@
 [
   {
-    "paper": "11-arXiv-2404.13024-BANF",
-    "arxiv_id": "2404.13024",
+    "paper": "12-ULD-Net",
+    "arxiv_id": "10.1016/j.bspc.2025.108746",
     "steps": {},
-    "fidelity": "LATEX_EXACT",
-    "repo": "theialab/banf",
+    "fidelity": "PDF_DERIVED",
+    "repo": null,
     "counts": {
       "sections": 19,
-      "equations": 22,
+      "equations": 4,
       "algorithms": 0,
-      "stated_values": 1,
-      "declared_urls": 1,
-      "components": 8
+      "stated_values": 12,
+      "declared_urls": 0,
+      "components": 12
     }
   }
 ]

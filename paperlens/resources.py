@@ -10,7 +10,7 @@ import re
 from urllib.parse import quote, unquote
 from typing import Any
 
-from .graph.store import Store
+from .graph.store import base_id, Store
 from .sources.arxiv import parse_arxiv_id
 
 
@@ -27,7 +27,9 @@ def _pv(store: Store, paper_id: str) -> str:
     into mappings and reports as though it had been asked for. An ambiguous
     identifier must raise, never pick.
     """
-    paper_id = (paper_id or "").strip()
+    # A DOI in a URI path segment arrives percent-encoded, because it contains
+    # a slash.
+    paper_id = unquote((paper_id or "").strip())
     if not paper_id:
         raise ResourceNotFound("empty paper identifier")
 
@@ -76,7 +78,7 @@ def paper_overview(store: Store, paper_id: str) -> dict[str, Any]:
                   "declared_urls", "components")
     }
     return {
-        "uri": f"paperlens://paper/{row['arxiv_id']}",
+        "uri": paper_uri(row["arxiv_id"]),
         "paper_version": pv,
         "title": paper["title"],
         "authors": json.loads(paper["authors_json"] or "[]"),
@@ -101,7 +103,7 @@ def section(store: Store, paper_id: str, section_path: str) -> dict[str, Any]:
             f"No section {section_path!r} in {pv}. Available: {', '.join(available[:40])}"
         )
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/section/{section_path}",
+        "uri": paper_uri(_aid(store, pv), "section", str(section_path)),
         "paper_version": pv,
         "section_path": row["section_path"],
         "level": row["level"],
@@ -150,7 +152,7 @@ def equation(store: Store, paper_id: str, ref: str) -> dict[str, Any]:
         ambiguous = False
 
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/equation/{row['content_hash']}",
+        "uri": paper_uri(_aid(store, pv), "equation", str(row['content_hash'])),
         "paper_version": pv,
         "content_hash": row["content_hash"],
         "latex": row["latex"],
@@ -175,7 +177,7 @@ def component(store: Store, paper_id: str, slug: str) -> dict[str, Any]:
         raise ResourceNotFound(
             f"No component {slug!r} in {pv}. Available: {', '.join(available[:30])}")
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/component/{slug}",
+        "uri": paper_uri(_aid(store, pv), "component", str(slug)),
         "paper_version": pv, "slug": row["slug"], "name": row["name"],
         "kind": row["kind"], "description": row["description"],
         "section": row["section_id"], "source": row["source"],
@@ -192,7 +194,7 @@ def algorithm(store: Store, paper_id: str, slug: str) -> dict[str, Any]:
         raise ResourceNotFound(
             f"No algorithm {slug!r} in {pv}. Available: {', '.join(available[:30])}")
     out = {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/algorithm/{slug}",
+        "uri": paper_uri(_aid(store, pv), "algorithm", str(slug)),
         "paper_version": pv, "slug": row["slug"], "name": row["name"],
         "presentation": row["presentation"], "extractable": bool(row["extractable"]),
         "body": row["body"], "section": row["section_id"], "src_line": row["src_line"],
@@ -210,7 +212,7 @@ def stated_values(store: Store, paper_id: str) -> dict[str, Any]:
     rows = store.all(
         "SELECT * FROM stated_values WHERE paper_version = ? ORDER BY src_line", (pv,))
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/values",
+        "uri": paper_uri(_aid(store, pv), "values"),
         "paper_version": pv,
         "values": [
             {"symbol": r["symbol"], "value": r["value_text"], "numeric": r["value_num"],
@@ -226,7 +228,7 @@ def declared_urls(store: Store, paper_id: str) -> dict[str, Any]:
     rows = store.all(
         "SELECT * FROM declared_urls WHERE paper_version = ? ORDER BY src_line", (pv,))
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/urls",
+        "uri": paper_uri(_aid(store, pv), "urls"),
         "paper_version": pv,
         "urls": [
             {"url": r["url"], "host": r["host"], "owner": r["owner"], "repo": r["repo"],
@@ -250,13 +252,13 @@ def implementations(store: Store, paper_id: str) -> dict[str, Any]:
     )
     if not rows:
         return {
-            "uri": f"paperlens://paper/{pv.split('v')[0]}/implementations",
+            "uri": paper_uri(_aid(store, pv), "implementations"),
             "paper_version": pv, "candidates": [],
             "note": "No implementation search has been run for this paper yet. "
                     "Call find_implementations.",
         }
     return {
-        "uri": f"paperlens://paper/{pv.split('v')[0]}/implementations",
+        "uri": paper_uri(_aid(store, pv), "implementations"),
         "paper_version": pv,
         "candidates": [{
             "repo": r["repo_id"], "url": f"https://github.com/{r['repo_id']}",
@@ -280,12 +282,12 @@ def mapping(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
         "SELECT * FROM mappings WHERE paper_version = ? AND snapshot_id LIKE ? "
         "ORDER BY status, anchor_kind", (pv, f"{repo}@%"))
     if not rows:
-        return {"uri": f"paperlens://mapping/{pv.split('v')[0]}/{repo}",
+        return {"uri": f"paperlens://mapping/{encode_paper(_aid(store, pv))}/{repo}",
                 "paper_version": pv, "repo": repo, "mappings": [],
                 "note": "No mapping has been computed for this pair. "
                         "Call map_paper_to_code."}
     return {
-        "uri": f"paperlens://mapping/{pv.split('v')[0]}/{repo}",
+        "uri": f"paperlens://mapping/{encode_paper(_aid(store, pv))}/{repo}",
         "paper_version": pv, "repo": repo,
         "summary": {s: sum(1 for r in rows if r["status"] == s)
                     for s in ("MATCHED", "ABSENT", "AMBIGUOUS", "UNKNOWN")},
@@ -305,7 +307,7 @@ def differences(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
         "SELECT * FROM differences WHERE paper_version = ? AND snapshot_id LIKE ? "
         "ORDER BY CASE severity WHEN 'BLOCKING' THEN 0 WHEN 'SIGNIFICANT' THEN 1 "
         "WHEN 'MINOR' THEN 2 ELSE 3 END", (pv, f"{repo}@%"))
-    uri = f"paperlens://difference/{pv.split('v')[0]}/{repo}"
+    uri = f"paperlens://difference/{encode_paper(_aid(store, pv))}/{repo}"
     if not rows:
         return {"uri": uri, "paper_version": pv, "repo": repo, "differences": [],
                 "note": "No comparison has been run for this pair. "
@@ -329,13 +331,13 @@ def references(store: Store, paper_id: str) -> dict[str, Any]:
         "SELECT b.*, (SELECT COUNT(*) FROM citation_sites c WHERE "
         "c.paper_version = b.paper_version AND c.bib_key = b.bib_key) AS sites "
         "FROM bib_entries b WHERE b.paper_version = ? ORDER BY sites DESC", (pv,))
-    aid = pv.split("v")[0]
+    aid = _aid(store, pv)
     if not rows:
-        return {"uri": f"paperlens://paper/{aid}/references", "paper_version": pv,
+        return {"uri": paper_uri(aid, "references"), "paper_version": pv,
                 "references": [],
                 "note": "No bibliography was recovered from this paper's source."}
     return {
-        "uri": f"paperlens://paper/{aid}/references", "paper_version": pv,
+        "uri": paper_uri(aid, "references"), "paper_version": pv,
         "count": len(rows),
         "resolved_to_arxiv": sum(1 for r in rows if r["arxiv_id"]),
         "references": [{
@@ -352,14 +354,14 @@ def lineage(store: Store, paper_id: str) -> dict[str, Any]:
     import json as _json
 
     pv = _pv(store, paper_id)
-    aid = pv.split("v")[0]
+    aid = _aid(store, pv)
     rows = store.all(
         "SELECT * FROM lineage_edges WHERE from_paper = ? OR to_paper = ?", (aid, aid))
     if not rows:
-        return {"uri": f"paperlens://lineage/{aid}", "paper_version": pv, "edges": [],
+        return {"uri": f"paperlens://lineage/{encode_paper(aid)}", "paper_version": pv, "edges": [],
                 "note": "No lineage has been traced. Call trace_research_lineage."}
     return {
-        "uri": f"paperlens://lineage/{aid}", "paper_version": pv,
+        "uri": f"paperlens://lineage/{encode_paper(aid)}", "paper_version": pv,
         "edges": [{
             "from": r["from_paper"], "to": r["to_paper"], "relation": r["relation"],
             "confidence": r["confidence"], "source": r["source"],
@@ -384,7 +386,7 @@ def analysis(store: Store, paper_id: str) -> dict[str, Any]:
     got = get_analysis(store, paper_id)
     if got is None:
         pv = _pv(store, paper_id)
-        return {"uri": f"paperlens://paper/{pv.split('v')[0]}/analysis",
+        return {"uri": paper_uri(_aid(store, pv), "analysis"),
                 "paper_version": pv, "analysis": None,
                 "note": "No analysis has been recorded. Read the skeleton, then "
                         "call record_paper_analysis."}
@@ -392,6 +394,24 @@ def analysis(store: Store, paper_id: str) -> dict[str, Any]:
 
 
 # ── code side ─────────────────────────────────────────────────────────────
+def encode_paper(paper_id: str) -> str:
+    """Percent-encode a paper identifier for a URI path segment.
+
+    arXiv ids need no encoding; a DOI contains a slash and would otherwise split
+    the path."""
+    return quote(paper_id, safe="")
+
+
+def paper_uri(paper_id: str, *suffix: str) -> str:
+    parts = "/".join(suffix)
+    return f"paperlens://paper/{encode_paper(paper_id)}" + (f"/{parts}" if parts else "")
+
+
+def _aid(store: Store, pv: str) -> str:
+    """The paper id for a version, looked up rather than derived."""
+    return store.paper_id_of(pv)
+
+
 def encode_symbol(qualified_name: str) -> str:
     """Percent-encode a symbol id for use in a URI path segment.
 
@@ -488,6 +508,7 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/references$"),
      lambda s, m: references(s, m[0])),
     (re.compile(r"^paperlens://lineage/([^/]+)$"), lambda s, m: lineage(s, m[0])),
+    (re.compile(r"^paperlens://lineage/(.+)$"), lambda s, m: lineage(s, m[0])),
     (re.compile(r"^paperlens://plan/([^/]+)/([^/]+/[^/]+)$"),
      lambda s, m: plan(s, m[0], m[1])),
     (re.compile(r"^paperlens://mapping/([^/]+)/([^/]+/[^/]+)$"),

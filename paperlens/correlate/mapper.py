@@ -26,8 +26,8 @@ from .. import config
 from ..code.indexer import persist_symbol, provider, require_snapshot
 from ..code.provider import Symbol
 from ..evidence.confidence import Evidence, Signal, assess, evidence_for, record
-from ..graph.store import Store
-from ..resources import _pv, symbol_uri
+from ..graph.store import base_id, Store
+from ..resources import _aid, encode_paper, paper_uri, _pv, symbol_uri
 
 # Reused from implementation discovery: component kind -> file/symbol patterns.
 _KIND_PATTERNS: dict[str, re.Pattern] = {
@@ -415,7 +415,7 @@ def map_paper_to_code(
     max_anchors: int = 60,
 ) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     snap = require_snapshot(store, repo)
     repo_key, snapshot_id = snap["repo_id"], snap["id"]
     prov = provider()
@@ -446,16 +446,16 @@ def map_paper_to_code(
         if kind == "stated_value":
             status, cands, why, ev, sym = _map_stated_value(store, prov, repo_key, row)
             label = f"{row['symbol']} = {row['value_text']}"
-            uri = f"paperlens://paper/{arxiv_id}/values"
+            uri = paper_uri(arxiv_id, "values")
         elif kind == "component":
             status, cands, why, ev, sym = _map_component(
                 store, prov, repo_key, row, located)
             label = row["name"]
-            uri = f"paperlens://paper/{arxiv_id}/component/{row['slug']}"
+            uri = f"paperlens://paper/{encode_paper(arxiv_id)}/component/{row['slug']}"
         else:
             status, cands, why, ev, sym = _map_algorithm(store, prov, repo_key, row)
             label = row["name"] or row["slug"]
-            uri = f"paperlens://paper/{arxiv_id}/algorithm/{row['slug']}"
+            uri = f"paperlens://paper/{encode_paper(arxiv_id)}/algorithm/{row['slug']}"
 
         weight = {"MATCHED": "DECISIVE" if kind == "stated_value" else "STRONG",
                   "AMBIGUOUS": "WEAK", "ABSENT": "DECISIVE",
@@ -509,6 +509,17 @@ def map_paper_to_code(
             "components, which rarely correspond to a symbol. Record a paper "
             "analysis to supply finer-grained components."
         )
+    cand = store.one(
+        "SELECT relation, confidence FROM implementation_candidates "
+        "WHERE paper_version = ? AND repo_id = ?", (pv, repo_key))
+    if cand and cand["relation"] not in ("OFFICIAL", "ORGANIZATION"):
+        notes.append(
+            f"{repo_key} is not established as this paper's implementation "
+            f"(relation {cand['relation']}, confidence {cand['confidence']}). "
+            f"Read every result below as a comparison against that repository, "
+            f"not against the paper's own code."
+        )
+
     absent_named = [m.anchor_label for m in mappings if m.status == "ABSENT"]
     if absent_named:
         notes.append(
@@ -518,7 +529,7 @@ def map_paper_to_code(
 
     return {
         "paper_version": pv, "repo": repo_key, "commit_sha": snap["commit_sha"],
-        "uri": f"paperlens://mapping/{arxiv_id}/{repo_key}",
+        "uri": f"paperlens://mapping/{encode_paper(arxiv_id)}/{repo_key}",
         "summary": counts,
         "mappings": [{
             "id": m.id,

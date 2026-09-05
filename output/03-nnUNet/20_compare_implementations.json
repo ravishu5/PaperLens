@@ -5,24 +5,38 @@
     "MIC-DKFZ/nnUNet"
   ],
   "errors": {},
-  "closest_to_paper": null,
+  "closest_to_paper": "MIC-DKFZ/nnUNet",
   "coverage": {
     "MIC-DKFZ/batchgenerators": {
       "matched": 0,
       "absent": 0,
-      "ambiguous": 1,
+      "ambiguous": 3,
       "blocking_differences": 0,
       "significant_differences": 0
     },
     "MIC-DKFZ/nnUNet": {
-      "matched": 0,
+      "matched": 1,
       "absent": 0,
-      "ambiguous": 2,
+      "ambiguous": 5,
       "blocking_differences": 0,
       "significant_differences": 0
     }
   },
   "agree_on": [
+    {
+      "anchor": "Preprocessing",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "AMBIGUOUS",
+        "MIC-DKFZ/nnUNet": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Training Procedure",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "AMBIGUOUS",
+        "MIC-DKFZ/nnUNet": "AMBIGUOUS"
+      }
+    },
     {
       "anchor": "mask = 0",
       "status": {
@@ -33,6 +47,20 @@
   ],
   "differ_on": [
     {
+      "anchor": "Inference",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "UNKNOWN",
+        "MIC-DKFZ/nnUNet": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Network Architectures",
+      "status": {
+        "MIC-DKFZ/batchgenerators": "UNKNOWN",
+        "MIC-DKFZ/nnUNet": "MATCHED"
+      }
+    },
+    {
       "anchor": "Postprocessing",
       "status": {
         "MIC-DKFZ/batchgenerators": "UNKNOWN",
@@ -41,7 +69,6 @@
     }
   ],
   "notes": [
-    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper.",
-    "MIC-DKFZ/batchgenerators and MIC-DKFZ/nnUNet score identically on these checks, so no claim is made about which is closer to the paper."
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
   ]
 }

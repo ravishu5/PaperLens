@@ -10,6 +10,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:1810.11654; repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -17,10 +18,10 @@
           "architecture": "ndv/modules/model.py"
         },
         "missing": [
+          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing",
-          "evaluation"
+          "preprocessing"
         ]
       },
       "stars": 45,
@@ -46,6 +47,17 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
           "excerpt": "no filename matches the loss component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -75,17 +87,6 @@
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
           }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
         }
       ]
     },
@@ -97,6 +98,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:1810.11654; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -104,10 +106,10 @@
           "architecture": "model.py"
         },
         "missing": [
+          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing",
-          "evaluation"
+          "preprocessing"
         ]
       },
       "stars": 376,
@@ -133,6 +135,17 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
           "excerpt": "no filename matches the loss component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -162,17 +175,6 @@
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
           }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
         }
       ]
     },
@@ -184,15 +186,16 @@
       "reasoning": "the repository README quotes the paper title",
       "rank": 3,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
           "architecture": "networks/models/E_CATBraTS/model.py",
+          "evaluation": "BTCV/test.py",
           "loss": "networks/models/unetr_pp/training/loss_functions/TopK_loss.py",
           "optimizer": "BTCV/optimizers/lr_scheduler.py",
-          "preprocessing": "networks/models/unetr_pp/experiment_planning/nnFormer_plan_and_preprocess.py",
-          "evaluation": "BTCV/test.py"
+          "preprocessing": "networks/models/unetr_pp/experiment_planning/nnFormer_plan_and_preprocess.py"
         },
         "missing": []
       },
@@ -218,16 +221,17 @@
       "reasoning": "the repository README cites arXiv:1810.11654",
       "rank": 4,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.0,
         "matched": {},
         "missing": [
           "architecture",
+          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing",
-          "evaluation"
+          "preprocessing"
         ]
       },
       "stars": 28,
@@ -256,6 +260,17 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
           "excerpt": "no filename matches the loss component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -285,17 +300,6 @@
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
           }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/jongcye/CollaGAN_MRI",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
         }
       ]
     },
@@ -307,6 +311,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 5,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -335,6 +340,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 6,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,

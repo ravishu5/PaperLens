@@ -10,15 +10,16 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "inference": "documentation/competitions/FLARE24/Task_1/inference_flare_task1.py",
           "architecture": "nnunetv2/experiment_planning/experiment_planners/network_topology.py",
           "preprocessing": "nnunetv2/experiment_planning/plan_and_preprocess_api.py",
+          "evaluation": "nnunetv2/batch_running/benchmarking/generate_benchmarking_commands.py",
           "training": "nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py",
-          "evaluation": "nnunetv2/batch_running/benchmarking/generate_benchmarking_commands.py"
+          "inference": "documentation/competitions/FLARE24/Task_1/inference_flare_task1.py"
         },
         "missing": []
       },
@@ -44,15 +45,16 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "inference": "nnunet/inference/ensemble_predictions.py",
           "architecture": "nnunet/inference/pretrained_models/collect_pretrained_models.py",
           "preprocessing": "nnunet/experiment_planning/nnUNet_plan_and_preprocess.py",
+          "evaluation": "nnunet/evaluation/evaluator.py",
           "training": "nnunet/inference/change_trainer.py",
-          "evaluation": "nnunet/evaluation/evaluator.py"
+          "inference": "nnunet/inference/ensemble_predictions.py"
         },
         "missing": []
       },
@@ -78,14 +80,15 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 3,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.8,
         "matched": {
-          "inference": "predict.py",
           "architecture": "model.py",
           "preprocessing": "preprocessing.py",
-          "training": "training.py"
+          "training": "training.py",
+          "inference": "predict.py"
         },
         "missing": [
           "evaluation"
@@ -124,6 +127,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 4,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.4,
@@ -132,9 +136,9 @@
           "evaluation": "nnunet/src/utils/eval.py"
         },
         "missing": [
-          "inference",
           "architecture",
-          "training"
+          "training",
+          "inference"
         ]
       },
       "stars": 8,
@@ -148,17 +152,6 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
         },
         {
           "kind": "code_absence",
@@ -181,6 +174,17 @@
             "method": "shallow_tree_scan",
             "kind": "training"
           }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
         }
       ]
     },
@@ -192,6 +196,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 5,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -199,10 +204,10 @@
           "evaluation": "evaluation_results.py"
         },
         "missing": [
-          "inference",
           "architecture",
           "preprocessing",
-          "training"
+          "training",
+          "inference"
         ]
       },
       "stars": 8,
@@ -216,17 +221,6 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
         },
         {
           "kind": "code_absence",
@@ -260,6 +254,17 @@
             "method": "shallow_tree_scan",
             "kind": "training"
           }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
         }
       ]
     },
@@ -271,6 +276,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 6,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -280,8 +286,8 @@
         "missing": [
           "architecture",
           "preprocessing",
-          "training",
-          "evaluation"
+          "evaluation",
+          "training"
         ]
       },
       "stars": 6,
@@ -321,23 +327,23 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the training component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "training"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
           "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the training component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "training"
           }
         }
       ]
@@ -350,16 +356,17 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 7,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.0,
         "matched": {},
         "missing": [
-          "inference",
           "architecture",
           "preprocessing",
+          "evaluation",
           "training",
-          "evaluation"
+          "inference"
         ]
       },
       "stars": 5,
@@ -373,17 +380,6 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
         },
         {
           "kind": "code_absence",
@@ -410,6 +406,17 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
           "excerpt": "no filename matches the training component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -421,12 +428,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the evaluation component kind",
+          "excerpt": "no filename matches the inference component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "evaluation"
+            "kind": "inference"
           }
         }
       ]
@@ -439,13 +446,14 @@
       "reasoning": "the paper itself links this repository (in the body)",
       "rank": 8,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.6,
         "matched": {
-          "inference": "batchgenerators/augmentations/resample_augmentations.py",
           "preprocessing": "batchgenerators/augmentations/color_augmentations.py",
-          "evaluation": "tests/test_DataLoader.py"
+          "evaluation": "tests/test_DataLoader.py",
+          "inference": "batchgenerators/augmentations/resample_augmentations.py"
         },
         "missing": [
           "architecture",
@@ -492,6 +500,7 @@
   "notes": [
     "The paper links MIC-DKFZ/batchgenerators, but nothing identifies it as this paper's own implementation -- the name does not match the method, the README does not cite the paper, and the owner is not an author. Treated as a declared dependency.",
     "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "For MIC-DKFZ/nnUNet, nikh9l/NNU-Net, Godthumb/mini-nnU-Net the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified.",
     "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
   ]

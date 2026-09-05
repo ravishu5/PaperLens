@@ -10,6 +10,7 @@
       "reasoning": "the paper itself links this repository (in the body); repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.2,
@@ -18,9 +19,9 @@
         },
         "missing": [
           "training",
-          "inference",
+          "evaluation",
           "loss",
-          "evaluation"
+          "inference"
         ]
       },
       "stars": 303,
@@ -65,12 +66,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/faustomilletari/VNet",
-          "excerpt": "no filename matches the inference component kind",
+          "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "inference"
+            "kind": "evaluation"
           }
         },
         {
@@ -87,12 +88,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/faustomilletari/VNet",
-          "excerpt": "no filename matches the evaluation component kind",
+          "excerpt": "no filename matches the inference component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "evaluation"
+            "kind": "inference"
           }
         }
       ]
@@ -105,15 +106,16 @@
       "reasoning": "the paper itself links this repository (in the body)",
       "rank": 2,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "architecture": "include/caffe/common_layers.hpp",
           "training": "tools/train_net.cpp",
-          "inference": "src/caffe/test/test_data/generate_sample_data.py",
+          "evaluation": "include/caffe/test/test_caffe_main.hpp",
+          "architecture": "include/caffe/common_layers.hpp",
           "loss": "include/caffe/loss_layers.hpp",
-          "evaluation": "include/caffe/test/test_caffe_main.hpp"
+          "inference": "src/caffe/test/test_data/generate_sample_data.py"
         },
         "missing": []
       },
@@ -147,6 +149,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 3,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,

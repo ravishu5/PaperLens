@@ -10,6 +10,7 @@
       "reasoning": "the paper itself links this repository (in the abstract); repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.5,
@@ -77,6 +78,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.5,
@@ -144,6 +146,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
       "rank": 3,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.5,
@@ -195,6 +198,7 @@
       "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:2103.04430; repository is named after the paper's method",
       "rank": 4,
       "name_match": true,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "SHALLOW",
         "score": 0.5,
@@ -246,6 +250,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 5,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW",
         "score": 1.0,
@@ -277,6 +282,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 6,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.5,
@@ -320,6 +326,7 @@
       "reasoning": "repository is named after the method described by the paper; repository is named after the paper's method",
       "rank": 7,
       "name_match": true,
+      "name_is_only_evidence": true,
       "coverage": {
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.0,
@@ -373,6 +380,7 @@
       "reasoning": "this is a curated list or documentation repository (0 source file(s)); it references the paper rather than implementing it",
       "rank": 8,
       "name_match": false,
+      "name_is_only_evidence": false,
       "coverage": {
         "kind": "NOT_AN_IMPLEMENTATION",
         "score": null,
@@ -396,6 +404,7 @@
   ],
   "notes": [
     "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
+    "For JoetheReindeer/multiPI_TransBTS, Milkomeda98/CKD-TransBTS, 111Kaushal/Testing-and-validation-of-TransBTSV2 the only evidence is that the repository name matches the paper's method. Names are reused across unrelated fields, so confirm the subject matter before relying on it.",
     "1 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
     "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
   ]

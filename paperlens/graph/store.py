@@ -15,6 +15,18 @@ from .. import config
 _SCHEMA = Path(__file__).with_name("schema.sql")
 
 
+_VERSION_SUFFIX = re.compile(r"v\d+$")
+
+
+def base_id(paper_version: str) -> str:
+    """Strip the trailing version from a paper_version.
+
+    `pv.split("v")[0]` was fine while every identifier was an arXiv number, and
+    silently truncates a DOI such as 10.1016/j.bspc.2025.108746 at any letter v.
+    """
+    return _VERSION_SUFFIX.sub("", paper_version)
+
+
 def utcnow() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
@@ -213,6 +225,18 @@ class Store:
         return self.one(
             "SELECT * FROM paper_versions WHERE paper_version = ?", (paper_version,)
         )
+
+    def paper_id_of(self, paper_version: str) -> str:
+        """The paper a version belongs to.
+
+        Deriving it by stripping "v1" from the version string assumes the two are
+        related by naming, which they need not be: a record ingested from a PDF
+        may be keyed `uld-netv1` while its paper is keyed by DOI.
+        """
+        row = self.one(
+            "SELECT arxiv_id FROM paper_versions WHERE paper_version = ?",
+            (paper_version,))
+        return row["arxiv_id"] if row else base_id(paper_version)
 
     def latest_version_of(self, arxiv_id: str) -> str | None:
         row = self.one(

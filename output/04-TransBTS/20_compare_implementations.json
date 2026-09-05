@@ -10,14 +10,14 @@
     "Rubics-Xuan/TransBTS": {
       "matched": 0,
       "absent": 1,
-      "ambiguous": 5,
+      "ambiguous": 7,
       "blocking_differences": 0,
       "significant_differences": 1
     },
     "nivu/TransBTS": {
       "matched": 0,
       "absent": 1,
-      "ambiguous": 5,
+      "ambiguous": 7,
       "blocking_differences": 0,
       "significant_differences": 1
     }
@@ -32,6 +32,20 @@
     },
     {
       "anchor": "L = 4",
+      "status": {
+        "Rubics-Xuan/TransBTS": "AMBIGUOUS",
+        "nivu/TransBTS": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Network Decoder",
+      "status": {
+        "Rubics-Xuan/TransBTS": "AMBIGUOUS",
+        "nivu/TransBTS": "AMBIGUOUS"
+      }
+    },
+    {
+      "anchor": "Network Encoder",
       "status": {
         "Rubics-Xuan/TransBTS": "AMBIGUOUS",
         "nivu/TransBTS": "AMBIGUOUS"

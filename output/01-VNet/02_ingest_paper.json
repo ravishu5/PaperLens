@@ -12,8 +12,6 @@
   "declared_urls": 3,
   "components": 7,
   "notes": [
-    "No numbered equations in this paper; equation anchors are limited.",
-    "20 bibliography entries parsed; 6 resolved to arXiv identifiers. Unresolved entries are still listed with title and authors.",
-    "Components are section-derived only at this stage. Finer-grained method components come from agent analysis."
+    "loaded from local store: already ingested"
   ]
 }

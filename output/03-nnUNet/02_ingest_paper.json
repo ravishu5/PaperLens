@@ -12,7 +12,6 @@
   "declared_urls": 2,
   "components": 8,
   "notes": [
-    "16 bibliography entries parsed; 5 resolved to arXiv identifiers. Unresolved entries are still listed with title and authors.",
-    "Components are section-derived only at this stage. Finer-grained method components come from agent analysis."
+    "loaded from local store: already ingested"
   ]
 }

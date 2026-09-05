@@ -19,7 +19,8 @@ from typing import Any
 
 from .. import config
 from ..evidence.confidence import Evidence, Signal, assess, at_most, record
-from ..graph.store import Store
+from ..graph.store import base_id, Store
+from ..resources import _aid, encode_paper, paper_uri
 from ..sources import github as gh
 
 # Component kind -> filename patterns that would implement it.
@@ -89,6 +90,7 @@ class Candidate:
     matched_kinds: dict[str, str] = field(default_factory=dict)
     missing_kinds: list[str] = field(default_factory=list)
     name_match: bool = False
+    name_only: bool = False
     stars: int | None = None
     archived: bool | None = None
     license: str | None = None
@@ -165,7 +167,7 @@ def find_implementations(
     from ..resources import _pv
 
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     paper = store.one("SELECT * FROM papers WHERE arxiv_id = ?", (arxiv_id,))
     import json as _json
     authors = _json.loads(paper["authors_json"] or "[]")
@@ -258,6 +260,14 @@ def find_implementations(
             "kinds and cannot confirm that a matched file truly implements the "
             "component. Missing kinds are the more reliable half of this signal."
         )
+    name_only = [c.repo_id for c in candidates if c.name_only]
+    if name_only:
+        notes.append(
+            f"For {', '.join(name_only[:3])} the only evidence is that the "
+            f"repository name matches the paper's method. Names are reused across "
+            f"unrelated fields, so confirm the subject matter before relying on it."
+        )
+
     listed = [c.repo_id for c in candidates if c.relation == "DERIVED"]
     if listed:
         notes.append(
@@ -282,7 +292,7 @@ def find_implementations(
 
     return {
         "paper_version": pv,
-        "uri": f"paperlens://paper/{arxiv_id}/implementations",
+        "uri": paper_uri(arxiv_id, "implementations"),
         "candidates": [_public(c) for c in candidates],
         "notes": notes,
     }
@@ -341,7 +351,7 @@ def _assess_candidate(
             detail=f"the paper itself links this repository (in the {where})",
             evidence=[Evidence(
                 kind="paper_url",
-                uri=f"paperlens://paper/{arxiv_id}/urls",
+                uri=paper_uri(arxiv_id, "urls"),
                 excerpt=meta.get("url"),
                 locator=f"flattened LaTeX line {meta.get('src_line')}",
             )],
@@ -441,6 +451,9 @@ def _assess_candidate(
                 # and its missing training code is a real finding.
                 coverage_kind = "SHALLOW_SMALL_REPO"
 
+    # Signals other than the repository's name. When there are none, a name
+    # match is the entire case for this candidate.
+    corroborating = {sig.name for sig in signals} - {"name_affinity"}
     name_match = _name_affinity(name, title)
     if name_match:
         reasoning += f"; repository is named after the paper's method"
@@ -459,6 +472,7 @@ def _assess_candidate(
         owner=owner, name=name, relation=relation, confidence=confidence,
         reasoning=reasoning, coverage_score=score, coverage_kind=coverage_kind,
         matched_kinds=matched, missing_kinds=missing, name_match=name_match,
+        name_only=bool(name_match and not corroborating),
         stars=repo.stars, archived=repo.archived, license=repo.license,
     )
 
@@ -509,6 +523,7 @@ def _public(c: Candidate) -> dict[str, Any]:
         "reasoning": c.reasoning,
         "rank": c.rank,
         "name_match": c.name_match,
+        "name_is_only_evidence": c.name_only,
         "coverage": {
             "kind": c.coverage_kind,
             "score": round(c.coverage_score, 2) if c.coverage_score is not None else None,

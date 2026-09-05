@@ -7,7 +7,8 @@ NAMES = {"01-VNet":"V-Net","02-SegResNet":"SegResNet","03-nnUNet":"nnU-Net",
          "04-TransBTS":"TransBTS","05-UNETR":"UNETR","06-nnFormer":"nnFormer",
          "07-SwinUNETR":"Swin UNETR","08-RepUX-Net":"RepUX-Net","09-UNesT":"UNesT",
          "10-deformUX-Net":"DeformUX-Net",
-         "11-arXiv-2404.13024-BANF":"BANF (supplied as ULD-Net)"}
+         "11-arXiv-2404.13024-BANF":"BANF (supplied as ULD-Net)",
+         "12-ULD-Net":"ULD-Net"}
 
 
 def j(d, n, default=None):
@@ -21,15 +22,21 @@ def rows():
             continue
         ing, impl = j(d, "02_ingest_paper"), j(d, "08_find_implementations")
         cands = impl.get("candidates") or []
-        top = cands[0] if cands else {}
+        # Mirror the runner: a candidate whose only link to the paper is a
+        # matching name was not compared against, so do not present it as the
+        # implementation found.
+        usable = [c for c in cands if not c.get("name_is_only_evidence")
+                  and c.get("relation") not in ("DERIVED", "UNRELATED")]
+        top = usable[0] if usable else {}
         yield d, {
-            "name": NAMES.get(d.name, d.name), "arxiv": ing.get("arxiv_id", "?"),
+            "name": NAMES.get(d.name, d.name),
+            "arxiv": ing.get("arxiv_id", "?"),
             "title": ing.get("title", ""), "fid": ing.get("fidelity", "-"),
             "sec": ing.get("sections", 0), "eq": ing.get("equations", 0),
             "val": ing.get("stated_values", 0),
             "refs": j(d, "07_resource_references").get("count", 0),
-            "repo": top.get("repo", "—"), "rel": top.get("relation", "—"),
-            "conf": top.get("confidence", "—"),
+            "repo": top.get("repo", "— none established"),
+            "rel": top.get("relation", "—"), "conf": top.get("confidence", "—"),
             "map": j(d, "10_map_paper_to_code").get("summary") or {},
             "diff": j(d, "11_compare_paper_with_code").get("summary") or {},
             "gaps": j(d, "16_find_implementation_gaps").get("summary") or {},
@@ -47,21 +54,27 @@ def main() -> None:
     L.append("One folder per paper. Every file is a tool's raw JSON output, named for\n"
              "the tool that produced it, in the order the pipeline runs them.\n")
     L.append(f"Papers processed: **{len(data)}**.\n")
-    L.append("> **On entry 11.** The identifier supplied for *ULD-Net* — "
-             "`2404.13024` — resolves to *BANF: Band-limited Neural Fields for "
-             "Levels of Detail Reconstruction*, a neural-fields paper, not a "
-             "volumetric segmentation architecture. It was run and is filed "
-             "under its real title rather than the label it arrived with. "
-             "`ULD-Net` itself remains unidentified: arXiv full-text search "
-             "returns nothing for the name. See "
-             "[11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md).\n")
+    L.append("> **Two notes on identification.** *ULD-Net* is not on arXiv — it "
+             "is published in *Biomedical Signal Processing and Control* "
+             "(DOI `10.1016/j.bspc.2025.108746`), which is why the earlier "
+             "searches found nothing. It is entry 12, ingested from a PDF with "
+             "its reference list recovered from the publisher.\n>\n"
+             "> The identifier first supplied for it, `2404.13024`, resolves to "
+             "*BANF: Band-limited Neural Fields*, an unrelated neural-fields "
+             "paper. It was run too, and is filed under its own title as entry "
+             "11 rather than under the label it arrived with.\n")
 
     L.append("\n## Resolution\n")
-    L.append("| # | Architecture | arXiv | Title |")
+    L.append("| # | Architecture | Identifier | Title |")
     L.append("|---|---|---|---|")
     for i, (d, r) in enumerate(data, 1):
-        L.append(f"| {i} | {r['name']} | [`{r['arxiv']}`](https://arxiv.org/abs/{r['arxiv']}) | {r['title'][:70]} |")
-    L.append("| — | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |")
+        ident = r["arxiv"]
+        link = (f"[`{ident}`](https://doi.org/{ident})" if ident.startswith("10.")
+                else f"[`{ident}`](https://arxiv.org/abs/{ident})")
+        if r["repo"] == "—":
+            r["rel"] = r["conf"] = "—"
+        L.append(f"| {i} | {r['name']} | {link} | {r['title'][:70]} |")
+
 
     L.append("\n## What was extracted\n")
     L.append("| Architecture | Fidelity | Sections | Equations | Values | References | Components recorded |")

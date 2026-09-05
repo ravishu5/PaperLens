@@ -194,39 +194,11 @@
   ],
   "components": [
     {
-      "slug": "implementation-details",
-      "name": "Implementation Details",
-      "kind": "training",
-      "source": "AGENT",
-      "uri": "paperlens://paper/2103.10504/component/implementation-details"
-    },
-    {
-      "slug": "architecture",
-      "name": "Architecture",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2103.10504/component/architecture"
-    },
-    {
-      "slug": "loss-function",
-      "name": "Loss Function",
-      "kind": "loss",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2103.10504/component/loss-function"
-    },
-    {
       "slug": "experiments",
       "name": "Experiments",
       "kind": "evaluation",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2103.10504/component/experiments"
-    },
-    {
-      "slug": "datasets",
-      "name": "Datasets",
-      "kind": "dataset",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/2103.10504/component/datasets"
     },
     {
       "slug": "evaluation-metrics",
@@ -269,6 +241,34 @@
       "kind": "architecture",
       "source": "DETERMINISTIC",
       "uri": "paperlens://paper/2103.10504/component/model-and-computational-complexity"
+    },
+    {
+      "slug": "architecture",
+      "name": "Architecture",
+      "kind": "architecture",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.10504/component/architecture"
+    },
+    {
+      "slug": "loss-function",
+      "name": "Loss Function",
+      "kind": "loss",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.10504/component/loss-function"
+    },
+    {
+      "slug": "datasets",
+      "name": "Datasets",
+      "kind": "dataset",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.10504/component/datasets"
+    },
+    {
+      "slug": "implementation-details",
+      "name": "Implementation Details",
+      "kind": "training",
+      "source": "AGENT",
+      "uri": "paperlens://paper/2103.10504/component/implementation-details"
     }
   ],
   "algorithms": [],

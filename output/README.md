@@ -3,14 +3,16 @@
 One folder per paper. Every file is a tool's raw JSON output, named for
 the tool that produced it, in the order the pipeline runs them.
 
-Papers processed: **11**.
+Papers processed: **12**.
 
-> **On entry 11.** The identifier supplied for *ULD-Net* — `2404.13024` — resolves to *BANF: Band-limited Neural Fields for Levels of Detail Reconstruction*, a neural-fields paper, not a volumetric segmentation architecture. It was run and is filed under its real title rather than the label it arrived with. `ULD-Net` itself remains unidentified: arXiv full-text search returns nothing for the name. See [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md).
+> **Two notes on identification.** *ULD-Net* is not on arXiv — it is published in *Biomedical Signal Processing and Control* (DOI `10.1016/j.bspc.2025.108746`), which is why the earlier searches found nothing. It is entry 12, ingested from a PDF with its reference list recovered from the publisher.
+>
+> The identifier first supplied for it, `2404.13024`, resolves to *BANF: Band-limited Neural Fields*, an unrelated neural-fields paper. It was run too, and is filed under its own title as entry 11 rather than under the label it arrived with.
 
 
 ## Resolution
 
-| # | Architecture | arXiv | Title |
+| # | Architecture | Identifier | Title |
 |---|---|---|---|
 | 1 | V-Net | [`1606.04797`](https://arxiv.org/abs/1606.04797) | V-Net: Fully Convolutional Neural Networks for Volumetric Medical Imag |
 | 2 | SegResNet | [`1810.11654`](https://arxiv.org/abs/1810.11654) | 3D MRI brain tumor segmentation using autoencoder regularization |
@@ -23,7 +25,7 @@ Papers processed: **11**.
 | 9 | UNesT | [`2209.14378`](https://arxiv.org/abs/2209.14378) | UNesT: Local Spatial Representation Learning with Hierarchical Transfo |
 | 10 | DeformUX-Net | [`2310.00199`](https://arxiv.org/abs/2310.00199) | DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Seg |
 | 11 | BANF (supplied as ULD-Net) | [`2404.13024`](https://arxiv.org/abs/2404.13024) | BANF: Band-limited Neural Fields for Levels of Detail Reconstruction |
-| — | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |
+| 12 | ULD-Net | [`10.1016/j.bspc.2025.108746`](https://doi.org/10.1016/j.bspc.2025.108746) | ULD-Net: A U-shaped branch large kernel depthwise convolution volume n |
 
 ## What was extracted
 
@@ -40,6 +42,7 @@ Papers processed: **11**.
 | UNesT | `LATEX_EXACT` | 40 | 2 | 14 | 71 | 5 |
 | DeformUX-Net | `LATEX_EXACT` | 18 | 3 | 6 | 32 | 3 |
 | BANF (supplied as ULD-Net) | `LATEX_EXACT` | 19 | 22 | 1 | 53 | 4 |
+| ULD-Net | `PDF_DERIVED` | 19 | 4 | 12 | 53 | 0 |
 
 ## Implementation found
 
@@ -56,6 +59,7 @@ Papers processed: **11**.
 | UNesT | `MASILab/UNesT` | OFFICIAL | CONFIRMED |
 | DeformUX-Net | `MASILab/deform-uxnet` | OFFICIAL | CONFIRMED |
 | BANF (supplied as ULD-Net) | `theialab/banf` | THIRD_PARTY | LIKELY |
+| ULD-Net | `caoxin918/ULD-Net-3D-Unsupervised-Learning-by-Dense-Similarity-Learning-with-Equivariant-Crop` | THIRD_PARTY | POSSIBLE |
 
 ## Correlation and comparison
 
@@ -72,6 +76,7 @@ Papers processed: **11**.
 | UNesT | 2 | 0 | 15 | 12 | 0 | 0 | 3 | 15 |
 | DeformUX-Net | 0 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
 | BANF (supplied as ULD-Net) | 0 | 0 | 4 | 7 | 0 | 0 | 4 | 15 |
+| ULD-Net | 1 | 11 | 3 | 9 | 0 | 10 | 1 | 15 |
 
 ## Files in each folder
 

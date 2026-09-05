@@ -21,8 +21,8 @@ from typing import Any
 from .. import config
 from ..code.indexer import provider, require_snapshot
 from ..evidence.confidence import Evidence, Signal, evidence_for, record
-from ..graph.store import Store
-from ..resources import _pv
+from ..graph.store import base_id, Store
+from ..resources import _aid, encode_paper, paper_uri, _pv
 
 # A behaviour the paper asserts, and the vocabulary it would leave in source.
 # `paper` is matched against the flattened LaTeX; `code` against the repository.
@@ -100,7 +100,7 @@ def _line_of(tex: str, offset: int) -> int:
 # ── compare_paper_with_code ───────────────────────────────────────────────
 def compare_paper_with_code(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     snap = require_snapshot(store, repo)
     repo_key, snapshot_id = snap["repo_id"], snap["id"]
     prov = provider()
@@ -152,7 +152,7 @@ def compare_paper_with_code(store: Store, paper_id: str, repo: str) -> dict[str,
             # Both observations are exact; the inference joining them is not.
             confidence="LIKELY",
             evidence=[
-                {"kind": "paper_section", "uri": f"paperlens://paper/{arxiv_id}",
+                {"kind": "paper_section", "uri": paper_uri(arxiv_id),
                  "excerpt": quote, "locator": f"flattened LaTeX line {_line_of(tex, pm.start())}",
                  "stance": "SUPPORTS", "provenance": {"pattern": paper_pat}},
                 {"kind": "code_absence", "uri": f"paperlens://repo/{repo_key}",
@@ -211,7 +211,7 @@ def compare_paper_with_code(store: Store, paper_id: str, repo: str) -> dict[str,
 
     return {
         "paper_version": pv, "repo": repo_key, "commit_sha": snap["commit_sha"],
-        "uri": f"paperlens://mapping/{arxiv_id}/{repo_key}",
+        "uri": f"paperlens://mapping/{encode_paper(arxiv_id)}/{repo_key}",
         "summary": {s: sum(1 for d in diffs if d.severity == s)
                     for s in ("BLOCKING", "SIGNIFICANT", "MINOR")},
         "differences": [{
@@ -226,7 +226,7 @@ def compare_paper_with_code(store: Store, paper_id: str, repo: str) -> dict[str,
 # ── find_implementation_gaps ──────────────────────────────────────────────
 def find_implementation_gaps(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
     pv = _pv(store, paper_id)
-    arxiv_id = pv.split("v")[0]
+    arxiv_id = _aid(store, pv)
     snap = require_snapshot(store, repo)
     repo_key = snap["repo_id"]
     prov = provider()
@@ -271,7 +271,7 @@ def find_implementation_gaps(store: Store, paper_id: str, repo: str) -> dict[str
                  "uri": f"paperlens://repo/{repo_key}/file/{file_path}",
                  "excerpt": line_text, "locator": site, "provenance": None},
                 {"kind": "paper_url", "stance": "SUPPORTS",
-                 "uri": f"paperlens://paper/{arxiv_id}",
+                 "uri": paper_uri(arxiv_id),
                  "excerpt": f"none of {listed} occurs in the paper source",
                  "locator": None,
                  "provenance": {"method": "literal_absence", "constants": consts}},
