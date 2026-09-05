@@ -6,8 +6,8 @@
       "repo": "sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
       "url": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
       "relation": "REPRODUCTION",
-      "confidence": "POSSIBLE",
-      "reasoning": "the repository README cites arXiv:1810.11654; repository is named after the paper's method",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:1810.11654; repository is named after the paper's method",
       "rank": 1,
       "name_match": true,
       "coverage": {
@@ -27,6 +27,14 @@
       "archived": false,
       "license": "GPL-3.0",
       "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "repository name '3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
         {
           "kind": "repo_metadata",
           "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization#readme",
@@ -85,8 +93,8 @@
       "repo": "IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
       "url": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
       "relation": "THIRD_PARTY",
-      "confidence": "POSSIBLE",
-      "reasoning": "the repository README cites arXiv:1810.11654; repository is named after the paper's method",
+      "confidence": "LIKELY",
+      "reasoning": "repository is named after the method described by the paper; the repository README cites arXiv:1810.11654; repository is named after the paper's method",
       "rank": 2,
       "name_match": true,
       "coverage": {
@@ -106,6 +114,14 @@
       "archived": false,
       "license": "MIT",
       "evidence": [
+        {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "repository name '3d-mri-brain-tumor-segmentation-using-autoencoder-regularization' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
         {
           "kind": "repo_metadata",
           "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization#readme",
@@ -343,7 +359,7 @@
   "notes": [
     "Coverage is SHALLOW: it matches filenames against the paper's component kinds and cannot confirm that a matched file truly implements the component. Missing kinds are the more reliable half of this signal.",
     "2 candidate(s) are curated lists or documentation repositories that cite the paper rather than implement it; they are ranked last and were not compared against the paper.",
-    "No official implementation was established. The paper declares no repository URL, so these candidates come from searching GitHub for the title -- treat them as third-party until verified.",
+    "No official implementation was established: no candidate is both linked by the paper and identifiable as the paper's own repository. The remaining candidates come from searching GitHub, so treat them as third-party until verified.",
     "Some repositories have fewer than a dozen source files, where a compact implementation keeps several components in one file. A missing kind there may still be implemented; confirm with map_paper_to_code before treating it as absent."
   ]
 }

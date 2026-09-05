@@ -267,9 +267,10 @@ def find_implementations(
         )
     if not any(c.relation in ("OFFICIAL", "ORGANIZATION") for c in candidates):
         notes.append(
-            "No official implementation was established. The paper declares no "
-            "repository URL, so these candidates come from searching GitHub for "
-            "the title -- treat them as third-party until verified."
+            "No official implementation was established: no candidate is both "
+            "linked by the paper and identifiable as the paper's own repository. "
+            "The remaining candidates come from searching GitHub, so treat them "
+            "as third-party until verified."
         )
     if any(c.coverage_kind == "SHALLOW_SMALL_REPO" for c in candidates):
         notes.append(
@@ -297,13 +298,17 @@ def _rank_key(c: Candidate) -> tuple:
     filename heuristic, and letting it lead ranked an unrelated blog repository
     above openai/CLIP.
     """
+    # A declared dependency and a curated list are explicitly *not* this paper's
+    # implementation, so they rank below anything that might be -- however well
+    # evidenced their link to the paper is.
+    is_impl = 0 if c.relation in ("DECLARED_DEPENDENCY", "DERIVED") else 1
     conf_rank = {"CONFIRMED": 3, "LIKELY": 2, "POSSIBLE": 1, "UNKNOWN": 0}[c.confidence]
     rel_rank = {"OFFICIAL": 4, "ORGANIZATION": 3, "REPRODUCTION": 3,
                 "THIRD_PARTY": 2, "DECLARED_DEPENDENCY": 1, "DERIVED": 0,
                 "UNRELATED": -1}[c.relation]
     # Name affinity sits above coverage: coverage is a filename heuristic and a
     # framework fork can satisfy every pattern without implementing the paper.
-    return (conf_rank, rel_rank, 1 if c.name_match else 0,
+    return (is_impl, conf_rank, rel_rank, 1 if c.name_match else 0,
             c.coverage_score if c.coverage_score is not None else -1.0,
             c.stars or 0)
 
@@ -355,6 +360,18 @@ def _assess_candidate(
                    f"on {sorted(shared)}",
             evidence=[Evidence(kind="repo_metadata", uri=repo_uri,
                                excerpt=f"owner={owner} ({repo.owner_type})")],
+        ))
+
+    # S2b -- the repository is named after the paper's method. On its own this
+    # is weak, but without it a repository literally called nnUNet had no signal
+    # at all, fell to UNRELATED, and was discarded before ranking.
+    if _name_affinity(name, title):
+        signals.append(Signal(
+            name="name_affinity", weight="STRONG",
+            detail=f"repository is named after the method described by the paper",
+            evidence=[Evidence(kind="repo_metadata", uri=repo_uri,
+                               excerpt=f"repository name {name!r} matches the "
+                                       f"paper's method")],
         ))
 
     # S3 -- the repository points back at this arXiv id.

@@ -44,6 +44,14 @@
           "provenance": null
         },
         {
+          "kind": "repo_metadata",
+          "uri": "https://github.com/faustomilletari/VNet",
+          "excerpt": "repository name 'VNet' matches the paper's method",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
           "kind": "code_absence",
           "uri": "https://github.com/faustomilletari/VNet",
           "excerpt": "no filename matches the training component kind",
