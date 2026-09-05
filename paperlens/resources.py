@@ -371,6 +371,13 @@ def lineage(store: Store, paper_id: str) -> dict[str, Any]:
     }
 
 
+def plan(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
+    """A reproduction plan, rebuilt from the graph on each read."""
+    from .correlate.plan import build_reproduction_plan
+
+    return build_reproduction_plan(store, paper_id, repo)
+
+
 def analysis(store: Store, paper_id: str) -> dict[str, Any]:
     from .correlate.analysis import get_analysis
 
@@ -481,6 +488,8 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/references$"),
      lambda s, m: references(s, m[0])),
     (re.compile(r"^paperlens://lineage/([^/]+)$"), lambda s, m: lineage(s, m[0])),
+    (re.compile(r"^paperlens://plan/([^/]+)/([^/]+/[^/]+)$"),
+     lambda s, m: plan(s, m[0], m[1])),
     (re.compile(r"^paperlens://mapping/([^/]+)/([^/]+/[^/]+)$"),
      lambda s, m: mapping(s, m[0], m[1])),
     (re.compile(r"^paperlens://difference/([^/]+)/([^/]+/[^/]+)$"),

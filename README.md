@@ -3,7 +3,7 @@
 An MCP server for **research engineering**: going from a paper to a working understanding of how its ideas became real code.
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
-**Status: Phase 7 of 8.** Ingestion, implementation discovery, code intelligence, paper↔code mapping, comparison and research lineage all work end to end. Reproduction planning is not built yet.
+**Status: all 8 phases complete.** 19 tools, 17 resource templates, 4 prompts, 180 tests. Every capability in the original vision is implemented; the honest limitations of each are recorded in [docs/PHASES.md](docs/PHASES.md).
 
 ---
 
@@ -53,6 +53,7 @@ compare_implementations("2103.00020", [repo_a, repo_b]) → which implements mor
 trace_research_lineage("2103.00020")                    → predecessors and successors
 trace_method("2103.00020", "temperature")               → one method through the literature
 find_sota_successors("2103.00020")                      → later work, with citing sentences
+build_reproduction_plan("2103.00020", "openai/CLIP")    → an actionable plan, with risks
 ```
 
 Then read only what you need:
@@ -73,6 +74,7 @@ paperlens://mapping/2103.00020/openai/CLIP
 paperlens://difference/2103.00020/openai/CLIP
 paperlens://paper/2103.00020/references
 paperlens://lineage/2103.00020
+paperlens://plan/2103.00020/openai/CLIP
 ```
 
 `paperlens_fetch(uri)` returns identical content, for clients without resource support.
@@ -92,6 +94,30 @@ paperlens://lineage/2103.00020
 **Official is not the same as complete.** `find_implementations` ranks by evidential strength and reports content coverage for every candidate. `openai/CLIP` comes back first — `OFFICIAL`, `CONFIRMED`, cited to the URL in the paper's own abstract — with `missing: [dataset, training, inference]` on the face of the result, because the official repository ships inference weights and not the contrastive objective the paper is about.
 
 **`UNKNOWN` is a normal answer, and absence is a finding.** A tool that cannot say "I could not establish this" will invent mappings. Asking CLIP for an equation returns an error explaining it has none. Searching `openai/CLIP` for its own contrastive loss returns `found: false` with a citable `absence_ref` and `confidence: CONFIRMED` — because establishing that something is missing is a result, not a failure.
+
+## Workflows
+
+Four prompts wrap the multi-step sequences, since those are started by a person rather than chosen by a model mid-task:
+
+```
+/reverse-engineer-paper(paper)      /compare-implementations(paper, repos)
+/reproduce-paper(paper, repo)       /trace-lineage(paper, method)
+```
+
+## What a finished plan looks like
+
+`build_reproduction_plan("2103.00020", "openai/CLIP")` — every line assembled from evidence established elsewhere in the graph, nothing generated:
+
+```
+readiness: 0 known, 6 partial, 2 unknown, 2 blocking risks
+
+BLOCKING · Contrastive Objective is described in the paper but absent from openai/CLIP.
+BLOCKING · The paper describes value clipping, but nothing in openai/CLIP implements it.
+
+verification
+  · assert the value used for tau equals 0.07   @ clip/model.py:295   CONFIRMED
+  · implement Contrastive Objective and test it independently         CONFIRMED
+```
 
 ## Develop
 

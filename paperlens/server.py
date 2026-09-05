@@ -27,6 +27,7 @@ from .correlate.discover import find_implementations as _discover
 from .correlate.lineage import find_sota_successors as _successors
 from .correlate.lineage import trace_method as _trace_method
 from .correlate.lineage import trace_research_lineage as _lineage
+from .correlate.plan import build_reproduction_plan as _plan
 from .correlate.mapper import map_paper_to_code as _map
 from .paper.ingest import ingest_paper as _ingest
 from .sources import arxiv
@@ -470,6 +471,21 @@ def trace_method(paper_id: str, method: str, limit: int = 12) -> dict[str, Any]:
 
 
 @mcp.tool(
+    title="Build a reproduction plan",
+    description="Assemble everything established about a paper and a repository "
+                "into an actionable plan: environment, dependencies, dataset, "
+                "architecture, training, hyperparameters, evaluation, risks, "
+                "missing information and verification steps. Sections are KNOWN, "
+                "PARTIAL or UNKNOWN, and UNKNOWN says what would resolve it.",
+)
+def build_reproduction_plan(paper_id: str, repo: str | None = None) -> dict[str, Any]:
+    try:
+        return _plan(store(), paper_id, repo)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
     title="Explain a confidence verdict",
     description="Why a mapping carries the confidence it does: the supporting and "
                 "contradicting evidence, and what would raise it.",
@@ -554,6 +570,12 @@ def r_references(arxiv_id: str) -> dict[str, Any]:
     return res.references(store(), arxiv_id)
 
 
+@mcp.resource("paperlens://plan/{arxiv_id}/{owner}/{repo}",
+              mime_type="application/json")
+def r_plan(arxiv_id: str, owner: str, repo: str) -> dict[str, Any]:
+    return res.plan(store(), arxiv_id, f"{owner}/{repo}")
+
+
 @mcp.resource("paperlens://lineage/{arxiv_id}", mime_type="application/json")
 def r_lineage(arxiv_id: str) -> dict[str, Any]:
     return res.lineage(store(), arxiv_id)
@@ -600,6 +622,89 @@ def r_values(arxiv_id: str) -> dict[str, Any]:
 @mcp.resource("paperlens://paper/{arxiv_id}/urls", mime_type="application/json")
 def r_urls(arxiv_id: str) -> dict[str, Any]:
     return res.declared_urls(store(), arxiv_id)
+
+
+# ── prompts ───────────────────────────────────────────────────────────────
+# User-invoked workflows. These are the multi-step sequences a person starts
+# deliberately, which is exactly what prompts are for -- as distinct from tools,
+# which the model calls on its own initiative.
+
+@mcp.prompt(
+    name="reverse-engineer-paper",
+    title="Reverse engineer a paper",
+    description="Reconstruct a paper technically: structure, method components, "
+                "implementations and how they differ.",
+)
+def reverse_engineer_paper_prompt(paper: str) -> str:
+    return f"""\
+Reverse engineer {paper} using PaperLens. Work in this order and stop to report
+what you find rather than guessing past a gap.
+
+1. resolve_paper, then ingest_paper.
+2. get_paper_skeleton. Read only the sections you actually need, by URI.
+3. record_paper_analysis with the method components you identify. Every component
+   must cite a paperlens:// URI that resolves -- unsupported ones are rejected.
+4. find_implementations, then index_repository for the top candidate.
+5. map_paper_to_code, then compare_paper_with_code.
+
+Report what is CONFIRMED separately from what is LIKELY, and state UNKNOWN where
+the evidence does not reach. Do not describe a component as implemented because a
+symbol has a similar name."""
+
+
+@mcp.prompt(
+    name="reproduce-paper",
+    title="Plan a reproduction",
+    description="Produce an actionable plan for reproducing a paper, with risks "
+                "and verification steps.",
+)
+def reproduce_paper_prompt(paper: str, repo: str = "") -> str:
+    target = f" against {repo}" if repo else ""
+    return f"""\
+Build a reproduction plan for {paper}{target}.
+
+Prerequisites, in order: ingest_paper, record_paper_analysis, find_implementations,
+index_repository, map_paper_to_code, compare_paper_with_code,
+find_implementation_gaps. Then build_reproduction_plan.
+
+When you write the plan up, lead with the BLOCKING risks and the missing
+information -- those decide whether a reproduction is feasible at all. Keep every
+UNKNOWN section marked UNKNOWN; a plan that reads complete while resting on
+guesses is worse than one that admits its holes."""
+
+
+@mcp.prompt(
+    name="compare-implementations",
+    title="Compare implementations",
+    description="Compare several repositories claiming to implement the same paper.",
+)
+def compare_implementations_prompt(paper: str, repos: str) -> str:
+    return f"""\
+Compare these implementations of {paper}: {repos}.
+
+Ingest the paper, record its method components, then index each repository and
+call compare_implementations. Note that ranking is by BLOCKING differences and
+established absences, not by how many symbol names match -- a repository with
+tidier naming can implement less of the paper. Report what they agree on, where
+they diverge, and which divergences are essential rather than stylistic."""
+
+
+@mcp.prompt(
+    name="trace-lineage",
+    title="Trace research lineage",
+    description="Trace what a paper builds on and what built on it.",
+)
+def trace_lineage_prompt(paper: str, method: str = "") -> str:
+    focus = f"\n\nFocus on the method: {method}. Use trace_method for it." if method else ""
+    return f"""\
+Trace the research lineage of {paper}.
+
+Ingest it, then call trace_research_lineage and find_sota_successors.
+
+Predecessors come from the paper's own bibliography and are quotable -- cite the
+sentence. Successors come from a citation index and were not verified against the
+citing paper's source, so present them as the weaker evidence they are. Do not
+claim a successor improved on the paper unless you have read what it says.{focus}"""
 
 
 def main() -> None:
