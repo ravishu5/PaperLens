@@ -19,7 +19,7 @@ from ..graph.store import Store
 
 _BASE = "https://api.openalex.org"
 _TTL_DAYS = 30
-_MAILTO = "itsshankar.ravi2@gmail.com"   # polite pool
+_MAILTO = "itsshankar.ravi@gmail.com"   # polite pool
 
 
 class OpenAlexUnavailable(RuntimeError):
