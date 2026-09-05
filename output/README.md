@@ -3,7 +3,9 @@
 One folder per paper. Every file is a tool's raw JSON output, named for
 the tool that produced it, in the order the pipeline runs them.
 
-Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for why.
+Papers processed: **11**.
+
+> **On entry 11.** The identifier supplied for *ULD-Net* — `2404.13024` — resolves to *BANF: Band-limited Neural Fields for Levels of Detail Reconstruction*, a neural-fields paper, not a volumetric segmentation architecture. It was run and is filed under its real title rather than the label it arrived with. `ULD-Net` itself remains unidentified: arXiv full-text search returns nothing for the name. See [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md).
 
 
 ## Resolution
@@ -20,7 +22,8 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | 8 | RepUX-Net | [`2303.05785`](https://arxiv.org/abs/2303.05785) | Scaling Up 3D Kernels with Bayesian Frequency Re-parameterization for  |
 | 9 | UNesT | [`2209.14378`](https://arxiv.org/abs/2209.14378) | UNesT: Local Spatial Representation Learning with Hierarchical Transfo |
 | 10 | DeformUX-Net | [`2310.00199`](https://arxiv.org/abs/2310.00199) | DeformUX-Net: Exploring a 3D Foundation Backbone for Medical Image Seg |
-| 11 | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |
+| 11 | BANF (supplied as ULD-Net) | [`2404.13024`](https://arxiv.org/abs/2404.13024) | BANF: Band-limited Neural Fields for Levels of Detail Reconstruction |
+| — | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |
 
 ## What was extracted
 
@@ -36,6 +39,7 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | RepUX-Net | `LATEX_EXACT` | 11 | 9 | 5 | 23 | 3 |
 | UNesT | `LATEX_EXACT` | 40 | 2 | 14 | 71 | 5 |
 | DeformUX-Net | `LATEX_EXACT` | 18 | 3 | 6 | 32 | 3 |
+| BANF (supplied as ULD-Net) | `LATEX_EXACT` | 19 | 22 | 1 | 53 | 4 |
 
 ## Implementation found
 
@@ -51,6 +55,7 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | RepUX-Net | `MASILab/RepUX-Net` | OFFICIAL | CONFIRMED |
 | UNesT | `MASILab/UNesT` | OFFICIAL | CONFIRMED |
 | DeformUX-Net | `MASILab/deform-uxnet` | OFFICIAL | CONFIRMED |
+| BANF (supplied as ULD-Net) | `theialab/banf` | THIRD_PARTY | LIKELY |
 
 ## Correlation and comparison
 
@@ -66,6 +71,7 @@ Papers processed: **10 of 11**. `11-ULD-Net` was not run — see its folder for 
 | RepUX-Net | 0 | 0 | 6 | 3 | 0 | 0 | 4 | 15 |
 | UNesT | 2 | 0 | 15 | 12 | 0 | 0 | 3 | 15 |
 | DeformUX-Net | 0 | 0 | 8 | 8 | 0 | 0 | 5 | 15 |
+| BANF (supplied as ULD-Net) | 0 | 0 | 4 | 7 | 0 | 0 | 4 | 15 |
 
 ## Files in each folder
 

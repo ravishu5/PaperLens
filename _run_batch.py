@@ -32,6 +32,9 @@ PAPERS = [
     ("08-RepUX-Net",    "2303.05785", "kernel"),
     ("09-UNesT",        "2209.14378", "transformer"),
     ("10-deformUX-Net", "2310.00199", "deformable"),
+    # Supplied as "ULD-Net", but this identifier resolves to BANF. Named for
+    # what it is rather than what it was labelled.
+    ("11-arXiv-2404.13024-BANF", "2404.13024", "band-limited"),
 ]
 
 OUT = Path("output")

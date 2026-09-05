@@ -87,6 +87,13 @@ ANALYSES: dict[str, tuple[str, list[tuple[str, str, str, str]]]] = {
     ("Complete Architecture", "architecture", "4.2", "Full DeformUX-Net backbone."),
     ("Experimental Setup", "training", "5", "Datasets, optimiser and training schedule."),
   ]),
+  # Supplied as "ULD-Net"; the identifier resolves to BANF (neural fields).
+  "11-arXiv-2404.13024-BANF": ("2404.13024", [
+    ("Filtering via optimization", "module", "3.1", "Band-limiting a neural field by constraining it during optimisation."),
+    ("Cascaded training", "training", "3.2", "Coarse-to-fine cascade producing levels of detail."),
+    ("Image filtering", "evaluation", "4.1", "2D image filtering experiments."),
+    ("Signed Distance Fields", "evaluation", "4.2", "3D SDF reconstruction experiments."),
+  ]),
 }
 
 

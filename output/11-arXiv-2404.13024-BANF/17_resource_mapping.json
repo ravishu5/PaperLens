@@ -1,0 +1,166 @@
+{
+  "uri": "paperlens://mapping/2404.13024/theialab/banf",
+  "paper_version": "2404.13024v2",
+  "repo": "theialab/banf",
+  "summary": {
+    "MATCHED": 0,
+    "ABSENT": 0,
+    "AMBIGUOUS": 4,
+    "UNKNOWN": 7
+  },
+  "mappings": [
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:cascaded-training",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:cascaded-training",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Cascaded training' matches 1/2 of its name tokens against 3D_reconstruction/banf/banf_model.py::BanfModel.get_training_callbacks#method",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/cascaded-training",
+          "excerpt": "Cascaded training (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/theialab/banf/symbol/3D_reconstruction%2Fbanf%2Fbanf_model.py%3A%3ABanfModel.get_training_callbacks%23method",
+          "excerpt": "def get_training_callbacks(\n        self, training_callback_attributes: TrainingCallbackAttributes\n    ) -> List[TrainingCallback]",
+          "locator": "3D_reconstruction/banf/banf_model.py:109",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:image-filtering",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:image-filtering",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Image filtering' matches 1/2 of its name tokens against NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/image-filtering",
+          "excerpt": "Image filtering (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/theialab/banf/symbol/NeRFing%2Fwisp%2Faccelstructs%2Foctree_as.py%3A%3Afast_filter_method%23function",
+          "excerpt": "def fast_filter_method(mask_idx: torch.Tensor, depth: torch.Tensor, deltas: torch.Tensor, samples: torch.Tensor,\n                       num_samples: int, num_rays: int, device: torch.device) -> \\\n        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]",
+          "locator": "NeRFing/wisp/accelstructs/octree_as.py:22",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:method",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:method",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Method' matches 1/1 of its name tokens against NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/method",
+          "excerpt": "Method (module)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|stated_value|2404.13024v2:val:0",
+      "anchor_kind": "stated_value",
+      "anchor_id": "2404.13024v2:val:0",
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "0 is too common a value for an exact match to be evidence",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:ablations",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:ablations",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Ablations' is a section heading rather than a named method component, so its absence from code is not informative",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:additional-3d-reconstruction-results",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:additional-3d-reconstruction-results",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Additional 3D reconstruction results' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:evaluation-of-geometry-and-color-reconstruction-on-nerf-synt",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:evaluation-of-geometry-and-color-reconstruction-on-nerf-synt",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Evaluation of geometry and color reconstruction on NeRF Synthetic Dataset' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:experiments",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:experiments",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Experiments' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:filtering-via-optimization",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:filtering-via-optimization",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Filtering via optimization' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:proof-of-filtering-via-optimization",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:proof-of-filtering-via-optimization",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Proof of filtering via optimization' but none carry enough of its name to identify one",
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:signed-distance-fields",
+      "anchor_kind": "component",
+      "anchor_id": "2404.13024v2:comp:signed-distance-fields",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Signed Distance Fields' but none carry enough of its name to identify one",
+      "evidence": []
+    }
+  ]
+}

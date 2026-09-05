@@ -1,0 +1,284 @@
+{
+  "paper_version": "2404.13024v2",
+  "repo": "theialab/banf",
+  "commit_sha": "30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d",
+  "uri": "paperlens://mapping/2404.13024/theialab/banf",
+  "summary": {
+    "MATCHED": 0,
+    "ABSENT": 0,
+    "AMBIGUOUS": 4,
+    "UNKNOWN": 7
+  },
+  "mappings": [
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|stated_value|2404.13024v2:val:0",
+      "anchor": {
+        "kind": "stated_value",
+        "label": "Sigma_l = 0",
+        "uri": "paperlens://paper/2404.13024/values"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "UNKNOWN",
+      "method": "mapper:stated_value",
+      "reasoning": "0 is too common a value for an exact match to be evidence",
+      "symbol_uri": null,
+      "candidates": [
+        "2D_fitting/dataloader.py:13",
+        "2D_fitting/dataloader.py:22",
+        "2D_fitting/dataloader.py:24",
+        "2D_fitting/dataloader.py:35"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:method",
+      "anchor": {
+        "kind": "component",
+        "label": "Method",
+        "uri": "paperlens://paper/2404.13024/component/method"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Method' matches 1/1 of its name tokens against NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+      "symbol_uri": "paperlens://repo/theialab/banf/symbol/NeRFing%2Fwisp%2Faccelstructs%2Foctree_as.py%3A%3Afast_filter_method%23function",
+      "candidates": [
+        "NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+        "NeRFing/wisp/core/rays.py::Rays.to#method",
+        "NeRFing/wisp/core/transforms.py::ObjectTransform.to#method",
+        "NeRFing/wisp/core/wisp_module.py::WispModule.public_properties#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/method",
+          "excerpt": "Method (module)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/theialab/banf/symbol/NeRFing%2Fwisp%2Faccelstructs%2Foctree_as.py%3A%3Afast_filter_method%23function",
+          "excerpt": "def fast_filter_method(mask_idx: torch.Tensor, depth: torch.Tensor, deltas: torch.Tensor, samples: torch.Tensor,\n                       num_samples: int, num_rays: int, device: torch.device) -> \\\n        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]",
+          "locator": "NeRFing/wisp/accelstructs/octree_as.py:22",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:experiments",
+      "anchor": {
+        "kind": "component",
+        "label": "Experiments",
+        "uri": "paperlens://paper/2404.13024/component/experiments"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Experiments' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/trainers/tracker/tracker.py::_BaseDashboard.log_metric#method",
+        "NeRFing/wisp/renderer/app/optimization_app.py::OptimizationApp.__init__#method",
+        "NeRFing/wisp/trainers/tracker/tracker.py::Tracker.__init__#method",
+        "NeRFing/wisp/trainers/tracker/tracker.py::Tracker.log_config#method"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:ablations",
+      "anchor": {
+        "kind": "component",
+        "label": "Ablations",
+        "uri": "paperlens://paper/2404.13024/component/ablations"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "'Ablations' is a section heading rather than a named method component, so its absence from code is not informative",
+      "symbol_uri": null,
+      "candidates": [],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:additional-3d-reconstruction-results",
+      "anchor": {
+        "kind": "component",
+        "label": "Additional 3D reconstruction results",
+        "uri": "paperlens://paper/2404.13024/component/additional-3d-reconstruction-results"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Additional 3D reconstruction results' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/accelstructs/base_as.py::ASQueryResults#class",
+        "NeRFing/wisp/accelstructs/base_as.py::ASRaymarchResults#class",
+        "NeRFing/wisp/accelstructs/base_as.py::ASRaytraceResults#class",
+        "static/css/index.css::.results-carousel .item#class"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:evaluation-of-geometry-and-color-reconstruction-on-nerf-synt",
+      "anchor": {
+        "kind": "component",
+        "label": "Evaluation of geometry and color reconstruction on NeRF Synthetic Dataset",
+        "uri": "paperlens://paper/2404.13024/component/evaluation-of-geometry-and-color-reconstruction-on-nerf-synt"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Evaluation of geometry and color reconstruction on NeRF Synthetic Dataset' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/datasets/formats/nerf_standard_dataset.py::NeRFSyntheticDataset#class",
+        "NeRFing/wisp/datasets/formats/nerf_standard_dataset.py::NeRFSyntheticDataset.__init__#method",
+        "NeRFing/wisp/framework/state.py::InteractiveRendererState.clear_color_value#field",
+        "NeRFing/wisp/renderer/core/api/base_renderer.py::FramePayload.clear_color#field"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:proof-of-filtering-via-optimization",
+      "anchor": {
+        "kind": "component",
+        "label": "Proof of filtering via optimization",
+        "uri": "paperlens://paper/2404.13024/component/proof-of-filtering-via-optimization"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Proof of filtering via optimization' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/framework/state.py::OptimizationState#class",
+        "NeRFing/wisp/framework/state.py::WispState.optimization#field",
+        "NeRFing/wisp/renderer/app/optimization_app.py::OptimizationApp#class",
+        "NeRFing/wisp/renderer/app/optimization_app.py::OptimizationApp.on_optimization_running_changed#method"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:filtering-via-optimization",
+      "anchor": {
+        "kind": "component",
+        "label": "Filtering via optimization",
+        "uri": "paperlens://paper/2404.13024/component/filtering-via-optimization"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Filtering via optimization' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/framework/state.py::OptimizationState#class",
+        "NeRFing/wisp/framework/state.py::WispState.optimization#field",
+        "NeRFing/wisp/renderer/app/optimization_app.py::OptimizationApp#class",
+        "NeRFing/wisp/renderer/app/optimization_app.py::OptimizationApp.on_optimization_running_changed#method"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:cascaded-training",
+      "anchor": {
+        "kind": "component",
+        "label": "Cascaded training",
+        "uri": "paperlens://paper/2404.13024/component/cascaded-training"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Cascaded training' matches 1/2 of its name tokens against 3D_reconstruction/banf/banf_model.py::BanfModel.get_training_callbacks#method",
+      "symbol_uri": "paperlens://repo/theialab/banf/symbol/3D_reconstruction%2Fbanf%2Fbanf_model.py%3A%3ABanfModel.get_training_callbacks%23method",
+      "candidates": [
+        "3D_reconstruction/banf/banf_model.py::BanfModel.get_training_callbacks#method",
+        "NeRFing/wisp/trainers/base_trainer.py::BaseTrainer.post_training#method",
+        "NeRFing/wisp/trainers/base_trainer.py::BaseTrainer.pre_training#method",
+        "NeRFing/wisp/trainers/image_trainer.py::ImageTrainer.pre_training#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/cascaded-training",
+          "excerpt": "Cascaded training (training)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/theialab/banf/symbol/3D_reconstruction%2Fbanf%2Fbanf_model.py%3A%3ABanfModel.get_training_callbacks%23method",
+          "excerpt": "def get_training_callbacks(\n        self, training_callback_attributes: TrainingCallbackAttributes\n    ) -> List[TrainingCallback]",
+          "locator": "3D_reconstruction/banf/banf_model.py:109",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:image-filtering",
+      "anchor": {
+        "kind": "component",
+        "label": "Image filtering",
+        "uri": "paperlens://paper/2404.13024/component/image-filtering"
+      },
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Image filtering' matches 1/2 of its name tokens against NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+      "symbol_uri": "paperlens://repo/theialab/banf/symbol/NeRFing%2Fwisp%2Faccelstructs%2Foctree_as.py%3A%3Afast_filter_method%23function",
+      "candidates": [
+        "NeRFing/wisp/accelstructs/octree_as.py::fast_filter_method#function",
+        "NeRFing/wisp/datasets/image_dataset.py::ImageDataset.get_image#method",
+        "NeRFing/wisp/trainers/tracker/tracker.py::Tracker.get_record_dict.record_dict_filter#function",
+        "NeRFing/wisp/trainers/tracker/tracker.py::_Tensorboard.log_image#method"
+      ],
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/2404.13024/component/image-filtering",
+          "excerpt": "Image filtering (evaluation)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/theialab/banf/symbol/NeRFing%2Fwisp%2Faccelstructs%2Foctree_as.py%3A%3Afast_filter_method%23function",
+          "excerpt": "def fast_filter_method(mask_idx: torch.Tensor, depth: torch.Tensor, deltas: torch.Tensor, samples: torch.Tensor,\n                       num_samples: int, num_rays: int, device: torch.device) -> \\\n        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]",
+          "locator": "NeRFing/wisp/accelstructs/octree_as.py:22",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
+    {
+      "id": "2404.13024v2|theialab/banf@30e3a58eaaff7b6f58ca580ed61c7a2dac8e814d|component|2404.13024v2:comp:signed-distance-fields",
+      "anchor": {
+        "kind": "component",
+        "label": "Signed Distance Fields",
+        "uri": "paperlens://paper/2404.13024/component/signed-distance-fields"
+      },
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "method": "mapper:component",
+      "reasoning": "symbols were returned for 'Signed Distance Fields' but none carry enough of its name to identify one",
+      "symbol_uri": null,
+      "candidates": [
+        "NeRFing/wisp/core/render_buffer.py::RenderBuffer._join_fields#method",
+        "NeRFing/wisp/datasets/batch.py::Batch.fields#method",
+        "NeRFing/wisp/framework/event.py::wrap_iterable_fields#function",
+        "NeRFing/wisp/renderer/core/api/renderers_factory.py::_REGISTERED_RENDERABLE_NEURAL_FIELDS#constant"
+      ],
+      "evidence": []
+    }
+  ],
+  "notes": [
+    "Nothing in this paper could be located in this repository. That is the expected result when the repository does not implement the paper.",
+    "Some components are section-derived headings rather than named method components, which rarely correspond to a symbol. Record a paper analysis to supply finer-grained components."
+  ]
+}

@@ -6,7 +6,8 @@ OUT = pathlib.Path("output")
 NAMES = {"01-VNet":"V-Net","02-SegResNet":"SegResNet","03-nnUNet":"nnU-Net",
          "04-TransBTS":"TransBTS","05-UNETR":"UNETR","06-nnFormer":"nnFormer",
          "07-SwinUNETR":"Swin UNETR","08-RepUX-Net":"RepUX-Net","09-UNesT":"UNesT",
-         "10-deformUX-Net":"DeformUX-Net"}
+         "10-deformUX-Net":"DeformUX-Net",
+         "11-arXiv-2404.13024-BANF":"BANF (supplied as ULD-Net)"}
 
 
 def j(d, n, default=None):
@@ -16,7 +17,7 @@ def j(d, n, default=None):
 
 def rows():
     for d in sorted(OUT.glob("[0-9][0-9]-*")):
-        if d.name.startswith("11"):
+        if d.name == "11-ULD-Net":
             continue
         ing, impl = j(d, "02_ingest_paper"), j(d, "08_find_implementations")
         cands = impl.get("candidates") or []
@@ -45,15 +46,22 @@ def main() -> None:
     L.append("# PaperLens run — 11 volumetric segmentation architectures\n")
     L.append("One folder per paper. Every file is a tool's raw JSON output, named for\n"
              "the tool that produced it, in the order the pipeline runs them.\n")
-    L.append(f"Papers processed: **{len(data)} of 11**. "
-             "`11-ULD-Net` was not run — see its folder for why.\n")
+    L.append(f"Papers processed: **{len(data)}**.\n")
+    L.append("> **On entry 11.** The identifier supplied for *ULD-Net* — "
+             "`2404.13024` — resolves to *BANF: Band-limited Neural Fields for "
+             "Levels of Detail Reconstruction*, a neural-fields paper, not a "
+             "volumetric segmentation architecture. It was run and is filed "
+             "under its real title rather than the label it arrived with. "
+             "`ULD-Net` itself remains unidentified: arXiv full-text search "
+             "returns nothing for the name. See "
+             "[11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md).\n")
 
     L.append("\n## Resolution\n")
     L.append("| # | Architecture | arXiv | Title |")
     L.append("|---|---|---|---|")
     for i, (d, r) in enumerate(data, 1):
         L.append(f"| {i} | {r['name']} | [`{r['arxiv']}`](https://arxiv.org/abs/{r['arxiv']}) | {r['title'][:70]} |")
-    L.append("| 11 | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |")
+    L.append("| — | ULD-Net | — | **not identified** — see [11-ULD-Net](11-ULD-Net/00_UNRESOLVED.md) |")
 
     L.append("\n## What was extracted\n")
     L.append("| Architecture | Fidelity | Sections | Equations | Values | References | Components recorded |")
