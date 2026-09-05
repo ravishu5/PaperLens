@@ -16,6 +16,9 @@ from mcp.server.caching import CacheHint
 
 from . import resources as res
 from .graph.store import Store
+from .code.indexer import index_repository as _index_repo
+from .code.indexer import provider as _code_provider
+from .code.indexer import require_snapshot as _require_snapshot
 from .correlate.discover import find_implementations as _discover
 from .paper.ingest import ingest_paper as _ingest
 from .sources import arxiv
@@ -200,6 +203,93 @@ def find_implementations(paper_id: str, kind: str = "all",
 
 
 @mcp.tool(
+    title="Index a repository",
+    description="Clone a GitHub repository at a commit and build a code index. "
+                "Returns counts and the SHA, never source. Indexing is keyed on "
+                "the commit SHA, so repeat calls are free.",
+)
+def index_repository(repo: str, ref: str = "HEAD", force: bool = False) -> dict[str, Any]:
+    import dataclasses as _dc
+    try:
+        return _dc.asdict(_index_repo(store(), repo, ref=ref, force=force))
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Get repository outline",
+    description="The code-side counterpart of get_paper_skeleton: files and their "
+                "symbols as addressable URIs, with no source text.",
+)
+def get_repo_outline(repo: str, path_prefix: str = "", limit: int = 60) -> dict[str, Any]:
+    try:
+        snap = _require_snapshot(store(), repo)
+    except Exception as exc:
+        return _err(exc)
+    prov = _code_provider()
+    try:
+        symbols = prov.list_symbols(snap["repo_id"])
+    except Exception as exc:
+        return _err(exc)
+
+    by_file: dict[str, list] = {}
+    for sym in symbols:
+        if path_prefix and not sym.file_path.startswith(path_prefix):
+            continue
+        by_file.setdefault(sym.file_path, []).append(sym)
+
+    base = f"paperlens://repo/{snap['repo_id']}"
+    files = [{
+        "path": path,
+        "symbol_count": len(syms),
+        "uri": f"{base}/file/{path}",
+        "top_symbols": [{
+            "qualified_name": s.qualified_name, "kind": s.kind,
+            "uri": res.symbol_uri(snap["repo_id"], s.qualified_name),
+        } for s in sorted(syms, key=lambda s: s.line_start)[:6]],
+    } for path, syms in sorted(by_file.items())][:limit]
+
+    return {
+        "repo": snap["repo_id"], "commit_sha": snap["commit_sha"],
+        "indexer": snap["indexer"], "uri": base,
+        "files": files, "file_count": len(by_file), "symbol_count": len(symbols),
+        "truncated": len(by_file) > limit,
+    }
+
+
+@mcp.tool(
+    title="Search code",
+    description="Find symbols in an indexed repository. When nothing matches, "
+                "returns a citable absence record rather than an empty list, "
+                "because 'it is not there' is a finding.",
+)
+def search_code(repo: str, query: str, limit: int = 20) -> dict[str, Any]:
+    try:
+        snap = _require_snapshot(store(), repo)
+        res = _code_provider().search_symbols(snap["repo_id"], query, limit=limit)
+    except Exception as exc:
+        return _err(exc)
+    base = f"paperlens://repo/{snap['repo_id']}"
+    if not res.found:
+        return {
+            "repo": snap["repo_id"], "commit_sha": snap["commit_sha"],
+            "query": query, "found": False, "confidence": "CONFIRMED",
+            "finding": f"No symbol matching {query!r} exists in this repository.",
+            "absence_ref": res.absence_ref, "method": res.method, "symbols": [],
+        }
+    return {
+        "repo": snap["repo_id"], "commit_sha": snap["commit_sha"],
+        "query": query, "found": True, "method": res.method,
+        "symbols": [{
+            "qualified_name": s.qualified_name, "name": s.name, "kind": s.kind,
+            "file_path": s.file_path, "lines": [s.line_start, s.line_end],
+            "signature": s.signature,
+            "uri": res.symbol_uri(snap["repo_id"], s.qualified_name),
+        } for s in res.symbols],
+    }
+
+
+@mcp.tool(
     title="Fetch a PaperLens resource",
     description="Read any paperlens:// URI. Identical to the MCP resource of the "
                 "same URI; provided for clients without resource support.",
@@ -241,6 +331,22 @@ def r_algorithm(arxiv_id: str, slug: str) -> dict[str, Any]:
 @mcp.resource("paperlens://paper/{arxiv_id}/implementations", mime_type="application/json")
 def r_implementations(arxiv_id: str) -> dict[str, Any]:
     return res.implementations(store(), arxiv_id)
+
+
+@mcp.resource("paperlens://repo/{owner}/{repo}", mime_type="application/json")
+def r_repo(owner: str, repo: str) -> dict[str, Any]:
+    return res.repo_overview(store(), f"{owner}/{repo}")
+
+
+@mcp.resource("paperlens://repo/{owner}/{repo}/file/{+path}", mime_type="application/json")
+def r_repo_file(owner: str, repo: str, path: str) -> dict[str, Any]:
+    return res.repo_file(store(), f"{owner}/{repo}", path)
+
+
+@mcp.resource("paperlens://repo/{owner}/{repo}/symbol/{+qualified_name}",
+              mime_type="application/json")
+def r_repo_symbol(owner: str, repo: str, qualified_name: str) -> dict[str, Any]:
+    return res.repo_symbol(store(), f"{owner}/{repo}", qualified_name)
 
 
 @mcp.resource("paperlens://paper/{arxiv_id}/values", mime_type="application/json")

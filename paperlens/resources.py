@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import re
+from urllib.parse import quote, unquote
 from typing import Any
 
 from .graph.store import Store
@@ -236,6 +237,84 @@ def implementations(store: Store, paper_id: str) -> dict[str, Any]:
     }
 
 
+# ── code side ─────────────────────────────────────────────────────────────
+def encode_symbol(qualified_name: str) -> str:
+    """Percent-encode a symbol id for use in a URI path segment.
+
+    Symbol ids look like `clip/model.py::CLIP.forward#method`. The `#` would be
+    read as a fragment delimiter and the `/` as a path separator, so both are
+    escaped. `decode_symbol` accepts either form.
+    """
+    return quote(qualified_name, safe="")
+
+
+def decode_symbol(segment: str) -> str:
+    return unquote(segment)
+
+
+def symbol_uri(repo_id: str, qualified_name: str) -> str:
+    return f"paperlens://repo/{repo_id}/symbol/{encode_symbol(qualified_name)}"
+
+
+def repo_overview(store: Store, repo: str) -> dict[str, Any]:
+    from .code.indexer import require_snapshot
+
+    snap = require_snapshot(store, repo)
+    return {
+        "uri": f"paperlens://repo/{snap['repo_id']}",
+        "repo": snap["repo_id"], "commit_sha": snap["commit_sha"],
+        "indexer": snap["indexer"], "indexed_at": snap["indexed_at"],
+        "symbol_count": snap["symbol_count"], "file_count": snap["file_count"],
+    }
+
+
+def repo_file(store: Store, repo: str, path: str) -> dict[str, Any]:
+    """A file's symbol outline -- never its full text. The agent drills into the
+    symbols it needs rather than pulling the whole file into context."""
+    from .code.indexer import provider, require_snapshot
+
+    snap = require_snapshot(store, repo)
+    syms = provider().file_outline(snap["repo_id"], path)
+    if not syms:
+        raise ResourceNotFound(
+            f"No symbols found for {path!r} in {snap['repo_id']}. The file may not "
+            f"exist, or may be in a language the active backend "
+            f"({snap['indexer']}) does not parse."
+        )
+    return {
+        "uri": f"paperlens://repo/{snap['repo_id']}/file/{path}",
+        "repo": snap["repo_id"], "commit_sha": snap["commit_sha"], "file_path": path,
+        "symbols": [{
+            "qualified_name": s.qualified_name, "name": s.name, "kind": s.kind,
+            "lines": [s.line_start, s.line_end], "signature": s.signature,
+            "uri": symbol_uri(snap["repo_id"], s.qualified_name),
+        } for s in syms],
+    }
+
+
+def repo_symbol(store: Store, repo: str, qualified_name: str) -> dict[str, Any]:
+    from .code.indexer import find_symbol, persist_symbol, provider, require_snapshot
+
+    qualified_name = decode_symbol(qualified_name)
+    snap = require_snapshot(store, repo)
+    sym = find_symbol(store, repo, qualified_name)
+    if sym is None:
+        raise ResourceNotFound(
+            f"No symbol {qualified_name!r} in {snap['repo_id']} at "
+            f"{snap['commit_sha'][:8]}."
+        )
+    persist_symbol(store, snap["id"], sym)
+    store.commit()
+    return {
+        "uri": symbol_uri(snap["repo_id"], qualified_name),
+        "repo": snap["repo_id"], "commit_sha": snap["commit_sha"],
+        "qualified_name": sym.qualified_name, "name": sym.name, "kind": sym.kind,
+        "file_path": sym.file_path, "lines": [sym.line_start, sym.line_end],
+        "signature": sym.signature,
+        "source": provider().symbol_source(snap["repo_id"], qualified_name),
+    }
+
+
 # ── dispatch ──────────────────────────────────────────────────────────────
 _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)$"), lambda s, m: paper_overview(s, m[0])),
@@ -251,6 +330,11 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/urls$"), lambda s, m: declared_urls(s, m[0])),
     (re.compile(r"^paperlens://paper/([^/]+)/implementations$"),
      lambda s, m: implementations(s, m[0])),
+    (re.compile(r"^paperlens://repo/([^/]+/[^/]+)$"), lambda s, m: repo_overview(s, m[0])),
+    (re.compile(r"^paperlens://repo/([^/]+/[^/]+)/file/(.+)$"),
+     lambda s, m: repo_file(s, m[0], m[1])),
+    (re.compile(r"^paperlens://repo/([^/]+/[^/]+)/symbol/(.+)$"),
+     lambda s, m: repo_symbol(s, m[0], m[1])),
 ]
 
 

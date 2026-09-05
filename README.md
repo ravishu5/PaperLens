@@ -4,7 +4,7 @@ An MCP server for **research engineering**: going from a paper to a working unde
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
 
-**Status: Phase 3 of 8.** Paper ingestion and implementation discovery work end to end. Code intelligence, paper↔code mapping and lineage are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
+**Status: Phase 4 of 8.** Paper ingestion, implementation discovery and code intelligence work end to end. Paper↔code mapping, comparison and lineage are not built yet. See [docs/PHASES.md](docs/PHASES.md) for per-phase detail and [ARCHITECTURE.md](ARCHITECTURE.md) §5 for the plan.
 
 ---
 
@@ -31,6 +31,8 @@ State lives in `~/.paperlens/` (`graph.db` plus cached arXiv sources). Override 
 
 GitHub access is optional but strongly recommended: PaperLens uses `GITHUB_TOKEN`/`GH_TOKEN` if set, otherwise the `gh` CLI's token, otherwise anonymous access at 60 requests/hour.
 
+Code intelligence uses [jcodemunch](https://github.com/jgravelle/jcodemunch-mcp) when it is reachable (70+ languages) and falls back to a built-in Python AST backend otherwise. Force one with `PAPERLENS_CODE_PROVIDER=python-ast|jcodemunch`.
+
 ## Use
 
 ```
@@ -38,6 +40,9 @@ resolve_paper("Learning Transferable Visual Models…")   → candidates + arXiv
 ingest_paper("2103.00020")                              → structure counts + URIs
 get_paper_skeleton("2103.00020")                        → every addressable anchor
 find_implementations("2103.00020")                      → ranked repos + evidence
+index_repository("openai/CLIP")                         → commit SHA + symbol counts
+get_repo_outline("openai/CLIP")                         → files and symbols as URIs
+search_code("openai/CLIP", "contrastive loss")          → symbols, or a citable absence
 ```
 
 Then read only what you need:
@@ -51,6 +56,9 @@ paperlens://paper/2103.00020/algorithm/{slug}
 paperlens://paper/2103.00020/values
 paperlens://paper/2103.00020/urls
 paperlens://paper/2103.00020/implementations
+paperlens://repo/openai/CLIP
+paperlens://repo/openai/CLIP/file/clip/model.py
+paperlens://repo/openai/CLIP/symbol/{percent-encoded symbol id}
 ```
 
 `paperlens_fetch(uri)` returns identical content, for clients without resource support.
@@ -63,7 +71,7 @@ paperlens://paper/2103.00020/implementations
 
 **Official is not the same as complete.** `find_implementations` ranks by evidential strength and reports content coverage for every candidate. `openai/CLIP` comes back first — `OFFICIAL`, `CONFIRMED`, cited to the URL in the paper's own abstract — with `missing: [dataset, training, inference]` on the face of the result, because the official repository ships inference weights and not the contrastive objective the paper is about.
 
-**`UNKNOWN` is a normal answer.** A tool that cannot say "I could not establish this" will invent mappings. Asking CLIP for an equation returns an error explaining it has none — not a guess.
+**`UNKNOWN` is a normal answer, and absence is a finding.** A tool that cannot say "I could not establish this" will invent mappings. Asking CLIP for an equation returns an error explaining it has none. Searching `openai/CLIP` for its own contrastive loss returns `found: false` with a citable `absence_ref` and `confidence: CONFIRMED` — because establishing that something is missing is a result, not a failure.
 
 ## Develop
 
