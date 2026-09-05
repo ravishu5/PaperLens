@@ -63,6 +63,18 @@ class IngestResult:
 
 
 def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResult:
+    # Check if paper was already ingested into store (e.g. from PDF/DOI)
+    existing_paper = store.one(
+        "SELECT * FROM papers WHERE arxiv_id = ? OR doi = ? OR arxiv_id LIKE ?",
+        (paper_id, paper_id, f"%{paper_id}%"),
+    )
+    if existing_paper and existing_paper["latest_version"]:
+        pv = existing_paper["latest_version"]
+        pv_row = store.paper_version_row(pv)
+        if pv_row:
+            return _summarize(store, pv, existing_paper["title"], pv_row["fidelity"],
+                              ["loaded from local store: already ingested"])
+
     parsed = arxiv.parse_arxiv_id(paper_id)
     if not parsed:
         raise ValueError(

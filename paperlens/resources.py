@@ -20,9 +20,17 @@ class ResourceNotFound(LookupError):
 
 def _pv(store: Store, paper_id: str) -> str:
     """Resolve a possibly-unversioned paper id to a stored paper_version."""
+    row = store.one(
+        "SELECT latest_version FROM papers WHERE arxiv_id = ? OR doi = ? OR arxiv_id LIKE ?",
+        (paper_id, paper_id, f"%{paper_id}%"),
+    )
+    if row and row["latest_version"]:
+        return row["latest_version"]
+    if store.paper_version_row(paper_id):
+        return paper_id
     parsed = parse_arxiv_id(paper_id)
     if not parsed:
-        raise ResourceNotFound(f"{paper_id!r} is not an arXiv identifier")
+        raise ResourceNotFound(f"{paper_id!r} is not an arXiv identifier or ingested paper")
     arxiv_id, version = parsed
     pv = f"{arxiv_id}v{version}" if version else store.latest_version_of(arxiv_id)
     if not pv or not store.paper_version_row(pv):
