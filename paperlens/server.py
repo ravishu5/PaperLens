@@ -24,6 +24,9 @@ from .correlate.compare import compare_implementations as _cmp_impls
 from .correlate.compare import compare_paper_with_code as _cmp_code
 from .correlate.compare import find_implementation_gaps as _find_gaps
 from .correlate.discover import find_implementations as _discover
+from .correlate.lineage import find_sota_successors as _successors
+from .correlate.lineage import trace_method as _trace_method
+from .correlate.lineage import trace_research_lineage as _lineage
 from .correlate.mapper import map_paper_to_code as _map
 from .paper.ingest import ingest_paper as _ingest
 from .sources import arxiv
@@ -424,6 +427,49 @@ def compare_implementations(paper_id: str, repos: list[str]) -> dict[str, Any]:
 
 
 @mcp.tool(
+    title="Trace research lineage",
+    description="What the paper builds on and what built on it. Predecessors come "
+                "from the paper's own bibliography and are quotable; successors "
+                "come from a citation index and are not verified from source.",
+)
+def trace_research_lineage(paper_id: str, direction: str = "both",
+                           limit: int = 20) -> dict[str, Any]:
+    if direction not in ("back", "forward", "both"):
+        return {"error": "ValueError",
+                "message": "direction must be 'back', 'forward' or 'both'"}
+    try:
+        return _lineage(store(), paper_id, direction=direction, limit=limit)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Find successor work",
+    description="Later papers that cite this one, ranked by citation influence and "
+                "intent where available. What each successor changed is not "
+                "asserted; the citing sentences are returned as evidence.",
+)
+def find_sota_successors(paper_id: str, limit: int = 15) -> dict[str, Any]:
+    try:
+        return _successors(store(), paper_id, limit=limit)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
+    title="Trace a method",
+    description="Follow one method through the literature: which cited work "
+                "introduced it, where this paper discusses it, and which later "
+                "papers carry it forward. Every step quotes a sentence.",
+)
+def trace_method(paper_id: str, method: str, limit: int = 12) -> dict[str, Any]:
+    try:
+        return _trace_method(store(), paper_id, method, limit=limit)
+    except Exception as exc:
+        return _err(exc)
+
+
+@mcp.tool(
     title="Explain a confidence verdict",
     description="Why a mapping carries the confidence it does: the supporting and "
                 "contradicting evidence, and what would raise it.",
@@ -501,6 +547,16 @@ def r_algorithm(arxiv_id: str, slug: str) -> dict[str, Any]:
 @mcp.resource("paperlens://paper/{arxiv_id}/implementations", mime_type="application/json")
 def r_implementations(arxiv_id: str) -> dict[str, Any]:
     return res.implementations(store(), arxiv_id)
+
+
+@mcp.resource("paperlens://paper/{arxiv_id}/references", mime_type="application/json")
+def r_references(arxiv_id: str) -> dict[str, Any]:
+    return res.references(store(), arxiv_id)
+
+
+@mcp.resource("paperlens://lineage/{arxiv_id}", mime_type="application/json")
+def r_lineage(arxiv_id: str) -> dict[str, Any]:
+    return res.lineage(store(), arxiv_id)
 
 
 @mcp.resource("paperlens://paper/{arxiv_id}/analysis", mime_type="application/json")

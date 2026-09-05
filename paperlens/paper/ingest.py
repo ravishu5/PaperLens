@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from .. import config
 from ..graph.store import Store
 from ..sources import arxiv
+from .citations import collect as collect_citations
 from .equations import extract_equations
 from .structure import (Section, extract_algorithms, extract_declared_urls,
                         extract_sections, extract_stated_values, slugify)
@@ -199,6 +200,48 @@ def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResu
             "repo, context, section_id, in_abstract, src_line) VALUES (?,?,?,?,?,?,?,?,?,?)",
             (f"{paper_version}:url:{i}", paper_version, u.url, u.host, u.owner, u.repo,
              u.context, sec_id(u.char_start), int(u.in_abstract), u.src_line),
+        )
+
+    # ── bibliography and citation sites ───────────────────────────────────
+    # The paper carries its own references, so the backward half of the research
+    # lineage needs no citation API.
+    try:
+        entries, sites = collect_citations(tex, config.source_cache_dir() / arxiv_id)
+    except OSError:
+        entries, sites = {}, []
+
+    for key, e in entries.items():
+        store.execute(
+            "INSERT OR REPLACE INTO bib_entries (id, paper_version, bib_key, raw, "
+            "authors, title, year, arxiv_id, doi, cite_count) VALUES (?,?,?,?,?,?,?,?,?,?)",
+            (f"{paper_version}:bib:{key}", paper_version, key, e.raw, e.authors,
+             e.title, e.year, e.arxiv_id, e.doi, e.cite_count))
+    for i, site in enumerate(sites):
+        store.execute(
+            "INSERT OR REPLACE INTO citation_sites (id, paper_version, bib_key, "
+            "section_id, context, src_line, command) VALUES (?,?,?,?,?,?,?)",
+            (f"{paper_version}:cite:{i}", paper_version, site.bib_key,
+             sec_id(site.char_start), site.context, site.src_line, site.command))
+
+    # A resolved reference is a CONFIRMED lineage edge: the paper names it, and
+    # we can quote the sentence that does so.
+    import json as _json
+    for key, e in entries.items():
+        if not e.arxiv_id or not e.sites:
+            continue
+        store.execute(
+            "INSERT OR REPLACE INTO lineage_edges (id, from_paper, to_paper, relation, "
+            "is_influential, intents_json, contexts_json, confidence, source) "
+            "VALUES (?,?,?,?,?,?,?,?,?)",
+            (f"{arxiv_id}->{e.arxiv_id}:CITES", arxiv_id, e.arxiv_id, "CITES",
+             None, None, _json.dumps([s.context for s in e.sites[:4]]),
+             "CONFIRMED", "bibliography"))
+    if entries:
+        unresolved = sum(1 for e in entries.values() if not e.arxiv_id)
+        notes.append(
+            f"{len(entries)} bibliography entries parsed; {len(entries) - unresolved} "
+            f"resolved to arXiv identifiers. Unresolved entries are still listed "
+            f"with title and authors."
         )
 
     # ── deterministic components (coarse; enriched later by write-back) ───

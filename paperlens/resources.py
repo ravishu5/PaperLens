@@ -322,6 +322,55 @@ def differences(store: Store, paper_id: str, repo: str) -> dict[str, Any]:
     }
 
 
+def references(store: Store, paper_id: str) -> dict[str, Any]:
+    """The paper's own bibliography, with where each entry is cited."""
+    pv = _pv(store, paper_id)
+    rows = store.all(
+        "SELECT b.*, (SELECT COUNT(*) FROM citation_sites c WHERE "
+        "c.paper_version = b.paper_version AND c.bib_key = b.bib_key) AS sites "
+        "FROM bib_entries b WHERE b.paper_version = ? ORDER BY sites DESC", (pv,))
+    aid = pv.split("v")[0]
+    if not rows:
+        return {"uri": f"paperlens://paper/{aid}/references", "paper_version": pv,
+                "references": [],
+                "note": "No bibliography was recovered from this paper's source."}
+    return {
+        "uri": f"paperlens://paper/{aid}/references", "paper_version": pv,
+        "count": len(rows),
+        "resolved_to_arxiv": sum(1 for r in rows if r["arxiv_id"]),
+        "references": [{
+            "bib_key": r["bib_key"], "title": r["title"], "authors": r["authors"],
+            "year": r["year"], "arxiv_id": r["arxiv_id"], "doi": r["doi"],
+            "cited_times": r["sites"],
+            "uri": f"paperlens://paper/{r['arxiv_id']}" if r["arxiv_id"] else None,
+        } for r in rows],
+    }
+
+
+def lineage(store: Store, paper_id: str) -> dict[str, Any]:
+    """Stored lineage edges. Run trace_research_lineage to populate or refresh."""
+    import json as _json
+
+    pv = _pv(store, paper_id)
+    aid = pv.split("v")[0]
+    rows = store.all(
+        "SELECT * FROM lineage_edges WHERE from_paper = ? OR to_paper = ?", (aid, aid))
+    if not rows:
+        return {"uri": f"paperlens://lineage/{aid}", "paper_version": pv, "edges": [],
+                "note": "No lineage has been traced. Call trace_research_lineage."}
+    return {
+        "uri": f"paperlens://lineage/{aid}", "paper_version": pv,
+        "edges": [{
+            "from": r["from_paper"], "to": r["to_paper"], "relation": r["relation"],
+            "confidence": r["confidence"], "source": r["source"],
+            "is_influential": (None if r["is_influential"] is None
+                               else bool(r["is_influential"])),
+            "intents": _json.loads(r["intents_json"]) if r["intents_json"] else [],
+            "contexts": _json.loads(r["contexts_json"]) if r["contexts_json"] else [],
+        } for r in rows],
+    }
+
+
 def analysis(store: Store, paper_id: str) -> dict[str, Any]:
     from .correlate.analysis import get_analysis
 
@@ -429,6 +478,9 @@ _ROUTES: list[tuple[re.Pattern, Any]] = [
     (re.compile(r"^paperlens://paper/([^/]+)/implementations$"),
      lambda s, m: implementations(s, m[0])),
     (re.compile(r"^paperlens://paper/([^/]+)/analysis$"), lambda s, m: analysis(s, m[0])),
+    (re.compile(r"^paperlens://paper/([^/]+)/references$"),
+     lambda s, m: references(s, m[0])),
+    (re.compile(r"^paperlens://lineage/([^/]+)$"), lambda s, m: lineage(s, m[0])),
     (re.compile(r"^paperlens://mapping/([^/]+)/([^/]+/[^/]+)$"),
      lambda s, m: mapping(s, m[0], m[1])),
     (re.compile(r"^paperlens://difference/([^/]+)/([^/]+/[^/]+)$"),

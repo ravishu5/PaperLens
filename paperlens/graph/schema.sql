@@ -124,6 +124,35 @@ CREATE TABLE IF NOT EXISTS declared_urls (
 );
 CREATE INDEX IF NOT EXISTS ix_url_pv ON declared_urls(paper_version);
 
+-- Bibliography entries, resolved from the paper's own .bbl/.bib. These are the
+-- outgoing half of the research lineage and need no network at all.
+CREATE TABLE IF NOT EXISTS bib_entries (
+  id              TEXT PRIMARY KEY,
+  paper_version   TEXT NOT NULL REFERENCES paper_versions(paper_version) ON DELETE CASCADE,
+  bib_key         TEXT NOT NULL,
+  raw             TEXT NOT NULL,
+  authors         TEXT,
+  title           TEXT,
+  year            INTEGER,
+  arxiv_id        TEXT,
+  doi             TEXT,
+  cite_count      INTEGER NOT NULL DEFAULT 0,
+  UNIQUE (paper_version, bib_key)
+);
+CREATE INDEX IF NOT EXISTS ix_bib_pv ON bib_entries(paper_version);
+
+-- Where in the paper each reference is cited, with the sentence that cites it.
+CREATE TABLE IF NOT EXISTS citation_sites (
+  id              TEXT PRIMARY KEY,
+  paper_version   TEXT NOT NULL REFERENCES paper_versions(paper_version) ON DELETE CASCADE,
+  bib_key         TEXT NOT NULL,
+  section_id      TEXT REFERENCES sections(id) ON DELETE SET NULL,
+  context         TEXT NOT NULL,
+  src_line        INTEGER,
+  command         TEXT
+);
+CREATE INDEX IF NOT EXISTS ix_cs_pv ON citation_sites(paper_version, bib_key);
+
 CREATE TABLE IF NOT EXISTS claims (
   id              TEXT PRIMARY KEY,
   paper_version   TEXT NOT NULL REFERENCES paper_versions(paper_version) ON DELETE CASCADE,
