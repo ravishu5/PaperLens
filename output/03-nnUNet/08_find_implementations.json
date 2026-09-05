@@ -14,11 +14,11 @@
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
+          "inference": "documentation/competitions/FLARE24/Task_1/inference_flare_task1.py",
           "architecture": "nnunetv2/experiment_planning/experiment_planners/network_topology.py",
           "preprocessing": "nnunetv2/experiment_planning/plan_and_preprocess_api.py",
-          "evaluation": "nnunetv2/batch_running/benchmarking/generate_benchmarking_commands.py",
           "training": "nnunetv2/training/nnUNetTrainer/nnUNetTrainer.py",
-          "inference": "documentation/competitions/FLARE24/Task_1/inference_flare_task1.py"
+          "evaluation": "nnunetv2/batch_running/benchmarking/generate_benchmarking_commands.py"
         },
         "missing": []
       },
@@ -48,11 +48,11 @@
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
+          "inference": "nnunet/inference/ensemble_predictions.py",
           "architecture": "nnunet/inference/pretrained_models/collect_pretrained_models.py",
           "preprocessing": "nnunet/experiment_planning/nnUNet_plan_and_preprocess.py",
-          "evaluation": "nnunet/evaluation/evaluator.py",
           "training": "nnunet/inference/change_trainer.py",
-          "inference": "nnunet/inference/ensemble_predictions.py"
+          "evaluation": "nnunet/evaluation/evaluator.py"
         },
         "missing": []
       },
@@ -82,10 +82,10 @@
         "kind": "SHALLOW_SMALL_REPO",
         "score": 0.8,
         "matched": {
+          "inference": "predict.py",
           "architecture": "model.py",
           "preprocessing": "preprocessing.py",
-          "training": "training.py",
-          "inference": "predict.py"
+          "training": "training.py"
         },
         "missing": [
           "evaluation"
@@ -132,9 +132,9 @@
           "evaluation": "nnunet/src/utils/eval.py"
         },
         "missing": [
+          "inference",
           "architecture",
-          "training",
-          "inference"
+          "training"
         ]
       },
       "stars": 8,
@@ -148,6 +148,17 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
         },
         {
           "kind": "code_absence",
@@ -170,17 +181,6 @@
             "method": "shallow_tree_scan",
             "kind": "training"
           }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/ImagingDataCommons/nnU-Net-BPR-annotations",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
         }
       ]
     },
@@ -199,10 +199,10 @@
           "evaluation": "evaluation_results.py"
         },
         "missing": [
+          "inference",
           "architecture",
           "preprocessing",
-          "training",
-          "inference"
+          "training"
         ]
       },
       "stars": 8,
@@ -216,6 +216,17 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
         },
         {
           "kind": "code_absence",
@@ -249,17 +260,6 @@
             "method": "shallow_tree_scan",
             "kind": "training"
           }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/nadunnr/Lung-Cancer-Segmentation-nnU-Net",
-          "excerpt": "no filename matches the inference component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "inference"
-          }
         }
       ]
     },
@@ -280,8 +280,8 @@
         "missing": [
           "architecture",
           "preprocessing",
-          "evaluation",
-          "training"
+          "training",
+          "evaluation"
         ]
       },
       "stars": 6,
@@ -321,23 +321,23 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
           "excerpt": "no filename matches the training component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "training"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/WestCoastGod/Carotid-Artery-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
           }
         }
       ]
@@ -355,11 +355,11 @@
         "score": 0.0,
         "matched": {},
         "missing": [
+          "inference",
           "architecture",
           "preprocessing",
-          "evaluation",
           "training",
-          "inference"
+          "evaluation"
         ]
       },
       "stars": 5,
@@ -373,6 +373,17 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
+          "excerpt": "no filename matches the inference component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "inference"
+          }
         },
         {
           "kind": "code_absence",
@@ -399,17 +410,6 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
           "excerpt": "no filename matches the training component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -421,12 +421,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/Usamakhan843/3D-Lung-Tumor-Segmentation-with-nnU-Net",
-          "excerpt": "no filename matches the inference component kind",
+          "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "inference"
+            "kind": "evaluation"
           }
         }
       ]
@@ -443,9 +443,9 @@
         "kind": "SHALLOW",
         "score": 0.6,
         "matched": {
+          "inference": "batchgenerators/augmentations/resample_augmentations.py",
           "preprocessing": "batchgenerators/augmentations/color_augmentations.py",
-          "evaluation": "tests/test_DataLoader.py",
-          "inference": "batchgenerators/augmentations/resample_augmentations.py"
+          "evaluation": "tests/test_DataLoader.py"
         },
         "missing": [
           "architecture",

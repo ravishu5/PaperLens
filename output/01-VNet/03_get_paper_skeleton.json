@@ -72,39 +72,11 @@
   ],
   "components": [
     {
-      "slug": "method",
-      "name": "Method",
-      "kind": "module",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1606.04797/component/method"
-    },
-    {
-      "slug": "training",
-      "name": "Training",
-      "kind": "training",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1606.04797/component/training"
-    },
-    {
-      "slug": "results",
-      "name": "Results",
-      "kind": "evaluation",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1606.04797/component/results"
-    },
-    {
       "slug": "v-net-architecture",
       "name": "V-Net Architecture",
       "kind": "architecture",
       "source": "AGENT",
       "uri": "paperlens://paper/1606.04797/component/v-net-architecture"
-    },
-    {
-      "slug": "dice-loss-layer",
-      "name": "Dice Loss Layer",
-      "kind": "loss",
-      "source": "AGENT",
-      "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
     },
     {
       "slug": "training-procedure",
@@ -119,6 +91,34 @@
       "kind": "inference",
       "source": "AGENT",
       "uri": "paperlens://paper/1606.04797/component/inference"
+    },
+    {
+      "slug": "method",
+      "name": "Method",
+      "kind": "module",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/method"
+    },
+    {
+      "slug": "dice-loss-layer",
+      "name": "Dice loss layer",
+      "kind": "loss",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/dice-loss-layer"
+    },
+    {
+      "slug": "training",
+      "name": "Training",
+      "kind": "training",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/training"
+    },
+    {
+      "slug": "results",
+      "name": "Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1606.04797/component/results"
     }
   ],
   "algorithms": [],

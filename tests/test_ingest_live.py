@@ -97,3 +97,20 @@ def test_asking_for_an_equation_that_does_not_exist_reports_unknown(store):
     ingest_paper(store, "2103.00020")
     with pytest.raises(ResourceNotFound, match="0 numbered equation"):
         resolve(store, "paperlens://paper/2103.00020/equation/1")
+
+
+def test_a_parser_upgrade_forces_a_reparse(store, monkeypatch):
+    """Bumping PARSER_VERSION is the invalidation mechanism. A store
+    short-circuit that returned before checking it meant parser fixes changed
+    nothing on any paper already ingested."""
+    from paperlens import config
+    from paperlens.paper.ingest import ingest_paper as _ingest
+
+    _ingest(store, "2103.00020")
+    row = store.paper_version_row("2103.00020v1")
+    assert row["parser_version"] == config.PARSER_VERSION
+
+    monkeypatch.setattr(config, "PARSER_VERSION", config.PARSER_VERSION + "-next")
+    r = _ingest(store, "2103.00020")
+    assert not any("already ingested" in n for n in r.notes), r.notes
+    assert store.paper_version_row("2103.00020v1")["parser_version"].endswith("-next")

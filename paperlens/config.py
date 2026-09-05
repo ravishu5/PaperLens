@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 
 # Bumping either of these invalidates derived data (ARCHITECTURE 1.3).
-PARSER_VERSION = "2"
+PARSER_VERSION = "3"
 ANALYZER_VERSION = "1"
 
 USER_AGENT = "PaperLens/0.1 (https://github.com/ravi/paperlens; MCP research tool)"

@@ -5,10 +5,10 @@
     "faustomilletari/3D-Caffe"
   ],
   "errors": {},
-  "closest_to_paper": "faustomilletari/VNet",
+  "closest_to_paper": null,
   "coverage": {
     "faustomilletari/VNet": {
-      "matched": 1,
+      "matched": 0,
       "absent": 0,
       "ambiguous": 3,
       "blocking_differences": 0,
@@ -17,7 +17,7 @@
     "faustomilletari/3D-Caffe": {
       "matched": 0,
       "absent": 0,
-      "ambiguous": 3,
+      "ambiguous": 2,
       "blocking_differences": 0,
       "significant_differences": 0
     }
@@ -47,13 +47,6 @@
   ],
   "differ_on": [
     {
-      "anchor": "Dice Loss Layer",
-      "status": {
-        "faustomilletari/VNet": "MATCHED",
-        "faustomilletari/3D-Caffe": "AMBIGUOUS"
-      }
-    },
-    {
       "anchor": "V-Net Architecture",
       "status": {
         "faustomilletari/VNet": "AMBIGUOUS",
@@ -62,6 +55,7 @@
     }
   ],
   "notes": [
-    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper."
+    "Repositories are ranked by BLOCKING differences and established absences, not by how many symbol names happen to match. A repository with tidier naming can match more anchors while implementing less of the paper.",
+    "faustomilletari/VNet and faustomilletari/3D-Caffe score identically on these checks, so no claim is made about which is closer to the paper."
   ]
 }

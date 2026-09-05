@@ -3,12 +3,47 @@
   "paper_version": "1606.04797v1",
   "repo": "faustomilletari/VNet",
   "summary": {
-    "MATCHED": 1,
+    "MATCHED": 0,
     "ABSENT": 0,
-    "AMBIGUOUS": 6,
+    "AMBIGUOUS": 7,
     "UNKNOWN": 1
   },
   "mappings": [
+    {
+      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:dice-loss-layer",
+      "anchor_kind": "component",
+      "anchor_id": "1606.04797v1:comp:dice-loss-layer",
+      "status": "AMBIGUOUS",
+      "confidence": "POSSIBLE",
+      "method": "mapper:component",
+      "reasoning": "'Dice loss layer' matches 3/3 of its name tokens against pyLayer.py::DiceLoss#class",
+      "evidence": [
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
+          "excerpt": "Dice Loss Layer (loss)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "paper_section",
+          "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
+          "excerpt": "Dice loss layer (loss)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/pyLayer.py%3A%3ADiceLoss%23class",
+          "excerpt": "class DiceLoss(caffe.Layer)",
+          "locator": "pyLayer.py:4",
+          "stance": "SUPPORTS",
+          "provenance": null
+        }
+      ]
+    },
     {
       "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:method",
       "anchor_kind": "component",
@@ -79,6 +114,14 @@
           "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
+          "excerpt": "def loadTrainingData(self)",
+          "locator": "DataManager.py:59",
+          "stance": "SUPPORTS",
+          "provenance": null
         }
       ]
     },
@@ -100,10 +143,10 @@
           "provenance": null
         },
         {
-          "kind": "code_symbol",
-          "uri": "paperlens://repo/faustomilletari/VNet/symbol/DataManager.py%3A%3ADataManager.loadTrainingData%23method",
-          "excerpt": "def loadTrainingData(self)",
-          "locator": "DataManager.py:59",
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1606.04797/component/training-procedure",
+          "excerpt": "Training Procedure (training)",
+          "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
         }
@@ -138,6 +181,14 @@
           "provenance": null
         },
         {
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1606.04797/component/v-net-architecture",
+          "excerpt": "V-Net Architecture (architecture)",
+          "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
           "kind": "code_symbol",
           "uri": "paperlens://repo/faustomilletari/VNet/symbol/VNet.py%3A%3AVNet%23class",
           "excerpt": "class VNet(object)",
@@ -156,33 +207,6 @@
       "method": "mapper:stated_value",
       "reasoning": "2 is too common a value for an exact match to be evidence",
       "evidence": []
-    },
-    {
-      "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:dice-loss-layer",
-      "anchor_kind": "component",
-      "anchor_id": "1606.04797v1:comp:dice-loss-layer",
-      "status": "MATCHED",
-      "confidence": "POSSIBLE",
-      "method": "mapper:component",
-      "reasoning": "'Dice Loss Layer' matches 3/3 of its name tokens against pyLayer.py::DiceLoss#class",
-      "evidence": [
-        {
-          "kind": "paper_section",
-          "uri": "paperlens://paper/1606.04797/component/dice-loss-layer",
-          "excerpt": "Dice Loss Layer (loss)",
-          "locator": null,
-          "stance": "SUPPORTS",
-          "provenance": null
-        },
-        {
-          "kind": "code_symbol",
-          "uri": "paperlens://repo/faustomilletari/VNet/symbol/pyLayer.py%3A%3ADiceLoss%23class",
-          "excerpt": "class DiceLoss(caffe.Layer)",
-          "locator": "pyLayer.py:4",
-          "stance": "SUPPORTS",
-          "provenance": null
-        }
-      ]
     },
     {
       "id": "1606.04797v1|faustomilletari/VNet@584c1502f369f2547e7ed384f9cc25beb09f65e1|component|1606.04797v1:comp:inference",

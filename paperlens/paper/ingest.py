@@ -80,7 +80,13 @@ def ingest_paper(store: Store, paper_id: str, force: bool = False) -> IngestResu
             )
         if len(existing) == 1:
             pv = existing[0]["latest_version"]
-            if (pv_row := store.paper_version_row(pv)) is not None:
+            pv_row = store.paper_version_row(pv)
+            # Only a version parsed by the *current* parser may be served from
+            # the store. Returning here unconditionally defeated the invalidation
+            # mechanism entirely: a parser fix changed nothing on any paper that
+            # had already been ingested, and stale extractions kept reappearing
+            # in output that had supposedly been regenerated.
+            if pv_row is not None and pv_row["parser_version"] == config.PARSER_VERSION:
                 return _summarize(store, pv, existing[0]["title"],
                                   pv_row["fidelity"],
                                   ["loaded from local store: already ingested"])

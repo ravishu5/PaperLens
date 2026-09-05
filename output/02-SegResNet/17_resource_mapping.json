@@ -27,10 +27,10 @@
           "provenance": null
         },
         {
-          "kind": "code_symbol",
-          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3ADecoder%23class",
-          "excerpt": "class Decoder(nn.Module)",
-          "locator": "ndv/modules/model.py:95",
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1810.11654/component/decoder",
+          "excerpt": "Decoder (architecture)",
+          "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
         }
@@ -50,6 +50,14 @@
           "uri": "paperlens://paper/1810.11654/component/decoder-part",
           "excerpt": "Decoder part (architecture)",
           "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3ADecoder%23class",
+          "excerpt": "class Decoder(nn.Module)",
+          "locator": "ndv/modules/model.py:95",
           "stance": "SUPPORTS",
           "provenance": null
         }
@@ -73,10 +81,10 @@
           "provenance": null
         },
         {
-          "kind": "code_symbol",
-          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3AEncoder%23class",
-          "excerpt": "class Encoder(nn.Module)",
-          "locator": "ndv/modules/model.py:51",
+          "kind": "paper_url",
+          "uri": "paperlens://paper/1810.11654/component/encoder",
+          "excerpt": "Encoder (architecture)",
+          "locator": null,
           "stance": "SUPPORTS",
           "provenance": null
         }
@@ -96,6 +104,14 @@
           "uri": "paperlens://paper/1810.11654/component/encoder-part",
           "excerpt": "Encoder part (architecture)",
           "locator": null,
+          "stance": "SUPPORTS",
+          "provenance": null
+        },
+        {
+          "kind": "code_symbol",
+          "uri": "paperlens://repo/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization/symbol/ndv%2Fmodules%2Fmodel.py%3A%3AEncoder%23class",
+          "excerpt": "class Encoder(nn.Module)",
+          "locator": "ndv/modules/model.py:51",
           "stance": "SUPPORTS",
           "provenance": null
         }
@@ -172,7 +188,7 @@
       "status": "UNKNOWN",
       "confidence": "UNKNOWN",
       "method": "mapper:component",
-      "reasoning": "symbols were returned for 'Data Preprocessing and Augmentation' but none carry enough of its name to identify one",
+      "reasoning": "symbols were returned for 'Data preprocessing and augmentation' but none carry enough of its name to identify one",
       "evidence": []
     },
     {
@@ -182,7 +198,7 @@
       "status": "UNKNOWN",
       "confidence": "UNKNOWN",
       "method": "mapper:component",
-      "reasoning": "'Optimization' contains no distinctive term, so neither its presence nor its absence can be established by name",
+      "reasoning": "'Optimization' is a section heading rather than a named method component, so its absence from code is not informative",
       "evidence": []
     },
     {

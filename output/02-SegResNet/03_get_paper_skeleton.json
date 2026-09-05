@@ -120,27 +120,6 @@
   ],
   "components": [
     {
-      "slug": "encoder-part",
-      "name": "Encoder part",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1810.11654/component/encoder-part"
-    },
-    {
-      "slug": "decoder-part",
-      "name": "Decoder part",
-      "kind": "architecture",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1810.11654/component/decoder-part"
-    },
-    {
-      "slug": "results",
-      "name": "Results",
-      "kind": "evaluation",
-      "source": "DETERMINISTIC",
-      "uri": "paperlens://paper/1810.11654/component/results"
-    },
-    {
       "slug": "encoder",
       "name": "Encoder",
       "kind": "architecture",
@@ -162,25 +141,46 @@
       "uri": "paperlens://paper/1810.11654/component/variational-autoencoder-branch"
     },
     {
+      "slug": "encoder-part",
+      "name": "Encoder part",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/encoder-part"
+    },
+    {
+      "slug": "decoder-part",
+      "name": "Decoder part",
+      "kind": "architecture",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/decoder-part"
+    },
+    {
       "slug": "loss",
       "name": "Loss",
       "kind": "loss",
-      "source": "AGENT",
+      "source": "DETERMINISTIC",
       "uri": "paperlens://paper/1810.11654/component/loss"
     },
     {
       "slug": "optimization",
       "name": "Optimization",
       "kind": "optimizer",
-      "source": "AGENT",
+      "source": "DETERMINISTIC",
       "uri": "paperlens://paper/1810.11654/component/optimization"
     },
     {
       "slug": "data-preprocessing-and-augmentation",
-      "name": "Data Preprocessing and Augmentation",
+      "name": "Data preprocessing and augmentation",
       "kind": "preprocessing",
-      "source": "AGENT",
+      "source": "DETERMINISTIC",
       "uri": "paperlens://paper/1810.11654/component/data-preprocessing-and-augmentation"
+    },
+    {
+      "slug": "results",
+      "name": "Results",
+      "kind": "evaluation",
+      "source": "DETERMINISTIC",
+      "uri": "paperlens://paper/1810.11654/component/results"
     }
   ],
   "algorithms": [],

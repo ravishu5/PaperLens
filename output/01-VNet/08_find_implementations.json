@@ -18,9 +18,9 @@
         },
         "missing": [
           "training",
-          "evaluation",
+          "inference",
           "loss",
-          "inference"
+          "evaluation"
         ]
       },
       "stars": 303,
@@ -65,12 +65,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/faustomilletari/VNet",
-          "excerpt": "no filename matches the evaluation component kind",
+          "excerpt": "no filename matches the inference component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "evaluation"
+            "kind": "inference"
           }
         },
         {
@@ -87,12 +87,12 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/faustomilletari/VNet",
-          "excerpt": "no filename matches the inference component kind",
+          "excerpt": "no filename matches the evaluation component kind",
           "locator": null,
           "stance": "CONTRADICTS",
           "provenance": {
             "method": "shallow_tree_scan",
-            "kind": "inference"
+            "kind": "evaluation"
           }
         }
       ]
@@ -109,11 +109,11 @@
         "kind": "SHALLOW",
         "score": 1.0,
         "matched": {
-          "training": "tools/train_net.cpp",
-          "evaluation": "include/caffe/test/test_caffe_main.hpp",
           "architecture": "include/caffe/common_layers.hpp",
+          "training": "tools/train_net.cpp",
+          "inference": "src/caffe/test/test_data/generate_sample_data.py",
           "loss": "include/caffe/loss_layers.hpp",
-          "inference": "src/caffe/test/test_data/generate_sample_data.py"
+          "evaluation": "include/caffe/test/test_caffe_main.hpp"
         },
         "missing": []
       },

@@ -17,10 +17,10 @@
           "architecture": "ndv/modules/model.py"
         },
         "missing": [
-          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing"
+          "preprocessing",
+          "evaluation"
         ]
       },
       "stars": 45,
@@ -46,17 +46,6 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
           "excerpt": "no filename matches the loss component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -86,6 +75,17 @@
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
           }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/sinclairjang/3D-MRI-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
         }
       ]
     },
@@ -104,10 +104,10 @@
           "architecture": "model.py"
         },
         "missing": [
-          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing"
+          "preprocessing",
+          "evaluation"
         ]
       },
       "stars": 376,
@@ -133,17 +133,6 @@
         {
           "kind": "code_absence",
           "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
           "excerpt": "no filename matches the loss component kind",
           "locator": null,
           "stance": "CONTRADICTS",
@@ -173,6 +162,17 @@
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
           }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/IAmSuyogJadhav/3d-mri-brain-tumor-segmentation-using-autoencoder-regularization",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
+          }
         }
       ]
     },
@@ -189,10 +189,10 @@
         "score": 1.0,
         "matched": {
           "architecture": "networks/models/E_CATBraTS/model.py",
-          "evaluation": "BTCV/test.py",
           "loss": "networks/models/unetr_pp/training/loss_functions/TopK_loss.py",
           "optimizer": "BTCV/optimizers/lr_scheduler.py",
-          "preprocessing": "networks/models/unetr_pp/experiment_planning/nnFormer_plan_and_preprocess.py"
+          "preprocessing": "networks/models/unetr_pp/experiment_planning/nnFormer_plan_and_preprocess.py",
+          "evaluation": "BTCV/test.py"
         },
         "missing": []
       },
@@ -224,10 +224,10 @@
         "matched": {},
         "missing": [
           "architecture",
-          "evaluation",
           "loss",
           "optimizer",
-          "preprocessing"
+          "preprocessing",
+          "evaluation"
         ]
       },
       "stars": 28,
@@ -251,17 +251,6 @@
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "architecture"
-          }
-        },
-        {
-          "kind": "code_absence",
-          "uri": "https://github.com/jongcye/CollaGAN_MRI",
-          "excerpt": "no filename matches the evaluation component kind",
-          "locator": null,
-          "stance": "CONTRADICTS",
-          "provenance": {
-            "method": "shallow_tree_scan",
-            "kind": "evaluation"
           }
         },
         {
@@ -295,6 +284,17 @@
           "provenance": {
             "method": "shallow_tree_scan",
             "kind": "preprocessing"
+          }
+        },
+        {
+          "kind": "code_absence",
+          "uri": "https://github.com/jongcye/CollaGAN_MRI",
+          "excerpt": "no filename matches the evaluation component kind",
+          "locator": null,
+          "stance": "CONTRADICTS",
+          "provenance": {
+            "method": "shallow_tree_scan",
+            "kind": "evaluation"
           }
         }
       ]
