@@ -3,7 +3,6 @@
 An MCP server for **research engineering**: going from a paper to a working understanding of how its ideas became real code.
 
 Not a search wrapper. PaperLens does the deterministic work that language models do badly — flattening LaTeX, replaying equation counters, mining implementation URLs, indexing repositories, matching concrete anchors — and hands the calling agent precisely-scoped evidence with stable addresses. The agent does the language work, then writes its conclusions back into a graph that validates them.
-**Status: all 8 phases complete.** 19 tools, 17 resource templates, 4 prompts, 180 tests. Every capability in the original vision is implemented; the honest limitations of each are recorded in [docs/PHASES.md](docs/PHASES.md).
 
 ---
 
